@@ -1,0 +1,361 @@
+{
+    "nodes": [
+        {
+            "id": 24800,
+            "name": "fuckthealtright",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.005865102639296188,
+                "clustering": 0,
+                "pagerank": 0.003142906394646537
+            }
+        },
+        {
+            "id": 737,
+            "name": "funny",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.005865102639296188,
+                "clustering": 0,
+                "pagerank": 0.002866166308794762
+            }
+        },
+        {
+            "id": 130,
+            "name": "conspiracy",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.00879765395894428,
+                "clustering": 0,
+                "pagerank": 0.004720206712718077
+            }
+        },
+        {
+            "id": 9472,
+            "name": "thesefuckingaccounts",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.011730205278592375,
+                "clustering": 0,
+                "pagerank": 0.005792386120317468
+            }
+        },
+        {
+            "id": 35453,
+            "name": "moosearchive2",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0017767675625020058
+            }
+        },
+        {
+            "id": 19785,
+            "name": "remembermoose",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.005865102639296188,
+                "clustering": 0,
+                "pagerank": 0.0029727826099023346
+            }
+        },
+        {
+            "id": 16137,
+            "name": "the_donald",
+            "attributes": {
+                "degree": 5,
+                "degree_centrality": 0.01466275659824047,
+                "clustering": 0,
+                "pagerank": 0.007031032230815325
+            }
+        },
+        {
+            "id": 2445,
+            "name": "nursing",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0016346115386283988
+            }
+        },
+        {
+            "id": 33231,
+            "name": "moosearchive",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0017767675625020058
+            }
+        },
+        {
+            "id": 5039,
+            "name": "aww",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0016701512613944334
+            }
+        },
+        {
+            "id": 26422,
+            "name": "marchagainsttrump",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0017735880157581602
+            }
+        },
+        {
+            "id": 27062,
+            "name": "keepournetfree",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0017973043160352524
+            }
+        },
+        {
+            "id": 27869,
+            "name": "wtf",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.005865102639296188,
+                "clustering": 0,
+                "pagerank": 0.003198519621157871
+            }
+        },
+        {
+            "id": 1818,
+            "name": "requestabot",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0017973043160352524
+            }
+        },
+        {
+            "id": 35452,
+            "name": "isis",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.002932551319648094,
+                "clustering": 0,
+                "pagerank": 0.0016346115386283988
+            }
+        },
+        {
+            "id": 7741,
+            "name": "pics",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.005865102639296188,
+                "clustering": 0,
+                "pagerank": 0.003198519621157871
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 24800,
+            "target": 16137,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3055.0,
+                "num_words": 491.0,
+                "num_words_unique": 283.0,
+                "num_words_long": 101.0,
+                "num_stop_word_unique": 63.0,
+                "num_sentences": 19.0
+            }
+        },
+        {
+            "source": 24800,
+            "target": 26422,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3055.0,
+                "num_words": 491.0,
+                "num_words_unique": 283.0,
+                "num_words_long": 101.0,
+                "num_stop_word_unique": 63.0,
+                "num_sentences": 19.0
+            }
+        },
+        {
+            "source": 737,
+            "target": 9472,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 13768.0,
+                "num_words": 2166.0,
+                "num_words_unique": 661.0,
+                "num_words_long": 306.0,
+                "num_stop_word_unique": 49.0,
+                "num_sentences": 17.0
+            }
+        },
+        {
+            "source": 737,
+            "target": 16137,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 231.0,
+                "num_words": 31.0,
+                "num_words_unique": 31.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 6.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 19785,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5420.0,
+                "num_words": 846.0,
+                "num_words_unique": 440.0,
+                "num_words_long": 241.0,
+                "num_stop_word_unique": 66.0,
+                "num_sentences": 48.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 35453,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1278.0,
+                "num_words": 187.0,
+                "num_words_unique": 124.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 29.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 33231,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1278.0,
+                "num_words": 187.0,
+                "num_words_unique": 124.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 29.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 9472,
+            "target": 5039,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 11694.0,
+                "num_words": 1882.0,
+                "num_words_unique": 593.0,
+                "num_words_long": 264.0,
+                "num_stop_word_unique": 48.0,
+                "num_sentences": 25.0
+            }
+        },
+        {
+            "source": 9472,
+            "target": 7741,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10911.0,
+                "num_words": 1715.0,
+                "num_words_unique": 550.0,
+                "num_words_long": 249.0,
+                "num_stop_word_unique": 45.0,
+                "num_sentences": 15.0
+            }
+        },
+        {
+            "source": 9472,
+            "target": 27869,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5772.0,
+                "num_words": 940.0,
+                "num_words_unique": 360.0,
+                "num_words_long": 132.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 19785,
+            "target": 16137,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 14506.0,
+                "num_words": 2359.0,
+                "num_words_unique": 1041.0,
+                "num_words_long": 640.0,
+                "num_stop_word_unique": 87.0,
+                "num_sentences": 110.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 35452,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 253.0,
+                "num_words": 41.0,
+                "num_words_unique": 39.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 2445,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 100.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27062,
+            "target": 7741,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 8906.0,
+                "num_words": 1397.0,
+                "num_words_unique": 647.0,
+                "num_words_long": 351.0,
+                "num_stop_word_unique": 70.0,
+                "num_sentences": 52.0
+            }
+        },
+        {
+            "source": 27869,
+            "target": 1818,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 561.0,
+                "num_words": 85.0,
+                "num_words_unique": 73.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 5.0
+            }
+        }
+    ]
+}

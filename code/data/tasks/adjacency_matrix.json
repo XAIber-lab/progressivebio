@@ -1,0 +1,1279 @@
+{
+    "plain": {
+        "training": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/training/20_0.025_plain_0.json",
+                "task": "Find all friends of Robert.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Rebecca",
+                        "attributes": {},
+                        "id": 7
+                    },
+                    {
+                        "name": "Troy",
+                        "attributes": {},
+                        "id": 13
+                    }
+                ],
+                "text_solution": "Rebecca and Troy"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/training/20_0.025_plain_1.json",
+                "task": "Find all friends of Susan.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Duane",
+                        "attributes": {},
+                        "id": 1
+                    },
+                    {
+                        "name": "Scott",
+                        "attributes": {},
+                        "id": 13
+                    }
+                ],
+                "text_solution": "Duane and Scott"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/training/20_0.025_plain_2.json",
+                "task": "Find all friends of Phillip.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Thomas",
+                        "attributes": {},
+                        "id": 5
+                    },
+                    {
+                        "name": "Eddy",
+                        "attributes": {},
+                        "id": 9
+                    }
+                ],
+                "text_solution": "Thomas and Eddy"
+            }
+        ],
+        "survey": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/survey/20_0.025_plain.json",
+                "task": "Find all friends of Rebecca.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Phillip",
+                        "attributes": {},
+                        "id": 0
+                    },
+                    {
+                        "name": "Carly",
+                        "attributes": {},
+                        "id": 1
+                    }
+                ],
+                "text_solution": "Phillip and Carly"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.0625,
+                "type": "plain",
+                "data": "tasks/survey/20_0.0625_plain.json",
+                "task": "Find all friends of James.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Sheila",
+                        "attributes": {},
+                        "id": 8
+                    },
+                    {
+                        "name": "Yvonne",
+                        "attributes": {},
+                        "id": 13
+                    },
+                    {
+                        "name": "Eddie",
+                        "attributes": {},
+                        "id": 14
+                    },
+                    {
+                        "name": "Richard",
+                        "attributes": {},
+                        "id": 16
+                    },
+                    {
+                        "name": "Shauna",
+                        "attributes": {},
+                        "id": 18
+                    }
+                ],
+                "text_solution": "Sheila, Yvonne, Eddie, Richard and Shauna"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.1,
+                "type": "plain",
+                "data": "tasks/survey/20_0.1_plain.json",
+                "task": "Find all friends of Steven.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Vera",
+                        "attributes": {},
+                        "id": 1
+                    },
+                    {
+                        "name": "Tammy",
+                        "attributes": {},
+                        "id": 3
+                    },
+                    {
+                        "name": "Misty",
+                        "attributes": {},
+                        "id": 18
+                    },
+                    {
+                        "name": "Iris",
+                        "attributes": {},
+                        "id": 19
+                    }
+                ],
+                "text_solution": "Vera, Tammy, Misty and Iris"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/survey/50_0.025_plain.json",
+                "task": "Find all friends of Nancy.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Lottie",
+                        "attributes": {},
+                        "id": 5
+                    },
+                    {
+                        "name": "Michael",
+                        "attributes": {},
+                        "id": 12
+                    },
+                    {
+                        "name": "Jessica",
+                        "attributes": {},
+                        "id": 16
+                    },
+                    {
+                        "name": "Randall",
+                        "attributes": {},
+                        "id": 39
+                    }
+                ],
+                "text_solution": "Lottie, Michael, Jessica and Randall"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.0625,
+                "type": "plain",
+                "data": "tasks/survey/50_0.0625_plain.json",
+                "task": "Find all friends of Lynn.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Shakia",
+                        "attributes": {},
+                        "id": 0
+                    },
+                    {
+                        "name": "Ralph",
+                        "attributes": {},
+                        "id": 32
+                    },
+                    {
+                        "name": "Dixie",
+                        "attributes": {},
+                        "id": 37
+                    }
+                ],
+                "text_solution": "Shakia, Ralph and Dixie"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.1,
+                "type": "plain",
+                "data": "tasks/survey/50_0.1_plain.json",
+                "task": "Find all friends of Gwen.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Connie",
+                        "attributes": {},
+                        "id": 2
+                    },
+                    {
+                        "name": "William",
+                        "attributes": {},
+                        "id": 5
+                    },
+                    {
+                        "name": "Lynn",
+                        "attributes": {},
+                        "id": 7
+                    },
+                    {
+                        "name": "Owen",
+                        "attributes": {},
+                        "id": 10
+                    },
+                    {
+                        "name": "Dorothy",
+                        "attributes": {},
+                        "id": 11
+                    },
+                    {
+                        "name": "Peter",
+                        "attributes": {},
+                        "id": 13
+                    },
+                    {
+                        "name": "Jayson",
+                        "attributes": {},
+                        "id": 14
+                    },
+                    {
+                        "name": "Darlene",
+                        "attributes": {},
+                        "id": 17
+                    },
+                    {
+                        "name": "Darwin",
+                        "attributes": {},
+                        "id": 19
+                    },
+                    {
+                        "name": "Dung",
+                        "attributes": {},
+                        "id": 27
+                    },
+                    {
+                        "name": "Maria",
+                        "attributes": {},
+                        "id": 39
+                    },
+                    {
+                        "name": "Bruce",
+                        "attributes": {},
+                        "id": 46
+                    }
+                ],
+                "text_solution": "Connie, William, Lynn, Owen, Dorothy, Peter, Jayson, Darlene, Darwin, Dung, Maria and Bruce"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.025,
+                "type": "plain",
+                "data": "tasks/survey/80_0.025_plain.json",
+                "task": "Find all friends of Albert.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Lucinda",
+                        "attributes": {},
+                        "id": 23
+                    },
+                    {
+                        "name": "Jerry",
+                        "attributes": {},
+                        "id": 41
+                    }
+                ],
+                "text_solution": "Lucinda and Jerry"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.0625,
+                "type": "plain",
+                "data": "tasks/survey/80_0.0625_plain.json",
+                "task": "Find all friends of Jessica.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Carol",
+                        "attributes": {},
+                        "id": 12
+                    },
+                    {
+                        "name": "Edith",
+                        "attributes": {},
+                        "id": 21
+                    },
+                    {
+                        "name": "Margo",
+                        "attributes": {},
+                        "id": 37
+                    },
+                    {
+                        "name": "Judith",
+                        "attributes": {},
+                        "id": 39
+                    },
+                    {
+                        "name": "Harold",
+                        "attributes": {},
+                        "id": 40
+                    },
+                    {
+                        "name": "Amie",
+                        "attributes": {},
+                        "id": 53
+                    },
+                    {
+                        "name": "Brett",
+                        "attributes": {},
+                        "id": 54
+                    },
+                    {
+                        "name": "Pat",
+                        "attributes": {},
+                        "id": 68
+                    },
+                    {
+                        "name": "Steven",
+                        "attributes": {},
+                        "id": 76
+                    }
+                ],
+                "text_solution": "Carol, Edith, Margo, Judith, Harold, Amie, Brett, Pat and Steven"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "plainEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.1,
+                "type": "plain",
+                "data": "tasks/survey/80_0.1_plain.json",
+                "task": "Find all friends of Ericka.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Jayme",
+                        "attributes": {},
+                        "id": 1
+                    },
+                    {
+                        "name": "Lisa",
+                        "attributes": {},
+                        "id": 3
+                    },
+                    {
+                        "name": "Joseph",
+                        "attributes": {},
+                        "id": 9
+                    },
+                    {
+                        "name": "Ashley",
+                        "attributes": {},
+                        "id": 17
+                    },
+                    {
+                        "name": "Micah",
+                        "attributes": {},
+                        "id": 22
+                    },
+                    {
+                        "name": "Juan",
+                        "attributes": {},
+                        "id": 25
+                    },
+                    {
+                        "name": "Verna",
+                        "attributes": {},
+                        "id": 30
+                    },
+                    {
+                        "name": "Ernest",
+                        "attributes": {},
+                        "id": 31
+                    },
+                    {
+                        "name": "Steven",
+                        "attributes": {},
+                        "id": 38
+                    },
+                    {
+                        "name": "Herman",
+                        "attributes": {},
+                        "id": 46
+                    },
+                    {
+                        "name": "Chuck",
+                        "attributes": {},
+                        "id": 50
+                    },
+                    {
+                        "name": "Debra",
+                        "attributes": {},
+                        "id": 60
+                    },
+                    {
+                        "name": "Dorothy",
+                        "attributes": {},
+                        "id": 63
+                    },
+                    {
+                        "name": "Huong",
+                        "attributes": {},
+                        "id": 65
+                    },
+                    {
+                        "name": "Shameka",
+                        "attributes": {},
+                        "id": 68
+                    },
+                    {
+                        "name": "Marie",
+                        "attributes": {},
+                        "id": 69
+                    },
+                    {
+                        "name": "Lucille",
+                        "attributes": {},
+                        "id": 75
+                    }
+                ],
+                "text_solution": "Jayme, Lisa, Joseph, Ashley, Micah, Juan, Verna, Ernest, Steven, Herman, Chuck, Debra, Dorothy, Huong, Shameka, Marie and Lucille"
+            }
+        ]
+    },
+    "one": {
+        "training": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/training/20_0.025_one_0.json",
+                "task": "Find a friend of Wallace whose friendship has the second highest value in interactions per week.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Albert",
+                        "attributes": {},
+                        "id": 5
+                    }
+                ],
+                "text_solution": "Albert"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/training/20_0.025_one_1.json",
+                "task": "Find a friend of Howard whose friendship has the second highest value in interactions per week.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Edith",
+                        "attributes": {},
+                        "id": 0
+                    }
+                ],
+                "text_solution": "Edith"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/training/20_0.025_one_2.json",
+                "task": "Find a friend of Charles whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Micheal",
+                        "attributes": {},
+                        "id": 18
+                    }
+                ],
+                "text_solution": "Micheal"
+            }
+        ],
+        "survey": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/survey/20_0.025_one.json",
+                "task": "Find a friend of Terri whose friendship has the second highest value in interactions per week.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Karyn",
+                        "attributes": {},
+                        "id": 15
+                    }
+                ],
+                "text_solution": "Karyn"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.0625,
+                "type": "one",
+                "data": "tasks/survey/20_0.0625_one.json",
+                "task": "Find a friend of Doris whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Gwen",
+                        "attributes": {},
+                        "id": 17
+                    }
+                ],
+                "text_solution": "Gwen"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.1,
+                "type": "one",
+                "data": "tasks/survey/20_0.1_one.json",
+                "task": "Find a friend of Nellie whose friendship has the second highest value in common hobbies.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Lee",
+                        "attributes": {},
+                        "id": 18
+                    }
+                ],
+                "text_solution": "Lee"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/survey/50_0.025_one.json",
+                "task": "Find a friend of Robert whose friendship has the second highest value in distance.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Inez",
+                        "attributes": {},
+                        "id": 46
+                    }
+                ],
+                "text_solution": "Inez"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.0625,
+                "type": "one",
+                "data": "tasks/survey/50_0.0625_one.json",
+                "task": "Find a friend of Jack whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Donna",
+                        "attributes": {},
+                        "id": 1
+                    },
+                    {
+                        "name": "William",
+                        "attributes": {},
+                        "id": 13
+                    },
+                    {
+                        "name": "Sidney",
+                        "attributes": {},
+                        "id": 14
+                    }
+                ],
+                "text_solution": "Donna, William or Sidney"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.1,
+                "type": "one",
+                "data": "tasks/survey/50_0.1_one.json",
+                "task": "Find a friend of Jason whose friendship has the second highest value in distance.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Veta",
+                        "attributes": {},
+                        "id": 9
+                    }
+                ],
+                "text_solution": "Veta"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.025,
+                "type": "one",
+                "data": "tasks/survey/80_0.025_one.json",
+                "task": "Find a friend of Jose whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Marilyn",
+                        "attributes": {},
+                        "id": 15
+                    }
+                ],
+                "text_solution": "Marilyn"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.0625,
+                "type": "one",
+                "data": "tasks/survey/80_0.0625_one.json",
+                "task": "Find a friend of Dianne whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Sarah",
+                        "attributes": {},
+                        "id": 14
+                    },
+                    {
+                        "name": "Wallace",
+                        "attributes": {},
+                        "id": 24
+                    },
+                    {
+                        "name": "Arnold",
+                        "attributes": {},
+                        "id": 40
+                    },
+                    {
+                        "name": "Roger",
+                        "attributes": {},
+                        "id": 64
+                    },
+                    {
+                        "name": "Kenton",
+                        "attributes": {},
+                        "id": 67
+                    }
+                ],
+                "text_solution": "Sarah, Wallace, Arnold, Roger or Kenton"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.1,
+                "type": "one",
+                "data": "tasks/survey/80_0.1_one.json",
+                "task": "Find a friend of Lois whose friendship has the second highest value in years of friendship.",
+                "answer_option": "nodeSelection",
+                "solution": [
+                    {
+                        "name": "Joshua",
+                        "attributes": {},
+                        "id": 32
+                    },
+                    {
+                        "name": "Isidra",
+                        "attributes": {},
+                        "id": 66
+                    }
+                ],
+                "text_solution": "Joshua or Isidra"
+            }
+        ]
+    },
+    "two": {
+        "training": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/training/20_0.025_two_0.json",
+                "task": "Find all friends of Zoe whose friendship has more common hobbies than interactions per week.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Shirley",
+                        "attributes": {},
+                        "id": 0
+                    }
+                ],
+                "text_solution": "Shirley"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/training/20_0.025_two_1.json",
+                "task": "Find all friends of Manuel whose friendship has more interactions per week than distance.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Bruce",
+                        "attributes": {},
+                        "id": 0
+                    }
+                ],
+                "text_solution": "Bruce"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/training/20_0.025_two_2.json",
+                "task": "Find all friends of Brett whose friendship has more common hobbies than interactions per week.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Patsy",
+                        "attributes": {},
+                        "id": 11
+                    }
+                ],
+                "text_solution": "Patsy"
+            }
+        ],
+        "survey": [
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/survey/20_0.025_two.json",
+                "task": "Find all friends of Sonia whose friendship has more years of friendship than interactions per week.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Betty",
+                        "attributes": {},
+                        "id": 15
+                    }
+                ],
+                "text_solution": "Betty"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.0625,
+                "type": "two",
+                "data": "tasks/survey/20_0.0625_two.json",
+                "task": "Find all friends of Joyce whose friendship has more distance than interactions per week.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Kevin",
+                        "attributes": {},
+                        "id": 4
+                    },
+                    {
+                        "name": "Erich",
+                        "attributes": {},
+                        "id": 12
+                    },
+                    {
+                        "name": "Luis",
+                        "attributes": {},
+                        "id": 16
+                    }
+                ],
+                "text_solution": "Kevin, Erich and Luis"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 20,
+                "density": 0.1,
+                "type": "two",
+                "data": "tasks/survey/20_0.1_two.json",
+                "task": "Find all friends of Manuel whose friendship has more common hobbies than interactions per week.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Robert",
+                        "attributes": {},
+                        "id": 5
+                    }
+                ],
+                "text_solution": "Robert"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/survey/50_0.025_two.json",
+                "task": "Find all friends of Mark whose friendship has more interactions per week than common hobbies.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Rodger",
+                        "attributes": {},
+                        "id": 40
+                    },
+                    {
+                        "name": "Alexis",
+                        "attributes": {},
+                        "id": 46
+                    }
+                ],
+                "text_solution": "Rodger and Alexis"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.0625,
+                "type": "two",
+                "data": "tasks/survey/50_0.0625_two.json",
+                "task": "Find all friends of Piper whose friendship has more interactions per week than distance.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Daniel",
+                        "attributes": {},
+                        "id": 28
+                    },
+                    {
+                        "name": "David",
+                        "attributes": {},
+                        "id": 32
+                    },
+                    {
+                        "name": "Ashley",
+                        "attributes": {},
+                        "id": 40
+                    }
+                ],
+                "text_solution": "Daniel, David and Ashley"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 50,
+                "density": 0.1,
+                "type": "two",
+                "data": "tasks/survey/50_0.1_two.json",
+                "task": "Find all friends of Charles whose friendship has more interactions per week than years of friendship.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Ignacio",
+                        "attributes": {},
+                        "id": 7
+                    },
+                    {
+                        "name": "Mary",
+                        "attributes": {},
+                        "id": 8
+                    },
+                    {
+                        "name": "Katie",
+                        "attributes": {},
+                        "id": 12
+                    },
+                    {
+                        "name": "Diana",
+                        "attributes": {},
+                        "id": 15
+                    }
+                ],
+                "text_solution": "Ignacio, Mary, Katie and Diana"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.025,
+                "type": "two",
+                "data": "tasks/survey/80_0.025_two.json",
+                "task": "Find all friends of Malisa whose friendship has more interactions per week than years of friendship.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Dee",
+                        "attributes": {},
+                        "id": 24
+                    },
+                    {
+                        "name": "Dalia",
+                        "attributes": {},
+                        "id": 40
+                    },
+                    {
+                        "name": "Frank",
+                        "attributes": {},
+                        "id": 42
+                    },
+                    {
+                        "name": "Marlyn",
+                        "attributes": {},
+                        "id": 65
+                    }
+                ],
+                "text_solution": "Dee, Dalia, Frank and Marlyn"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.0625,
+                "type": "two",
+                "data": "tasks/survey/80_0.0625_two.json",
+                "task": "Find all friends of Noah whose friendship has more interactions per week than common hobbies.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Larry",
+                        "attributes": {},
+                        "id": 8
+                    },
+                    {
+                        "name": "Arthur",
+                        "attributes": {},
+                        "id": 33
+                    },
+                    {
+                        "name": "Patti",
+                        "attributes": {},
+                        "id": 49
+                    },
+                    {
+                        "name": "Angela",
+                        "attributes": {},
+                        "id": 72
+                    }
+                ],
+                "text_solution": "Larry, Arthur, Patti and Angela"
+            },
+            {
+                "technique": "adjacency_matrix",
+                "parameters": {
+                    "nodeEncoding": "plainNodes",
+                    "edgeEncoding": "multipleEdges",
+                    "nodeOrdering": "RCM",
+                    "nodeAttribute": "",
+                    "edgeAttribute": ""
+                },
+                "size": 80,
+                "density": 0.1,
+                "type": "two",
+                "data": "tasks/survey/80_0.1_two.json",
+                "task": "Find all friends of George whose friendship has more common hobbies than distance.",
+                "answer_option": "multipleNodeSelection",
+                "solution": [
+                    {
+                        "name": "Tiffany",
+                        "attributes": {},
+                        "id": 6
+                    },
+                    {
+                        "name": "Pete",
+                        "attributes": {},
+                        "id": 23
+                    },
+                    {
+                        "name": "Anna",
+                        "attributes": {},
+                        "id": 50
+                    },
+                    {
+                        "name": "Tyler",
+                        "attributes": {},
+                        "id": 65
+                    },
+                    {
+                        "name": "Dennis",
+                        "attributes": {},
+                        "id": 72
+                    },
+                    {
+                        "name": "Ilana",
+                        "attributes": {},
+                        "id": 73
+                    },
+                    {
+                        "name": "Arline",
+                        "attributes": {},
+                        "id": 77
+                    }
+                ],
+                "text_solution": "Tiffany, Pete, Anna, Tyler, Dennis, Ilana and Arline"
+            }
+        ]
+    }
+}

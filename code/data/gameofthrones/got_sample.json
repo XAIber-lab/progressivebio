@@ -1,0 +1,640 @@
+{
+    "nodes": [
+        {
+            "id": 114,
+            "name": "Tyrion",
+            "gansner": 18,
+            "hierarchy": [
+                0.7666098807495741,
+                0.2
+            ],
+            "radial": [
+                0.5,
+                0.0
+            ]
+        },
+        {
+            "id": 45,
+            "name": "Jon",
+            "gansner": 13,
+            "hierarchy": [
+                0.17546848381601363,
+                0.2
+            ],
+            "radial": [
+                0.0,
+                0.5
+            ]
+        },
+        {
+            "id": 19,
+            "name": "Daenerys",
+            "gansner": 3,
+            "hierarchy": [
+                0.1686541737649063,
+                0.8
+            ],
+            "radial": [
+                0.09549455207320418,
+                0.2061111526666168
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Cersei",
+            "gansner": 1,
+            "hierarchy": [
+                1.0,
+                0.8
+            ],
+            "radial": [
+                1.0,
+                0.5
+            ]
+        },
+        {
+            "id": 101,
+            "name": "Sansa",
+            "gansner": 8,
+            "hierarchy": [
+                0.1686541737649063,
+                0.6
+            ],
+            "radial": [
+                0.5,
+                1.0
+            ]
+        },
+        {
+            "id": 38,
+            "name": "Jaime",
+            "gansner": 6,
+            "hierarchy": [
+                0.26916524701873934,
+                0.4
+            ],
+            "radial": [
+                0.2061111526666168,
+                0.9045054479267958
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Arya",
+            "gansner": 2,
+            "hierarchy": [
+                0.7955706984667802,
+                1.0
+            ],
+            "radial": [
+                0.2061111526666168,
+                0.09549205874286285
+            ]
+        },
+        {
+            "id": 100,
+            "name": "Sam",
+            "gansner": 15,
+            "hierarchy": [
+                0.424190800681431,
+                0.0
+            ],
+            "radial": [
+                0.9045054479267958,
+                0.2061111526666168
+            ]
+        },
+        {
+            "id": 140,
+            "name": "Davos",
+            "gansner": 4,
+            "hierarchy": [
+                0.5434412265758092,
+                0.6
+            ],
+            "radial": [
+                0.34548831874735086,
+                0.9755279626997782
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Bran",
+            "gansner": 12,
+            "hierarchy": [
+                0.29131175468483816,
+                0.6
+            ],
+            "radial": [
+                0.6545116812526491,
+                0.02447203730022191
+            ]
+        },
+        {
+            "id": 48,
+            "name": "Jorah",
+            "gansner": 16,
+            "hierarchy": [
+                0.0,
+                0.0
+            ],
+            "radial": [
+                0.02447203730022191,
+                0.34548831874735086
+            ]
+        },
+        {
+            "id": 119,
+            "name": "Varys",
+            "gansner": 19,
+            "hierarchy": [
+                0.8126064735945485,
+                0.0
+            ],
+            "radial": [
+                0.7938888473333832,
+                0.9045054479267958
+            ]
+        },
+        {
+            "id": 75,
+            "name": "Ned",
+            "gansner": 14,
+            "hierarchy": [
+                0.17546848381601363,
+                0.0
+            ],
+            "radial": [
+                0.02447203730022191,
+                0.6545116812526491
+            ]
+        },
+        {
+            "id": 110,
+            "name": "Theon",
+            "gansner": 17,
+            "hierarchy": [
+                0.5877342419080068,
+                0.4
+            ],
+            "radial": [
+                0.7938888473333832,
+                0.09549205874286285
+            ]
+        },
+        {
+            "id": 55,
+            "name": "Petyr",
+            "gansner": 11,
+            "hierarchy": [
+                0.6439522998296422,
+                0.2
+            ],
+            "radial": [
+                0.9755279626997782,
+                0.6545116812526491
+            ]
+        },
+        {
+            "id": 133,
+            "name": "Brienne",
+            "gansner": 0,
+            "hierarchy": [
+                0.6695059625212947,
+                0.8
+            ],
+            "radial": [
+                0.9755279626997782,
+                0.34548831874735086
+            ]
+        },
+        {
+            "id": 44,
+            "name": "Joffrey",
+            "gansner": 10,
+            "hierarchy": [
+                0.39182282793867124,
+                0.4
+            ],
+            "radial": [
+                0.09549455207320418,
+                0.7938888473333832
+            ]
+        },
+        {
+            "id": 116,
+            "name": "Tywin",
+            "gansner": 7,
+            "hierarchy": [
+                0.2981260647359455,
+                0.2
+            ],
+            "radial": [
+                0.6545116812526491,
+                0.9755279626997782
+            ]
+        },
+        {
+            "id": 32,
+            "name": "Sandor",
+            "gansner": 9,
+            "hierarchy": [
+                0.7955706984667802,
+                0.6
+            ],
+            "radial": [
+                0.34548831874735086,
+                0.02447203730022191
+            ]
+        },
+        {
+            "id": 92,
+            "name": "Robb",
+            "gansner": 5,
+            "hierarchy": [
+                0.9250425894378195,
+                0.4
+            ],
+            "radial": [
+                0.9045054479267958,
+                0.7938888473333832
+            ]
+        }
+    ],
+    "links": [
+        {
+            "source": 133,
+            "target": 32,
+            "attributes": {
+                "Season 4": 22,
+                "Season 7": 18,
+                "Season 8": 7
+            }
+        },
+        {
+            "source": 133,
+            "target": 110,
+            "attributes": {
+                "Season 6": 5,
+                "Season 7": 3,
+                "Season 8": 2
+            }
+        },
+        {
+            "source": 32,
+            "target": 110,
+            "attributes": {
+                "Season 7": 4
+            }
+        },
+        {
+            "source": 19,
+            "target": 48,
+            "attributes": {
+                "Season 1": 154,
+                "Season 2": 119,
+                "Season 3": 69,
+                "Season 4": 106,
+                "Season 5": 40,
+                "Season 6": 21,
+                "Season 7": 34,
+                "Season 8": 51
+            }
+        },
+        {
+            "source": 45,
+            "target": 100,
+            "attributes": {
+                "Season 1": 121,
+                "Season 2": 39,
+                "Season 3": 8,
+                "Season 4": 89,
+                "Season 5": 85,
+                "Season 6": 4,
+                "Season 7": 3,
+                "Season 8": 66
+            }
+        },
+        {
+            "source": 44,
+            "target": 45,
+            "attributes": {
+                "Season 1": 2
+            }
+        },
+        {
+            "source": 17,
+            "target": 119,
+            "attributes": {
+                "Season 1": 13,
+                "Season 2": 11,
+                "Season 3": 5,
+                "Season 4": 16,
+                "Season 5": 4,
+                "Season 6": 2,
+                "Season 7": 2,
+                "Season 8": 3
+            }
+        },
+        {
+            "source": 32,
+            "target": 114,
+            "attributes": {
+                "Season 1": 10,
+                "Season 2": 29,
+                "Season 7": 9,
+                "Season 8": 2
+            }
+        },
+        {
+            "source": 19,
+            "target": 101,
+            "attributes": {
+                "Season 1": 2,
+                "Season 8": 71
+            }
+        },
+        {
+            "source": 19,
+            "target": 75,
+            "attributes": {
+                "Season 1": 3,
+                "Season 7": 3
+            }
+        },
+        {
+            "source": 101,
+            "target": 119,
+            "attributes": {
+                "Season 1": 8,
+                "Season 3": 7,
+                "Season 4": 2,
+                "Season 8": 22
+            }
+        },
+        {
+            "source": 4,
+            "target": 32,
+            "attributes": {
+                "Season 1": 7,
+                "Season 2": 3,
+                "Season 3": 79,
+                "Season 4": 162,
+                "Season 8": 63
+            }
+        },
+        {
+            "source": 13,
+            "target": 45,
+            "attributes": {
+                "Season 1": 19,
+                "Season 3": 8,
+                "Season 4": 14,
+                "Season 6": 3,
+                "Season 7": 8,
+                "Season 8": 30
+            }
+        },
+        {
+            "source": 133,
+            "target": 38,
+            "attributes": {
+                "Season 2": 49,
+                "Season 3": 127,
+                "Season 4": 40,
+                "Season 6": 50,
+                "Season 7": 10,
+                "Season 8": 121
+            }
+        },
+        {
+            "source": 45,
+            "target": 48,
+            "attributes": {
+                "Season 7": 59,
+                "Season 8": 11
+            }
+        },
+        {
+            "source": 17,
+            "target": 92,
+            "attributes": {
+                "Season 1": 8,
+                "Season 2": 4,
+                "Season 7": 2
+            }
+        },
+        {
+            "source": 38,
+            "target": 116,
+            "attributes": {
+                "Season 1": 34,
+                "Season 2": 8,
+                "Season 3": 11,
+                "Season 4": 83,
+                "Season 5": 6,
+                "Season 7": 4,
+                "Season 8": 2
+            }
+        },
+        {
+            "source": 116,
+            "target": 119,
+            "attributes": {
+                "Season 2": 5,
+                "Season 3": 10,
+                "Season 4": 18
+            }
+        },
+        {
+            "source": 4,
+            "target": 92,
+            "attributes": {
+                "Season 1": 6,
+                "Season 2": 7,
+                "Season 3": 2,
+                "Season 7": 3
+            }
+        },
+        {
+            "source": 140,
+            "target": 110,
+            "attributes": {
+                "Season 7": 12,
+                "Season 8": 3
+            }
+        },
+        {
+            "source": 45,
+            "target": 75,
+            "attributes": {
+                "Season 1": 29,
+                "Season 2": 4,
+                "Season 3": 3,
+                "Season 4": 5,
+                "Season 6": 10,
+                "Season 7": 21,
+                "Season 8": 7
+            }
+        },
+        {
+            "source": 92,
+            "target": 119,
+            "attributes": {
+                "Season 1": 2,
+                "Season 3": 2
+            }
+        },
+        {
+            "source": 114,
+            "target": 119,
+            "attributes": {
+                "Season 1": 2,
+                "Season 2": 103,
+                "Season 3": 24,
+                "Season 4": 27,
+                "Season 5": 110,
+                "Season 6": 86,
+                "Season 7": 45,
+                "Season 8": 114
+            }
+        },
+        {
+            "source": 44,
+            "target": 55,
+            "attributes": {
+                "Season 1": 12,
+                "Season 2": 7,
+                "Season 4": 7
+            }
+        },
+        {
+            "source": 19,
+            "target": 45,
+            "attributes": {
+                "Season 7": 178,
+                "Season 8": 194
+            }
+        },
+        {
+            "source": 19,
+            "target": 110,
+            "attributes": {
+                "Season 6": 15,
+                "Season 7": 7,
+                "Season 8": 11
+            }
+        },
+        {
+            "source": 38,
+            "target": 45,
+            "attributes": {
+                "Season 1": 10,
+                "Season 2": 2,
+                "Season 7": 6,
+                "Season 8": 11
+            }
+        },
+        {
+            "source": 140,
+            "target": 92,
+            "attributes": {
+                "Season 2": 2,
+                "Season 3": 2
+            }
+        },
+        {
+            "source": 44,
+            "target": 75,
+            "attributes": {
+                "Season 1": 39,
+                "Season 2": 3,
+                "Season 3": 5,
+                "Season 4": 4,
+                "Season 7": 5
+            }
+        },
+        {
+            "source": 140,
+            "target": 38,
+            "attributes": {
+                "Season 7": 3,
+                "Season 8": 10
+            }
+        },
+        {
+            "source": 17,
+            "target": 55,
+            "attributes": {
+                "Season 1": 8,
+                "Season 2": 27,
+                "Season 3": 16,
+                "Season 5": 50,
+                "Season 7": 2
+            }
+        },
+        {
+            "source": 110,
+            "target": 114,
+            "attributes": {
+                "Season 1": 19,
+                "Season 2": 2,
+                "Season 6": 13,
+                "Season 7": 10,
+                "Season 8": 5
+            }
+        },
+        {
+            "source": 133,
+            "target": 100,
+            "attributes": {
+                "Season 8": 23
+            }
+        },
+        {
+            "source": 4,
+            "target": 19,
+            "attributes": {
+                "Season 8": 21
+            }
+        },
+        {
+            "source": 17,
+            "target": 32,
+            "attributes": {
+                "Season 1": 4,
+                "Season 2": 6,
+                "Season 3": 2,
+                "Season 7": 4,
+                "Season 8": 6
+            }
+        },
+        {
+            "source": 19,
+            "target": 140,
+            "attributes": {
+                "Season 7": 33,
+                "Season 8": 17
+            }
+        },
+        {
+            "source": 32,
+            "target": 119,
+            "attributes": {
+                "Season 4": 2,
+                "Season 7": 3
+            }
+        },
+        {
+            "source": 13,
+            "target": 110,
+            "attributes": {
+                "Season 1": 26,
+                "Season 2": 47,
+                "Season 3": 2,
+                "Season 5": 5,
+                "Season 8": 27
+            }
+        }
+    ]
+}

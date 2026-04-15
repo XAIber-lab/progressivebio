@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>BioFabric Patterns</title>
+    <link href="form.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="py-5 text-center">
+    <h3>BioFabric Patterns</h3>
+    <p class="lead">Calculate Statistics</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 order-md-3">
+      <h5 class="mb-2 text-muted">Networks</h5>
+      <div class="mb-2">
+        <label for="filesInput" class="form-label">Upload multiple files containing network data</label>
+        <input class="form-control" type="file" id="filesInput" accept=".JSON" multiple>
+      </div>
+      <div class="alert alert-danger" role="alert" id="errorMessage" style=display:none>
+        At least one of the loaded files do not match the expected format.
+      </div>
+
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="nodeOrder">Node order</label>
+            <select class="form-control" id="nodeOrder">
+              <option>Alphabetical</option>
+              <option>Degree</option>
+              <option>Gansner</option>
+              <option>Random</option>
+              <option>RCM</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="edgeOrder">Edge order</label>
+            <select class="form-control" id="edgeOrder">
+              <option>Index of nodes</option>
+              <option>Degree</option>
+              <option>Staircases</option>
+              <option>Random</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+
+      <hr class="mb-3">
+
+      <h5 class="mb-2 text-muted">Parameters</h5>
+
+      <form>
+        <h6 class="my-0">Stairs</h6>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="shortestStairs">Shortest stair</label>
+            <input type="number" min="2" max="100" value="3" id="shortestStairs" class="form-control" />
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="distanceStairs">Maximal distance</label>
+            <input type="number" min="1" max="100" value="1" id="distanceStairs" class="form-control" />
+            <!--<small class="text-muted">0 is processed as infinite.</small>-->
+          </div>
+        </div>
+
+        <h6 class="my-0">Runways</h6>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="shortestRunways">Shortest runway</label>
+            <input type="number" min="2" max="100" value="3" id="shortestRunways" class="form-control" />
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="distanceRunways">Maximal distance</label>
+            <input type="number" min="1" max="100" value="1" id="distanceRunways" class="form-control" />
+          </div>
+        </div>
+
+        <h6 class="my-0">Escalators</h6>
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <label class="form-label" for="shortestEscalators">Shortest escalator</label>
+            <input type="number" min="2" max="100" value="3" id="shortestEscalators" class="form-control" />
+          </div>
+          <div class="col-md-4 mb-2">
+            <label class="form-label" for="distance1Escalators">Maximal upper distance</label>
+            <input type="number" min="1" max="100" value="1" id="distance1Escalators" class="form-control" />
+          </div>
+          <div class="col-md-4 mb-2">
+            <label class="form-label" for="distance2Escalators">Maximal lower distance</label>
+            <input type="number" min="1" max="100" value="1" id="distance2Escalators" class="form-control" />
+          </div>
+        </div>
+
+        <h6 class="my-0">Paths</h6>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="shortestPaths">Shortest path</label>
+            <input type="number" min="2" max="100" value="3" id="shortestPaths" class="form-control" />
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label" for="distancePaths">Maximal distance</label>
+            <input type="number" min="1" max="100" value="1" id="distancePaths" class="form-control" />
+          </div>
+        </div>
+
+        <hr class="mb-3">
+
+      </form>
+
+      <button id="fileButton" class="btn btn-primary btn-block" disabled onclick="getStatistics()">Get results as CSV file</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/d3-force-boundary@0.0.1/dist/d3-force-boundary.min.js"></script>
+
+<script src="statistics.js"></script>
+<script src="../biofabric/patterns.js"></script>
+<script src="../utility.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>

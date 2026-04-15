@@ -1,0 +1,505 @@
+{
+    "nodes": [
+        {
+            "name": "fuckthealtright",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.32608695652173914,
+                "betweenness": 0.13333333333333336,
+                "eigenvector": 0.2785614028947049
+            },
+            "id": 24800,
+            "gansner": 0,
+            "hierarchy": [
+                0.0,
+                0.75
+            ],
+            "radial": [
+                0.35366483754784933,
+                0.5044986237583908
+            ]
+        },
+        {
+            "name": "funny",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4166666666666667,
+                "betweenness": 0.5142857142857143,
+                "eigenvector": 0.3690694329855555
+            },
+            "id": 737,
+            "gansner": 2,
+            "hierarchy": [
+                0.5,
+                0.75
+            ],
+            "radial": [
+                0.7555392129132016,
+                0.5441974825113962
+            ]
+        },
+        {
+            "name": "conspiracy",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.28846153846153844,
+                "betweenness": 0.2571428571428572,
+                "eigenvector": 0.18544076190759054
+            },
+            "id": 130,
+            "gansner": 9,
+            "hierarchy": [
+                0.7393939393939394,
+                1.0
+            ],
+            "radial": [
+                0.5546378533310704,
+                0.8913149906981298
+            ]
+        },
+        {
+            "name": "thesefuckingaccounts",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.375,
+                "betweenness": 0.5523809523809524,
+                "eigenvector": 0.3363453184888324
+            },
+            "id": 9472,
+            "gansner": 3,
+            "hierarchy": [
+                0.6242424242424243,
+                0.5
+            ],
+            "radial": [
+                0.9002093115347627,
+                0.6633375762916545
+            ]
+        },
+        {
+            "name": "moosearchive2",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22727272727272727,
+                "betweenness": 0.0,
+                "eigenvector": 0.07506510077181495
+            },
+            "id": 35453,
+            "gansner": 11,
+            "hierarchy": [
+                0.7393939393939394,
+                0.75
+            ],
+            "radial": [
+                0.5877128472025795,
+                1.0
+            ]
+        },
+        {
+            "name": "remembermoose",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.35714285714285715,
+                "betweenness": 0.34285714285714286,
+                "eigenvector": 0.30798186205899813
+            },
+            "id": 19785,
+            "gansner": 12,
+            "hierarchy": [
+                0.2606060606060606,
+                0.75
+            ],
+            "radial": [
+                0.6319511229280985,
+                0.6954426275879326
+            ]
+        },
+        {
+            "name": "the_donald",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.4411764705882353,
+                "betweenness": 0.7333333333333334,
+                "eigenvector": 0.5753944917065397
+            },
+            "id": 16137,
+            "gansner": 13,
+            "hierarchy": [
+                0.2606060606060606,
+                0.5
+            ],
+            "radial": [
+                0.7073409892327128,
+                0.5044986237583908
+            ]
+        },
+        {
+            "name": "nursing",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.3125,
+                "betweenness": 0.0,
+                "eigenvector": 0.23291676128718317
+            },
+            "id": 2445,
+            "gansner": 14,
+            "hierarchy": [
+                0.2606060606060606,
+                0.25
+            ],
+            "radial": [
+                0.7335143595255604,
+                0.0
+            ]
+        },
+        {
+            "name": "moosearchive",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22727272727272727,
+                "betweenness": 0.0,
+                "eigenvector": 0.07506510077181495
+            },
+            "id": 33231,
+            "gansner": 10,
+            "hierarchy": [
+                1.0,
+                0.75
+            ],
+            "radial": [
+                0.5215628594595614,
+                0.7826299813962597
+            ]
+        },
+        {
+            "name": "aww",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2777777777777778,
+                "betweenness": 0.0,
+                "eigenvector": 0.1361526716983724
+            },
+            "id": 5039,
+            "gansner": 6,
+            "hierarchy": [
+                0.49393939393939396,
+                0.25
+            ],
+            "radial": [
+                0.8775810375063643,
+                0.455040960866869
+            ]
+        },
+        {
+            "name": "marchagainsttrump",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25,
+                "betweenness": 0.0,
+                "eigenvector": 0.11276012620766454
+            },
+            "id": 26422,
+            "gansner": 1,
+            "hierarchy": [
+                0.0,
+                0.5
+            ],
+            "radial": [
+                0.0,
+                0.5044986237583908
+            ]
+        },
+        {
+            "name": "keepournetfree",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22727272727272727,
+                "betweenness": 0.0,
+                "eigenvector": 0.06591617178349586
+            },
+            "id": 27062,
+            "gansner": 7,
+            "hierarchy": [
+                0.9848484848484849,
+                0.5
+            ],
+            "radial": [
+                1.0,
+                0.693310269047075
+            ]
+        },
+        {
+            "name": "wtf",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.28846153846153844,
+                "betweenness": 0.13333333333333336,
+                "eigenvector": 0.1628357255032435
+            },
+            "id": 27869,
+            "gansner": 4,
+            "hierarchy": [
+                0.7393939393939394,
+                0.25
+            ],
+            "radial": [
+                0.8615526767362487,
+                0.759391625053037
+            ]
+        },
+        {
+            "name": "requestabot",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22727272727272727,
+                "betweenness": 0.0,
+                "eigenvector": 0.06591617178349586
+            },
+            "id": 1818,
+            "gansner": 5,
+            "hierarchy": [
+                0.7393939393939394,
+                0.0
+            ],
+            "radial": [
+                0.8228960419377346,
+                0.85545655319473
+            ]
+        },
+        {
+            "name": "isis",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.3125,
+                "betweenness": 0.0,
+                "eigenvector": 0.23291676128718317
+            },
+            "id": 35452,
+            "gansner": 15,
+            "hierarchy": [
+                0.015151515151515152,
+                0.25
+            ],
+            "radial": [
+                0.5744753068959665,
+                0.16789059695159764
+            ]
+        },
+        {
+            "name": "pics",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.28846153846153844,
+                "betweenness": 0.13333333333333336,
+                "eigenvector": 0.1628357255032435
+            },
+            "id": 7741,
+            "gansner": 8,
+            "hierarchy": [
+                0.9848484848484849,
+                0.25
+            ],
+            "radial": [
+                0.9492372385962927,
+                0.6780682572320681
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3055.0,
+                "num_words": 491.0,
+                "num_words_unique": 283.0,
+                "num_words_long": 101.0,
+                "num_stop_word_unique": 63.0,
+                "num_sentences": 19.0
+            },
+            "source": 24800,
+            "target": 16137
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3055.0,
+                "num_words": 491.0,
+                "num_words_unique": 283.0,
+                "num_words_long": 101.0,
+                "num_stop_word_unique": 63.0,
+                "num_sentences": 19.0
+            },
+            "source": 24800,
+            "target": 26422
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 13768.0,
+                "num_words": 2166.0,
+                "num_words_unique": 661.0,
+                "num_words_long": 306.0,
+                "num_stop_word_unique": 49.0,
+                "num_sentences": 17.0
+            },
+            "source": 737,
+            "target": 9472
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 231.0,
+                "num_words": 31.0,
+                "num_words_unique": 31.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 6.0,
+                "num_sentences": 4.0
+            },
+            "source": 737,
+            "target": 16137
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5420.0,
+                "num_words": 846.0,
+                "num_words_unique": 440.0,
+                "num_words_long": 241.0,
+                "num_stop_word_unique": 66.0,
+                "num_sentences": 48.0
+            },
+            "source": 130,
+            "target": 19785
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1278.0,
+                "num_words": 187.0,
+                "num_words_unique": 124.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 29.0,
+                "num_sentences": 3.0
+            },
+            "source": 130,
+            "target": 35453
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1278.0,
+                "num_words": 187.0,
+                "num_words_unique": 124.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 29.0,
+                "num_sentences": 3.0
+            },
+            "source": 130,
+            "target": 33231
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 11694.0,
+                "num_words": 1882.0,
+                "num_words_unique": 593.0,
+                "num_words_long": 264.0,
+                "num_stop_word_unique": 48.0,
+                "num_sentences": 25.0
+            },
+            "source": 9472,
+            "target": 5039
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10911.0,
+                "num_words": 1715.0,
+                "num_words_unique": 550.0,
+                "num_words_long": 249.0,
+                "num_stop_word_unique": 45.0,
+                "num_sentences": 15.0
+            },
+            "source": 9472,
+            "target": 7741
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5772.0,
+                "num_words": 940.0,
+                "num_words_unique": 360.0,
+                "num_words_long": 132.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 7.0
+            },
+            "source": 9472,
+            "target": 27869
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 14506.0,
+                "num_words": 2359.0,
+                "num_words_unique": 1041.0,
+                "num_words_long": 640.0,
+                "num_stop_word_unique": 87.0,
+                "num_sentences": 110.0
+            },
+            "source": 19785,
+            "target": 16137
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 253.0,
+                "num_words": 41.0,
+                "num_words_unique": 39.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 3.0
+            },
+            "source": 16137,
+            "target": 35452
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 100.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 16137,
+            "target": 2445
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 8906.0,
+                "num_words": 1397.0,
+                "num_words_unique": 647.0,
+                "num_words_long": 351.0,
+                "num_stop_word_unique": 70.0,
+                "num_sentences": 52.0
+            },
+            "source": 27062,
+            "target": 7741
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 561.0,
+                "num_words": 85.0,
+                "num_words_unique": 73.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 5.0
+            },
+            "source": 27869,
+            "target": 1818
+        }
+    ]
+}

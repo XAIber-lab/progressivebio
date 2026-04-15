@@ -1,0 +1,196 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "A",
+            "categorical": [
+                "attr1",
+                "attr3"
+            ],
+            "numerical": [
+                15,
+                2
+            ]
+        },
+        {
+            "id": 1,
+            "name": "B"
+        },
+        {
+            "id": 2,
+            "name": "C",
+            "categorical": [
+                "attr1",
+                "attr3"
+            ],
+            "numerical": [
+                1,
+                5
+            ]
+        },
+        {
+            "id": 3,
+            "name": "D",
+            "categorical": [
+                "attr3"
+            ],
+            "numerical": [
+                11
+            ]
+        },
+        {
+            "id": 4,
+            "name": "E",
+            "categorical": [
+                "attr2",
+                "attr3"
+            ],
+            "numerical": [
+                2,
+                15
+            ]
+        },
+        {
+            "id": 5,
+            "name": "F",
+            "categorical": [
+                "attr2"
+            ],
+            "numerical": [
+                1
+            ]
+        },
+        {
+            "id": 6,
+            "name": "G",
+            "categorical": [
+                "attr1",
+                "attr2"
+            ],
+            "numerical": [
+                19,
+                15
+            ]
+        },
+        {
+            "id": 7,
+            "name": "H",
+            "categorical": [
+                "attr1",
+                "attr2",
+                "attr3"
+            ],
+            "numerical": [
+                18,
+                4,
+                2
+            ]
+        },
+        {
+            "id": 8,
+            "name": "I",
+            "categorical": [
+                "attr3"
+            ],
+            "numerical": [
+                18
+            ]
+        },
+        {
+            "id": 9,
+            "name": "J",
+            "categorical": [
+                "attr2"
+            ],
+            "numerical": [
+                13
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "source": 3,
+            "target": 3
+        },
+        {
+            "source": 3,
+            "target": 8,
+            "categorical": "attr2",
+            "numerical": 9
+        },
+        {
+            "source": 3,
+            "target": 8,
+            "categorical": "attr3",
+            "numerical": 15
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "categorical": "attr1",
+            "numerical": 13
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "categorical": "attr2",
+            "numerical": 4
+        },
+        {
+            "source": 8,
+            "target": 4,
+            "categorical": "attr3",
+            "numerical": 15
+        },
+        {
+            "source": 6,
+            "target": 5,
+            "categorical": "attr2",
+            "numerical": 9
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "categorical": "attr1",
+            "numerical": 3
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "categorical": "attr2",
+            "numerical": 8
+        },
+        {
+            "source": 4,
+            "target": 7
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "categorical": "attr2",
+            "numerical": 4
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "categorical": "attr1",
+            "numerical": 11
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "categorical": "attr3",
+            "numerical": 10
+        },
+        {
+            "source": 3,
+            "target": 5
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "categorical": "attr3",
+            "numerical": 14
+        }
+    ]
+}

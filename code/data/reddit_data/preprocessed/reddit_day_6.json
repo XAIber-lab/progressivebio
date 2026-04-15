@@ -1,0 +1,1181 @@
+{
+    "nodes": [
+        {
+            "name": "chibears",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 258,
+            "gansner": 0,
+            "hierarchy": [
+                0.5147410358565737,
+                1.0
+            ],
+            "radial": [
+                0.25226722089796433,
+                0.5471904723843019
+            ]
+        },
+        {
+            "name": "nfl",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.5283018867924528,
+                "betweenness": 0.4583333333333333,
+                "eigenvector": 0.09186576213992749
+            },
+            "id": 3,
+            "gansner": 7,
+            "hierarchy": [
+                0.7418326693227092,
+                0.6
+            ],
+            "radial": [
+                0.09672236378082814,
+                0.8619614739029655
+            ]
+        },
+        {
+            "name": "detroitlions",
+            "attributes": {
+                "degree": 18,
+                "closeness": 0.5490196078431373,
+                "betweenness": 0.20105820105820105,
+                "eigenvector": 0.5136303390916153
+            },
+            "id": 903,
+            "gansner": 1,
+            "hierarchy": [
+                0.3705179282868526,
+                0.8
+            ],
+            "radial": [
+                0.1327513121895659,
+                0.3667892254815762
+            ]
+        },
+        {
+            "name": "ravens",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 3722,
+            "gansner": 5,
+            "hierarchy": [
+                0.39282868525896414,
+                0.6
+            ],
+            "radial": [
+                0.35883736677508626,
+                0.025526336823595237
+            ]
+        },
+        {
+            "name": "tennesseetitans",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 3727,
+            "gansner": 4,
+            "hierarchy": [
+                0.4541832669322709,
+                0.6
+            ],
+            "radial": [
+                0.25226722089796433,
+                0.08239948845016387
+            ]
+        },
+        {
+            "name": "saints",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 792,
+            "gansner": 3,
+            "hierarchy": [
+                0.24621513944223108,
+                0.6
+            ],
+            "radial": [
+                0.17408381574157794,
+                0.16445527935416834
+            ]
+        },
+        {
+            "name": "49ers",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 797,
+            "gansner": 2,
+            "hierarchy": [
+                0.3035856573705179,
+                0.6
+            ],
+            "radial": [
+                0.1327513121895659,
+                0.26280872831907925
+            ]
+        },
+        {
+            "name": "denverbroncos",
+            "attributes": {
+                "degree": 19,
+                "closeness": 0.6666666666666666,
+                "betweenness": 0.6534391534391534,
+                "eigenvector": 0.5260366238521099
+            },
+            "id": 33,
+            "gansner": 10,
+            "hierarchy": [
+                0.3593625498007968,
+                0.4
+            ],
+            "radial": [
+                0.35883736677508626,
+                0.6040684197905843
+            ]
+        },
+        {
+            "name": "colts",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 418,
+            "gansner": 13,
+            "hierarchy": [
+                0.5920318725099601,
+                0.2
+            ],
+            "radial": [
+                0.7256829061133748,
+                0.05035648629206299
+            ]
+        },
+        {
+            "name": "nfl_draft",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.3010752688172043,
+                "betweenness": 0.0,
+                "eigenvector": 0.025978252150180653
+            },
+            "id": 3490,
+            "gansner": 6,
+            "hierarchy": [
+                0.035856573705179286,
+                0.4
+            ],
+            "radial": [
+                1.0,
+                0.31479498041723286
+            ]
+        },
+        {
+            "name": "evilleagueofevil",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.28865979381443296,
+                "betweenness": 0.0006613756613756613,
+                "eigenvector": 0.005253944527229933
+            },
+            "id": 5543,
+            "gansner": 23,
+            "hierarchy": [
+                0.9306772908366534,
+                0.6
+            ],
+            "radial": [
+                0.14923930188775253,
+                0.764175525537527
+            ]
+        },
+        {
+            "name": "azcardinals",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 3499,
+            "gansner": 17,
+            "hierarchy": [
+                0.41832669322709165,
+                0.2
+            ],
+            "radial": [
+                0.8799263373374197,
+                0.4173607225641436
+            ]
+        },
+        {
+            "name": "yankees",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.35,
+                "betweenness": 0.0,
+                "eigenvector": 0.014343354413143576
+            },
+            "id": 3120,
+            "gansner": 8,
+            "hierarchy": [
+                0.803187250996016,
+                0.4
+            ],
+            "radial": [
+                0.0,
+                0.8187994564782992
+            ]
+        },
+        {
+            "name": "eagles",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 2233,
+            "gansner": 12,
+            "hierarchy": [
+                0.650996015936255,
+                0.2
+            ],
+            "radial": [
+                0.60910254453225,
+                0.008586843577651666
+            ]
+        },
+        {
+            "name": "redskins",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 57,
+            "gansner": 11,
+            "hierarchy": [
+                0.0,
+                0.2
+            ],
+            "radial": [
+                0.48223798284857666,
+                0.0
+            ]
+        },
+        {
+            "name": "steelers",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.28865979381443296,
+                "betweenness": 0.0006613756613756613,
+                "eigenvector": 0.005253944527229933
+            },
+            "id": 956,
+            "gansner": 24,
+            "hierarchy": [
+                1.0,
+                0.6
+            ],
+            "radial": [
+                0.3565867806441765,
+                0.8384621533050916
+            ]
+        },
+        {
+            "name": "jaguars",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 2237,
+            "gansner": 20,
+            "hierarchy": [
+                0.24302788844621515,
+                0.2
+            ],
+            "radial": [
+                0.60910254453225,
+                0.621005515146671
+            ]
+        },
+        {
+            "name": "cowboys",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22950819672131148,
+                "betweenness": 0.0,
+                "eigenvector": 0.000840827275360624
+            },
+            "id": 196,
+            "gansner": 26,
+            "hierarchy": [
+                0.8621513944223107,
+                0.4
+            ],
+            "radial": [
+                0.3614500037183597,
+                1.0
+            ]
+        },
+        {
+            "name": "buffalobills",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 840,
+            "gansner": 21,
+            "hierarchy": [
+                0.18406374501992032,
+                0.2
+            ],
+            "radial": [
+                0.17408381574157794,
+                0.46513468148029735
+            ]
+        },
+        {
+            "name": "chargers",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 330,
+            "gansner": 18,
+            "hierarchy": [
+                0.3593625498007968,
+                0.2
+            ],
+            "radial": [
+                0.8193366446304929,
+                0.5088082487411079
+            ]
+        },
+        {
+            "name": "bengals",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 844,
+            "gansner": 19,
+            "hierarchy": [
+                0.30199203187250995,
+                0.2
+            ],
+            "radial": [
+                0.7256829061133748,
+                0.5792342738390217
+            ]
+        },
+        {
+            "name": "browns",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 213,
+            "gansner": 15,
+            "hierarchy": [
+                0.47729083665338645,
+                0.2
+            ],
+            "radial": [
+                0.8799263373374197,
+                0.2122292382703221
+            ]
+        },
+        {
+            "name": "nflsurvivor",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.3888888888888889,
+                "betweenness": 0.1283068783068783,
+                "eigenvector": 0.01682483654828483
+            },
+            "id": 27222,
+            "gansner": 25,
+            "hierarchy": [
+                0.9250996015936255,
+                0.4
+            ],
+            "radial": [
+                0.17414252668412342,
+                0.9479657901047079
+            ]
+        },
+        {
+            "name": "penguins",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.35,
+                "betweenness": 0.0,
+                "eigenvector": 0.014343354413143576
+            },
+            "id": 1495,
+            "gansner": 9,
+            "hierarchy": [
+                0.7418326693227092,
+                0.4
+            ],
+            "radial": [
+                0.013887094943422223,
+                0.9213492126928304
+            ]
+        },
+        {
+            "name": "panthers",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 473,
+            "gansner": 14,
+            "hierarchy": [
+                0.5346613545816733,
+                0.2
+            ],
+            "radial": [
+                0.8193366446304929,
+                0.12078171209335786
+            ]
+        },
+        {
+            "name": "nyjets",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.42424242424242425,
+                "betweenness": 0.07142857142857142,
+                "eigenvector": 0.1663846447455778
+            },
+            "id": 2273,
+            "gansner": 16,
+            "hierarchy": [
+                0.06772908366533864,
+                0.2
+            ],
+            "radial": [
+                0.9008763586690621,
+                0.31479498041723286
+            ]
+        },
+        {
+            "name": "patriots",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.29473684210526313,
+                "betweenness": 0.07208994708994709,
+                "eigenvector": 0.005385232391096326
+            },
+            "id": 368,
+            "gansner": 27,
+            "hierarchy": [
+                0.9250996015936255,
+                0.2
+            ],
+            "radial": [
+                0.30407962769434305,
+                0.9362960594676686
+            ]
+        },
+        {
+            "name": "coalitionagainstevil",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.3888888888888889,
+                "betweenness": 0.1283068783068783,
+                "eigenvector": 0.01682483654828483
+            },
+            "id": 27122,
+            "gansner": 28,
+            "hierarchy": [
+                0.949800796812749,
+                0.0
+            ],
+            "radial": [
+                0.27916661774088125,
+                0.7524258652385901
+            ]
+        },
+        {
+            "name": "buccaneers",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.4117647058823529,
+                "betweenness": 0.0,
+                "eigenvector": 0.16232852064168124
+            },
+            "id": 767,
+            "gansner": 22,
+            "hierarchy": [
+                0.12669322709163347,
+                0.2
+            ],
+            "radial": [
+                0.48223798284857666,
+                0.6295899608344657
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 258,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 258,
+            "target": 903
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 3,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4247.0,
+                "num_words": 759.0,
+                "num_words_unique": 344.0,
+                "num_words_long": 116.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 79.0
+            },
+            "source": 3,
+            "target": 27222
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4019.0,
+                "num_words": 718.0,
+                "num_words_unique": 328.0,
+                "num_words_long": 110.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 71.0
+            },
+            "source": 3,
+            "target": 27122
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 419.0,
+                "num_words": 74.0,
+                "num_words_unique": 62.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 15.0,
+                "num_sentences": 6.0
+            },
+            "source": 3,
+            "target": 1495
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 337.0,
+                "num_words": 53.0,
+                "num_words_unique": 47.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 5.0
+            },
+            "source": 3,
+            "target": 3120
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 3722
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 3727
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 767
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 840
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 792
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 2237
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 844
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 330
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 797
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 3499
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 2273
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 213
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 473
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 418
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 2233
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3028.0,
+                "num_words": 419.0,
+                "num_words_unique": 215.0,
+                "num_words_long": 99.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 903,
+            "target": 57
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 3722,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 3727,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 792,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 797,
+            "target": 33
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 767
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 840
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 2237
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 844
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 330
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 3499
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 2273
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 213
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 473
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 418
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 2233
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2894.0,
+                "num_words": 403.0,
+                "num_words_unique": 208.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 33,
+            "target": 57
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 460.0,
+                "num_words": 63.0,
+                "num_words_unique": 55.0,
+                "num_words_long": 18.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 2.0
+            },
+            "source": 3490,
+            "target": 2273
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4247.0,
+                "num_words": 759.0,
+                "num_words_unique": 344.0,
+                "num_words_long": 116.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 79.0
+            },
+            "source": 5543,
+            "target": 27222
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4019.0,
+                "num_words": 718.0,
+                "num_words_unique": 328.0,
+                "num_words_long": 110.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 71.0
+            },
+            "source": 5543,
+            "target": 27122
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4247.0,
+                "num_words": 759.0,
+                "num_words_unique": 344.0,
+                "num_words_long": 116.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 79.0
+            },
+            "source": 956,
+            "target": 27222
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4019.0,
+                "num_words": 718.0,
+                "num_words_unique": 328.0,
+                "num_words_long": 110.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 71.0
+            },
+            "source": 956,
+            "target": 27122
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 517.0,
+                "num_words": 65.0,
+                "num_words_unique": 48.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 2.0
+            },
+            "source": 196,
+            "target": 368
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4247.0,
+                "num_words": 759.0,
+                "num_words_unique": 344.0,
+                "num_words_long": 116.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 79.0
+            },
+            "source": 27222,
+            "target": 368
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4019.0,
+                "num_words": 718.0,
+                "num_words_unique": 328.0,
+                "num_words_long": 110.0,
+                "num_stop_word_unique": 67.0,
+                "num_sentences": 71.0
+            },
+            "source": 368,
+            "target": 27122
+        }
+    ]
+}

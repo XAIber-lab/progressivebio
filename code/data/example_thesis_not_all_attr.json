@@ -1,0 +1,665 @@
+{
+    "nodes": [
+        {
+            "name": "A",
+            "attributes": {
+                "Attribute 2": 1.0
+            },
+            "id": 0,
+            "gansner": 0,
+            "hierarchy": [
+                0.0,
+                1.0
+            ],
+            "radial": [
+                0.7904514862591139,
+                0.8081587506419289
+            ]
+        },
+        {
+            "name": "B",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "id": 1,
+            "gansner": 2,
+            "hierarchy": [
+                0.29090557473838713,
+                1.0
+            ],
+            "radial": [
+                0.7904514862591139,
+                0.1918412493580712
+            ]
+        },
+        {
+            "name": "C",
+            "attributes": {
+                "Attribute 4": 0.2
+            },
+            "id": 2,
+            "gansner": 8,
+            "hierarchy": [
+                0.7834700006776893,
+                1.0
+            ],
+            "radial": [
+                0.4023649280239297,
+                1.0
+            ]
+        },
+        {
+            "name": "D",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 4": 1.0
+            },
+            "id": 3,
+            "gansner": 9,
+            "hierarchy": [
+                0.6925604589774825,
+                0.75
+            ],
+            "radial": [
+                0.682627593942793,
+                0.9200189615896134
+            ]
+        },
+        {
+            "name": "E",
+            "attributes": {
+                "Attribute 2": 0.4
+            },
+            "id": 4,
+            "gansner": 3,
+            "hierarchy": [
+                0.3355338952093977,
+                0.75
+            ],
+            "radial": [
+                0.4023649280239297,
+                0.0
+            ]
+        },
+        {
+            "name": "F",
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "id": 5,
+            "gansner": 15,
+            "hierarchy": [
+                0.51404717709344,
+                1.0
+            ],
+            "radial": [
+                0.0,
+                0.582581673096928
+            ]
+        },
+        {
+            "name": "G",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "id": 6,
+            "gansner": 6,
+            "hierarchy": [
+                0.7553706877885344,
+                0.5
+            ],
+            "radial": [
+                0.04758599738268835,
+                0.26120906469325683
+            ]
+        },
+        {
+            "name": "H",
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "id": 7,
+            "gansner": 16,
+            "hierarchy": [
+                0.5735516043881209,
+                0.75
+            ],
+            "radial": [
+                0.04758599738268835,
+                0.7387909353067432
+            ]
+        },
+        {
+            "name": "I",
+            "attributes": {
+                "Attribute 2": 1.0,
+                "Attribute 3": 1.0
+            },
+            "id": 8,
+            "gansner": 7,
+            "hierarchy": [
+                0.2727236663983458,
+                0.5
+            ],
+            "radial": [
+                0.5484085810431857,
+                0.013639176750984293
+            ]
+        },
+        {
+            "name": "J",
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "id": 9,
+            "gansner": 11,
+            "hierarchy": [
+                0.6363618331991728,
+                0.5
+            ],
+            "radial": [
+                0.0,
+                0.41741832690307207
+            ]
+        },
+        {
+            "name": "K",
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6
+            },
+            "id": 10,
+            "gansner": 1,
+            "hierarchy": [
+                0.0,
+                0.75
+            ],
+            "radial": [
+                0.8601958309964479,
+                0.6629050735419986
+            ]
+        },
+        {
+            "name": "L",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0
+            },
+            "id": 11,
+            "gansner": 4,
+            "hierarchy": [
+                0.15371481180898416,
+                0.5
+            ],
+            "radial": [
+                0.8843241727425687,
+                0.5000065838852824
+            ]
+        },
+        {
+            "name": "M",
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.4,
+                "Attribute 4": 0.0
+            },
+            "id": 12,
+            "gansner": 14,
+            "hierarchy": [
+                1.0,
+                0.25
+            ],
+            "radial": [
+                0.2602939801832118,
+                0.9594564344310865
+            ]
+        },
+        {
+            "name": "N",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 3": 0.2
+            },
+            "id": 13,
+            "gansner": 10,
+            "hierarchy": [
+                0.39173252098770733,
+                0.5
+            ],
+            "radial": [
+                0.5484085810431857,
+                0.9863581896949029
+            ]
+        },
+        {
+            "name": "O",
+            "attributes": {
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2
+            },
+            "id": 14,
+            "gansner": 18,
+            "hierarchy": [
+                0.10743359057978799,
+                0.25
+            ],
+            "radial": [
+                0.8601958309964479,
+                0.33709492645800143
+            ]
+        },
+        {
+            "name": "P",
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6
+            },
+            "id": 15,
+            "gansner": 12,
+            "hierarchy": [
+                0.5454522914989661,
+                0.25
+            ],
+            "radial": [
+                0.13759581230136472,
+                0.1308744716432061
+            ]
+        },
+        {
+            "name": "Q",
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 4": 1.0
+            },
+            "id": 16,
+            "gansner": 17,
+            "hierarchy": [
+                0.8462802294887413,
+                0.25
+            ],
+            "radial": [
+                0.13759581230136472,
+                0.8691255283567939
+            ]
+        },
+        {
+            "name": "R",
+            "attributes": {
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.2
+            },
+            "id": 17,
+            "gansner": 13,
+            "hierarchy": [
+                0.5454522914989661,
+                0.0
+            ],
+            "radial": [
+                0.2602939801832118,
+                0.04054356556891353
+            ]
+        },
+        {
+            "name": "S",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "id": 18,
+            "gansner": 19,
+            "hierarchy": [
+                0.4545427497987593,
+                0.75
+            ],
+            "radial": [
+                0.682627593942793,
+                0.07998235518744322
+            ]
+        },
+        {
+            "name": "T",
+            "attributes": {
+                "Attribute 2": 0.6
+            },
+            "id": 19,
+            "gansner": 5,
+            "hierarchy": [
+                0.2264424451691496,
+                0.25
+            ],
+            "radial": [
+                1.0,
+                0.5000065838852824
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0
+            },
+            "source": 0,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.4
+            },
+            "source": 0,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 0,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 3": 0.0
+            },
+            "source": 1,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "source": 1,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 1,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 4": 1.0
+            },
+            "source": 1,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 3": 0.6
+            },
+            "source": 2,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 1.0
+            },
+            "source": 2,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6
+            },
+            "source": 2,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.8
+            },
+            "source": 2,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 3": 0.2
+            },
+            "source": 2,
+            "target": 3
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.0
+            },
+            "source": 3,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.6,
+                "Attribute 4": 0.4
+            },
+            "source": 3,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.4,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 3,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 3": 0.2
+            },
+            "source": 3,
+            "target": 9
+        },
+        {
+            "attributes": {},
+            "source": 4,
+            "target": 6
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0
+            },
+            "source": 4,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 3": 0.2
+            },
+            "source": 4,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 4,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.8,
+                "Attribute 4": 1.0
+            },
+            "source": 4,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 2": 1.0
+            },
+            "source": 5,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 5,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6
+            },
+            "source": 6,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8
+            },
+            "source": 6,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.2
+            },
+            "source": 7,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8
+            },
+            "source": 7,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6
+            },
+            "source": 8,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4
+            },
+            "source": 9,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "source": 9,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 9,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 3": 1.0
+            },
+            "source": 9,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.4
+            },
+            "source": 10,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 4": 1.0
+            },
+            "source": 10,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.6
+            },
+            "source": 11,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.6
+            },
+            "source": 11,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 11,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 3": 0.6
+            },
+            "source": 15,
+            "target": 17
+        }
+    ]
+}

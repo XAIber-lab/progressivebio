@@ -1,0 +1,138 @@
+{
+    "nodes": [
+        {
+            "id": 114,
+            "name": "Tyrion",
+            "gansner": 3
+        },
+        {
+            "id": 17,
+            "name": "Cersei",
+            "gansner": 5
+        },
+        {
+            "id": 45,
+            "name": "Jon",
+            "gansner": 4
+        },
+        {
+            "id": 101,
+            "name": "Sansa",
+            "gansner": 7
+        },
+        {
+            "id": 19,
+            "name": "Daenerys",
+            "gansner": 9
+        },
+        {
+            "id": 75,
+            "name": "Ned",
+            "gansner": 2
+        },
+        {
+            "id": 38,
+            "name": "Jaime",
+            "gansner": 1
+        },
+        {
+            "id": 44,
+            "name": "Joffrey",
+            "gansner": 6
+        },
+        {
+            "id": 4,
+            "name": "Arya",
+            "gansner": 0
+        },
+        {
+            "id": 116,
+            "name": "Tywin",
+            "gansner": 8
+        }
+    ],
+    "links": [
+        {
+            "source": 4,
+            "target": 17,
+            "attributes": {
+                "Season 1": 9,
+                "Season 2": 7,
+                "Season 3": 4
+            }
+        },
+        {
+            "source": 4,
+            "target": 45,
+            "attributes": {
+                "Season 1": 20
+            }
+        },
+        {
+            "source": 4,
+            "target": 38,
+            "attributes": {
+                "Season 1": 3,
+                "Season 4": 2
+            }
+        },
+        {
+            "source": 44,
+            "target": 116,
+            "attributes": {
+                "Season 1": 3,
+                "Season 2": 9,
+                "Season 3": 49,
+                "Season 4": 30
+            }
+        },
+        {
+            "source": 4,
+            "target": 101,
+            "attributes": {
+                "Season 1": 53,
+                "Season 2": 6,
+                "Season 3": 2,
+                "Season 4": 3
+            }
+        },
+        {
+            "source": 44,
+            "target": 101,
+            "attributes": {
+                "Season 1": 69,
+                "Season 2": 56,
+                "Season 3": 22,
+                "Season 4": 25
+            }
+        },
+        {
+            "source": 75,
+            "target": 114,
+            "attributes": {
+                "Season 1": 11,
+                "Season 2": 10,
+                "Season 3": 2,
+                "Season 4": 3
+            }
+        },
+        {
+            "source": 4,
+            "target": 114,
+            "attributes": {
+                "Season 1": 2,
+                "Season 2": 2
+            }
+        },
+        {
+            "source": 38,
+            "target": 75,
+            "attributes": {
+                "Season 1": 53,
+                "Season 2": 5,
+                "Season 3": 2,
+                "Season 4": 2
+            }
+        }
+    ]
+}

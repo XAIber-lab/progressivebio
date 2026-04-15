@@ -1,0 +1,493 @@
+{
+    "nodes": [
+        {
+            "id": 12,
+            "name": 12,
+            "attributes": {
+                "Age": 25,
+                "Birthplace": 3,
+                "Residence": 0,
+                "Arrests": 5,
+                "Convictions": 3,
+                "Prison": 0,
+                "Music": 1,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 46,
+            "name": 46,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 3,
+                "Residence": 0,
+                "Arrests": 5,
+                "Convictions": 2,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 36,
+            "name": 36,
+            "attributes": {
+                "Age": 17,
+                "Birthplace": 3,
+                "Residence": 1,
+                "Arrests": 7,
+                "Convictions": 2,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 51,
+            "name": 51,
+            "attributes": {
+                "Age": 17,
+                "Birthplace": 3,
+                "Residence": 0,
+                "Arrests": 4,
+                "Convictions": 1,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 27,
+            "name": 27,
+            "attributes": {
+                "Age": 17,
+                "Birthplace": 3,
+                "Residence": 0,
+                "Arrests": 3,
+                "Convictions": 1,
+                "Prison": 0,
+                "Music": 1,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 11,
+            "name": 11,
+            "attributes": {
+                "Age": 21,
+                "Birthplace": 1,
+                "Residence": 0,
+                "Arrests": 16,
+                "Convictions": 8,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 30,
+            "name": 30,
+            "attributes": {
+                "Age": 19,
+                "Birthplace": 2,
+                "Residence": 1,
+                "Arrests": 6,
+                "Convictions": 3,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 40,
+            "name": 40,
+            "attributes": {
+                "Age": 23,
+                "Birthplace": 1,
+                "Residence": 1,
+                "Arrests": 18,
+                "Convictions": 12,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 33,
+            "name": 33,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 3,
+                "Residence": 1,
+                "Arrests": 15,
+                "Convictions": 6,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 43,
+            "name": 43,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 3,
+                "Residence": 1,
+                "Arrests": 6,
+                "Convictions": 0,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 44,
+            "name": 44,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 3,
+                "Residence": 1,
+                "Arrests": 7,
+                "Convictions": 1,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 41,
+            "name": 41,
+            "attributes": {
+                "Age": 19,
+                "Birthplace": 2,
+                "Residence": 1,
+                "Arrests": 8,
+                "Convictions": 1,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 9,
+            "name": 9,
+            "attributes": {
+                "Age": 20,
+                "Birthplace": 1,
+                "Residence": 1,
+                "Arrests": 9,
+                "Convictions": 3,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 13,
+            "name": 13,
+            "attributes": {
+                "Age": 21,
+                "Birthplace": 3,
+                "Residence": 0,
+                "Arrests": 19,
+                "Convictions": 9,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 35,
+            "name": 35,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 3,
+                "Residence": 1,
+                "Arrests": 7,
+                "Convictions": 3,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 49,
+            "name": 49,
+            "attributes": {
+                "Age": 19,
+                "Birthplace": 2,
+                "Residence": 0,
+                "Arrests": 3,
+                "Convictions": 0,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 25,
+            "name": 25,
+            "attributes": {
+                "Age": 17,
+                "Birthplace": 4,
+                "Residence": 0,
+                "Arrests": 8,
+                "Convictions": 2,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 38,
+            "name": 38,
+            "attributes": {
+                "Age": 20,
+                "Birthplace": 2,
+                "Residence": 0,
+                "Arrests": 6,
+                "Convictions": 2,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        },
+        {
+            "id": 19,
+            "name": 19,
+            "attributes": {
+                "Age": 20,
+                "Birthplace": 2,
+                "Residence": 1,
+                "Arrests": 22,
+                "Convictions": 9,
+                "Prison": 1,
+                "Music": 0,
+                "Ranking": 3
+            }
+        },
+        {
+            "id": 26,
+            "name": 26,
+            "attributes": {
+                "Age": 18,
+                "Birthplace": 4,
+                "Residence": 0,
+                "Arrests": 0,
+                "Convictions": 0,
+                "Prison": 0,
+                "Music": 0,
+                "Ranking": 4
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 9,
+            "target": 11,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 9,
+            "target": 12,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 9,
+            "target": 13,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 9,
+            "target": 25,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 9,
+            "target": 41,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 9,
+            "target": 46,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 11,
+            "target": 12,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 11,
+            "target": 19,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 11,
+            "target": 25,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 11,
+            "target": 51,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 25,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 27,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 33,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 35,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 36,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 12,
+            "target": 44,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 19,
+            "target": 40,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 19,
+            "target": 41,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 19,
+            "target": 51,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 25,
+            "target": 26,
+            "attributes": {
+                "Kin": 1,
+                "Co-Offend": 1,
+                "Serious Crime": 1
+            }
+        },
+        {
+            "source": 25,
+            "target": 33,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 25,
+            "target": 35,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 25,
+            "target": 36,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 33,
+            "target": 35,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 33,
+            "target": 36,
+            "attributes": {
+                "Hang Out": 1
+            }
+        },
+        {
+            "source": 35,
+            "target": 36,
+            "attributes": {
+                "Kin": 1,
+                "Co-Offend": 1,
+                "Serious Crime": 1
+            }
+        },
+        {
+            "source": 43,
+            "target": 44,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 43,
+            "target": 46,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        },
+        {
+            "source": 43,
+            "target": 51,
+            "attributes": {
+                "Co-Offend": 1
+            }
+        }
+    ]
+}

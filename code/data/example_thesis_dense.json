@@ -1,0 +1,1906 @@
+{
+    "nodes": [
+        {
+            "name": "A",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "id": 0,
+            "gansner": 0,
+            "hierarchy": [
+                0.0,
+                1.0
+            ],
+            "radial": [
+                0.34548831874735086,
+                0.9755279626997782
+            ]
+        },
+        {
+            "name": "B",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "id": 1,
+            "gansner": 1,
+            "hierarchy": [
+                1.0,
+                1.0
+            ],
+            "radial": [
+                0.9755279626997782,
+                0.6545116812526491
+            ]
+        },
+        {
+            "name": "C",
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "id": 2,
+            "gansner": 2,
+            "hierarchy": [
+                0.6290909090909091,
+                0.9333333333333333
+            ],
+            "radial": [
+                1.0,
+                0.5
+            ]
+        },
+        {
+            "name": "D",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "id": 3,
+            "gansner": 3,
+            "hierarchy": [
+                0.6436363636363637,
+                0.8666666666666667
+            ],
+            "radial": [
+                0.2061111526666168,
+                0.9045054479267958
+            ]
+        },
+        {
+            "name": "E",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "id": 4,
+            "gansner": 4,
+            "hierarchy": [
+                0.2238961038961039,
+                0.8
+            ],
+            "radial": [
+                0.7938888473333832,
+                0.9045054479267958
+            ]
+        },
+        {
+            "name": "F",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "id": 5,
+            "gansner": 5,
+            "hierarchy": [
+                0.28103896103896103,
+                0.7333333333333333
+            ],
+            "radial": [
+                0.7938888473333832,
+                0.09549205874286285
+            ]
+        },
+        {
+            "name": "G",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "id": 6,
+            "gansner": 6,
+            "hierarchy": [
+                0.5667532467532468,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.9755279626997782,
+                0.34548831874735086
+            ]
+        },
+        {
+            "name": "H",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.8
+            },
+            "id": 7,
+            "gansner": 7,
+            "hierarchy": [
+                0.21818181818181817,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.5,
+                0.0
+            ]
+        },
+        {
+            "name": "I",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "id": 8,
+            "gansner": 8,
+            "hierarchy": [
+                0.4057142857142857,
+                0.6
+            ],
+            "radial": [
+                0.34548831874735086,
+                0.02447203730022191
+            ]
+        },
+        {
+            "name": "J",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "id": 9,
+            "gansner": 9,
+            "hierarchy": [
+                0.3979220779220779,
+                0.5333333333333333
+            ],
+            "radial": [
+                0.5,
+                1.0
+            ]
+        },
+        {
+            "name": "K",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.2
+            },
+            "id": 10,
+            "gansner": 10,
+            "hierarchy": [
+                0.27064935064935064,
+                0.4666666666666667
+            ],
+            "radial": [
+                0.6545116812526491,
+                0.02447203730022191
+            ]
+        },
+        {
+            "name": "L",
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.2
+            },
+            "id": 11,
+            "gansner": 13,
+            "hierarchy": [
+                0.8519480519480519,
+                0.4
+            ],
+            "radial": [
+                0.09549455207320418,
+                0.7938888473333832
+            ]
+        },
+        {
+            "name": "M",
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "id": 12,
+            "gansner": 11,
+            "hierarchy": [
+                0.6150649350649351,
+                0.4
+            ],
+            "radial": [
+                0.2061111526666168,
+                0.09549205874286285
+            ]
+        },
+        {
+            "name": "N",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.8
+            },
+            "id": 13,
+            "gansner": 14,
+            "hierarchy": [
+                0.8181818181818182,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.02447203730022191,
+                0.6545116812526491
+            ]
+        },
+        {
+            "name": "O",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "id": 14,
+            "gansner": 12,
+            "hierarchy": [
+                0.005194805194805195,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9045054479267958,
+                0.2061111526666168
+            ]
+        },
+        {
+            "name": "P",
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 1.0
+            },
+            "id": 15,
+            "gansner": 15,
+            "hierarchy": [
+                0.17402597402597403,
+                0.26666666666666666
+            ],
+            "radial": [
+                0.02447203730022191,
+                0.34548831874735086
+            ]
+        },
+        {
+            "name": "Q",
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "id": 16,
+            "gansner": 16,
+            "hierarchy": [
+                0.6446753246753246,
+                0.2
+            ],
+            "radial": [
+                0.9045054479267958,
+                0.7938888473333832
+            ]
+        },
+        {
+            "name": "R",
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "id": 17,
+            "gansner": 17,
+            "hierarchy": [
+                0.38025974025974024,
+                0.13333333333333333
+            ],
+            "radial": [
+                0.6545116812526491,
+                0.9755279626997782
+            ]
+        },
+        {
+            "name": "S",
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 1.0
+            },
+            "id": 18,
+            "gansner": 18,
+            "hierarchy": [
+                0.5085714285714286,
+                0.06666666666666667
+            ],
+            "radial": [
+                0.0,
+                0.5
+            ]
+        },
+        {
+            "name": "T",
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "id": 19,
+            "gansner": 19,
+            "hierarchy": [
+                0.017142857142857144,
+                0.0
+            ],
+            "radial": [
+                0.09549455207320418,
+                0.2061111526666168
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 0,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.0
+            },
+            "source": 0,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 1.0
+            },
+            "source": 0,
+            "target": 5
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 0,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "source": 0,
+            "target": 3
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 0,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 0,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "source": 0,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "source": 0,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "source": 0,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.4
+            },
+            "source": 0,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 0,
+            "target": 2
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.2
+            },
+            "source": 0,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.8
+            },
+            "source": 0,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "source": 1,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.2
+            },
+            "source": 1,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 1,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 1,
+            "target": 5
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.2
+            },
+            "source": 1,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.6
+            },
+            "source": 1,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 1,
+            "target": 3
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "source": 1,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 1,
+            "target": 2
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 1,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.8,
+                "Attribute 4": 1.0
+            },
+            "source": 1,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.0
+            },
+            "source": 1,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 1,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 1,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 2,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "source": 2,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.6
+            },
+            "source": 2,
+            "target": 3
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 2,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.8
+            },
+            "source": 2,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.6
+            },
+            "source": 2,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "source": 2,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 2,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "source": 2,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 2,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.0
+            },
+            "source": 2,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 2,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 3,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 1.0
+            },
+            "source": 3,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 3,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 3,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.6
+            },
+            "source": 3,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "source": 3,
+            "target": 6
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.2
+            },
+            "source": 3,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 3,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 4,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 4,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.4
+            },
+            "source": 4,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 4,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 4,
+            "target": 6
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 4,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 4,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 1.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 4,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 4,
+            "target": 5
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.6
+            },
+            "source": 4,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.6
+            },
+            "source": 4,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 5,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "source": 5,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "source": 5,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "source": 5,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "source": 5,
+            "target": 6
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 5,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "source": 5,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 5,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.4
+            },
+            "source": 5,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 5,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.0
+            },
+            "source": 5,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 5,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 6,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 6,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.0
+            },
+            "source": 6,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 6,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 6,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 6,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "source": 6,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 7,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.6
+            },
+            "source": 7,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 7,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 7,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "source": 7,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.2
+            },
+            "source": 7,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.8
+            },
+            "source": 7,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.2
+            },
+            "source": 7,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 7,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "source": 8,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.6,
+                "Attribute 4": 1.0
+            },
+            "source": 8,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 1.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "source": 8,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 8,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 8,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 8,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 8,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 8,
+            "target": 9
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 8,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.2
+            },
+            "source": 8,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.8
+            },
+            "source": 8,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.2
+            },
+            "source": 9,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "source": 9,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "source": 9,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 9,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "source": 9,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.2
+            },
+            "source": 9,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 9,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.2
+            },
+            "source": 9,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.4
+            },
+            "source": 9,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.6
+            },
+            "source": 9,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 10,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 1.0
+            },
+            "source": 10,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 10,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 10,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 10,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 10,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 10,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "source": 10,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.0,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 10,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.0
+            },
+            "source": 11,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.0
+            },
+            "source": 11,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 0.0,
+                "Attribute 4": 1.0
+            },
+            "source": 11,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.2
+            },
+            "source": 11,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.4
+            },
+            "source": 11,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.8
+            },
+            "source": 12,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 12,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.8
+            },
+            "source": 12,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.4
+            },
+            "source": 12,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.0,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.8
+            },
+            "source": 12,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 12,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.4
+            },
+            "source": 12,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 1.0
+            },
+            "source": 13,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.0
+            },
+            "source": 13,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 13,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.8
+            },
+            "source": 13,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.6,
+                "Attribute 2": 0.8,
+                "Attribute 3": 1.0,
+                "Attribute 4": 1.0
+            },
+            "source": 14,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 0.6,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 14,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.4
+            },
+            "source": 14,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.8,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 1.0
+            },
+            "source": 14,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.4,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.4
+            },
+            "source": 15,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 0.2,
+                "Attribute 3": 1.0,
+                "Attribute 4": 0.4
+            },
+            "source": 15,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "source": 15,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 1.0,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.6,
+                "Attribute 4": 0.8
+            },
+            "source": 15,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.8,
+                "Attribute 4": 0.2
+            },
+            "source": 16,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 1.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.6
+            },
+            "source": 16,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.2,
+                "Attribute 2": 0.0,
+                "Attribute 3": 0.0,
+                "Attribute 4": 0.0
+            },
+            "source": 16,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.8,
+                "Attribute 3": 0.4,
+                "Attribute 4": 0.6
+            },
+            "source": 17,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Attribute 1": 0.4,
+                "Attribute 2": 0.4,
+                "Attribute 3": 0.2,
+                "Attribute 4": 0.0
+            },
+            "source": 18,
+            "target": 19
+        }
+    ]
+}

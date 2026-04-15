@@ -1,0 +1,3181 @@
+{
+    "nodes": [
+        {
+            "name": "cityporn",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 28163,
+            "gansner": 0,
+            "hierarchy": [
+                0.21477795447938575,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.0,
+                0.2221741540375022
+            ]
+        },
+        {
+            "name": "politics",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.21603563474387527,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.01718567489306315
+            },
+            "id": 3593,
+            "gansner": 44,
+            "hierarchy": [
+                0.5974623369072658,
+                0.5
+            ],
+            "radial": [
+                0.7811332962259933,
+                0.31818734875420784
+            ]
+        },
+        {
+            "name": "thenetherlands",
+            "attributes": {
+                "degree": 18,
+                "closeness": 0.34275618374558303,
+                "betweenness": 0.5829037800687284,
+                "eigenvector": 0.636301593754661
+            },
+            "id": 3082,
+            "gansner": 1,
+            "hierarchy": [
+                0.21477795447938575,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.7053677194685087,
+                0.2221741540375022
+            ]
+        },
+        {
+            "name": "circlebroke",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.26721763085399447,
+                "betweenness": 0.0823668384879725,
+                "eigenvector": 0.11690772768004454
+            },
+            "id": 16,
+            "gansner": 23,
+            "hierarchy": [
+                0.4555310453325125,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.7223134047887498,
+                0.198096499885087
+            ]
+        },
+        {
+            "name": "bandnames",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.15421303656597773,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.0015659290632455943
+            },
+            "id": 23,
+            "gansner": 79,
+            "hierarchy": [
+                0.6959592332290223,
+                1.0
+            ],
+            "radial": [
+                0.2658360331301945,
+                0.7068501669618354
+            ]
+        },
+        {
+            "name": "miraculousladybug",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16139767054908485,
+                "betweenness": 0.0,
+                "eigenvector": 0.003471782008384739
+            },
+            "id": 25623,
+            "gansner": 49,
+            "hierarchy": [
+                0.4828912943107782,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.9465844596362529,
+                0.3122253917181522
+            ]
+        },
+        {
+            "name": "videos",
+            "attributes": {
+                "degree": 9,
+                "closeness": 0.27953890489913547,
+                "betweenness": 0.273840206185567,
+                "eigenvector": 0.2642967446999093
+            },
+            "id": 11294,
+            "gansner": 25,
+            "hierarchy": [
+                0.40012654115152446,
+                0.5
+            ],
+            "radial": [
+                0.7343019300574213,
+                0.20513999107734324
+            ]
+        },
+        {
+            "name": "history",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 1056,
+            "gansner": 2,
+            "hierarchy": [
+                0.16313548453290924,
+                0.5
+            ],
+            "radial": [
+                0.5124095508584641,
+                0.06654274087793535
+            ]
+        },
+        {
+            "name": "askreddit",
+            "attributes": {
+                "degree": 7,
+                "closeness": 0.18097014925373134,
+                "betweenness": 0.10094501718213059,
+                "eigenvector": 0.005337405352703016
+            },
+            "id": 34,
+            "gansner": 81,
+            "hierarchy": [
+                0.8091622633765967,
+                1.0
+            ],
+            "radial": [
+                0.2124680662794183,
+                0.7477997539509794
+            ]
+        },
+        {
+            "name": "writingprompts",
+            "attributes": {
+                "degree": 6,
+                "closeness": 0.22401847575057737,
+                "betweenness": 0.10094501718213059,
+                "eigenvector": 0.07793590638610645
+            },
+            "id": 42,
+            "gansner": 33,
+            "hierarchy": [
+                0.2999367294242377,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.790191293095656,
+                0.027554786464600037
+            ]
+        },
+        {
+            "name": "houseofcards",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 2091,
+            "gansner": 18,
+            "hierarchy": [
+                0.18946972417448998,
+                0.5
+            ],
+            "radial": [
+                0.4972716590311179,
+                0.3267179494112398
+            ]
+        },
+        {
+            "name": "roosterteeth",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1913214990138067,
+                "betweenness": 0.0,
+                "eigenvector": 0.008011653432936406
+            },
+            "id": 2603,
+            "gansner": 41,
+            "hierarchy": [
+                0.6798850869542913,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.41047854196697453,
+                1.0
+            ]
+        },
+        {
+            "name": "jesuschristreddit",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.19917864476386038,
+                "betweenness": 0.0,
+                "eigenvector": 0.012922045966559428
+            },
+            "id": 33843,
+            "gansner": 39,
+            "hierarchy": [
+                0.6514988286393406,
+                0.5
+            ],
+            "radial": [
+                0.5658726647351822,
+                0.05242466438643215
+            ]
+        },
+        {
+            "name": "toradora",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1905697445972495,
+                "betweenness": 0.0,
+                "eigenvector": 0.007595679382240696
+            },
+            "id": 6708,
+            "gansner": 43,
+            "hierarchy": [
+                0.7616238307768601,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.36853773293181297,
+                0.9729210885641283
+            ]
+        },
+        {
+            "name": "pics",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.2519480519480519,
+                "betweenness": 0.26728951890034364,
+                "eigenvector": 0.03923819995907675
+            },
+            "id": 7741,
+            "gansner": 62,
+            "hierarchy": [
+                0.879614904495631,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.21848135831894236,
+                0.7731482107369303
+            ]
+        },
+        {
+            "name": "place",
+            "attributes": {
+                "degree": 7,
+                "closeness": 0.28955223880597014,
+                "betweenness": 0.3210910652920962,
+                "eigenvector": 0.21352050131745687
+            },
+            "id": 27206,
+            "gansner": 5,
+            "hierarchy": [
+                0.1354332324424152,
+                0.5
+            ],
+            "radial": [
+                0.739259090108991,
+                0.2221741540375022
+            ]
+        },
+        {
+            "name": "subredditdrama",
+            "attributes": {
+                "degree": 13,
+                "closeness": 0.30407523510971785,
+                "betweenness": 0.5152491408934707,
+                "eigenvector": 0.14630957016300028
+            },
+            "id": 70,
+            "gansner": 63,
+            "hierarchy": [
+                0.8936370320969921,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.7103248795200785,
+                0.23919479782070868
+            ]
+        },
+        {
+            "name": "tipofmytongue",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.17168141592920355,
+                "betweenness": 0.0,
+                "eigenvector": 0.007737692621241474
+            },
+            "id": 1097,
+            "gansner": 95,
+            "hierarchy": [
+                0.3724242890610304,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.4787370183776481,
+                0.14738606713623276
+            ]
+        },
+        {
+            "name": "horizon",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 27212,
+            "gansner": 9,
+            "hierarchy": [
+                0.055404504180988044,
+                0.5
+            ],
+            "radial": [
+                0.4975475854063492,
+                0.11643796725655342
+            ]
+        },
+        {
+            "name": "straya",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16139767054908485,
+                "betweenness": 0.0,
+                "eigenvector": 0.003471782008384739
+            },
+            "id": 7760,
+            "gansner": 50,
+            "hierarchy": [
+                0.5105935464012722,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.9567081031964644,
+                0.2905947085941408
+            ]
+        },
+        {
+            "name": "paranormal",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.15348101265822786,
+                "betweenness": 0.0,
+                "eigenvector": 0.0011860092210378803
+            },
+            "id": 82,
+            "gansner": 86,
+            "hierarchy": [
+                0.8279724345491544,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.18079362134338087,
+                0.7422298530465465
+            ]
+        },
+        {
+            "name": "purplepixels",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18546845124282982,
+                "betweenness": 0.0,
+                "eigenvector": 0.011689103667161103
+            },
+            "id": 27220,
+            "gansner": 46,
+            "hierarchy": [
+                0.5109355495135005,
+                0.5
+            ],
+            "radial": [
+                0.9689820695429613,
+                0.1306939393529722
+            ]
+        },
+        {
+            "name": "yamrepublic",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21507760532150777,
+                "betweenness": 0.0,
+                "eigenvector": 0.016337647747970266
+            },
+            "id": 27223,
+            "gansner": 57,
+            "hierarchy": [
+                0.5697600848167718,
+                0.5
+            ],
+            "radial": [
+                0.7695824472766544,
+                0.34130514134299506
+            ]
+        },
+        {
+            "name": "explainlikeimfive",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21896162528216703,
+                "betweenness": 0.0,
+                "eigenvector": 0.05870843972811155
+            },
+            "id": 88,
+            "gansner": 30,
+            "hierarchy": [
+                0.375160313958857,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8304004262586762,
+                0.06857872892698293
+            ]
+        },
+        {
+            "name": "subredditcancer",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.24556962025316456,
+                "betweenness": 0.0,
+                "eigenvector": 0.05243068040555856
+            },
+            "id": 10345,
+            "gansner": 91,
+            "hierarchy": [
+                0.6521828348637972,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.5934938463660973,
+                0.011535913693574335
+            ]
+        },
+        {
+            "name": "denmark",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 2668,
+            "gansner": 71,
+            "hierarchy": [
+                0.8365225123548624,
+                0.5
+            ],
+            "radial": [
+                0.35671095760724264,
+                0.9509659451932566
+            ]
+        },
+        {
+            "name": "soccer",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 113,
+            "gansner": 17,
+            "hierarchy": [
+                0.21477795447938575,
+                0.5
+            ],
+            "radial": [
+                0.49377976317905253,
+                0.31008936175965607
+            ]
+        },
+        {
+            "name": "cig_rca",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1905697445972495,
+                "betweenness": 0.0,
+                "eigenvector": 0.007595679382240696
+            },
+            "id": 17527,
+            "gansner": 61,
+            "hierarchy": [
+                0.8419945621505156,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.2791471020594574,
+                0.8700942286633591
+            ]
+        },
+        {
+            "name": "gifsound",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.13416320885200553,
+                "betweenness": 0.0,
+                "eigenvector": 0.0003670379723741652
+            },
+            "id": 28792,
+            "gansner": 77,
+            "hierarchy": [
+                0.6815951025154329,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.23447557337976513,
+                0.6659546566805014
+            ]
+        },
+        {
+            "name": "homestuck",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.19207920792079208,
+                "betweenness": 0.08118556701030928,
+                "eigenvector": 0.015629475002528703
+            },
+            "id": 2682,
+            "gansner": 51,
+            "hierarchy": [
+                0.4832332974230065,
+                0.5
+            ],
+            "radial": [
+                0.9591819258709521,
+                0.3085481755870703
+            ]
+        },
+        {
+            "name": "outoftheloop",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.2572944297082228,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.14867838051530094
+            },
+            "id": 126,
+            "gansner": 3,
+            "hierarchy": [
+                0.10841498657637784,
+                0.5
+            ],
+            "radial": [
+                0.510487580934439,
+                0.09447200854411983
+            ]
+        },
+        {
+            "name": "uwaterloo",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 3202,
+            "gansner": 67,
+            "hierarchy": [
+                0.9476735238290669,
+                0.5
+            ],
+            "radial": [
+                0.31605463342229584,
+                0.906109316064838
+            ]
+        },
+        {
+            "name": "grilledcheese",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 9360,
+            "gansner": 10,
+            "hierarchy": [
+                0.027702252090494022,
+                0.5
+            ],
+            "radial": [
+                0.4869291773112403,
+                0.1859833173356406
+            ]
+        },
+        {
+            "name": "csshelp",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21896162528216703,
+                "betweenness": 0.0,
+                "eigenvector": 0.05870843972811155
+            },
+            "id": 658,
+            "gansner": 31,
+            "hierarchy": [
+                0.3505360898784179,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8215993263590563,
+                0.05701983263258933
+            ]
+        },
+        {
+            "name": "theitalyplace",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1913214990138067,
+                "betweenness": 0.0,
+                "eigenvector": 0.008011653432936406
+            },
+            "id": 27289,
+            "gansner": 42,
+            "hierarchy": [
+                0.7339215786863661,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.38763374103833953,
+                0.9805999810731523
+            ]
+        },
+        {
+            "name": "swedenonplace",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22505800464037123,
+                "betweenness": 0.0,
+                "eigenvector": 0.04742956398528214
+            },
+            "id": 27290,
+            "gansner": 7,
+            "hierarchy": [
+                0.19425776774568645,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.975547214332948,
+                0.18472603387905748
+            ]
+        },
+        {
+            "name": "parahumansplace",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16139767054908485,
+                "betweenness": 0.0,
+                "eigenvector": 0.003471782008384739
+            },
+            "id": 27294,
+            "gansner": 53,
+            "hierarchy": [
+                0.5085415277279023,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9718364803212164,
+                0.305181900525896
+            ]
+        },
+        {
+            "name": "expectationvsreality",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18546845124282982,
+                "betweenness": 0.0,
+                "eigenvector": 0.011689103667161103
+            },
+            "id": 18081,
+            "gansner": 47,
+            "hierarchy": [
+                0.5403478171651361,
+                0.5
+            ],
+            "radial": [
+                0.9741200089438204,
+                0.16588030120726252
+            ]
+        },
+        {
+            "name": "karmacourt",
+            "attributes": {
+                "degree": 6,
+                "closeness": 0.27323943661971833,
+                "betweenness": 0.16376718213058422,
+                "eigenvector": 0.07354796312716327
+            },
+            "id": 162,
+            "gansner": 58,
+            "hierarchy": [
+                0.5701020879290001,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.7343019300574213,
+                0.23919479782070868
+            ]
+        },
+        {
+            "name": "wholesomememes",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1833648393194707,
+                "betweenness": 0.0,
+                "eigenvector": 0.01731191903597798
+            },
+            "id": 34469,
+            "gansner": 35,
+            "hierarchy": [
+                0.36592622992869234,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.8026079799810657,
+                0.031002176587489355
+            ]
+        },
+        {
+            "name": "travel",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 1189,
+            "gansner": 13,
+            "hierarchy": [
+                0.3218249286068503,
+                0.5
+            ],
+            "radial": [
+                0.48586353062069165,
+                0.23951925806756885
+            ]
+        },
+        {
+            "name": "thetruthishere",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.15348101265822786,
+                "betweenness": 0.0,
+                "eigenvector": 0.0011860092210378803
+            },
+            "id": 1194,
+            "gansner": 83,
+            "hierarchy": [
+                0.7633338463380017,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.20540815695453404,
+                0.7062147656450676
+            ]
+        },
+        {
+            "name": "nomorebamboozles",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22505800464037123,
+                "betweenness": 0.0,
+                "eigenvector": 0.04742956398528214
+            },
+            "id": 25789,
+            "gansner": 8,
+            "hierarchy": [
+                0.16484550009405086,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9649858944534041,
+                0.11262555935594643
+            ]
+        },
+        {
+            "name": "confession",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18130841121495328,
+                "betweenness": 0.0,
+                "eigenvector": 0.014468760057941552
+            },
+            "id": 1216,
+            "gansner": 22,
+            "hierarchy": [
+                0.4278287932420185,
+                0.5
+            ],
+            "radial": [
+                0.8650434584040989,
+                0.14242452919466264
+            ]
+        },
+        {
+            "name": "apple",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 1221,
+            "gansner": 16,
+            "hierarchy": [
+                0.2400861847842815,
+                0.5
+            ],
+            "radial": [
+                0.49089680829301485,
+                0.2932309480998797
+            ]
+        },
+        {
+            "name": "craftbeer",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 3271,
+            "gansner": 68,
+            "hierarchy": [
+                0.9213392841874861,
+                0.5
+            ],
+            "radial": [
+                0.3256359389346388,
+                0.9173707904662765
+            ]
+        },
+        {
+            "name": "create_a_story",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1833648393194707,
+                "betweenness": 0.0,
+                "eigenvector": 0.01731191903597798
+            },
+            "id": 27336,
+            "gansner": 37,
+            "hierarchy": [
+                0.3071187947810325,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7811903844415582,
+                0.014921115602482122
+            ]
+        },
+        {
+            "name": "cringeanarchy",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.19917864476386038,
+                "betweenness": 0.0,
+                "eigenvector": 0.012922045966559428
+            },
+            "id": 9418,
+            "gansner": 40,
+            "hierarchy": [
+                0.6237965765488466,
+                0.5
+            ],
+            "radial": [
+                0.5834177763188567,
+                0.02398301991374765
+            ]
+        },
+        {
+            "name": "bestofoutrageculture",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.24556962025316456,
+                "betweenness": 0.0,
+                "eigenvector": 0.05243068040555856
+            },
+            "id": 7374,
+            "gansner": 92,
+            "hierarchy": [
+                0.6244805827733032,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.6034842840899901,
+                0.0
+            ]
+        },
+        {
+            "name": "todayilearned",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 27865,
+            "gansner": 14,
+            "hierarchy": [
+                0.29412267651635626,
+                0.5
+            ],
+            "radial": [
+                0.48688160379826934,
+                0.25774310859954846
+            ]
+        },
+        {
+            "name": "amishadowbanned",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1779816513761468,
+                "betweenness": 0.0,
+                "eigenvector": 0.003817571893789171
+            },
+            "id": 12506,
+            "gansner": 45,
+            "hierarchy": [
+                0.5974623369072658,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.7895918668322225,
+                0.33199042842271764
+            ]
+        },
+        {
+            "name": "wtf",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.13416320885200553,
+                "betweenness": 0.0,
+                "eigenvector": 0.0003670379723741652
+            },
+            "id": 27869,
+            "gansner": 78,
+            "hierarchy": [
+                0.7110073701670685,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.2578436829510802,
+                0.681298922521597
+            ]
+        },
+        {
+            "name": "funny",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.18130841121495328,
+                "betweenness": 0.1014819587628866,
+                "eigenvector": 0.006699485667632546
+            },
+            "id": 737,
+            "gansner": 87,
+            "hierarchy": [
+                0.7380256160331059,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.2240950328495107,
+                0.747624004650597
+            ]
+        },
+        {
+            "name": "unpopularopinion",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.20950323974082075,
+                "betweenness": 0.05412371134020619,
+                "eigenvector": 0.01020580344994667
+            },
+            "id": 2274,
+            "gansner": 89,
+            "hierarchy": [
+                0.7879580704184408,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.20899519983254128,
+                0.7635766334545554
+            ]
+        },
+        {
+            "name": "worldoftanksblitz",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.20507399577167018,
+                "betweenness": 0.0,
+                "eigenvector": 0.033026033543637486
+            },
+            "id": 27363,
+            "gansner": 4,
+            "hierarchy": [
+                0.10602096479077959,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.4988415849591582,
+                0.08745149995268288
+            ]
+        },
+        {
+            "name": "europe",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.25866666666666666,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.15681767929390006
+            },
+            "id": 1254,
+            "gansner": 19,
+            "hierarchy": [
+                0.08310675627148206,
+                0.5
+            ],
+            "radial": [
+                0.5065865528708237,
+                0.36079979450851035
+            ]
+        },
+        {
+            "name": "spam",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.212253829321663,
+                "betweenness": 0.16237113402061856,
+                "eigenvector": 0.01139181267098455
+            },
+            "id": 5356,
+            "gansner": 90,
+            "hierarchy": [
+                0.8142923100600216,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.22781528156383657,
+                0.7632792115616002
+            ]
+        },
+        {
+            "name": "askvet",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.15348101265822786,
+                "betweenness": 0.0,
+                "eigenvector": 0.0011860092210378803
+            },
+            "id": 2285,
+            "gansner": 85,
+            "hierarchy": [
+                0.8532806648540502,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.18620748711947138,
+                0.7267503954359259
+            ]
+        },
+        {
+            "name": "thefinalclean",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.2360097323600973,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.03606284625318883
+            },
+            "id": 27375,
+            "gansner": 75,
+            "hierarchy": [
+                0.7339215786863661,
+                0.5
+            ],
+            "radial": [
+                0.3990608988539541,
+                0.9903067501250524
+            ]
+        },
+        {
+            "name": "hiphopheads",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 240,
+            "gansner": 12,
+            "hierarchy": [
+                0.34711605875613466,
+                0.5
+            ],
+            "radial": [
+                0.48554954543508366,
+                0.2221741540375022
+            ]
+        },
+        {
+            "name": "placeatlas",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.23261390887290168,
+                "betweenness": 0.13767182130584193,
+                "eigenvector": 0.056474481568271034
+            },
+            "id": 27378,
+            "gansner": 54,
+            "hierarchy": [
+                0.22367003539732208,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9739297148919368,
+                0.277751490489259
+            ]
+        },
+        {
+            "name": "placehistory",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.22505800464037123,
+                "betweenness": 0.0,
+                "eigenvector": 0.04742956398528214
+            },
+            "id": 27379,
+            "gansner": 6,
+            "hierarchy": [
+                0.1354332324424152,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9765938316183082,
+                0.20357176655085238
+            ]
+        },
+        {
+            "name": "starcitizen",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.23486682808716708,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.03419052932416419
+            },
+            "id": 242,
+            "gansner": 64,
+            "hierarchy": [
+                0.7982181637852904,
+                0.5
+            ],
+            "radial": [
+                0.28796723136426566,
+                0.8571969338506673
+            ]
+        },
+        {
+            "name": "charlotte",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21896162528216703,
+                "betweenness": 0.0,
+                "eigenvector": 0.05870843972811155
+            },
+            "id": 5878,
+            "gansner": 32,
+            "hierarchy": [
+                0.32524495972913353,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8120085061441192,
+                0.046288309967689165
+            ]
+        },
+        {
+            "name": "vancouver",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.15348101265822786,
+                "betweenness": 0.0,
+                "eigenvector": 0.0011860092210378803
+            },
+            "id": 1279,
+            "gansner": 82,
+            "hierarchy": [
+                0.7896680859795824,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.2175964909776833,
+                0.7031053549459909
+            ]
+        },
+        {
+            "name": "thesefuckingaccounts",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.1547049441786284,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.0016517350468467397
+            },
+            "id": 9472,
+            "gansner": 88,
+            "hierarchy": [
+                0.706219326595872,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.24615962816542264,
+                0.6736335491895254
+            ]
+        },
+        {
+            "name": "libertarian",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 255,
+            "gansner": 66,
+            "hierarchy": [
+                0.9729817541339626,
+                0.5
+            ],
+            "radial": [
+                0.30679682779815515,
+                0.8947937649555895
+            ]
+        },
+        {
+            "name": "intotheslushpile",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1833648393194707,
+                "betweenness": 0.0,
+                "eigenvector": 0.01731191903597798
+            },
+            "id": 25865,
+            "gansner": 36,
+            "hierarchy": [
+                0.33651396227705666,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7960999234066441,
+                0.011664345874623153
+            ]
+        },
+        {
+            "name": "anime",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.23486682808716708,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.03419052932416419
+            },
+            "id": 274,
+            "gansner": 74,
+            "hierarchy": [
+                0.7677798867969698,
+                0.5
+            ],
+            "radial": [
+                0.37533123058406004,
+                0.9585096459327557
+            ]
+        },
+        {
+            "name": "squaredcircle",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.261455525606469,
+                "betweenness": 0.11522766323024054,
+                "eigenvector": 0.05137620421722735
+            },
+            "id": 279,
+            "gansner": 72,
+            "hierarchy": [
+                0.708271345269242,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7223134047887498,
+                0.2462518081899174
+            ]
+        },
+        {
+            "name": "diy",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.13379310344827586,
+                "betweenness": 0.0,
+                "eigenvector": 0.00034796729434756474
+            },
+            "id": 1324,
+            "gansner": 80,
+            "hierarchy": [
+                0.6538928504249388,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.2754934562632909,
+                0.6962240938771648
+            ]
+        },
+        {
+            "name": "dc_cinematic",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 12077,
+            "gansner": 65,
+            "hierarchy": [
+                1.0,
+                0.5
+            ],
+            "radial": [
+                0.29737727222991334,
+                0.8828022549987157
+            ]
+        },
+        {
+            "name": "longhandwriter",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1833648393194707,
+                "betweenness": 0.0,
+                "eigenvector": 0.01731191903597798
+            },
+            "id": 26415,
+            "gansner": 38,
+            "hierarchy": [
+                0.27770652712939686,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7790781204656496,
+                0.03614216766483257
+            ]
+        },
+        {
+            "name": "entrepreneur",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.15348101265822786,
+                "betweenness": 0.0,
+                "eigenvector": 0.0011860092210378803
+            },
+            "id": 308,
+            "gansner": 84,
+            "hierarchy": [
+                0.9049231348005267,
+                0.8333333333333334
+            ],
+            "radial": [
+                0.19467557242829484,
+                0.7143533101704769
+            ]
+        },
+        {
+            "name": "marchagainsttrump",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2113289760348584,
+                "betweenness": 0.0,
+                "eigenvector": 0.025969098495382294
+            },
+            "id": 26422,
+            "gansner": 24,
+            "hierarchy": [
+                0.4555310453325125,
+                0.5
+            ],
+            "radial": [
+                0.7223134047887498,
+                0.1250564425637767
+            ]
+        },
+        {
+            "name": "unexpected",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.2068230277185501,
+                "betweenness": 0.020618556701030927,
+                "eigenvector": 0.034834015591890095
+            },
+            "id": 4414,
+            "gansner": 96,
+            "hierarchy": [
+                0.3724242890610304,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.49089680829301485,
+                0.1511173599751247
+            ]
+        },
+        {
+            "name": "mgtow",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.22095671981776766,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.06513633260631324
+            },
+            "id": 1882,
+            "gansner": 26,
+            "hierarchy": [
+                0.4562150515569691,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8595725044124434,
+                0.12656383079398126
+            ]
+        },
+        {
+            "name": "scjerk",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.20770877944325483,
+                "betweenness": 0.0,
+                "eigenvector": 0.01141325127602987
+            },
+            "id": 18789,
+            "gansner": 73,
+            "hierarchy": [
+                0.708271345269242,
+                0.0
+            ],
+            "radial": [
+                0.7223134047887498,
+                0.3149292271086536
+            ]
+        },
+        {
+            "name": "worldnews",
+            "attributes": {
+                "degree": 6,
+                "closeness": 0.32441471571906355,
+                "betweenness": 0.4223582474226806,
+                "eigenvector": 0.23603001415098632
+            },
+            "id": 1385,
+            "gansner": 93,
+            "hierarchy": [
+                0.6792010807298345,
+                0.5
+            ],
+            "radial": [
+                0.7103248795200785,
+                0.20513999107734324
+            ]
+        },
+        {
+            "name": "unitedkingdom",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2059447983014862,
+                "betweenness": 0.0,
+                "eigenvector": 0.0348340155918901
+            },
+            "id": 369,
+            "gansner": 21,
+            "hierarchy": [
+                0.07900271892474221,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.5118957569183782,
+                0.37746893969095163
+            ]
+        },
+        {
+            "name": "onepiece",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.20166320166320167,
+                "betweenness": 0.0,
+                "eigenvector": 0.008717202366860115
+            },
+            "id": 885,
+            "gansner": 76,
+            "hierarchy": [
+                0.869012808016553,
+                0.6666666666666666
+            ],
+            "radial": [
+                0.2185955347500726,
+                0.7865321959199124
+            ]
+        },
+        {
+            "name": "mentionhelper",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18908382066276802,
+                "betweenness": 0.0,
+                "eigenvector": 0.012544726124339205
+            },
+            "id": 26489,
+            "gansner": 56,
+            "hierarchy": [
+                0.22367003539732208,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.9665082468684735,
+                0.2420743825115927
+            ]
+        },
+        {
+            "name": "askfeminists",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21896162528216703,
+                "betweenness": 0.0,
+                "eigenvector": 0.05870843972811155
+            },
+            "id": 1422,
+            "gansner": 28,
+            "hierarchy": [
+                0.4298808119153884,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8468608617466139,
+                0.09623761305411727
+            ]
+        },
+        {
+            "name": "theoryofreddit",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.22716627634660422,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.05262258152832757
+            },
+            "id": 401,
+            "gansner": 48,
+            "hierarchy": [
+                0.5355597735939397,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9715510392433908,
+                0.14829185199205075
+            ]
+        },
+        {
+            "name": "negaredditredux",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21896162528216703,
+                "betweenness": 0.0,
+                "eigenvector": 0.05870843972811155
+            },
+            "id": 26010,
+            "gansner": 29,
+            "hierarchy": [
+                0.40217855982489437,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.8389636585934415,
+                0.08179913206883964
+            ]
+        },
+        {
+            "name": "xkcd",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.1833648393194707,
+                "betweenness": 0.0,
+                "eigenvector": 0.01731191903597798
+            },
+            "id": 410,
+            "gansner": 34,
+            "hierarchy": [
+                0.25068828126335946,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7921132630196812,
+                0.04532033689788966
+            ]
+        },
+        {
+            "name": "beerporn",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 28060,
+            "gansner": 69,
+            "hierarchy": [
+                0.8936370320969921,
+                0.5
+            ],
+            "radial": [
+                0.3357120089818793,
+                0.928740418283335
+            ]
+        },
+        {
+            "name": "humanporn",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 28574,
+            "gansner": 11,
+            "hierarchy": [
+                0.0,
+                0.5
+            ],
+            "radial": [
+                0.48589207472847423,
+                0.20420716786762022
+            ]
+        },
+        {
+            "name": "mylittlepony",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16139767054908485,
+                "betweenness": 0.0,
+                "eigenvector": 0.003471782008384739
+            },
+            "id": 933,
+            "gansner": 52,
+            "hierarchy": [
+                0.48152328186186494,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.9616557485454399,
+                0.3264881234030472
+            ]
+        },
+        {
+            "name": "nocontext",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21507760532150777,
+                "betweenness": 0.0,
+                "eigenvector": 0.016337647747970266
+            },
+            "id": 28071,
+            "gansner": 59,
+            "hierarchy": [
+                0.584808221754818,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.7988401577537689,
+                0.3051143046411335
+            ]
+        },
+        {
+            "name": "forsen",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18908382066276802,
+                "betweenness": 0.0,
+                "eigenvector": 0.012544726124339205
+            },
+            "id": 11178,
+            "gansner": 55,
+            "hierarchy": [
+                0.19425776774568645,
+                0.16666666666666666
+            ],
+            "radial": [
+                1.0,
+                0.27434465789722723
+            ]
+        },
+        {
+            "name": "croatia",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.25866666666666666,
+                "betweenness": 0.040807560137457045,
+                "eigenvector": 0.1490799866726586
+            },
+            "id": 2477,
+            "gansner": 97,
+            "hierarchy": [
+                0.3724242890610304,
+                0.5
+            ],
+            "radial": [
+                0.5030470835057874,
+                0.1548486528140167
+            ]
+        },
+        {
+            "name": "catalunya",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2059447983014862,
+                "betweenness": 0.0,
+                "eigenvector": 0.0348340155918901
+            },
+            "id": 18870,
+            "gansner": 20,
+            "hierarchy": [
+                0.05198447305870483,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.5012868635258634,
+                0.34413064932606907
+            ]
+        },
+        {
+            "name": "twoxchromosomes",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18130841121495328,
+                "betweenness": 0.0,
+                "eigenvector": 0.014468760057941552
+            },
+            "id": 453,
+            "gansner": 27,
+            "hierarchy": [
+                0.4562150515569691,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.8541015504207877,
+                0.11069907664021415
+            ]
+        },
+        {
+            "name": "photoshopbattles",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2559366754617414,
+                "betweenness": 0.0,
+                "eigenvector": 0.14134229405141713
+            },
+            "id": 2003,
+            "gansner": 15,
+            "hierarchy": [
+                0.2664204244258622,
+                0.5
+            ],
+            "radial": [
+                0.4885847355626282,
+                0.2758723248928605
+            ]
+        },
+        {
+            "name": "frankocean",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23373493975903614,
+                "betweenness": 0.0,
+                "eigenvector": 0.03250305351051367
+            },
+            "id": 14293,
+            "gansner": 70,
+            "hierarchy": [
+                0.8642247644453565,
+                0.5
+            ],
+            "radial": [
+                0.34631138767179986,
+                0.9401911611621085
+            ]
+        },
+        {
+            "name": "evenwithcontext",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.21507760532150777,
+                "betweenness": 0.0,
+                "eigenvector": 0.016337647747970266
+            },
+            "id": 28645,
+            "gansner": 60,
+            "hierarchy": [
+                0.5553959541031823,
+                0.16666666666666666
+            ],
+            "radial": [
+                0.8061569640486963,
+                0.2893374251375576
+            ]
+        },
+        {
+            "name": "incels",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.24808184143222506,
+                "betweenness": 0.04102233676975945,
+                "eigenvector": 0.058171622549036954
+            },
+            "id": 22515,
+            "gansner": 94,
+            "hierarchy": [
+                0.6514988286393406,
+                0.3333333333333333
+            ],
+            "radial": [
+                0.5746452205270194,
+                0.0382038421500899
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 28163,
+            "target": 3082
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 265.0,
+                "num_words": 38.0,
+                "num_words_unique": 35.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 5.0
+            },
+            "source": 3593,
+            "target": 12506
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1514.0,
+                "num_words": 228.0,
+                "num_words_unique": 144.0,
+                "num_words_long": 56.0,
+                "num_stop_word_unique": 27.0,
+                "num_sentences": 9.0
+            },
+            "source": 3593,
+            "target": 162
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 1254
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 2091
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 113
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 1221
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 11294
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 2003
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 27865
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 1189
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 240
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 28574
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 9360
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 2477
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 27212
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 27206
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 126
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 10745.0,
+                "num_words": 1302.0,
+                "num_words_unique": 436.0,
+                "num_words_long": 386.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 9.0
+            },
+            "source": 3082,
+            "target": 1056
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1947.0,
+                "num_words": 313.0,
+                "num_words_unique": 220.0,
+                "num_words_long": 87.0,
+                "num_stop_word_unique": 47.0,
+                "num_sentences": 14.0
+            },
+            "source": 16,
+            "target": 26422
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1495.0,
+                "num_words": 249.0,
+                "num_words_unique": 163.0,
+                "num_words_long": 55.0,
+                "num_stop_word_unique": 31.0,
+                "num_sentences": 21.0
+            },
+            "source": 16,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2943.0,
+                "num_words": 487.0,
+                "num_words_unique": 270.0,
+                "num_words_long": 81.0,
+                "num_stop_word_unique": 65.0,
+                "num_sentences": 22.0
+            },
+            "source": 16,
+            "target": 11294
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 104.0,
+                "num_words": 11.0,
+                "num_words_unique": 11.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 23,
+            "target": 737
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 109.0,
+                "num_words": 11.0,
+                "num_words_unique": 11.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 23,
+            "target": 1324
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1923.0,
+                "num_words": 302.0,
+                "num_words_unique": 173.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 9.0
+            },
+            "source": 25623,
+            "target": 2682
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 189.0,
+                "num_words": 27.0,
+                "num_words_unique": 23.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 1.0,
+                "num_sentences": 1.0
+            },
+            "source": 11294,
+            "target": 42
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 182.0,
+                "num_words": 25.0,
+                "num_words_unique": 23.0,
+                "num_words_long": 6.0,
+                "num_stop_word_unique": 4.0,
+                "num_sentences": 2.0
+            },
+            "source": 11294,
+            "target": 5878
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 346.0,
+                "num_words": 53.0,
+                "num_words_unique": 39.0,
+                "num_words_long": 10.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 3.0
+            },
+            "source": 11294,
+            "target": 658
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 272.0,
+                "num_words": 36.0,
+                "num_words_unique": 34.0,
+                "num_words_long": 10.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 3.0
+            },
+            "source": 11294,
+            "target": 88
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 433.0,
+                "num_words": 69.0,
+                "num_words_unique": 55.0,
+                "num_words_long": 14.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 3.0
+            },
+            "source": 11294,
+            "target": 26010
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1651.0,
+                "num_words": 302.0,
+                "num_words_unique": 186.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 52.0,
+                "num_sentences": 17.0
+            },
+            "source": 11294,
+            "target": 1422
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 328.0,
+                "num_words": 50.0,
+                "num_words_unique": 43.0,
+                "num_words_long": 6.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 2.0
+            },
+            "source": 11294,
+            "target": 1882
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 503.0,
+                "num_words": 95.0,
+                "num_words_unique": 76.0,
+                "num_words_long": 18.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 6.0
+            },
+            "source": 34,
+            "target": 737
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2289.0,
+                "num_words": 296.0,
+                "num_words_unique": 121.0,
+                "num_words_long": 80.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 8.0
+            },
+            "source": 34,
+            "target": 5356
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 98.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 34,
+            "target": 82
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 701.0,
+                "num_words": 117.0,
+                "num_words_unique": 93.0,
+                "num_words_long": 22.0,
+                "num_stop_word_unique": 30.0,
+                "num_sentences": 5.0
+            },
+            "source": 34,
+            "target": 2285
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 115.0,
+                "num_words": 15.0,
+                "num_words_unique": 15.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 2.0
+            },
+            "source": 34,
+            "target": 308
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 108.0,
+                "num_words": 12.0,
+                "num_words_unique": 12.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 34,
+            "target": 1194
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 127.0,
+                "num_words": 14.0,
+                "num_words_unique": 14.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 1.0
+            },
+            "source": 34,
+            "target": 1279
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4224.0,
+                "num_words": 830.0,
+                "num_words_unique": 401.0,
+                "num_words_long": 81.0,
+                "num_stop_word_unique": 71.0,
+                "num_sentences": 89.0
+            },
+            "source": 42,
+            "target": 26415
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3382.0,
+                "num_words": 604.0,
+                "num_words_unique": 343.0,
+                "num_words_long": 107.0,
+                "num_stop_word_unique": 65.0,
+                "num_sentences": 54.0
+            },
+            "source": 42,
+            "target": 27336
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 6748.0,
+                "num_words": 1223.0,
+                "num_words_unique": 579.0,
+                "num_words_long": 209.0,
+                "num_stop_word_unique": 78.0,
+                "num_sentences": 96.0
+            },
+            "source": 42,
+            "target": 25865
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 144.0,
+                "num_words": 15.0,
+                "num_words_unique": 15.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 1.0
+            },
+            "source": 42,
+            "target": 34469
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 183.0,
+                "num_words": 23.0,
+                "num_words_unique": 21.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 3.0
+            },
+            "source": 42,
+            "target": 410
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 179.0,
+                "num_words": 24.0,
+                "num_words_unique": 24.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 4.0,
+                "num_sentences": 2.0
+            },
+            "source": 2603,
+            "target": 27375
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 424.0,
+                "num_words": 60.0,
+                "num_words_unique": 51.0,
+                "num_words_long": 17.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 2.0
+            },
+            "source": 33843,
+            "target": 22515
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 636.0,
+                "num_words": 113.0,
+                "num_words_unique": 85.0,
+                "num_words_long": 19.0,
+                "num_stop_word_unique": 25.0,
+                "num_sentences": 5.0
+            },
+            "source": 6708,
+            "target": 274
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2289.0,
+                "num_words": 296.0,
+                "num_words_unique": 121.0,
+                "num_words_long": 80.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 8.0
+            },
+            "source": 7741,
+            "target": 5356
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 105.0,
+                "num_words": 15.0,
+                "num_words_unique": 15.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 7741,
+            "target": 885
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 101.0,
+                "num_words": 11.0,
+                "num_words_unique": 11.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 7741,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 776.0,
+                "num_words": 131.0,
+                "num_words_unique": 103.0,
+                "num_words_long": 22.0,
+                "num_stop_word_unique": 25.0,
+                "num_sentences": 9.0
+            },
+            "source": 7741,
+            "target": 2274
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 205.0,
+                "num_words": 30.0,
+                "num_words_unique": 21.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 1.0
+            },
+            "source": 27206,
+            "target": 25789
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 16165.0,
+                "num_words": 2595.0,
+                "num_words_unique": 934.0,
+                "num_words_long": 517.0,
+                "num_stop_word_unique": 91.0,
+                "num_sentences": 165.0
+            },
+            "source": 27206,
+            "target": 401
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 639.0,
+                "num_words": 107.0,
+                "num_words_unique": 77.0,
+                "num_words_long": 17.0,
+                "num_stop_word_unique": 1.0,
+                "num_sentences": 7.0
+            },
+            "source": 27206,
+            "target": 27290
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1194.0,
+                "num_words": 176.0,
+                "num_words_unique": 129.0,
+                "num_words_long": 53.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 2.0
+            },
+            "source": 27206,
+            "target": 162
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1448.0,
+                "num_words": 255.0,
+                "num_words_unique": 161.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 44.0,
+                "num_sentences": 10.0
+            },
+            "source": 27206,
+            "target": 27379
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 942.0,
+                "num_words": 102.0,
+                "num_words_unique": 62.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 3.0
+            },
+            "source": 27206,
+            "target": 27378
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 453.0,
+                "num_words": 51.0,
+                "num_words_unique": 32.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 1.0
+            },
+            "source": 70,
+            "target": 279
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1251.0,
+                "num_words": 199.0,
+                "num_words_unique": 129.0,
+                "num_words_long": 41.0,
+                "num_stop_word_unique": 35.0,
+                "num_sentences": 8.0
+            },
+            "source": 70,
+            "target": 27375
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1140.0,
+                "num_words": 151.0,
+                "num_words_unique": 85.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 19.0,
+                "num_sentences": 4.0
+            },
+            "source": 70,
+            "target": 2668
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1140.0,
+                "num_words": 151.0,
+                "num_words_unique": 85.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 19.0,
+                "num_sentences": 4.0
+            },
+            "source": 70,
+            "target": 14293
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1060.0,
+                "num_words": 178.0,
+                "num_words_unique": 114.0,
+                "num_words_long": 35.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 8.0
+            },
+            "source": 70,
+            "target": 28060
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1060.0,
+                "num_words": 178.0,
+                "num_words_unique": 114.0,
+                "num_words_long": 35.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 8.0
+            },
+            "source": 70,
+            "target": 3271
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 566.0,
+                "num_words": 61.0,
+                "num_words_unique": 22.0,
+                "num_words_long": 24.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 70,
+            "target": 3202
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 90.0,
+                "num_words": 13.0,
+                "num_words_unique": 13.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 70,
+            "target": 255
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 611.0,
+                "num_words": 81.0,
+                "num_words_unique": 60.0,
+                "num_words_long": 28.0,
+                "num_stop_word_unique": 12.0,
+                "num_sentences": 4.0
+            },
+            "source": 70,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1181.0,
+                "num_words": 165.0,
+                "num_words_unique": 114.0,
+                "num_words_long": 39.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 10.0
+            },
+            "source": 70,
+            "target": 12077
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1423.0,
+                "num_words": 220.0,
+                "num_words_unique": 127.0,
+                "num_words_long": 47.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 15.0
+            },
+            "source": 70,
+            "target": 242
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 404.0,
+                "num_words": 53.0,
+                "num_words_unique": 33.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 2.0
+            },
+            "source": 70,
+            "target": 274
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 377.0,
+                "num_words": 66.0,
+                "num_words_unique": 54.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 21.0,
+                "num_sentences": 3.0
+            },
+            "source": 1097,
+            "target": 4414
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1923.0,
+                "num_words": 302.0,
+                "num_words_unique": 173.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 9.0
+            },
+            "source": 7760,
+            "target": 2682
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 16165.0,
+                "num_words": 2595.0,
+                "num_words_unique": 934.0,
+                "num_words_long": 517.0,
+                "num_stop_word_unique": 91.0,
+                "num_sentences": 165.0
+            },
+            "source": 27220,
+            "target": 401
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 1374.0,
+                "num_words": 216.0,
+                "num_words_unique": 135.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 12.0
+            },
+            "source": 27223,
+            "target": 162
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 343.0,
+                "num_words": 52.0,
+                "num_words_unique": 46.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 12.0,
+                "num_sentences": 4.0
+            },
+            "source": 10345,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2773.0,
+                "num_words": 396.0,
+                "num_words_unique": 199.0,
+                "num_words_long": 84.0,
+                "num_stop_word_unique": 36.0,
+                "num_sentences": 14.0
+            },
+            "source": 17527,
+            "target": 242
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 839.0,
+                "num_words": 118.0,
+                "num_words_unique": 65.0,
+                "num_words_long": 26.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 3.0
+            },
+            "source": 28792,
+            "target": 9472
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1923.0,
+                "num_words": 302.0,
+                "num_words_unique": 173.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 9.0
+            },
+            "source": 2682,
+            "target": 27294
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1923.0,
+                "num_words": 302.0,
+                "num_words_unique": 173.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 9.0
+            },
+            "source": 2682,
+            "target": 933
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 287.0,
+                "num_words": 44.0,
+                "num_words_unique": 33.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            },
+            "source": 2682,
+            "target": 27378
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1058.0,
+                "num_words": 147.0,
+                "num_words_unique": 98.0,
+                "num_words_long": 36.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 5.0
+            },
+            "source": 126,
+            "target": 27363
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 367.0,
+                "num_words": 57.0,
+                "num_words_unique": 45.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 27289,
+            "target": 27375
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 16165.0,
+                "num_words": 2595.0,
+                "num_words_unique": 934.0,
+                "num_words_long": 517.0,
+                "num_stop_word_unique": 91.0,
+                "num_sentences": 165.0
+            },
+            "source": 18081,
+            "target": 401
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 948.0,
+                "num_words": 122.0,
+                "num_words_unique": 86.0,
+                "num_words_long": 40.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 5.0
+            },
+            "source": 162,
+            "target": 279
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 933.0,
+                "num_words": 130.0,
+                "num_words_unique": 89.0,
+                "num_words_long": 38.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 3.0
+            },
+            "source": 162,
+            "target": 28645
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 933.0,
+                "num_words": 130.0,
+                "num_words_unique": 89.0,
+                "num_words_long": 38.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 3.0
+            },
+            "source": 162,
+            "target": 28071
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 78.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 1216,
+            "target": 1882
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 424.0,
+                "num_words": 60.0,
+                "num_words_unique": 51.0,
+                "num_words_long": 17.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 2.0
+            },
+            "source": 9418,
+            "target": 22515
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1586.0,
+                "num_words": 250.0,
+                "num_words_unique": 176.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 42.0,
+                "num_sentences": 8.0
+            },
+            "source": 7374,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 839.0,
+                "num_words": 118.0,
+                "num_words_unique": 65.0,
+                "num_words_long": 26.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 3.0
+            },
+            "source": 27869,
+            "target": 9472
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2291.0,
+                "num_words": 296.0,
+                "num_words_unique": 121.0,
+                "num_words_long": 80.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 8.0
+            },
+            "source": 737,
+            "target": 9472
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2289.0,
+                "num_words": 296.0,
+                "num_words_unique": 121.0,
+                "num_words_long": 80.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 8.0
+            },
+            "source": 737,
+            "target": 5356
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 984.0,
+                "num_words": 179.0,
+                "num_words_unique": 104.0,
+                "num_words_long": 24.0,
+                "num_stop_word_unique": 30.0,
+                "num_sentences": 11.0
+            },
+            "source": 737,
+            "target": 2274
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 361.0,
+                "num_words": 38.0,
+                "num_words_unique": 18.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 1.0,
+                "num_sentences": 1.0
+            },
+            "source": 1254,
+            "target": 369
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 471.0,
+                "num_words": 72.0,
+                "num_words_unique": 60.0,
+                "num_words_long": 17.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 4.0
+            },
+            "source": 1254,
+            "target": 18870
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 169.0,
+                "num_words": 27.0,
+                "num_words_unique": 27.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            },
+            "source": 27378,
+            "target": 26489
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 673.0,
+                "num_words": 75.0,
+                "num_words_unique": 53.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 3.0
+            },
+            "source": 27378,
+            "target": 11178
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 840.0,
+                "num_words": 145.0,
+                "num_words_unique": 111.0,
+                "num_words_long": 31.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 9.0
+            },
+            "source": 279,
+            "target": 18789
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 901.0,
+                "num_words": 159.0,
+                "num_words_unique": 112.0,
+                "num_words_long": 33.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 7.0
+            },
+            "source": 4414,
+            "target": 2477
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 162.0,
+                "num_words": 22.0,
+                "num_words_unique": 22.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 2.0
+            },
+            "source": 1882,
+            "target": 453
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2345.0,
+                "num_words": 413.0,
+                "num_words_unique": 253.0,
+                "num_words_long": 79.0,
+                "num_stop_word_unique": 53.0,
+                "num_sentences": 19.0
+            },
+            "source": 1385,
+            "target": 22515
+        }
+    ]
+}

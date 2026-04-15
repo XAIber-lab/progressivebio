@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "links": [
+    {
+      "id": 11,
+      "source": 7,
+      "target": 8
+    },
+    {
+      "id": 7,
+      "source": 4,
+      "target": 7
+    },
+    {
+      "id": 9,
+      "source": 5,
+      "target": 8
+    }
+  ]
+}

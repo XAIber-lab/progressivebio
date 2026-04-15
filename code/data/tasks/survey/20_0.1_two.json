@@ -1,0 +1,511 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "Bernice",
+            "attributes": {},
+            "id": 0
+        },
+        {
+            "name": "Albert",
+            "attributes": {},
+            "id": 1
+        },
+        {
+            "name": "Bridget",
+            "attributes": {},
+            "id": 2
+        },
+        {
+            "name": "Alfred",
+            "attributes": {},
+            "id": 3
+        },
+        {
+            "name": "Manuel",
+            "attributes": {},
+            "id": 4
+        },
+        {
+            "name": "Robert",
+            "attributes": {},
+            "id": 5
+        },
+        {
+            "name": "Derek",
+            "attributes": {},
+            "id": 6
+        },
+        {
+            "name": "Evelyn",
+            "attributes": {},
+            "id": 7
+        },
+        {
+            "name": "Sadie",
+            "attributes": {},
+            "id": 8
+        },
+        {
+            "name": "Brandy",
+            "attributes": {},
+            "id": 9
+        },
+        {
+            "name": "Hershel",
+            "attributes": {},
+            "id": 10
+        },
+        {
+            "name": "Stefan",
+            "attributes": {},
+            "id": 11
+        },
+        {
+            "name": "Jordan",
+            "attributes": {},
+            "id": 12
+        },
+        {
+            "name": "Jane",
+            "attributes": {},
+            "id": 13
+        },
+        {
+            "name": "Clyde",
+            "attributes": {},
+            "id": 14
+        },
+        {
+            "name": "Alberto",
+            "attributes": {},
+            "id": 15
+        },
+        {
+            "name": "Lisa",
+            "attributes": {},
+            "id": 16
+        },
+        {
+            "name": "Gail",
+            "attributes": {},
+            "id": 17
+        },
+        {
+            "name": "Jason",
+            "attributes": {},
+            "id": 18
+        },
+        {
+            "name": "Mary",
+            "attributes": {},
+            "id": 19
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 1.0,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.6
+            },
+            "source": 0,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.6,
+                "Distance": 0.2,
+                "Interactions per Week": 0.6,
+                "Common Hobbies": 0.8
+            },
+            "source": 0,
+            "target": 13
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 0.0,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.0
+            },
+            "source": 0,
+            "target": 2
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 0.6,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.8
+            },
+            "source": 0,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.4,
+                "Interactions per Week": 0.6,
+                "Common Hobbies": 0.6
+            },
+            "source": 1,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.2,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.0
+            },
+            "source": 1,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.6,
+                "Distance": 0.4,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.6
+            },
+            "source": 1,
+            "target": 14
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.8,
+                "Distance": 0.4,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 0.2
+            },
+            "source": 1,
+            "target": 4
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.6,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 0.6
+            },
+            "source": 2,
+            "target": 3
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.4,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.2
+            },
+            "source": 2,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.8,
+                "Distance": 1.0,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.0
+            },
+            "source": 2,
+            "target": 7
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.6,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.4
+            },
+            "source": 2,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.6,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 1.0
+            },
+            "source": 3,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.0,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.8
+            },
+            "source": 3,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.6,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.0
+            },
+            "source": 3,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.8,
+                "Distance": 0.4,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.6
+            },
+            "source": 3,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.2,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.4
+            },
+            "source": 4,
+            "target": 5
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.6,
+                "Interactions per Week": 0.6,
+                "Common Hobbies": 0.4
+            },
+            "source": 5,
+            "target": 6
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.8,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.6
+            },
+            "source": 5,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.2,
+                "Interactions per Week": 1.0,
+                "Common Hobbies": 0.6
+            },
+            "source": 5,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.4,
+                "Interactions per Week": 0.6,
+                "Common Hobbies": 1.0
+            },
+            "source": 6,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.8,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.8
+            },
+            "source": 6,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.2,
+                "Interactions per Week": 1.0,
+                "Common Hobbies": 0.0
+            },
+            "source": 6,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.6,
+                "Distance": 0.4,
+                "Interactions per Week": 1.0,
+                "Common Hobbies": 0.2
+            },
+            "source": 6,
+            "target": 8
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.2,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.6
+            },
+            "source": 8,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.4,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 0.4
+            },
+            "source": 9,
+            "target": 10
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.8,
+                "Distance": 0.4,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 0.8
+            },
+            "source": 9,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 0.4,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 0.6
+            },
+            "source": 9,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.6,
+                "Distance": 0.8,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.6
+            },
+            "source": 9,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.8,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 1.0
+            },
+            "source": 10,
+            "target": 19
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.2,
+                "Distance": 0.8,
+                "Interactions per Week": 0.6,
+                "Common Hobbies": 0.2
+            },
+            "source": 10,
+            "target": 12
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 0.6,
+                "Interactions per Week": 0.4,
+                "Common Hobbies": 1.0
+            },
+            "source": 10,
+            "target": 17
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.8,
+                "Interactions per Week": 0.8,
+                "Common Hobbies": 1.0
+            },
+            "source": 10,
+            "target": 11
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 1.0,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.0
+            },
+            "source": 10,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.0,
+                "Distance": 1.0,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 1.0
+            },
+            "source": 10,
+            "target": 18
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.8,
+                "Interactions per Week": 1.0,
+                "Common Hobbies": 0.0
+            },
+            "source": 13,
+            "target": 15
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 1.0,
+                "Distance": 0.8,
+                "Interactions per Week": 0.2,
+                "Common Hobbies": 0.4
+            },
+            "source": 14,
+            "target": 16
+        },
+        {
+            "attributes": {
+                "Years of Friendship": 0.4,
+                "Distance": 0.0,
+                "Interactions per Week": 0.0,
+                "Common Hobbies": 0.6
+            },
+            "source": 14,
+            "target": 17
+        }
+    ],
+    "rcm": [
+        4,
+        14,
+        9,
+        5,
+        1,
+        19,
+        17,
+        18,
+        12,
+        16,
+        7,
+        6,
+        3,
+        8,
+        10,
+        2,
+        11,
+        15,
+        0,
+        13
+    ]
+}

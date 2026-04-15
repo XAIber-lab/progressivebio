@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 6
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2
+    },
+    {
+      "id": 4,
+      "source": 1,
+      "target": 10
+    },
+    {
+      "id": 5,
+      "source": 1,
+      "target": 12
+    },
+    {
+      "id": 6,
+      "source": 1,
+      "target": 16
+    },
+    {
+      "id": 2,
+      "source": 1,
+      "target": 3
+    },
+    {
+      "id": 3,
+      "source": 1,
+      "target": 4
+    },
+    {
+      "id": 8,
+      "source": 2,
+      "target": 20
+    },
+    {
+      "id": 9,
+      "source": 2,
+      "target": 24
+    },
+    {
+      "id": 10,
+      "source": 2,
+      "target": 27
+    },
+    {
+      "id": 7,
+      "source": 2,
+      "target": 6
+    }
+  ]
+}

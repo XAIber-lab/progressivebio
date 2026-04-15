@@ -1,0 +1,1330 @@
+{
+    "nodes": [
+        {
+            "id": 25473,
+            "name": "antitrumpalliance",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011741907024441043
+            }
+        },
+        {
+            "id": 130,
+            "name": "conspiracy",
+            "attributes": {
+                "degree": 5,
+                "degree_centrality": 0.010570824524312896,
+                "clustering": 0,
+                "pagerank": 0.004839021063255717
+            }
+        },
+        {
+            "id": 24324,
+            "name": "peoplesmetanarchism",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0012140297244851656
+            }
+        },
+        {
+            "id": 7941,
+            "name": "gamerghazi",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.002111711766633398
+            }
+        },
+        {
+            "id": 263,
+            "name": "circlebroke2",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010798819751779813
+            }
+        },
+        {
+            "id": 17289,
+            "name": "latestagecapitalism",
+            "attributes": {
+                "degree": 5,
+                "degree_centrality": 0.010570824524312896,
+                "clustering": 0,
+                "pagerank": 0.005014638816512621
+            }
+        },
+        {
+            "id": 650,
+            "name": "books",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.002289437811645152
+            }
+        },
+        {
+            "id": 3593,
+            "name": "politics",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.008456659619450317,
+                "clustering": 0,
+                "pagerank": 0.004036013096581187
+            }
+        },
+        {
+            "id": 16137,
+            "name": "the_donald",
+            "attributes": {
+                "degree": 7,
+                "degree_centrality": 0.014799154334038056,
+                "clustering": 0.047619047619047616,
+                "pagerank": 0.006206516401290391
+            }
+        },
+        {
+            "id": 8587,
+            "name": "museumofreddit",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0.3333333333333333,
+                "pagerank": 0.002769753296663866
+            }
+        },
+        {
+            "id": 2569,
+            "name": "melbourne",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011917329241486463
+            }
+        },
+        {
+            "id": 1678,
+            "name": "sportsbook",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011917329241486463
+            }
+        },
+        {
+            "id": 26634,
+            "name": "tucker_carlson",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011386860950091543
+            }
+        },
+        {
+            "id": 22,
+            "name": "iama",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.008456659619450317,
+                "clustering": 0,
+                "pagerank": 0.004129453988548052
+            }
+        },
+        {
+            "id": 279,
+            "name": "squaredcircle",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.008456659619450317,
+                "clustering": 0,
+                "pagerank": 0.004118553588253948
+            }
+        },
+        {
+            "id": 27160,
+            "name": "pentatonix",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010702820318865434
+            }
+        },
+        {
+            "id": 1944,
+            "name": "badpolitics",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.002861061746839558
+            }
+        },
+        {
+            "id": 921,
+            "name": "drupal",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011870474241314616
+            }
+        },
+        {
+            "id": 669,
+            "name": "scifi",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001289974950054472
+            }
+        },
+        {
+            "id": 7460,
+            "name": "gifs",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.0023374995103556625
+            }
+        },
+        {
+            "id": 34724,
+            "name": "coincidencetheorist",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.0026879667978324828
+            }
+        },
+        {
+            "id": 553,
+            "name": "destiny",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001245437421769331
+            }
+        },
+        {
+            "id": 809,
+            "name": "anarchism",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.002111711766633398
+            }
+        },
+        {
+            "id": 811,
+            "name": "socialism",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.0032011316614463806
+            }
+        },
+        {
+            "id": 23594,
+            "name": "breath_of_the_wild",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010798819751779813
+            }
+        },
+        {
+            "id": 27177,
+            "name": "infowars",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.0018999645269694783
+            }
+        },
+        {
+            "id": 565,
+            "name": "changemyview",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.0021850146798586575
+            }
+        },
+        {
+            "id": 26553,
+            "name": "truthleaks",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.002856931066842319
+            }
+        },
+        {
+            "id": 2875,
+            "name": "shitpoliticssays",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001168422178845247
+            }
+        },
+        {
+            "id": 32315,
+            "name": "theamericans",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0012073855481445725
+            }
+        },
+        {
+            "id": 189,
+            "name": "shitredditsays",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010798819751779813
+            }
+        },
+        {
+            "id": 3140,
+            "name": "longhornnation",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001193470492421269
+            }
+        },
+        {
+            "id": 22084,
+            "name": "goldandblack",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001168422178845247
+            }
+        },
+        {
+            "id": 70,
+            "name": "subredditdrama",
+            "attributes": {
+                "degree": 12,
+                "degree_centrality": 0.025369978858350954,
+                "clustering": 0.015151515151515152,
+                "pagerank": 0.010779199786092921
+            }
+        },
+        {
+            "id": 1093,
+            "name": "islam",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010798819751779813
+            }
+        },
+        {
+            "id": 326,
+            "name": "self",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011011750301726706
+            }
+        },
+        {
+            "id": 198,
+            "name": "india",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011870474241314616
+            }
+        },
+        {
+            "id": 2255,
+            "name": "postpreview",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.00209675349540534
+            }
+        },
+        {
+            "id": 24529,
+            "name": "remindmebot",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.008456659619450317,
+                "clustering": 0,
+                "pagerank": 0.004097906808943345
+            }
+        },
+        {
+            "id": 82,
+            "name": "paranormal",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011386860950091543
+            }
+        },
+        {
+            "id": 9175,
+            "name": "mademesmile",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.00122399874584376
+            }
+        },
+        {
+            "id": 19799,
+            "name": "mondo",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001193470492421269
+            }
+        },
+        {
+            "id": 88,
+            "name": "explainlikeimfive",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001168422178845247
+            }
+        },
+        {
+            "id": 4312,
+            "name": "neworleans",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011917329241486463
+            }
+        },
+        {
+            "id": 26200,
+            "name": "esist",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011386860950091543
+            }
+        },
+        {
+            "id": 24800,
+            "name": "fuckthealtright",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.004228329809725159,
+                "clustering": 0,
+                "pagerank": 0.0022593932422979718
+            }
+        },
+        {
+            "id": 2274,
+            "name": "unpopularopinion",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010702820318865434
+            }
+        },
+        {
+            "id": 28771,
+            "name": "trashy",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011224995397370167
+            }
+        },
+        {
+            "id": 1252,
+            "name": "anarcho_capitalism",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.0028557258593617037
+            }
+        },
+        {
+            "id": 1385,
+            "name": "worldnews",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0010798819751779813
+            }
+        },
+        {
+            "id": 9579,
+            "name": "shitghazisays",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0012140297244851656
+            }
+        },
+        {
+            "id": 626,
+            "name": "drama",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.0063424947145877385,
+                "clustering": 0,
+                "pagerank": 0.002844071856600151
+            }
+        },
+        {
+            "id": 26098,
+            "name": "trump_legal",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011262915221492685
+            }
+        },
+        {
+            "id": 9589,
+            "name": "redditcritiques",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.001276622633283439
+            }
+        },
+        {
+            "id": 1272,
+            "name": "exmormon",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0013093248861761673
+            }
+        },
+        {
+            "id": 35449,
+            "name": "shittygifrecipes",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011870474241314616
+            }
+        },
+        {
+            "id": 20603,
+            "name": "enoughtrumpspam",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0021141649048625794,
+                "clustering": 0,
+                "pagerank": 0.0011741907024441043
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 25473,
+            "target": 3593,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 771.0,
+                "num_words": 123.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 29.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 26553,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 26634,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 21047.0,
+                "num_words": 3455.0,
+                "num_words_unique": 1287.0,
+                "num_words_long": 930.0,
+                "num_stop_word_unique": 97.0,
+                "num_sentences": 178.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 27177,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 82,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 678.0,
+                "num_words": 118.0,
+                "num_words_unique": 83.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 130,
+            "target": 26200,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 96.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 2.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 24324,
+            "target": 809,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 326.0,
+                "num_words": 50.0,
+                "num_words_unique": 46.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 7941,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 7941,
+            "target": 9579,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 494.0,
+                "num_words": 79.0,
+                "num_words_unique": 72.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 263,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 17289,
+            "target": 88,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 446.0,
+                "num_words": 74.0,
+                "num_words_unique": 63.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 17289,
+            "target": 1252,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 81.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 17289,
+            "target": 22084,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 254.0,
+                "num_words": 39.0,
+                "num_words_unique": 38.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 17289,
+            "target": 2875,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 255.0,
+                "num_words": 39.0,
+                "num_words_unique": 38.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 17289,
+            "target": 811,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 650,
+            "target": 669,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 152.0,
+                "num_words": 20.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 650,
+            "target": 22,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 152.0,
+                "num_words": 20.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 3593,
+            "target": 70,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2498.0,
+                "num_words": 315.0,
+                "num_words_unique": 164.0,
+                "num_words_long": 89.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 16.0
+            }
+        },
+        {
+            "source": 3593,
+            "target": 20603,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 826.0,
+                "num_words": 131.0,
+                "num_words_unique": 97.0,
+                "num_words_long": 34.0,
+                "num_stop_word_unique": 25.0,
+                "num_sentences": 14.0
+            }
+        },
+        {
+            "source": 3593,
+            "target": 24800,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 771.0,
+                "num_words": 123.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 29.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 24529,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 394.0,
+                "num_words": 63.0,
+                "num_words_unique": 58.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 27160,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1973.0,
+                "num_words": 306.0,
+                "num_words_unique": 195.0,
+                "num_words_long": 67.0,
+                "num_stop_word_unique": 46.0,
+                "num_sentences": 16.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 70,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2498.0,
+                "num_words": 315.0,
+                "num_words_unique": 164.0,
+                "num_words_long": 89.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 16.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 2274,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 111.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 34724,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 2255,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 23901.0,
+                "num_words": 3840.0,
+                "num_words_unique": 1514.0,
+                "num_words_long": 1031.0,
+                "num_stop_word_unique": 98.0,
+                "num_sentences": 97.0
+            }
+        },
+        {
+            "source": 16137,
+            "target": 8587,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            }
+        },
+        {
+            "source": 8587,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            }
+        },
+        {
+            "source": 8587,
+            "target": 326,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            }
+        },
+        {
+            "source": 2569,
+            "target": 279,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 275.0,
+                "num_words": 44.0,
+                "num_words_unique": 41.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 1678,
+            "target": 279,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 671.0,
+                "num_words": 113.0,
+                "num_words_unique": 84.0,
+                "num_words_long": 16.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 22,
+            "target": 19799,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3348.0,
+                "num_words": 481.0,
+                "num_words_unique": 275.0,
+                "num_words_long": 117.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 22,
+            "target": 1252,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 619.0,
+                "num_words": 103.0,
+                "num_words_unique": 83.0,
+                "num_words_long": 20.0,
+                "num_stop_word_unique": 21.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 22,
+            "target": 3140,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5953.0,
+                "num_words": 837.0,
+                "num_words_unique": 475.0,
+                "num_words_long": 210.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 53.0
+            }
+        },
+        {
+            "source": 279,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1076.0,
+                "num_words": 163.0,
+                "num_words_unique": 105.0,
+                "num_words_long": 36.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 279,
+            "target": 4312,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 751.0,
+                "num_words": 124.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 21.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 1944,
+            "target": 1252,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 792.0,
+                "num_words": 138.0,
+                "num_words_unique": 106.0,
+                "num_words_long": 31.0,
+                "num_stop_word_unique": 28.0,
+                "num_sentences": 8.0
+            }
+        },
+        {
+            "source": 1944,
+            "target": 626,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 506.0,
+                "num_words": 76.0,
+                "num_words_unique": 61.0,
+                "num_words_long": 24.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 1944,
+            "target": 565,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 606.0,
+                "num_words": 96.0,
+                "num_words_unique": 73.0,
+                "num_words_long": 26.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 921,
+            "target": 24529,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1008.0,
+                "num_words": 168.0,
+                "num_words_unique": 108.0,
+                "num_words_long": 31.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 7460,
+            "target": 1272,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 249.0,
+                "num_words": 42.0,
+                "num_words_unique": 40.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 15.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 7460,
+            "target": 811,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 34724,
+            "target": 26553,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            }
+        },
+        {
+            "source": 34724,
+            "target": 27177,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            }
+        },
+        {
+            "source": 553,
+            "target": 565,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1464.0,
+                "num_words": 256.0,
+                "num_words_unique": 167.0,
+                "num_words_long": 47.0,
+                "num_stop_word_unique": 47.0,
+                "num_sentences": 17.0
+            }
+        },
+        {
+            "source": 809,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 811,
+            "target": 9175,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 23594,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1944.0,
+                "num_words": 264.0,
+                "num_words_unique": 145.0,
+                "num_words_long": 71.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 26553,
+            "target": 26098,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 245.0,
+                "num_words": 28.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 32315,
+            "target": 2255,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 98.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 189,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 626,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1093,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1387.0,
+                "num_words": 232.0,
+                "num_words_unique": 135.0,
+                "num_words_long": 51.0,
+                "num_stop_word_unique": 35.0,
+                "num_sentences": 10.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1385,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1240.0,
+                "num_words": 150.0,
+                "num_words_unique": 86.0,
+                "num_words_long": 51.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 198,
+            "target": 24529,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 293.0,
+                "num_words": 45.0,
+                "num_words_unique": 42.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 24529,
+            "target": 35449,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 301.0,
+                "num_words": 53.0,
+                "num_words_unique": 47.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 24800,
+            "target": 9589,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 347.0,
+                "num_words": 54.0,
+                "num_words_unique": 44.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 28771,
+            "target": 626,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 953.0,
+                "num_words": 150.0,
+                "num_words_unique": 108.0,
+                "num_words_long": 28.0,
+                "num_stop_word_unique": 30.0,
+                "num_sentences": 4.0
+            }
+        }
+    ]
+}

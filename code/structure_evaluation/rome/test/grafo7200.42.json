@@ -1,0 +1,632 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "gansner_pos": 0,
+            "force_direct_pos": 5,
+            "barycenter_pos": 33,
+            "cuthill_pos": 31,
+            "NetXForceFrom2D": 26
+        },
+        {
+            "id": 1,
+            "gansner_pos": 2,
+            "force_direct_pos": 12,
+            "barycenter_pos": 29,
+            "cuthill_pos": 0,
+            "NetXForceFrom2D": 23
+        },
+        {
+            "id": 2,
+            "gansner_pos": 3,
+            "force_direct_pos": 16,
+            "barycenter_pos": 41,
+            "cuthill_pos": 1,
+            "NetXForceFrom2D": 29
+        },
+        {
+            "id": 3,
+            "gansner_pos": 23,
+            "force_direct_pos": 19,
+            "barycenter_pos": 25,
+            "cuthill_pos": 32,
+            "NetXForceFrom2D": 33
+        },
+        {
+            "id": 4,
+            "gansner_pos": 24,
+            "force_direct_pos": 14,
+            "barycenter_pos": 0,
+            "cuthill_pos": 37,
+            "NetXForceFrom2D": 34
+        },
+        {
+            "id": 5,
+            "gansner_pos": 10,
+            "force_direct_pos": 33,
+            "barycenter_pos": 13,
+            "cuthill_pos": 8,
+            "NetXForceFrom2D": 37
+        },
+        {
+            "id": 6,
+            "gansner_pos": 12,
+            "force_direct_pos": 6,
+            "barycenter_pos": 3,
+            "cuthill_pos": 2,
+            "NetXForceFrom2D": 31
+        },
+        {
+            "id": 7,
+            "gansner_pos": 5,
+            "force_direct_pos": 28,
+            "barycenter_pos": 2,
+            "cuthill_pos": 27,
+            "NetXForceFrom2D": 10
+        },
+        {
+            "id": 8,
+            "gansner_pos": 13,
+            "force_direct_pos": 29,
+            "barycenter_pos": 12,
+            "cuthill_pos": 41,
+            "NetXForceFrom2D": 41
+        },
+        {
+            "id": 9,
+            "gansner_pos": 15,
+            "force_direct_pos": 3,
+            "barycenter_pos": 10,
+            "cuthill_pos": 12,
+            "NetXForceFrom2D": 0
+        },
+        {
+            "id": 10,
+            "gansner_pos": 16,
+            "force_direct_pos": 21,
+            "barycenter_pos": 39,
+            "cuthill_pos": 10,
+            "NetXForceFrom2D": 25
+        },
+        {
+            "id": 11,
+            "gansner_pos": 4,
+            "force_direct_pos": 37,
+            "barycenter_pos": 35,
+            "cuthill_pos": 33,
+            "NetXForceFrom2D": 1
+        },
+        {
+            "id": 12,
+            "gansner_pos": 25,
+            "force_direct_pos": 10,
+            "barycenter_pos": 18,
+            "cuthill_pos": 29,
+            "NetXForceFrom2D": 9
+        },
+        {
+            "id": 13,
+            "gansner_pos": 22,
+            "force_direct_pos": 40,
+            "barycenter_pos": 19,
+            "cuthill_pos": 9,
+            "NetXForceFrom2D": 2
+        },
+        {
+            "id": 14,
+            "gansner_pos": 17,
+            "force_direct_pos": 23,
+            "barycenter_pos": 5,
+            "cuthill_pos": 25,
+            "NetXForceFrom2D": 32
+        },
+        {
+            "id": 15,
+            "gansner_pos": 29,
+            "force_direct_pos": 31,
+            "barycenter_pos": 27,
+            "cuthill_pos": 35,
+            "NetXForceFrom2D": 8
+        },
+        {
+            "id": 16,
+            "gansner_pos": 27,
+            "force_direct_pos": 32,
+            "barycenter_pos": 28,
+            "cuthill_pos": 5,
+            "NetXForceFrom2D": 35
+        },
+        {
+            "id": 17,
+            "gansner_pos": 26,
+            "force_direct_pos": 41,
+            "barycenter_pos": 9,
+            "cuthill_pos": 39,
+            "NetXForceFrom2D": 27
+        },
+        {
+            "id": 18,
+            "gansner_pos": 18,
+            "force_direct_pos": 38,
+            "barycenter_pos": 38,
+            "cuthill_pos": 36,
+            "NetXForceFrom2D": 36
+        },
+        {
+            "id": 19,
+            "gansner_pos": 30,
+            "force_direct_pos": 34,
+            "barycenter_pos": 40,
+            "cuthill_pos": 7,
+            "NetXForceFrom2D": 18
+        },
+        {
+            "id": 20,
+            "gansner_pos": 9,
+            "force_direct_pos": 27,
+            "barycenter_pos": 20,
+            "cuthill_pos": 15,
+            "NetXForceFrom2D": 28
+        },
+        {
+            "id": 21,
+            "gansner_pos": 11,
+            "force_direct_pos": 26,
+            "barycenter_pos": 22,
+            "cuthill_pos": 17,
+            "NetXForceFrom2D": 11
+        },
+        {
+            "id": 22,
+            "gansner_pos": 8,
+            "force_direct_pos": 18,
+            "barycenter_pos": 7,
+            "cuthill_pos": 4,
+            "NetXForceFrom2D": 40
+        },
+        {
+            "id": 23,
+            "gansner_pos": 35,
+            "force_direct_pos": 13,
+            "barycenter_pos": 24,
+            "cuthill_pos": 16,
+            "NetXForceFrom2D": 39
+        },
+        {
+            "id": 24,
+            "gansner_pos": 31,
+            "force_direct_pos": 24,
+            "barycenter_pos": 21,
+            "cuthill_pos": 30,
+            "NetXForceFrom2D": 30
+        },
+        {
+            "id": 25,
+            "gansner_pos": 14,
+            "force_direct_pos": 0,
+            "barycenter_pos": 11,
+            "cuthill_pos": 23,
+            "NetXForceFrom2D": 14
+        },
+        {
+            "id": 26,
+            "gansner_pos": 37,
+            "force_direct_pos": 35,
+            "barycenter_pos": 30,
+            "cuthill_pos": 26,
+            "NetXForceFrom2D": 12
+        },
+        {
+            "id": 27,
+            "gansner_pos": 7,
+            "force_direct_pos": 39,
+            "barycenter_pos": 14,
+            "cuthill_pos": 34,
+            "NetXForceFrom2D": 38
+        },
+        {
+            "id": 28,
+            "gansner_pos": 21,
+            "force_direct_pos": 9,
+            "barycenter_pos": 6,
+            "cuthill_pos": 6,
+            "NetXForceFrom2D": 7
+        },
+        {
+            "id": 29,
+            "gansner_pos": 38,
+            "force_direct_pos": 17,
+            "barycenter_pos": 8,
+            "cuthill_pos": 21,
+            "NetXForceFrom2D": 5
+        },
+        {
+            "id": 30,
+            "gansner_pos": 32,
+            "force_direct_pos": 2,
+            "barycenter_pos": 36,
+            "cuthill_pos": 11,
+            "NetXForceFrom2D": 16
+        },
+        {
+            "id": 31,
+            "gansner_pos": 1,
+            "force_direct_pos": 25,
+            "barycenter_pos": 34,
+            "cuthill_pos": 18,
+            "NetXForceFrom2D": 17
+        },
+        {
+            "id": 32,
+            "gansner_pos": 34,
+            "force_direct_pos": 7,
+            "barycenter_pos": 37,
+            "cuthill_pos": 22,
+            "NetXForceFrom2D": 15
+        },
+        {
+            "id": 33,
+            "gansner_pos": 36,
+            "force_direct_pos": 8,
+            "barycenter_pos": 23,
+            "cuthill_pos": 38,
+            "NetXForceFrom2D": 4
+        },
+        {
+            "id": 34,
+            "gansner_pos": 39,
+            "force_direct_pos": 20,
+            "barycenter_pos": 16,
+            "cuthill_pos": 40,
+            "NetXForceFrom2D": 22
+        },
+        {
+            "id": 35,
+            "gansner_pos": 33,
+            "force_direct_pos": 11,
+            "barycenter_pos": 26,
+            "cuthill_pos": 19,
+            "NetXForceFrom2D": 6
+        },
+        {
+            "id": 36,
+            "gansner_pos": 19,
+            "force_direct_pos": 15,
+            "barycenter_pos": 15,
+            "cuthill_pos": 13,
+            "NetXForceFrom2D": 21
+        },
+        {
+            "id": 37,
+            "gansner_pos": 40,
+            "force_direct_pos": 1,
+            "barycenter_pos": 32,
+            "cuthill_pos": 3,
+            "NetXForceFrom2D": 24
+        },
+        {
+            "id": 38,
+            "gansner_pos": 20,
+            "force_direct_pos": 22,
+            "barycenter_pos": 4,
+            "cuthill_pos": 28,
+            "NetXForceFrom2D": 19
+        },
+        {
+            "id": 39,
+            "gansner_pos": 28,
+            "force_direct_pos": 36,
+            "barycenter_pos": 1,
+            "cuthill_pos": 24,
+            "NetXForceFrom2D": 13
+        },
+        {
+            "id": 40,
+            "gansner_pos": 6,
+            "force_direct_pos": 30,
+            "barycenter_pos": 31,
+            "cuthill_pos": 20,
+            "NetXForceFrom2D": 20
+        },
+        {
+            "id": 41,
+            "gansner_pos": 41,
+            "force_direct_pos": 4,
+            "barycenter_pos": 17,
+            "cuthill_pos": 14,
+            "NetXForceFrom2D": 3
+        }
+    ],
+    "links": [
+        {
+            "id": 0,
+            "source": 0,
+            "target": 1
+        },
+        {
+            "id": 1,
+            "source": 0,
+            "target": 8
+        },
+        {
+            "id": 27,
+            "source": 0,
+            "target": 31
+        },
+        {
+            "id": 40,
+            "source": 0,
+            "target": 37
+        },
+        {
+            "id": 42,
+            "source": 0,
+            "target": 32
+        },
+        {
+            "id": 2,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "id": 36,
+            "source": 2,
+            "target": 36
+        },
+        {
+            "id": 3,
+            "source": 3,
+            "target": 4
+        },
+        {
+            "id": 24,
+            "source": 4,
+            "target": 12
+        },
+        {
+            "id": 50,
+            "source": 4,
+            "target": 39
+        },
+        {
+            "id": 4,
+            "source": 5,
+            "target": 8
+        },
+        {
+            "id": 5,
+            "source": 5,
+            "target": 6
+        },
+        {
+            "id": 23,
+            "source": 5,
+            "target": 21
+        },
+        {
+            "id": 6,
+            "source": 7,
+            "target": 21
+        },
+        {
+            "id": 20,
+            "source": 7,
+            "target": 22
+        },
+        {
+            "id": 21,
+            "source": 7,
+            "target": 27
+        },
+        {
+            "id": 37,
+            "source": 7,
+            "target": 36
+        },
+        {
+            "id": 45,
+            "source": 7,
+            "target": 38
+        },
+        {
+            "id": 53,
+            "source": 7,
+            "target": 40
+        },
+        {
+            "id": 7,
+            "source": 8,
+            "target": 9
+        },
+        {
+            "id": 8,
+            "source": 8,
+            "target": 25
+        },
+        {
+            "id": 35,
+            "source": 8,
+            "target": 35
+        },
+        {
+            "id": 46,
+            "source": 8,
+            "target": 39
+        },
+        {
+            "id": 9,
+            "source": 9,
+            "target": 10
+        },
+        {
+            "id": 39,
+            "source": 10,
+            "target": 37
+        },
+        {
+            "id": 43,
+            "source": 11,
+            "target": 30
+        },
+        {
+            "id": 48,
+            "source": 11,
+            "target": 39
+        },
+        {
+            "id": 54,
+            "source": 11,
+            "target": 40
+        },
+        {
+            "id": 10,
+            "source": 12,
+            "target": 15
+        },
+        {
+            "id": 11,
+            "source": 12,
+            "target": 16
+        },
+        {
+            "id": 12,
+            "source": 12,
+            "target": 17
+        },
+        {
+            "id": 28,
+            "source": 12,
+            "target": 30
+        },
+        {
+            "id": 29,
+            "source": 12,
+            "target": 32
+        },
+        {
+            "id": 13,
+            "source": 13,
+            "target": 17
+        },
+        {
+            "id": 14,
+            "source": 14,
+            "target": 18
+        },
+        {
+            "id": 44,
+            "source": 14,
+            "target": 38
+        },
+        {
+            "id": 15,
+            "source": 15,
+            "target": 19
+        },
+        {
+            "id": 16,
+            "source": 16,
+            "target": 19
+        },
+        {
+            "id": 49,
+            "source": 16,
+            "target": 39
+        },
+        {
+            "id": 52,
+            "source": 18,
+            "target": 36
+        },
+        {
+            "id": 31,
+            "source": 19,
+            "target": 24
+        },
+        {
+            "id": 17,
+            "source": 20,
+            "target": 24
+        },
+        {
+            "id": 18,
+            "source": 20,
+            "target": 21
+        },
+        {
+            "id": 19,
+            "source": 21,
+            "target": 24
+        },
+        {
+            "id": 51,
+            "source": 22,
+            "target": 24
+        },
+        {
+            "id": 30,
+            "source": 23,
+            "target": 33
+        },
+        {
+            "id": 26,
+            "source": 24,
+            "target": 30
+        },
+        {
+            "id": 32,
+            "source": 25,
+            "target": 34
+        },
+        {
+            "id": 22,
+            "source": 26,
+            "target": 29
+        },
+        {
+            "id": 57,
+            "source": 27,
+            "target": 32
+        },
+        {
+            "id": 25,
+            "source": 28,
+            "target": 30
+        },
+        {
+            "id": 33,
+            "source": 29,
+            "target": 34
+        },
+        {
+            "id": 41,
+            "source": 29,
+            "target": 37
+        },
+        {
+            "id": 34,
+            "source": 30,
+            "target": 35
+        },
+        {
+            "id": 56,
+            "source": 32,
+            "target": 41
+        },
+        {
+            "id": 38,
+            "source": 33,
+            "target": 37
+        },
+        {
+            "id": 47,
+            "source": 36,
+            "target": 39
+        },
+        {
+            "id": 55,
+            "source": 37,
+            "target": 41
+        }
+    ]
+}

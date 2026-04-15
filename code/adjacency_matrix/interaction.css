@@ -1,0 +1,48 @@
+#adm .selectedNode text {
+    font-weight: bold;
+}
+
+#adm .nodeHighlight rect{
+    fill: green;
+    fill-opacity: 0.3;
+}
+
+#adm .nodeHover rect {
+    fill: green;
+    fill-opacity: 0.3;
+}
+
+#adm .edgeHighlight rect {
+    fill: red;
+    fill-opacity: 0.3
+}
+
+#adm .nodes .sort rect {
+    fill: gray;
+    fill-opacity: 1;
+}
+
+.checkbox.checked .checkmark{
+    display: block;
+}
+
+.edgeTooltip, .nodeTooltip {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: .75em;
+    color:black;
+    border: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+}
+
+#adm .alph.selectedOrdering path,
+#adm .cluster.selectedOrdering path,
+#adm .sort.selectedOrdering rect,
+#adm .header .selectedOrdering path {
+    stroke: orange;
+    fill: orange;
+}

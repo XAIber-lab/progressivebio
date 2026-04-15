@@ -1,0 +1,1843 @@
+{
+    "nodes": [
+        {
+            "name": "antitrumpalliance",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.208955223880597,
+                "betweenness": 0.0,
+                "eigenvector": 0.052631982283513255
+            },
+            "id": 25473,
+            "gansner": 0,
+            "hierarchy": [
+                0.5554800532291401,
+                1.0
+            ],
+            "radial": [
+                0.0,
+                0.5071845307551258
+            ]
+        },
+        {
+            "name": "conspiracy",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.175,
+                "betweenness": 0.10584415584415584,
+                "eigenvector": 0.024529317600378443
+            },
+            "id": 130,
+            "gansner": 38,
+            "hierarchy": [
+                0.8946742546504715,
+                0.75
+            ],
+            "radial": [
+                0.5848619317949584,
+                0.02763327221203534
+            ]
+        },
+        {
+            "name": "peoplesmetanarchism",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.20437956204379562,
+                "betweenness": 0.0,
+                "eigenvector": 0.044754951605757085
+            },
+            "id": 24324,
+            "gansner": 23,
+            "hierarchy": [
+                0.4513151561482488,
+                1.0
+            ],
+            "radial": [
+                0.37017877007338373,
+                0.09962993832305385
+            ]
+        },
+        {
+            "name": "gamerghazi",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.2557077625570776,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.17244159513453647
+            },
+            "id": 7941,
+            "gansner": 25,
+            "hierarchy": [
+                0.31994110818539595,
+                0.75
+            ],
+            "radial": [
+                0.3714601967873748,
+                0.0900516752792132
+            ]
+        },
+        {
+            "name": "circlebroke2",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25339366515837103,
+                "betweenness": 0.0,
+                "eigenvector": 0.16082605984867432
+            },
+            "id": 263,
+            "gansner": 27,
+            "hierarchy": [
+                0.49208641241258244,
+                0.75
+            ],
+            "radial": [
+                0.3690961854357016,
+                0.08427404567427906
+            ]
+        },
+        {
+            "name": "latestagecapitalism",
+            "attributes": {
+                "degree": 5,
+                "closeness": 0.2014388489208633,
+                "betweenness": 0.23246753246753246,
+                "eigenvector": 0.006602841446563995
+            },
+            "id": 17289,
+            "gansner": 6,
+            "hierarchy": [
+                0.08777145445794049,
+                0.5
+            ],
+            "radial": [
+                0.5163056025964355,
+                0.27685280880146695
+            ]
+        },
+        {
+            "name": "books",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.1661721068249258,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.0016676197824985705
+            },
+            "id": 650,
+            "gansner": 14,
+            "hierarchy": [
+                0.7808544975792067,
+                0.75
+            ],
+            "radial": [
+                0.5423318210288751,
+                0.3086581096849475
+            ]
+        },
+        {
+            "name": "politics",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.26291079812206575,
+                "betweenness": 0.1383116883116883,
+                "eigenvector": 0.20279224680865887
+            },
+            "id": 3593,
+            "gansner": 1,
+            "hierarchy": [
+                0.5554800532291401,
+                0.75
+            ],
+            "radial": [
+                0.6943134480210241,
+                0.5071845307551258
+            ]
+        },
+        {
+            "name": "the_donald",
+            "attributes": {
+                "degree": 7,
+                "closeness": 0.2994652406417112,
+                "betweenness": 0.4707792207792208,
+                "eigenvector": 0.37020239420846707
+            },
+            "id": 16137,
+            "gansner": 28,
+            "hierarchy": [
+                0.6930830431212662,
+                1.0
+            ],
+            "radial": [
+                0.5742570210584805,
+                0.016908818136356057
+            ]
+        },
+        {
+            "name": "museumofreddit",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.27722772277227725,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.2754635266866771
+            },
+            "id": 8587,
+            "gansner": 29,
+            "hierarchy": [
+                0.6472153798238909,
+                0.75
+            ],
+            "radial": [
+                0.5722906938594252,
+                0.014455075845974328
+            ]
+        },
+        {
+            "name": "melbourne",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2074074074074074,
+                "betweenness": 0.0,
+                "eigenvector": 0.05231111146153376
+            },
+            "id": 2569,
+            "gansner": 47,
+            "hierarchy": [
+                0.3001217475013449,
+                1.0
+            ],
+            "radial": [
+                0.3651635310375911,
+                0.07669944990831805
+            ]
+        },
+        {
+            "name": "sportsbook",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2074074074074074,
+                "betweenness": 0.0,
+                "eigenvector": 0.05231111146153376
+            },
+            "id": 1678,
+            "gansner": 48,
+            "hierarchy": [
+                0.2565191539964325,
+                1.0
+            ],
+            "radial": [
+                0.36889734335939267,
+                0.07184864144024004
+            ]
+        },
+        {
+            "name": "tucker_carlson",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.14933333333333335,
+                "betweenness": 0.0,
+                "eigenvector": 0.006367443837778938
+            },
+            "id": 26634,
+            "gansner": 42,
+            "hierarchy": [
+                1.0,
+                0.5
+            ],
+            "radial": [
+                0.5874468787869749,
+                0.025216202700450076
+            ]
+        },
+        {
+            "name": "iama",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.19718309859154928,
+                "betweenness": 0.1383116883116883,
+                "eigenvector": 0.005988454553307995
+            },
+            "id": 22,
+            "gansner": 15,
+            "hierarchy": [
+                0.7678303462725445,
+                0.5
+            ],
+            "radial": [
+                0.5447842066366857,
+                0.30665110851808636
+            ]
+        },
+        {
+            "name": "squaredcircle",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.26046511627906976,
+                "betweenness": 0.10519480519480519,
+                "eigenvector": 0.20155587913774936
+            },
+            "id": 279,
+            "gansner": 49,
+            "hierarchy": [
+                0.27803731702483087,
+                0.75
+            ],
+            "radial": [
+                0.3679473201059165,
+                0.0758926487747958
+            ]
+        },
+        {
+            "name": "pentatonix",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23140495867768596,
+                "betweenness": 0.0,
+                "eigenvector": 0.09608220626157127
+            },
+            "id": 27160,
+            "gansner": 33,
+            "hierarchy": [
+                0.6930830431212662,
+                0.75
+            ],
+            "radial": [
+                0.5844200605142719,
+                0.011140856809468245
+            ]
+        },
+        {
+            "name": "badpolitics",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.2692307692307692,
+                "betweenness": 0.43376623376623374,
+                "eigenvector": 0.05786136658667656
+            },
+            "id": 1944,
+            "gansner": 5,
+            "hierarchy": [
+                0.24462753758600186,
+                0.5
+            ],
+            "radial": [
+                0.5108043051518877,
+                0.33472245374229037
+            ]
+        },
+        {
+            "name": "drupal",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.19243986254295534,
+                "betweenness": 0.0,
+                "eigenvector": 0.03125313059482318
+            },
+            "id": 921,
+            "gansner": 34,
+            "hierarchy": [
+                0.6007814490783997,
+                1.0
+            ],
+            "radial": [
+                0.5834037565686927,
+                0.0
+            ]
+        },
+        {
+            "name": "scifi",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.14285714285714285,
+                "betweenness": 0.0,
+                "eigenvector": 0.00043318716601922807
+            },
+            "id": 669,
+            "gansner": 19,
+            "hierarchy": [
+                0.7270590900082109,
+                0.5
+            ],
+            "radial": [
+                0.5398794354210646,
+                0.31066511085180865
+            ]
+        },
+        {
+            "name": "gifs",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.14736842105263157,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.000556172324053449
+            },
+            "id": 7460,
+            "gansner": 10,
+            "hierarchy": [
+                0.15175967609501967,
+                0.5
+            ],
+            "radial": [
+                0.5254744316706821,
+                0.2765227537922987
+            ]
+        },
+        {
+            "name": "coincidencetheorist",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.24561403508771928,
+                "betweenness": 0.22337662337662337,
+                "eigenvector": 0.11565241597913983
+            },
+            "id": 34724,
+            "gansner": 31,
+            "hierarchy": [
+                0.8255896259803506,
+                0.75
+            ],
+            "radial": [
+                0.5815037100617404,
+                0.02454375729288215
+            ]
+        },
+        {
+            "name": "destiny",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.17721518987341772,
+                "betweenness": 0.0,
+                "eigenvector": 0.004179485256858673
+            },
+            "id": 553,
+            "gansner": 20,
+            "hierarchy": [
+                0.20272374642543672,
+                0.5
+            ],
+            "radial": [
+                0.4902572905999617,
+                0.3793965660943491
+            ]
+        },
+        {
+            "name": "anarchism",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.2557077625570776,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.17244159513453647
+            },
+            "id": 809,
+            "gansner": 24,
+            "hierarchy": [
+                0.4513151561482488,
+                0.75
+            ],
+            "radial": [
+                0.37300674626977787,
+                0.09846641106851142
+            ]
+        },
+        {
+            "name": "socialism",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.1712538226299694,
+                "betweenness": 0.10454545454545454,
+                "eigenvector": 0.0019946179461293205
+            },
+            "id": 811,
+            "gansner": 12,
+            "hierarchy": [
+                0.12854271072227413,
+                0.25
+            ],
+            "radial": [
+                0.5245244084172059,
+                0.27248541423570594
+            ]
+        },
+        {
+            "name": "breath_of_the_wild",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25339366515837103,
+                "betweenness": 0.0,
+                "eigenvector": 0.16082605984867432
+            },
+            "id": 23594,
+            "gansner": 51,
+            "hierarchy": [
+                0.3658087714827713,
+                0.75
+            ],
+            "radial": [
+                0.36693101616033735,
+                0.0672378729788298
+            ]
+        },
+        {
+            "name": "infowars",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.20363636363636364,
+                "betweenness": 0.06493506493506493,
+                "eigenvector": 0.036384516397640475
+            },
+            "id": 27177,
+            "gansner": 41,
+            "hierarchy": [
+                0.8618307426597582,
+                0.5
+            ],
+            "radial": [
+                0.5821665169827703,
+                0.028624437406234375
+            ]
+        },
+        {
+            "name": "changemyview",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.21455938697318008,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.016102593724893872
+            },
+            "id": 565,
+            "gansner": 21,
+            "hierarchy": [
+                0.2123502930434044,
+                0.25
+            ],
+            "radial": [
+                0.4918480272104334,
+                0.37592932155359227
+            ]
+        },
+        {
+            "name": "truthleaks",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.20512820512820512,
+                "betweenness": 0.10064935064935066,
+                "eigenvector": 0.03901301595072168
+            },
+            "id": 26553,
+            "gansner": 43,
+            "hierarchy": [
+                0.8131317421218042,
+                0.5
+            ],
+            "radial": [
+                0.5841991248739286,
+                0.023552925487581266
+            ]
+        },
+        {
+            "name": "shitpoliticssays",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16816816816816818,
+                "betweenness": 0.0,
+                "eigenvector": 0.001715031463967468
+            },
+            "id": 2875,
+            "gansner": 7,
+            "hierarchy": [
+                0.04586766329737535,
+                0.25
+            ],
+            "radial": [
+                0.5109368665360936,
+                0.2665044174029005
+            ]
+        },
+        {
+            "name": "theamericans",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.18983050847457628,
+                "betweenness": 0.0,
+                "eigenvector": 0.02673837505479419
+            },
+            "id": 32315,
+            "gansner": 45,
+            "hierarchy": [
+                0.9365780458110365,
+                1.0
+            ],
+            "radial": [
+                0.576775687358394,
+                0.03617602933822303
+            ]
+        },
+        {
+            "name": "shitredditsays",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25339366515837103,
+                "betweenness": 0.0,
+                "eigenvector": 0.16082605984867432
+            },
+            "id": 189,
+            "gansner": 52,
+            "hierarchy": [
+                0.41054389988391515,
+                0.75
+            ],
+            "radial": [
+                0.3664891448796508,
+                0.06286047674612436
+            ]
+        },
+        {
+            "name": "longhornnation",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16519174041297935,
+                "betweenness": 0.0,
+                "eigenvector": 0.0015550435965484997
+            },
+            "id": 3140,
+            "gansner": 16,
+            "hierarchy": [
+                0.7678303462725445,
+                0.25
+            ],
+            "radial": [
+                0.5485180189584873,
+                0.30943823970661777
+            ]
+        },
+        {
+            "name": "goldandblack",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16816816816816818,
+                "betweenness": 0.0,
+                "eigenvector": 0.001715031463967468
+            },
+            "id": 22084,
+            "gansner": 8,
+            "hierarchy": [
+                0.0,
+                0.25
+            ],
+            "radial": [
+                0.5081088903396995,
+                0.2812968828138023
+            ]
+        },
+        {
+            "name": "subredditdrama",
+            "attributes": {
+                "degree": 12,
+                "closeness": 0.3373493975903614,
+                "betweenness": 0.7662337662337663,
+                "eigenvector": 0.6196645056841075
+            },
+            "id": 70,
+            "gansner": 53,
+            "hierarchy": [
+                0.44168860953028116,
+                0.5
+            ],
+            "radial": [
+                0.571870916142773,
+                0.01825937656276046
+            ]
+        },
+        {
+            "name": "islam",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25339366515837103,
+                "betweenness": 0.0,
+                "eigenvector": 0.16082605984867432
+            },
+            "id": 1093,
+            "gansner": 55,
+            "hierarchy": [
+                0.42017044650188284,
+                0.25
+            ],
+            "radial": [
+                0.3735369918066017,
+                0.1096082680446741
+            ]
+        },
+        {
+            "name": "self",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2178988326848249,
+                "betweenness": 0.0,
+                "eigenvector": 0.071493326660533
+            },
+            "id": 326,
+            "gansner": 30,
+            "hierarchy": [
+                0.6483479147201223,
+                0.5
+            ],
+            "radial": [
+                0.5713185770419148,
+                0.010591098516419404
+            ]
+        },
+        {
+            "name": "india",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.19243986254295534,
+                "betweenness": 0.0,
+                "eigenvector": 0.03125313059482318
+            },
+            "id": 198,
+            "gansner": 35,
+            "hierarchy": [
+                0.6415527053427333,
+                1.0
+            ],
+            "radial": [
+                0.5821002362906673,
+                0.007754292382063677
+            ]
+        },
+        {
+            "name": "postpreview",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.23333333333333334,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.10302193155215894
+            },
+            "id": 2255,
+            "gansner": 46,
+            "hierarchy": [
+                0.9365780458110365,
+                0.75
+            ],
+            "radial": [
+                0.5758919447970209,
+                0.03186164360726788
+            ]
+        },
+        {
+            "name": "remindmebot",
+            "attributes": {
+                "degree": 4,
+                "closeness": 0.23728813559322035,
+                "betweenness": 0.10519480519480519,
+                "eigenvector": 0.12041678138643584
+            },
+            "id": 24529,
+            "gansner": 36,
+            "hierarchy": [
+                0.6013477165265155,
+                0.75
+            ],
+            "radial": [
+                0.5812164937292942,
+                0.0032872145357559592
+            ]
+        },
+        {
+            "name": "paranormal",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.14933333333333335,
+                "betweenness": 0.0,
+                "eigenvector": 0.006367443837778938
+            },
+            "id": 82,
+            "gansner": 40,
+            "hierarchy": [
+                0.906565871060902,
+                0.5
+            ],
+            "radial": [
+                0.5868724461220823,
+                0.02947124520753459
+            ]
+        },
+        {
+            "name": "mademesmile",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.14659685863874344,
+                "betweenness": 0.0,
+                "eigenvector": 0.0005184702511154208
+            },
+            "id": 9175,
+            "gansner": 13,
+            "hierarchy": [
+                0.12854271072227413,
+                0.0
+            ],
+            "radial": [
+                0.5231104203190089,
+                0.2663943990665111
+            ]
+        },
+        {
+            "name": "mondo",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16519174041297935,
+                "betweenness": 0.0,
+                "eigenvector": 0.0015550435965484997
+            },
+            "id": 19799,
+            "gansner": 17,
+            "hierarchy": [
+                0.7219626829751692,
+                0.25
+            ],
+            "radial": [
+                0.5453586393015782,
+                0.3004134022337056
+            ]
+        },
+        {
+            "name": "explainlikeimfive",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.16816816816816818,
+                "betweenness": 0.0,
+                "eigenvector": 0.001715031463967468
+            },
+            "id": 88,
+            "gansner": 9,
+            "hierarchy": [
+                0.08777145445794049,
+                0.25
+            ],
+            "radial": [
+                0.5164823511087102,
+                0.28999833305550926
+            ]
+        },
+        {
+            "name": "neworleans",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.2074074074074074,
+                "betweenness": 0.0,
+                "eigenvector": 0.05231111146153376
+            },
+            "id": 4312,
+            "gansner": 50,
+            "hierarchy": [
+                0.2882301310909143,
+                0.5
+            ],
+            "radial": [
+                0.3698031794848001,
+                0.0791298549758293
+            ]
+        },
+        {
+            "name": "esist",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.14933333333333335,
+                "betweenness": 0.0,
+                "eigenvector": 0.006367443837778938
+            },
+            "id": 26200,
+            "gansner": 39,
+            "hierarchy": [
+                0.9513009994620459,
+                0.5
+            ],
+            "radial": [
+                0.5846189025905808,
+                0.03221370228371395
+            ]
+        },
+        {
+            "name": "fuckthealtright",
+            "attributes": {
+                "degree": 2,
+                "closeness": 0.21052631578947367,
+                "betweenness": 0.03571428571428571,
+                "eigenvector": 0.05643323310584905
+            },
+            "id": 24800,
+            "gansner": 2,
+            "hierarchy": [
+                0.5549137857810243,
+                0.5
+            ],
+            "radial": [
+                0.5733069978050044,
+                0.9957659609934989
+            ]
+        },
+        {
+            "name": "unpopularopinion",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23140495867768596,
+                "betweenness": 0.0,
+                "eigenvector": 0.09608220626157127
+            },
+            "id": 2274,
+            "gansner": 32,
+            "hierarchy": [
+                0.7389507064186416,
+                0.75
+            ],
+            "radial": [
+                0.5849503060510958,
+                0.015570595099183198
+            ]
+        },
+        {
+            "name": "trashy",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.23333333333333334,
+                "betweenness": 0.0,
+                "eigenvector": 0.04893443686259748
+            },
+            "id": 28771,
+            "gansner": 22,
+            "hierarchy": [
+                0.33409779438828957,
+                0.5
+            ],
+            "radial": [
+                0.3970224503750934,
+                0.2156059343223871
+            ]
+        },
+        {
+            "name": "anarcho_capitalism",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.23628691983122363,
+                "betweenness": 0.38896103896103895,
+                "eigenvector": 0.01828783489686782
+            },
+            "id": 1252,
+            "gansner": 18,
+            "hierarchy": [
+                0.25425408420396955,
+                0.25
+            ],
+            "radial": [
+                0.5305559513985778,
+                0.29175195865977666
+            ]
+        },
+        {
+            "name": "worldnews",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.25339366515837103,
+                "betweenness": 0.0,
+                "eigenvector": 0.16082605984867432
+            },
+            "id": 1385,
+            "gansner": 54,
+            "hierarchy": [
+                0.4637730400067952,
+                0.25
+            ],
+            "radial": [
+                0.37271952993733154,
+                0.10543757292882147
+            ]
+        },
+        {
+            "name": "shitghazisays",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.20437956204379562,
+                "betweenness": 0.0,
+                "eigenvector": 0.044754951605757085
+            },
+            "id": 9579,
+            "gansner": 26,
+            "hierarchy": [
+                0.3799654576856649,
+                0.5
+            ],
+            "radial": [
+                0.36865431415501504,
+                0.09107851308551426
+            ]
+        },
+        {
+            "name": "drama",
+            "attributes": {
+                "degree": 3,
+                "closeness": 0.3027027027027027,
+                "betweenness": 0.4551948051948052,
+                "eigenvector": 0.18854418885941207
+            },
+            "id": 626,
+            "gansner": 56,
+            "hierarchy": [
+                0.33409779438828957,
+                0.25
+            ],
+            "radial": [
+                0.45391337776349056,
+                0.27515585930988495
+            ]
+        },
+        {
+            "name": "trump_legal",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.17073170731707318,
+                "betweenness": 0.0,
+                "eigenvector": 0.010126269229590165
+            },
+            "id": 26098,
+            "gansner": 44,
+            "hierarchy": [
+                0.8136980095699199,
+                0.25
+            ],
+            "radial": [
+                0.5854363644598509,
+                0.020536422737122854
+            ]
+        },
+        {
+            "name": "redditcritiques",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.17445482866043613,
+                "betweenness": 0.0,
+                "eigenvector": 0.014646427976086234
+            },
+            "id": 9589,
+            "gansner": 3,
+            "hierarchy": [
+                0.5549137857810243,
+                0.25
+            ],
+            "radial": [
+                0.572268600295391,
+                1.0
+            ]
+        },
+        {
+            "name": "exmormon",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.12873563218390804,
+                "betweenness": 0.0,
+                "eigenvector": 0.00014471385817459964
+            },
+            "id": 1272,
+            "gansner": 11,
+            "hierarchy": [
+                0.17044650188283927,
+                0.25
+            ],
+            "radial": [
+                0.5264244549241582,
+                0.2806301050175029
+            ]
+        },
+        {
+            "name": "shittygifrecipes",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.19243986254295534,
+                "betweenness": 0.0,
+                "eigenvector": 0.03125313059482318
+            },
+            "id": 35449,
+            "gansner": 37,
+            "hierarchy": [
+                0.6036127863189784,
+                0.5
+            ],
+            "radial": [
+                0.5782117690206254,
+                0.0021402233705617602
+            ]
+        },
+        {
+            "name": "enoughtrumpspam",
+            "attributes": {
+                "degree": 1,
+                "closeness": 0.208955223880597,
+                "betweenness": 0.0,
+                "eigenvector": 0.052631982283513255
+            },
+            "id": 20603,
+            "gansner": 4,
+            "hierarchy": [
+                0.5062430986154761,
+                0.5
+            ],
+            "radial": [
+                1.0,
+                0.7553592265377563
+            ]
+        }
+    ],
+    "links": [
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 771.0,
+                "num_words": 123.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 29.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 25473,
+            "target": 3593
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            },
+            "source": 130,
+            "target": 26553
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 21047.0,
+                "num_words": 3455.0,
+                "num_words_unique": 1287.0,
+                "num_words_long": 930.0,
+                "num_stop_word_unique": 97.0,
+                "num_sentences": 178.0
+            },
+            "source": 130,
+            "target": 26634
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            },
+            "source": 130,
+            "target": 27177
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 678.0,
+                "num_words": 118.0,
+                "num_words_unique": 83.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 6.0
+            },
+            "source": 130,
+            "target": 82
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 96.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 2.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 130,
+            "target": 26200
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 326.0,
+                "num_words": 50.0,
+                "num_words_unique": 46.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 2.0
+            },
+            "source": 24324,
+            "target": 809
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            },
+            "source": 7941,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 494.0,
+                "num_words": 79.0,
+                "num_words_unique": 72.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 4.0
+            },
+            "source": 7941,
+            "target": 9579
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            },
+            "source": 263,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 446.0,
+                "num_words": 74.0,
+                "num_words_unique": 63.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 6.0
+            },
+            "source": 17289,
+            "target": 88
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 81.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 17289,
+            "target": 1252
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 254.0,
+                "num_words": 39.0,
+                "num_words_unique": 38.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            },
+            "source": 17289,
+            "target": 22084
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 255.0,
+                "num_words": 39.0,
+                "num_words_unique": 38.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 1.0
+            },
+            "source": 17289,
+            "target": 2875
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            },
+            "source": 17289,
+            "target": 811
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 152.0,
+                "num_words": 20.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 1.0
+            },
+            "source": 650,
+            "target": 669
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 152.0,
+                "num_words": 20.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 1.0
+            },
+            "source": 650,
+            "target": 22
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2498.0,
+                "num_words": 315.0,
+                "num_words_unique": 164.0,
+                "num_words_long": 89.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 16.0
+            },
+            "source": 3593,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 826.0,
+                "num_words": 131.0,
+                "num_words_unique": 97.0,
+                "num_words_long": 34.0,
+                "num_stop_word_unique": 25.0,
+                "num_sentences": 14.0
+            },
+            "source": 3593,
+            "target": 20603
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 771.0,
+                "num_words": 123.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 29.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 13.0
+            },
+            "source": 3593,
+            "target": 24800
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 394.0,
+                "num_words": 63.0,
+                "num_words_unique": 58.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 2.0
+            },
+            "source": 16137,
+            "target": 24529
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1973.0,
+                "num_words": 306.0,
+                "num_words_unique": 195.0,
+                "num_words_long": 67.0,
+                "num_stop_word_unique": 46.0,
+                "num_sentences": 16.0
+            },
+            "source": 16137,
+            "target": 27160
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2498.0,
+                "num_words": 315.0,
+                "num_words_unique": 164.0,
+                "num_words_long": 89.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 16.0
+            },
+            "source": 16137,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 111.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 16137,
+            "target": 2274
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            },
+            "source": 16137,
+            "target": 34724
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 23901.0,
+                "num_words": 3840.0,
+                "num_words_unique": 1514.0,
+                "num_words_long": 1031.0,
+                "num_stop_word_unique": 98.0,
+                "num_sentences": 97.0
+            },
+            "source": 16137,
+            "target": 2255
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            },
+            "source": 16137,
+            "target": 8587
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            },
+            "source": 8587,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3822.0,
+                "num_words": 562.0,
+                "num_words_unique": 298.0,
+                "num_words_long": 157.0,
+                "num_stop_word_unique": 54.0,
+                "num_sentences": 26.0
+            },
+            "source": 8587,
+            "target": 326
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 275.0,
+                "num_words": 44.0,
+                "num_words_unique": 41.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 4.0
+            },
+            "source": 2569,
+            "target": 279
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 671.0,
+                "num_words": 113.0,
+                "num_words_unique": 84.0,
+                "num_words_long": 16.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 4.0
+            },
+            "source": 1678,
+            "target": 279
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3348.0,
+                "num_words": 481.0,
+                "num_words_unique": 275.0,
+                "num_words_long": 117.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 6.0
+            },
+            "source": 22,
+            "target": 19799
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 619.0,
+                "num_words": 103.0,
+                "num_words_unique": 83.0,
+                "num_words_long": 20.0,
+                "num_stop_word_unique": 21.0,
+                "num_sentences": 4.0
+            },
+            "source": 22,
+            "target": 1252
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 5953.0,
+                "num_words": 837.0,
+                "num_words_unique": 475.0,
+                "num_words_long": 210.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 53.0
+            },
+            "source": 22,
+            "target": 3140
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1076.0,
+                "num_words": 163.0,
+                "num_words_unique": 105.0,
+                "num_words_long": 36.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 3.0
+            },
+            "source": 279,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 751.0,
+                "num_words": 124.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 21.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 6.0
+            },
+            "source": 279,
+            "target": 4312
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 792.0,
+                "num_words": 138.0,
+                "num_words_unique": 106.0,
+                "num_words_long": 31.0,
+                "num_stop_word_unique": 28.0,
+                "num_sentences": 8.0
+            },
+            "source": 1944,
+            "target": 1252
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 506.0,
+                "num_words": 76.0,
+                "num_words_unique": 61.0,
+                "num_words_long": 24.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 5.0
+            },
+            "source": 1944,
+            "target": 626
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 606.0,
+                "num_words": 96.0,
+                "num_words_unique": 73.0,
+                "num_words_long": 26.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 6.0
+            },
+            "source": 1944,
+            "target": 565
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1008.0,
+                "num_words": 168.0,
+                "num_words_unique": 108.0,
+                "num_words_long": 31.0,
+                "num_stop_word_unique": 26.0,
+                "num_sentences": 5.0
+            },
+            "source": 921,
+            "target": 24529
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 249.0,
+                "num_words": 42.0,
+                "num_words_unique": 40.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 15.0,
+                "num_sentences": 2.0
+            },
+            "source": 7460,
+            "target": 1272
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            },
+            "source": 7460,
+            "target": 811
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            },
+            "source": 34724,
+            "target": 26553
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 36459.0,
+                "num_words": 5955.0,
+                "num_words_unique": 1840.0,
+                "num_words_long": 1535.0,
+                "num_stop_word_unique": 106.0,
+                "num_sentences": 278.0
+            },
+            "source": 34724,
+            "target": 27177
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1464.0,
+                "num_words": 256.0,
+                "num_words_unique": 167.0,
+                "num_words_long": 47.0,
+                "num_stop_word_unique": 47.0,
+                "num_sentences": 17.0
+            },
+            "source": 553,
+            "target": 565
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            },
+            "source": 809,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1212.0,
+                "num_words": 183.0,
+                "num_words_unique": 130.0,
+                "num_words_long": 45.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 6.0
+            },
+            "source": 811,
+            "target": 9175
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1944.0,
+                "num_words": 264.0,
+                "num_words_unique": 145.0,
+                "num_words_long": 71.0,
+                "num_stop_word_unique": 32.0,
+                "num_sentences": 5.0
+            },
+            "source": 23594,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 245.0,
+                "num_words": 28.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 26553,
+            "target": 26098
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 98.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            },
+            "source": 32315,
+            "target": 2255
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            },
+            "source": 189,
+            "target": 70
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 2214.0,
+                "num_words": 290.0,
+                "num_words_unique": 159.0,
+                "num_words_long": 64.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 12.0
+            },
+            "source": 70,
+            "target": 626
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1387.0,
+                "num_words": 232.0,
+                "num_words_unique": 135.0,
+                "num_words_long": 51.0,
+                "num_stop_word_unique": 35.0,
+                "num_sentences": 10.0
+            },
+            "source": 70,
+            "target": 1093
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1240.0,
+                "num_words": 150.0,
+                "num_words_unique": 86.0,
+                "num_words_long": 51.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 6.0
+            },
+            "source": 70,
+            "target": 1385
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 293.0,
+                "num_words": 45.0,
+                "num_words_unique": 42.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 3.0
+            },
+            "source": 198,
+            "target": 24529
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 301.0,
+                "num_words": 53.0,
+                "num_words_unique": 47.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 4.0
+            },
+            "source": 24529,
+            "target": 35449
+        },
+        {
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 347.0,
+                "num_words": 54.0,
+                "num_words_unique": 44.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 2.0
+            },
+            "source": 24800,
+            "target": 9589
+        },
+        {
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 953.0,
+                "num_words": 150.0,
+                "num_words_unique": 108.0,
+                "num_words_long": 28.0,
+                "num_stop_word_unique": 30.0,
+                "num_sentences": 4.0
+            },
+            "source": 28771,
+            "target": 626
+        }
+    ]
+}

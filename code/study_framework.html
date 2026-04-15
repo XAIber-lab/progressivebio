@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="highlighting.css">
+    <title>Study on Multivariate Network Visualization</title>
+</head>
+<body>
+
+<!-- starting page -->
+<div id="start" class="container">
+    <div class="card box-shadow my-auto">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Study on Multivariate Network Visualization</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p>Please read the information and consent to participate in this study. </p>
+                <p>We appreciate your input and record your responses anonymously!</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-block btn-primary my-2" id="introButton" type="button">
+                Start Introduction
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- visualization introduction framework -->
+<div id="intro" class="container-fluid" style="display:none">
+    <div class="card box-shadow" id="introCard">
+        <div class="card-header">
+            <h4 id="condition" class="my-0 font-weight-normal"></h4>
+            <p class="lead">Read the introduction below to learn about the network you will be interacting
+                with.</p>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p>In general, a network consists of nodes. These are connected by edges.</p>
+                <p>For this study, we use randomly generated networks of friendships. Each <b>person</b> is represented
+                    as a node.</p>
+                <p id="nodeDescription"></p>
+                <svg class="mb-5 vis">
+                    <g id="nodesVis"></g>
+                </svg>
+                <p>The <b>friendship</b> between two nodes is indicated by an edge.</p>
+                <p id="edgeDescription"></p>
+                <svg class="mb-5 vis">
+                    <g id="edgesVis"></g>
+                </svg>
+                <p>Further, a friendship can be described by the following attributes:
+                    <b class="attr">Years of Friendship</b>, <b class="attr">Distance</b>,
+                    <b class="attr">Interactions per Week</b>, and <b class="attr">Common Hobbies</b>.
+                    This makes the network multivariate.</p>
+                <p id="attributeDescription"></p>
+                <svg class="mb-5 vis">
+                    <g id="attributesVis"></g>
+                </svg>
+                <p id="orderingDescription"></p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-block btn-primary my-2" id="structureButton" type="button">
+                Everything is clear.
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- structure introduction framework -->
+<div id="structure" class="container" style="display:none">
+    <div class="card box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Structure of the Study</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p>This study is divided into <b>3 task sessions</b>.</p>
+                <p>Before each session, you will get familiar with the task type by trying to solve <b>3 training tasks</b>.</p>
+                <p><b>To be fully compensated for this study, you must solve at least 2 of 3 tasks at the start
+                    of each session!</b></p>
+                <p>After the training, you are asked to solve <b>9 tasks</b> of the same type. They are presented in
+                    increasing order of difficulty.</p>
+                <p>In each task, you are asked to select nodes. This can be done by click. A node can be unselected by
+                    another click. You can clear your whole answer using the button
+                    <b class="text-primary">Clear</b>. </p>
+                <p>If you are satisfied with your answer, click on the button
+                    <b class="text-success">Check</b> to get feedback in the training session
+                    or <b class="text-success">Submit</b>.</p>
+                <p>Apart from the <b>accuracy</b> of your solution, your <b>completion time</b> will be measured for each task.</p>
+                <p>However, you are allowed to rest after each task or session before continuing by clicking on
+                    <b class="text-primary">Next</b>.</p>
+                <p>The study should take approximately <b>50 minutes</b> to complete.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-block btn-primary my-2" id="startButton" type="button">
+                Everything is clear.
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- training introduction -->
+<div id="training" class="container" style=display:none>
+    <div class="card box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Let us start the training.</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p id="taskIntroduction"></p>
+                <p id="caution"></p>
+                <p><b>Reminder:</b> To continue this study, you must solve at least 2 of 3 tasks during
+                    the training!</p>
+                <p>You are allowed to take a break before continuing.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button id="startTrainingButton" type="button" class="btn btn-block btn-primary my-2">
+                Start Training
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- survey introduction -->
+<div id="survey" class="container" style=display:none>
+    <div class="card box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Let us start the actual study.</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p>You have completed the training successfully!</p>
+                <p>In the following you are asked to solve <b>9 tasks</b> of the same type. They are presented in
+                    increasing order of difficulty.</p>
+                <p><b>Reminder:</b> Apart from the accuracy of your solution, your completion time will be measured for each task.</p>
+                <p>However, you are allowed to rest after each task before continuing by clicking on <b class="text-primary">Next</b>.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button id="startSurveyButton" type="button" class="btn btn-block btn-primary my-2">
+                Start Survey
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- cancellation -->
+<div id="cancel" class="container" style=display:none>
+    <div class="card box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Thank you for your participation!</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <p>Unfortunately, you have not completed the training successfully. The study ends here for you.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- task framework -->
+<div id="framework" style=display:none>
+    <div class="row">
+        <!-- task panel -->
+        <div id="taskPanel" class="col-md-2">
+            <div class="card box-shadow" id="taskDefinition">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal" id="header">Task:</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                             aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="lead" id="task"></p>
+                    <div class="container p-0" id="legend"></div>
+                </div>
+            </div>
+            <div class="card box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Answer:</h4>
+                </div>
+                <div class="card-body" id="selection">
+                    <div class="content">
+                        <div class="answer" id="nodeSelection" style=display:none>
+                            <h5 class="my-0 font-weight-normal">Selected Node:</h5>
+                            <p class="lead" id="node">Select a node on click.</p>
+                        </div>
+                        <div class="answer" id="multipleNodeSelection" style=display:none>
+                            <h5 class="my-0 font-weight-normal">Selected Nodes:</h5>
+                            <p class="lead" id="nodes">Select nodes on click.</p>
+                        </div>
+                        <div class="answer" id="edgeSelection" style=display:none>
+                            <h5 class="my-0 font-weight-normal">Selected Edge:</h5>
+                            <p class="lead" id="edge">Select an edge on click.</p>
+                        </div>
+                        <div class="answer" id="multipleEdgeSelection" style=display:none>
+                            <h5 class="my-0 font-weight-normal">Selected Edges:</h5>
+                            <p class="lead" id="edges">Select edges on click.</p>
+                        </div>
+                        <div class="answer" id="optionSelection" style=display:none>
+                        </div>
+                        <div class="answer" id="enterAnswer" style=display:none>
+                            <div class="form-group">
+                                <h5 class="my-0 font-weight-normal">Enter Answer:</h5>
+                                <label for="enter" style="display: none"></label>
+                                <input class="form-control my-2" type="text" placeholder="Your Answer" id="enter">
+                            </div>
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="errorMessage" style=display:none>
+                            error message
+                        </div>
+                        <div class="alert alert-success" role="alert" id="successMessage" style=display:none>
+                            success message
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button id="submitButton" type="button" class="btn btn-block btn-success"
+                            style="display:none" disabled>
+                        Submit
+                    </button>
+                    <button id="checkButton" type="button" class="btn btn-block btn-success" disabled>
+                        Check
+                    </button>
+                    <button id="nextButton" type="button" class="btn btn-block btn-primary"
+                            style="display:none">
+                        Next
+                    </button>
+                    <button id="clearButton" type="button" class="btn btn-block btn-primary">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- visualization panel -->
+        <div class="col-md-10">
+            <svg class="vis" id="vis">
+                <g id="g"></g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- demographics form -->
+<div id="demographics" class="container" style=display:none>
+    <div class="card box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Thank you for your participation!</h4>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                Before you submit, please fill out the following form.
+            </div>
+            <form class="my-2">
+                <div class="form-group my-2">
+                    <label for="ageInput" class="col-sm-3 col-form-label text-right">Your Age:</label>
+                    <input class="form-control" id="ageInput" placeholder="Age">
+                </div>
+                <label class="col-form-label">Your Gender:</label>
+                <div class="form-group my-2">
+                    <div class="form-check form-check-inline genderInput">
+                        <input class="form-check-input" type="radio" name="genderOptions" id="genderOption1"
+                               value="Female">
+                        <label class="form-check-label" for="genderOption1">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline genderInput">
+                        <input class="form-check-input" type="radio" name="genderOptions" id="genderOption2"
+                               value="Male">
+                        <label class="form-check-label" for="genderOption2">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline genderInput">
+                        <input class="form-check-input" type="radio" name="genderOptions" id="genderOption3"
+                               value="Divers">
+                        <label class="form-check-label" for="genderOption3">Divers</label>
+                    </div>
+                    <div class="form-check form-check-inline genderInput">
+                        <input class="form-check-input" type="radio" name="genderOptions" id="genderOption4"
+                               value="no answer">
+                        <label class="form-check-label" for="genderOption4">Prefer not to answer</label>
+                    </div>
+                </div>
+                <label class="col-sm-3 col-form-label text-right">Highest Obtained Degree:</label>
+                <div class="form-group my-2">
+                    <div class="form-check form-check-inline degreeInput">
+                        <input class="form-check-input" type="radio" name="degreeOptions" id="degreeOption1"
+                               value="High School">
+                        <label class="form-check-label" for="degreeOption1">High School</label>
+                    </div>
+                    <div class="form-check form-check-inline degreeInput">
+                        <input class="form-check-input" type="radio" name="degreeOptions" id="degreeOption2"
+                               value="Bachelor">
+                        <label class="form-check-label" for="degreeOption2">Bachelor</label>
+                    </div>
+                    <div class="form-check form-check-inline degreeInput">
+                        <input class="form-check-input" type="radio" name="degreeOptions" id="degreeOption3"
+                               value="Master">
+                        <label class="form-check-label" for="degreeOption3">Master</label>
+                    </div>
+                    <div class="form-check form-check-inline degreeInput">
+                        <input class="form-check-input" type="radio" name="degreeOptions" id="degreeOption4"
+                               value="PhD">
+                        <label class="form-check-label" for="degreeOption4">PhD</label>
+                    </div>
+                    <div class="form-check form-check-inline degreeInput">
+                        <input class="form-check-input" type="radio" name="degreeOptions" id="degreeOption5"
+                               value="Unspecified">
+                        <label class="form-check-label" for="degreeOption5">Unspecified</label>
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <label for="studyInput" class="col-sm-3 col-form-label text-right">Field of Current Study</label>
+                    <input class="form-control" id="studyInput" placeholder="Enter studies">
+                </div>
+                <label class="col-sm-12 col-form-label">How familiar are you with data visualization?</label>
+                <small class="form-text text-muted">
+                    1 means not familiar at all, 5 means very familiar
+                </small>
+                <div class="form-group my-2">
+                    <div class="form-check form-check-inline familiarInput">
+                        <input class="form-check-input" type="radio" name="familiarOptions" id="familiarOption1"
+                               value="1">
+                        <label class="form-check-label" for="familiarOption1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline familiarInput">
+                        <input class="form-check-input" type="radio" name="familiarOptions" id="familiarOption2"
+                               value="2">
+                        <label class="form-check-label" for="familiarOption2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline familiarInput">
+                        <input class="form-check-input" type="radio" name="familiarOptions" id="familiarOption3"
+                               value="3">
+                        <label class="form-check-label" for="familiarOption3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline familiarInput">
+                        <input class="form-check-input" type="radio" name="familiarOptions" id="familiarOption4"
+                               value="4">
+                        <label class="form-check-label" for="familiarOption4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline familiarInput">
+                        <input class="form-check-input" type="radio" name="familiarOptions" id="familiarOption5"
+                               value="5">
+                        <label class="form-check-label" for="familiarOption5">5</label>
+                    </div>
+                </div>
+                <label class=" col-sm-12 col-form-label">How familiar are you with computers in general?</label>
+                <small class="form-text text-muted">
+                    1 means not familiar at all, 5 means very familiar
+                </small>
+                <div class="form-group my-2">
+                    <div class="form-check form-check-inline compInput">
+                        <input class="form-check-input" type="radio" name="compOptions" id="compOption1"
+                               value="1">
+                        <label class="form-check-label" for="compOption1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline compInput">
+                        <input class="form-check-input" type="radio" name="compOptions" id="compOption2"
+                               value="2">
+                        <label class="form-check-label" for="compOption2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline compInput">
+                        <input class="form-check-input" type="radio" name="compOptions" id="compOption3"
+                               value="3">
+                        <label class="form-check-label" for="compOption3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline compInput">
+                        <input class="form-check-input" type="radio" name="compOptions" id="compOption4"
+                               value="4">
+                        <label class="form-check-label" for="compOption4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline compInput">
+                        <input class="form-check-input" type="radio" name="compOptions" id="compOption5"
+                               value="5">
+                        <label class="form-check-label" for="compOption5">5</label>
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <label class="col-form-label" id="textareaLabel">Feel free to share your overall impressions
+                        here.</label>
+                    <div class="input-group">
+                        <textarea class="form-control" id="commentInput" aria-label="textareaLabel"></textarea>
+                    </div>
+                    <small class="form-text text-muted">This information is used for research. We'll never share your
+                        information with anyone else.</small>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-block btn-primary my-2" id="finalButton" type="button">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/d3-force-boundary@0.0.1/dist/d3-force-boundary.min.js"></script>
+
+<script src="study_framework.js"></script>
+<script src="utility.js"></script>
+<script src="node-link.js"></script>
+<script src="adjacency_matrix.js"></script>
+<script src="quilt.js"></script>
+<script src="biofabric.js"></script>
+<script src="introduction.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

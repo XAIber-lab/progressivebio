@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adjacency_matrix/interaction.css">
+    <link rel="stylesheet" href="biofabric/interaction.css">
+    <link rel="stylesheet" href="highlighting.css">
+    <title>Visualization Techniques for Multivariate Network Data</title>
+</head>
+<body>
+<!-- navigate through data and techniques -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Visualization Playground</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Network Data</a>
+                    <ul class="dropdown-menu" id="dataDropDown" aria-labelledby="dataDropDown">
+                        <li><a id="example_thesis.json" class="dropdown-item" href="#">Small Network</a></li>
+                        <li><a id="example_thesis_layered.json" class="dropdown-item" href="#">Small Layered Network</a>
+                        </li>
+                        <li><a id="example_thesis_attr.json" class="dropdown-item" href="#">Small Network with many
+                            Attributes</a></li>
+                        <li><a id="example_thesis_not_all_attr.json" class="dropdown-item" href="#">Small Network with
+                            Inconsistent Attributes</a></li>
+                        <li><a id="example_thesis_dense.json" class="dropdown-item" href="#">Dense Network</a></li>
+                        <li><a id="example_thesis_large.json" class="dropdown-item" href="#">Large Network</a></li>
+                        <!--<li><a id="london.json" class="dropdown-item" href="#">London's Gang Network</a></li>
+                        <li><a id="london_sample.json" class="dropdown-item" href="#">Small Sample of London's Gang
+                            Network</a></li>-->
+                        <li><a id="gameofthrones/got_sample.json" class="dropdown-item" href="#">Small Sample of Network
+                            from "Game of Thrones"</a></li>
+                        <li><a id="gameofthrones/got_sample_dense.json" class="dropdown-item" href="#">Dense Sample of
+                            Network from "Game of Thrones"</a></li>
+                        <li><a id="gameofthrones/got_sample_large.json" class="dropdown-item" href="#">Large Sample of
+                            Network from "Game of Thrones"</a></li>
+                        <!--<li><a id="248nodes.json" class="dropdown-item" href="#">Extreme Node Number</a></li>
+                        <li><a id="tasks/survey/80_0.1_two.json" class="dropdown-item" href="#">Largest and Densest Network For Study</a></li>-->
+                        <li><a id="reddit_data/preprocessed/reddit_day_0.json" class="dropdown-item" href="#">reddit_day_0</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_1.json" class="dropdown-item" href="#">reddit_day_1</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_2.json" class="dropdown-item" href="#">reddit_day_2</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_3.json" class="dropdown-item" href="#">reddit_day_3</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_4.json" class="dropdown-item" href="#">reddit_day_4</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_5.json" class="dropdown-item" href="#">reddit_day_5</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_6.json" class="dropdown-item" href="#">reddit_day_6</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_7.json" class="dropdown-item" href="#">reddit_day_7</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_8.json" class="dropdown-item" href="#">reddit_day_8</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_9.json" class="dropdown-item" href="#">reddit_day_9</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_10.json" class="dropdown-item" href="#">reddit_day_10</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_11.json" class="dropdown-item" href="#">reddit_day_11</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_12.json" class="dropdown-item" href="#">reddit_day_12</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_13.json" class="dropdown-item" href="#">reddit_day_13</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_14.json" class="dropdown-item" href="#">reddit_day_14</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_15.json" class="dropdown-item" href="#">reddit_day_15</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_16.json" class="dropdown-item" href="#">reddit_day_16</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_17.json" class="dropdown-item" href="#">reddit_day_17</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_18.json" class="dropdown-item" href="#">reddit_day_18</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_19.json" class="dropdown-item" href="#">reddit_day_19</a></li>
+                        <li><a id="reddit_data/preprocessed/reddit_day_20.json" class="dropdown-item" href="#">reddit_day_20</a></li>
+                        <li><a id="boardgames/preprocessed/boardgames_40.json" class="dropdown-item" href="#">boardgames_40</a></li>
+                        <li><a id="boardgames/preprocessed/boardgames_100.json" class="dropdown-item" href="#">boardgames_100</a></li>
+                        <li><a id="loadData" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modal"
+                               href="#" style="font-weight:700">Load Own Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Number of
+                        Visualizations</a>
+                    <ul class="dropdown-menu" id="numberDropDown" aria-labelledby="numberDropDown">
+                        <li><a id="1" class="dropdown-item" href="#">one</a></li>
+                        <li><a id="4" class="dropdown-item" href="#">all</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="studyDesign" checked>
+                <label class="form-check-label text-secondary" for="studyDesign">Study Design</label>
+            </div> -->
+            <ul class="nav nav-pills nav-fill mx-auto" id="techniques">
+                <li class="nav-item">
+                    <a class="nav-link link-primary" id="NLD" href="#">Node-Link Diagram</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-success" id="ADM" href="#">Adjacency Matrix</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-danger" id="QLT" href="#">Quilt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-warning" id="BF" href="#">BioFabric</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="statistics/statistics.html" target="_blank" rel="noopener noreferrer">BioFabric Pattern Statistics</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- modal to load data-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title" id="title">Load Network Data</h5>
+            </div>
+            <div class="modal-body my-1">
+                <p class="lead">Select a file with the following format:</p>
+                <pre><code>
+    {
+        "nodes" : [
+            {   "id" : 0,
+                "name": "A",
+                "attributes": { "attr1": 1,
+                                "attr2": 2,
+                                "attr3": 3, ... }   },
+            ... ],
+        "edges" : [
+            {   "source" : 0,
+                "target": 1,
+                "attributes": { "attr4": 4,
+                                "attr5": 5, ... }   },
+            ... ]
+    }
+                </code></pre>
+                <p class="lead"> The "source" and the "target" are ids of existing nodes and should differ from
+                    another.</p>
+                <p class="lead">The key "attributes" is optional. It contains a dictionary with the attribute labels and
+                    the corresponding numerical values.
+                    For nominal attributes you can use a constant value.</p>
+                <div class="custom-file my-2">
+                    <input type="file" class="custom-file-input" id="fileInput" accept=".JSON">
+                </div>
+                <div class="alert alert-danger" role="alert" id="errorMessage" style=display:none>
+                    This file does not match the expected format.
+                </div>
+                <div class="alert alert-success" role="alert" id="successMessage" style=display:none>
+                    This file is ready to load.
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-success" id="loadButton" data-bs-dismiss="modal" disabled>Load
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- node-link diagram encodings -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-1 mt-1 encoding" id="node-link-diagram"
+     style="display:none">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="layoutDropDownNLD" data-bs-toggle="dropdown"
+                       aria-expanded="false">Layout</a>
+                    <ul class="dropdown-menu" id="layoutNLD" aria-labelledby="layoutDropDownNLD">
+                        <li><a id="forcedirectedNLD" class="dropdown-item" href="#">Force-Directed</a></li>
+                        <li><a id="hierarchicalNLD" class="dropdown-item" href="#">Hierarchical Tree</a></li>
+                        <li><a id="centralityNLD" class="dropdown-item" href="#">Centrality-Based</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="nodeNLD">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainNLD" href="#">Plain Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorNLD" href="#">Colored Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barNLD" href="#">Bars on Nodes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="attributeDropdownNLD" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Attribute</a>
+                    <ul class="dropdown-menu" id="attributeNLD" aria-labelledby="attributeDropdownNLD">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="edgeNLD">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainNLD" href="#">Plain Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorNLD" href="#">Colored Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="parallelNLD" href="#">Parallel Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barNLD" href="#">Bars on Edges</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeAttributeDropdownNLD" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Attribute</a>
+                    <ul class="dropdown-menu" id="edgeAttributeNLD" aria-labelledby="edgeAttributeDropdownNLD">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- adjacency matrix encodings-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success py-1 mt-1 encoding" id="adjacency-matrix"
+     style="display:none">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <form>
+                <input type="color" class="form-control form-control-color" id="colorpicker" value="#000000" title="Choose grid color">
+            </form>
+            <!--<div class="form-check form-switch mx-auto">
+                <input class="form-check-input" type="checkbox" role="switch" id="nodeShadingADM">
+                <label class="form-check-label text-white" for="nodeShadingADM">Node Shading</label>
+            </div>-->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="orderingDropDownADM" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Ordering</a>
+                    <ul class="dropdown-menu" id="orderingADM" aria-labelledby="orderingDropDownADM">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="nodeADM">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainADM" href="#">Plain Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorADM" href="#">Colored Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="juxtaADM" href="#">Juxtaposed Nodes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="attributeDropdownADM" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Attribute</a>
+                    <ul class="dropdown-menu" id="attributeADM" aria-labelledby="attributeDropdownADM">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="edgeADM">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainADM" href="#">Plain Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="sizeADM" href="#">Squared Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="opacityADM" href="#">Opaque Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="dividedADM" href="#">Divided Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barsADM" href="#">Edge Bars</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeAttributeDropdownADM" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Attribute</a>
+                    <ul class="dropdown-menu" id="edgeAttributeADM" aria-labelledby="edgeAttributeDropdownADM">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- quilt encodings-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger py-1 mt-1 encoding" id="quilt" style="display:none">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="orderingDropDownQLT" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Ordering</a>
+                    <ul class="dropdown-menu" id="orderingQLT" aria-labelledby="orderingDropDownQLT">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="nodeQLT">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainNodesQLT" href="#">Plain Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="coloredNodesQLT" href="#">Colored Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="juxtaposedNodesQLT" href="#">Juxtaposed Nodes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="attributeDropdownQLT" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Attribute</a>
+                    <ul class="dropdown-menu" id="attributeQLT" aria-labelledby="attributeDropdownQLT">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="edgeQLT">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainEdgesQLT" href="#">Plain Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="coloredEdgesQLT" href="#">Colored Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="squaredEdgesQLT" href="#">Squared Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="multipleEdgesQLT" href="#">Multiple Edges</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeAttributeDropdownQLT" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Attribute</a>
+                    <ul class="dropdown-menu" id="edgeAttributeQLT" aria-labelledby="edgeAttributeDropdownQLT">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- biofabric encodings-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning py-1 mt-1 encoding" id="biofabric1" style="display:none">
+    <div class="container-fluid">
+        <nav class="collapse navbar-collapse">
+            <!--<ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="nodeShadingDropDownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Shading</a>
+                    <ul class="dropdown-menu" id="nodeShadingBF" aria-labelledby="nodeShadingDropDownBF">
+                        <li><a id="noneNodeBF" class="dropdown-item" href="#">None</a></li>
+                        <li><a id="backgroundNodeBF" class="dropdown-item" href="#">Background</a></li>
+                        <li><a id="lineNodeBF" class="dropdown-item" href="#">Line</a></li>
+                    </ul>
+                </li>
+            </ul>-->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="orderingDropDownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Ordering</a>
+                    <ul class="dropdown-menu" id="orderingBF" aria-labelledby="orderingDropDownBF">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="nodeBF">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainBF" href="#">Plain Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorCircleBF" href="#">Colored Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barNodesBF" href="#">Bars on Nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorLineBF" href="#">Colored Lines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="parallelLineBF" href="#">Parallel Lines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="curvedLineBF" href="#">Curved Lines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="dashedLineBF" href="#">Dashed Lines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barLineBF" href="#">Bars on Lines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="juxtaBF" href="#">Juxtaposed Nodes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-auto mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="attributeDropdownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Node Attribute</a>
+                    <ul class="dropdown-menu" id="attributeBF" aria-labelledby="attributeDropdownBF">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning py-1 mt-1 encoding" id="biofabric2" style="display:none">
+    <div class="container-fluid">
+        <nav class="collapse navbar-collapse mx-auto">
+            <div class="form-check form-switch mx-auto">
+                <input class="form-check-input" type="checkbox" role="switch" id="doubleEdgesBF">
+                <label class="form-check-label text-white" for="doubleEdgesBF">Double Edges</label>
+            </div>
+            <!--<ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeShadingDropDownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Shading</a>
+                    <ul class="dropdown-menu" id="edgeShadingBF" aria-labelledby="edgeShadingDropDownBF">
+                        <li><a id="noneEdgeBF" class="dropdown-item" href="#">None</a></li>
+                        <li><a id="backgroundEdgeBF" class="dropdown-item" href="#">Background</a></li>
+                        <li><a id="lineEdgeBF" class="dropdown-item" href="#">Line</a></li>
+                    </ul>
+                </li>
+            </ul>-->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeOrderingDropDownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Ordering</a>
+                    <ul class="dropdown-menu" id="edgeOrderingBF" aria-labelledby="edgeOrderingDropDownBF">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills nav-fill mx-auto" id="edgeBF">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="plainBF" href="#">Plain Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="colorBF" href="#">Colored Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="parallelBF" href="#">Parallel Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="curvedBF" href="#">Curved Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="dashedBF" href="#">Dashed Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barsBF" href="#">Bars on Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="juxtaBF" href="#">Juxtaposed Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="parallelAndJuxtaBF" href="#">Parallel and Juxtaposed
+                        Edges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="barsAndJuxtaBF" href="#">Bars and Juxtaposed Edges</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-auto mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="edgeAttributeDropdownBF" data-bs-toggle="dropdown"
+                       aria-expanded="false">Edge Attribute</a>
+                    <ul class="dropdown-menu" id="edgeAttributeBF" aria-labelledby="attributeDropdownBF">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning py-1 mt-1 encoding" id="biofabric3" style="display:none">
+    <div class="container-fluid">
+        <nav class="collapse navbar-collapse mx-auto">
+            <ul class="nav  nav-fill mx-auto" id="patterns">
+                <li class="nav-item active">
+                    <a class="nav-link link-light" id="none" href="#">No Patterns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="stairs" href="#">Stairs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="paths" href="#">Paths</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="escalators" href="#">Escalators</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" id="runways" href="#">Runways</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+
+
+<!-- scripts -->
+<script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/d3-force-boundary@0.0.1/dist/d3-force-boundary.min.js"></script>
+
+<script src="playground.js"></script>
+<script src="utility.js"></script>
+<script src="node-link_diagram/node-link_diagram.js"></script>
+<script src="node-link_diagram/layout.js"></script>
+<script src="node-link_diagram/node_encoding.js"></script>
+<script src="node-link_diagram/edge_encoding.js"></script>
+<script src="adjacency_matrix/node_encoding.js"></script>
+<script src="adjacency_matrix/edge_encoding.js"></script>
+<script src="adjacency_matrix/highlighting.js"></script>
+<script src="adjacency_matrix/tooltip.js"></script>
+<script src="adjacency_matrix/adjacency_matrix.js"></script>
+<script src="quilt.js"></script>
+<script src="biofabric/biofabric.js"></script>
+<script src="biofabric/node_encoding.js"></script>
+<script src="biofabric/edge_encoding.js"></script>
+<script src="biofabric/highlighting.js"></script>
+<script src="biofabric/tooltip.js"></script>
+<script src="biofabric/patterns.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>

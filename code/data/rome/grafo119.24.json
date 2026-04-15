@@ -1,0 +1,249 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {
+        "node_default": {},
+        "edge_default": {}
+    },
+    "nodes": [
+        {
+            "id": "n0"
+        },
+        {
+            "id": "n1"
+        },
+        {
+            "id": "n2"
+        },
+        {
+            "id": "n3"
+        },
+        {
+            "id": "n4"
+        },
+        {
+            "id": "n5"
+        },
+        {
+            "id": "n6"
+        },
+        {
+            "id": "n7"
+        },
+        {
+            "id": "n8"
+        },
+        {
+            "id": "n9"
+        },
+        {
+            "id": "n10"
+        },
+        {
+            "id": "n11"
+        },
+        {
+            "id": "n12"
+        },
+        {
+            "id": "n13"
+        },
+        {
+            "id": "n14"
+        },
+        {
+            "id": "n15"
+        },
+        {
+            "id": "n16"
+        },
+        {
+            "id": "n17"
+        },
+        {
+            "id": "n18"
+        },
+        {
+            "id": "n19"
+        },
+        {
+            "id": "n20"
+        },
+        {
+            "id": "n21"
+        },
+        {
+            "id": "n22"
+        },
+        {
+            "id": "n23"
+        }
+    ],
+    "links": [
+        {
+            "id": "e3",
+            "source": "n0",
+            "target": "n12"
+        },
+        {
+            "id": "e4",
+            "source": "n0",
+            "target": "n16"
+        },
+        {
+            "id": "e28",
+            "source": "n0",
+            "target": "n23"
+        },
+        {
+            "id": "e0",
+            "source": "n1",
+            "target": "n15"
+        },
+        {
+            "id": "e1",
+            "source": "n1",
+            "target": "n12"
+        },
+        {
+            "id": "e23",
+            "source": "n1",
+            "target": "n22"
+        },
+        {
+            "id": "e29",
+            "source": "n1",
+            "target": "n23"
+        },
+        {
+            "id": "e2",
+            "source": "n2",
+            "target": "n12"
+        },
+        {
+            "id": "e20",
+            "source": "n2",
+            "target": "n22"
+        },
+        {
+            "id": "e21",
+            "source": "n3",
+            "target": "n22"
+        },
+        {
+            "id": "e6",
+            "source": "n4",
+            "target": "n17"
+        },
+        {
+            "id": "e9",
+            "source": "n4",
+            "target": "n18"
+        },
+        {
+            "id": "e32",
+            "source": "n4",
+            "target": "n23"
+        },
+        {
+            "id": "e8",
+            "source": "n5",
+            "target": "n14"
+        },
+        {
+            "id": "e19",
+            "source": "n5",
+            "target": "n22"
+        },
+        {
+            "id": "e7",
+            "source": "n6",
+            "target": "n14"
+        },
+        {
+            "id": "e30",
+            "source": "n6",
+            "target": "n23"
+        },
+        {
+            "id": "e5",
+            "source": "n7",
+            "target": "n17"
+        },
+        {
+            "id": "e10",
+            "source": "n7",
+            "target": "n18"
+        },
+        {
+            "id": "e11",
+            "source": "n7",
+            "target": "n19"
+        },
+        {
+            "id": "e13",
+            "source": "n7",
+            "target": "n13"
+        },
+        {
+            "id": "e16",
+            "source": "n7",
+            "target": "n21"
+        },
+        {
+            "id": "e31",
+            "source": "n7",
+            "target": "n23"
+        },
+        {
+            "id": "e14",
+            "source": "n8",
+            "target": "n13"
+        },
+        {
+            "id": "e15",
+            "source": "n9",
+            "target": "n13"
+        },
+        {
+            "id": "e12",
+            "source": "n10",
+            "target": "n19"
+        },
+        {
+            "id": "e18",
+            "source": "n10",
+            "target": "n16"
+        },
+        {
+            "id": "e26",
+            "source": "n10",
+            "target": "n23"
+        },
+        {
+            "id": "e17",
+            "source": "n11",
+            "target": "n20"
+        },
+        {
+            "id": "e22",
+            "source": "n15",
+            "target": "n22"
+        },
+        {
+            "id": "e24",
+            "source": "n15",
+            "target": "n20"
+        },
+        {
+            "id": "e27",
+            "source": "n19",
+            "target": "n23"
+        },
+        {
+            "id": "e25",
+            "source": "n21",
+            "target": "n23"
+        }
+    ]
+}

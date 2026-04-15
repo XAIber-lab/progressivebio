@@ -1,0 +1,2066 @@
+{
+    "nodes": [
+        {
+            "id": 26113,
+            "name": "chronotrigger",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010060033269552794
+            }
+        },
+        {
+            "id": 3,
+            "name": "nfl",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.007518796992481203,
+                "clustering": 0,
+                "pagerank": 0.003344578220075056
+            }
+        },
+        {
+            "id": 536,
+            "name": "aquariums",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 5660,
+            "name": "bulgaria",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 542,
+            "name": "sfgiants",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011410402558498394
+            }
+        },
+        {
+            "id": 26169,
+            "name": "rogers",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.001092715418493555
+            }
+        },
+        {
+            "id": 57,
+            "name": "redskins",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009925867589576772
+            }
+        },
+        {
+            "id": 27206,
+            "name": "place",
+            "attributes": {
+                "degree": 38,
+                "degree_centrality": 0.07142857142857142,
+                "clustering": 0,
+                "pagerank": 0.03125155750963752
+            }
+        },
+        {
+            "id": 3142,
+            "name": "theb1g",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0020453151745499984
+            }
+        },
+        {
+            "id": 70,
+            "name": "subredditdrama",
+            "attributes": {
+                "degree": 12,
+                "degree_centrality": 0.022556390977443608,
+                "clustering": 0,
+                "pagerank": 0.010519397394535009
+            }
+        },
+        {
+            "id": 74,
+            "name": "tagpro",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.005639097744360902,
+                "clustering": 0,
+                "pagerank": 0.0027468019937320473
+            }
+        },
+        {
+            "id": 27227,
+            "name": "thebluecorner",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0016988590324248517
+            }
+        },
+        {
+            "id": 1627,
+            "name": "starcraft",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0017277343597932612
+            }
+        },
+        {
+            "id": 18013,
+            "name": "zootopia",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27232,
+            "name": "ainbowroad",
+            "attributes": {
+                "degree": 5,
+                "degree_centrality": 0.009398496240601503,
+                "clustering": 0,
+                "pagerank": 0.004298001965577412
+            }
+        },
+        {
+            "id": 27241,
+            "name": "greenlattice",
+            "attributes": {
+                "degree": 4,
+                "degree_centrality": 0.007518796992481203,
+                "clustering": 0,
+                "pagerank": 0.003622319081905727
+            }
+        },
+        {
+            "id": 27242,
+            "name": "theblackvoid",
+            "attributes": {
+                "degree": 7,
+                "degree_centrality": 0.013157894736842105,
+                "clustering": 0,
+                "pagerank": 0.00570140295362745
+            }
+        },
+        {
+            "id": 27245,
+            "name": "avoarmy",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 14448,
+            "name": "grandorder",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010750342752597884
+            }
+        },
+        {
+            "id": 27251,
+            "name": "placede",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.005639097744360902,
+                "clustering": 0,
+                "pagerank": 0.0028748767607731495
+            }
+        },
+        {
+            "id": 641,
+            "name": "diablo",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0016742587383668766
+            }
+        },
+        {
+            "id": 27271,
+            "name": "placesnek",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 10376,
+            "name": "kirby",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 3210,
+            "name": "greenbaypackers",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0016925639006729928
+            }
+        },
+        {
+            "id": 3727,
+            "name": "tennesseetitans",
+            "attributes": {
+                "degree": 5,
+                "degree_centrality": 0.009398496240601503,
+                "clustering": 0,
+                "pagerank": 0.0045365736272347384
+            }
+        },
+        {
+            "id": 660,
+            "name": "minecraft",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27289,
+            "name": "theitalyplace",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010117880023188196
+            }
+        },
+        {
+            "id": 27290,
+            "name": "swedenonplace",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.005639097744360902,
+                "clustering": 0,
+                "pagerank": 0.002803001642342855
+            }
+        },
+        {
+            "id": 1201,
+            "name": "jokes",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 27314,
+            "name": "growthetree",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 15542,
+            "name": "paladins",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27318,
+            "name": "farmcarrots",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010962442013734387
+            }
+        },
+        {
+            "id": 27321,
+            "name": "manningplace",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010117880023188196
+            }
+        },
+        {
+            "id": 25277,
+            "name": "foxes",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 2237,
+            "name": "jaguars",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010522990137963465
+            }
+        },
+        {
+            "id": 35517,
+            "name": "salamiarmy",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010962442013734387
+            }
+        },
+        {
+            "id": 192,
+            "name": "runescape",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 35521,
+            "name": "xingtian",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 1220,
+            "name": "ottawa",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 27334,
+            "name": "yumenikki",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27337,
+            "name": "restorethevoid",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0016742587383668766
+            }
+        },
+        {
+            "id": 27340,
+            "name": "colordefenseforce",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009742815966515611
+            }
+        },
+        {
+            "id": 27341,
+            "name": "edboxes",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27343,
+            "name": "nvade",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 27344,
+            "name": "timelapsesofplace",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 2769,
+            "name": "uiuc",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0018516962045942698
+            }
+        },
+        {
+            "id": 27345,
+            "name": "openplace",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 2257,
+            "name": "survivor",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0019838080237952237
+            }
+        },
+        {
+            "id": 6868,
+            "name": "falcons",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009742815966515611
+            }
+        },
+        {
+            "id": 213,
+            "name": "browns",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010522990137963465
+            }
+        },
+        {
+            "id": 27352,
+            "name": "placeqr",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 2274,
+            "name": "unpopularopinion",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011233252652164162
+            }
+        },
+        {
+            "id": 4837,
+            "name": "oltp",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.002031643109251358
+            }
+        },
+        {
+            "id": 2282,
+            "name": "indianauniversity",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.001151719062878954
+            }
+        },
+        {
+            "id": 1271,
+            "name": "short",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 7937,
+            "name": "puzzleanddragons",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011399580326316126
+            }
+        },
+        {
+            "id": 258,
+            "name": "chibears",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010522990137963465
+            }
+        },
+        {
+            "id": 261,
+            "name": "mensrights",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011233252652164162
+            }
+        },
+        {
+            "id": 2823,
+            "name": "pennstateuniversity",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 1295,
+            "name": "philippines",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 279,
+            "name": "squaredcircle",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 26903,
+            "name": "nier",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 797,
+            "name": "49ers",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0020218770535362428
+            }
+        },
+        {
+            "id": 798,
+            "name": "skyrim",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0020205614890858184
+            }
+        },
+        {
+            "id": 33569,
+            "name": "penis",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 14636,
+            "name": "survivorcirclejerk",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011233252652164162
+            }
+        },
+        {
+            "id": 18238,
+            "name": "moondye7",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 4926,
+            "name": "acecombat",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009742815966515611
+            }
+        },
+        {
+            "id": 2369,
+            "name": "gamingcirclejerk",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 321,
+            "name": "legaladvice",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0019838080237952237
+            }
+        },
+        {
+            "id": 19800,
+            "name": "aprilknights",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 354,
+            "name": "shitamericanssay",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0019838080237952237
+            }
+        },
+        {
+            "id": 2404,
+            "name": "earthbound",
+            "attributes": {
+                "degree": 3,
+                "degree_centrality": 0.005639097744360902,
+                "clustering": 0,
+                "pagerank": 0.002558935250309136
+            }
+        },
+        {
+            "id": 1383,
+            "name": "oceanictagpro",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011459271158428808
+            }
+        },
+        {
+            "id": 359,
+            "name": "neopets",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 19820,
+            "name": "joinrobin",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 13678,
+            "name": "northernlion",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 11131,
+            "name": "lowlevelaware",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 26009,
+            "name": "team_liquid",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010750342752597884
+            }
+        },
+        {
+            "id": 28574,
+            "name": "humanporn",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 23465,
+            "name": "googlepixel",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.001911188018187529
+            }
+        },
+        {
+            "id": 11178,
+            "name": "forsen",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 2477,
+            "name": "croatia",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0009814030328973045
+            }
+        },
+        {
+            "id": 949,
+            "name": "2007scape",
+            "attributes": {
+                "degree": 2,
+                "degree_centrality": 0.0037593984962406013,
+                "clustering": 0,
+                "pagerank": 0.0020205614890858184
+            }
+        },
+        {
+            "id": 446,
+            "name": "oblivion",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0011399580326316126
+            }
+        },
+        {
+            "id": 16839,
+            "name": "origintp",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010586708101644443
+            }
+        },
+        {
+            "id": 490,
+            "name": "games",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 11755,
+            "name": "bestoflegaladvice",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010277572180779457
+            }
+        },
+        {
+            "id": 19960,
+            "name": "enterthegungeon",
+            "attributes": {
+                "degree": 1,
+                "degree_centrality": 0.0018796992481203006,
+                "clustering": 0,
+                "pagerank": 0.0010513961914160332
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 26113,
+            "target": 2404,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 711.0,
+                "num_words": 113.0,
+                "num_words_unique": 89.0,
+                "num_words_long": 20.0,
+                "num_stop_word_unique": 24.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 3,
+            "target": 27232,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 464.0,
+                "num_words": 77.0,
+                "num_words_unique": 53.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 3,
+            "target": 57,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 40011.0,
+                "num_words": 7036.0,
+                "num_words_unique": 1562.0,
+                "num_words_long": 1278.0,
+                "num_stop_word_unique": 96.0,
+                "num_sentences": 303.0
+            }
+        },
+        {
+            "source": 3,
+            "target": 3210,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 160.0,
+                "num_words": 23.0,
+                "num_words_unique": 21.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 3,
+            "target": 3727,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 127.0,
+                "num_words_unique": 87.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 536,
+            "target": 70,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 933.0,
+                "num_words": 138.0,
+                "num_words_unique": 76.0,
+                "num_words_long": 41.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 5660,
+            "target": 27206,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1456.0,
+                "num_words": 154.0,
+                "num_words_unique": 75.0,
+                "num_words_long": 44.0,
+                "num_stop_word_unique": 2.0,
+                "num_sentences": 12.0
+            }
+        },
+        {
+            "source": 542,
+            "target": 797,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 742.0,
+                "num_words": 119.0,
+                "num_words_unique": 94.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 26169,
+            "target": 23465,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 420.0,
+                "num_words": 75.0,
+                "num_words_unique": 61.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 33569,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 225.0,
+                "num_words": 35.0,
+                "num_words_unique": 35.0,
+                "num_words_long": 6.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27314,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 290.0,
+                "num_words": 45.0,
+                "num_words_unique": 43.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 279,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 318.0,
+                "num_words": 43.0,
+                "num_words_unique": 39.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 5.0,
+                "num_sentences": 9.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 3210,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 908.0,
+                "num_words": 161.0,
+                "num_words_unique": 118.0,
+                "num_words_long": 21.0,
+                "num_stop_word_unique": 28.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27334,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 337.0,
+                "num_words": 54.0,
+                "num_words_unique": 48.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 2477,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 687.0,
+                "num_words": 106.0,
+                "num_words_unique": 78.0,
+                "num_words_long": 25.0,
+                "num_stop_word_unique": 15.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 1627,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4689.0,
+                "num_words": 871.0,
+                "num_words_unique": 389.0,
+                "num_words_long": 136.0,
+                "num_stop_word_unique": 75.0,
+                "num_sentences": 53.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27245,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 192.0,
+                "num_words": 25.0,
+                "num_words_unique": 25.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 6.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27337,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 442.0,
+                "num_words": 51.0,
+                "num_words_unique": 37.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 641,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 854.0,
+                "num_words": 146.0,
+                "num_words_unique": 106.0,
+                "num_words_long": 19.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 2404,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 697.0,
+                "num_words": 125.0,
+                "num_words_unique": 94.0,
+                "num_words_long": 21.0,
+                "num_stop_word_unique": 35.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 35521,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 355.0,
+                "num_words": 50.0,
+                "num_words_unique": 41.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 10.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 1295,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 213.0,
+                "num_words": 30.0,
+                "num_words_unique": 25.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 25277,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 102.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 2.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 2823,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 69.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 2.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27341,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 269.0,
+                "num_words": 47.0,
+                "num_words_unique": 44.0,
+                "num_words_long": 6.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 26903,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 584.0,
+                "num_words": 105.0,
+                "num_words_unique": 85.0,
+                "num_words_long": 16.0,
+                "num_stop_word_unique": 29.0,
+                "num_sentences": 8.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 2769,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 424.0,
+                "num_words": 72.0,
+                "num_words_unique": 60.0,
+                "num_words_long": 10.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 18238,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 142.0,
+                "num_words": 21.0,
+                "num_words_unique": 21.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 11178,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 97.0,
+                "num_words": 15.0,
+                "num_words_unique": 15.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 13678,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 143.0,
+                "num_words": 22.0,
+                "num_words_unique": 22.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27343,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 69.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 2.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27344,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1203.0,
+                "num_words": 203.0,
+                "num_words_unique": 124.0,
+                "num_words_long": 36.0,
+                "num_stop_word_unique": 21.0,
+                "num_sentences": 11.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27271,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 98.0,
+                "num_words": 14.0,
+                "num_words_unique": 14.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 1.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 11131,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 84.0,
+                "num_words": 12.0,
+                "num_words_unique": 12.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27345,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 696.0,
+                "num_words": 94.0,
+                "num_words_unique": 62.0,
+                "num_words_long": 21.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 192,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 531.0,
+                "num_words": 101.0,
+                "num_words_unique": 52.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 4.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 19800,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 193.0,
+                "num_words": 35.0,
+                "num_words_unique": 32.0,
+                "num_words_long": 4.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 359,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 590.0,
+                "num_words": 108.0,
+                "num_words_unique": 78.0,
+                "num_words_long": 18.0,
+                "num_stop_word_unique": 22.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 18013,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2218.0,
+                "num_words": 331.0,
+                "num_words_unique": 169.0,
+                "num_words_long": 81.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 15542,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 310.0,
+                "num_words": 58.0,
+                "num_words_unique": 46.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 15.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 660,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 158.0,
+                "num_words": 20.0,
+                "num_words_unique": 20.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 4.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 10376,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 335.0,
+                "num_words": 58.0,
+                "num_words_unique": 43.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 23465,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 650.0,
+                "num_words": 123.0,
+                "num_words_unique": 92.0,
+                "num_words_long": 17.0,
+                "num_stop_word_unique": 22.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 19820,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 286.0,
+                "num_words": 43.0,
+                "num_words_unique": 36.0,
+                "num_words_long": 10.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 27352,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3328.0,
+                "num_words": 501.0,
+                "num_words_unique": 274.0,
+                "num_words_long": 117.0,
+                "num_stop_word_unique": 46.0,
+                "num_sentences": 14.0
+            }
+        },
+        {
+            "source": 27206,
+            "target": 74,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1906.0,
+                "num_words": 340.0,
+                "num_words_unique": 189.0,
+                "num_words_long": 49.0,
+                "num_stop_word_unique": 47.0,
+                "num_sentences": 13.0
+            }
+        },
+        {
+            "source": 3142,
+            "target": 2769,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 253.0,
+                "num_words": 46.0,
+                "num_words_unique": 39.0,
+                "num_words_long": 5.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 3142,
+            "target": 2282,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 555.0,
+                "num_words": 92.0,
+                "num_words_unique": 77.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 6.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 2257,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 3203.0,
+                "num_words": 498.0,
+                "num_words_unique": 256.0,
+                "num_words_long": 118.0,
+                "num_stop_word_unique": 59.0,
+                "num_sentences": 24.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1201,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1890.0,
+                "num_words": 275.0,
+                "num_words_unique": 167.0,
+                "num_words_long": 66.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 20.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 354,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1890.0,
+                "num_words": 275.0,
+                "num_words_unique": 167.0,
+                "num_words_long": 66.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 20.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 28574,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1136.0,
+                "num_words": 182.0,
+                "num_words_unique": 109.0,
+                "num_words_long": 58.0,
+                "num_stop_word_unique": 27.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1627,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 916.0,
+                "num_words": 146.0,
+                "num_words_unique": 91.0,
+                "num_words_long": 35.0,
+                "num_stop_word_unique": 16.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 11755,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 245.0,
+                "num_words": 34.0,
+                "num_words_unique": 30.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 6.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 321,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 252.0,
+                "num_words": 27.0,
+                "num_words_unique": 16.0,
+                "num_words_long": 9.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1220,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 222.0,
+                "num_words": 31.0,
+                "num_words_unique": 31.0,
+                "num_words_long": 7.0,
+                "num_stop_word_unique": 7.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 1271,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 109.0,
+                "num_words": 11.0,
+                "num_words_unique": 11.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 2369,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2711.0,
+                "num_words": 401.0,
+                "num_words_unique": 221.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 42.0,
+                "num_sentences": 21.0
+            }
+        },
+        {
+            "source": 70,
+            "target": 490,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2711.0,
+                "num_words": 401.0,
+                "num_words_unique": 221.0,
+                "num_words_long": 94.0,
+                "num_stop_word_unique": 42.0,
+                "num_sentences": 21.0
+            }
+        },
+        {
+            "source": 74,
+            "target": 16839,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 322.0,
+                "num_words": 44.0,
+                "num_words_unique": 41.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 74,
+            "target": 4837,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 570.0,
+                "num_words": 103.0,
+                "num_words_unique": 77.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 27227,
+            "target": 2404,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 272.0,
+                "num_words": 47.0,
+                "num_words_unique": 38.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 12.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27227,
+            "target": 27242,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 453.0,
+                "num_words": 62.0,
+                "num_words_unique": 48.0,
+                "num_words_long": 16.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 2.0
+            }
+        },
+        {
+            "source": 27232,
+            "target": 27321,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 464.0,
+                "num_words": 77.0,
+                "num_words_unique": 53.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 13.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27232,
+            "target": 27289,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 381.0,
+                "num_words": 56.0,
+                "num_words_unique": 49.0,
+                "num_words_long": 16.0,
+                "num_stop_word_unique": 3.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27232,
+            "target": 27251,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 105.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27232,
+            "target": 27241,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1090.0,
+                "num_words": 184.0,
+                "num_words_unique": 131.0,
+                "num_words_long": 42.0,
+                "num_stop_word_unique": 34.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 27241,
+            "target": 949,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 345.0,
+                "num_words": 52.0,
+                "num_words_unique": 48.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 14.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27241,
+            "target": 19960,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 426.0,
+                "num_words": 73.0,
+                "num_words_unique": 59.0,
+                "num_words_long": 10.0,
+                "num_stop_word_unique": 19.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27241,
+            "target": 798,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 634.0,
+                "num_words": 83.0,
+                "num_words_unique": 62.0,
+                "num_words_long": 26.0,
+                "num_stop_word_unique": 12.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 27290,
+            "attributes": {
+                "sentiment": -1,
+                "num_chars": 472.0,
+                "num_words": 79.0,
+                "num_words_unique": 63.0,
+                "num_words_long": 15.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 6868,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 366.0,
+                "num_words": 55.0,
+                "num_words_unique": 51.0,
+                "num_words_long": 11.0,
+                "num_stop_word_unique": 11.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 641,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 290.0,
+                "num_words": 45.0,
+                "num_words_unique": 42.0,
+                "num_words_long": 6.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 27337,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 442.0,
+                "num_words": 51.0,
+                "num_words_unique": 37.0,
+                "num_words_long": 12.0,
+                "num_stop_word_unique": 8.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 27340,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 110.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 27242,
+            "target": 4926,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 4916.0,
+                "num_words": 904.0,
+                "num_words_unique": 444.0,
+                "num_words_long": 154.0,
+                "num_stop_word_unique": 65.0,
+                "num_sentences": 48.0
+            }
+        },
+        {
+            "source": 14448,
+            "target": 27290,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 786.0,
+                "num_words": 135.0,
+                "num_words_unique": 98.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 30.0,
+                "num_sentences": 10.0
+            }
+        },
+        {
+            "source": 27251,
+            "target": 27318,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 280.0,
+                "num_words": 42.0,
+                "num_words_unique": 40.0,
+                "num_words_long": 8.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 27251,
+            "target": 35517,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 193.0,
+                "num_words": 35.0,
+                "num_words_unique": 33.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 9.0,
+                "num_sentences": 4.0
+            }
+        },
+        {
+            "source": 3727,
+            "target": 213,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 127.0,
+                "num_words_unique": 87.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 3727,
+            "target": 797,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 127.0,
+                "num_words_unique": 87.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 3727,
+            "target": 2237,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 127.0,
+                "num_words_unique": 87.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 3727,
+            "target": 258,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 127.0,
+                "num_words_unique": 87.0,
+                "num_words_long": 23.0,
+                "num_stop_word_unique": 17.0,
+                "num_sentences": 7.0
+            }
+        },
+        {
+            "source": 27290,
+            "target": 26009,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 80.0,
+                "num_words": 10.0,
+                "num_words_unique": 10.0,
+                "num_words_long": 3.0,
+                "num_stop_word_unique": 0.0,
+                "num_sentences": 1.0
+            }
+        },
+        {
+            "source": 2257,
+            "target": 14636,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 830.0,
+                "num_words": 111.0,
+                "num_words_unique": 73.0,
+                "num_words_long": 28.0,
+                "num_stop_word_unique": 20.0,
+                "num_sentences": 3.0
+            }
+        },
+        {
+            "source": 2274,
+            "target": 354,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 1853.0,
+                "num_words": 306.0,
+                "num_words_unique": 168.0,
+                "num_words_long": 69.0,
+                "num_stop_word_unique": 40.0,
+                "num_sentences": 22.0
+            }
+        },
+        {
+            "source": 4837,
+            "target": 1383,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 570.0,
+                "num_words": 103.0,
+                "num_words_unique": 77.0,
+                "num_words_long": 13.0,
+                "num_stop_word_unique": 18.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 7937,
+            "target": 949,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 650.0,
+                "num_words": 116.0,
+                "num_words_unique": 78.0,
+                "num_words_long": 14.0,
+                "num_stop_word_unique": 23.0,
+                "num_sentences": 5.0
+            }
+        },
+        {
+            "source": 261,
+            "target": 321,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 2614.0,
+                "num_words": 480.0,
+                "num_words_unique": 238.0,
+                "num_words_long": 82.0,
+                "num_stop_word_unique": 57.0,
+                "num_sentences": 24.0
+            }
+        },
+        {
+            "source": 798,
+            "target": 446,
+            "attributes": {
+                "sentiment": 1,
+                "num_chars": 440.0,
+                "num_words": 73.0,
+                "num_words_unique": 63.0,
+                "num_words_long": 14.0,
+                "num_stop_word_unique": 21.0,
+                "num_sentences": 3.0
+            }
+        }
+    ]
+}

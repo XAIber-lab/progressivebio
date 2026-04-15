@@ -1,0 +1,61 @@
+.BFNodes .nodeHover text, .BFNodes .nodeHighlight text, .BFNodes .edgeHighlight text {
+    font-weight: bold;
+}
+.BFNodes .nodeHover line {
+    stroke-width: 3px;
+    stroke: green;
+    stroke-opacity: 1;
+}
+
+.BFNodes .nodeHighlight line, .BFEdges .nodeHighlight line {
+    stroke-width: 3px;
+    stroke: green;
+    stroke-opacity: 0.6;
+}
+
+.BFNodeBackground .nodeHighlight rect, .BFEdgeBackground .nodeHighlight rect,
+.BFNodes .nodeHover .BFNodeHighlight, .BFNodes .nodeHighlight .BFNodeHighlight {
+    fill: green;
+    fill-opacity: 0.3;
+}
+
+.BFEdges .edgeHover line {
+    stroke-width: 3px;
+    stroke: red;
+    stroke-opacity: 1;
+}
+
+.BFEdges .edgeHighlight line, .BFNodes .edgeHighlight line {
+    stroke-width: 3px;
+    stroke: red;
+    stroke-opacity: 0.6;
+}
+
+.BFNodeBackground .edgeHighlight rect, .BFEdgeBackground .edgeHighlight rect,
+.BFNodes .edgeHover .BFNodeHighlight, .BFNodes .edgeHighlight .BFNodeHighlight{
+    fill: red;
+    fill-opacity: 0.3;
+}
+
+.ADMNodes .nodeHover text, .ADMNodes .nodeHighlight text {
+    font-weight: bold;
+}
+
+.ADMGrid .nodeHighlight rect, .ADMBackground .nodeHighlight rect {
+    fill: green;
+    fill-opacity: 0.3;
+}
+
+.ADMGrid .nodeHover rect, .ADMBackground .nodeHover rect {
+    fill: green;
+    fill-opacity: 0.6;
+}
+
+.ADMGrid .edgeHighlight rect {
+    fill: red;
+    fill-opacity: 0.3
+}
+
+.checkbox.checked .checkmark{
+    display: block;
+}

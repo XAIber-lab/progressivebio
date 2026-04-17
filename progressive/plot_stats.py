@@ -55,8 +55,8 @@ def plot_kt_matrix(csv_path, output_path, filter_small=False, plot_node_coverage
     df = pd.read_csv(csv_path)
     
     # Compute new metrics
-    df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityRel']
-    df['delta_quality_absolute'] = df['s_qualityGT'] - df['s_qualityAbs']
+    df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityRel'])
+    df['delta_quality_absolute'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])
     
     # Apply filter if requested
     if filter_small:
@@ -93,7 +93,7 @@ def plot_kt_matrix(csv_path, output_path, filter_small=False, plot_node_coverage
         ncols=len(metrics),
         figsize=(5*len(metrics), 4*len(methods)),
         sharex=True,
-        sharey=False,  # Changed to False for independent y-scales
+        sharey='col',  # Changed to False for independent y-scales
     )
 
     # Make sure axes is 2D
@@ -267,7 +267,7 @@ def plot_kt_by_edges(csv_path, output_path, filter_small=False, plot_node_covera
         ncols=len(cols),  # Fixed 3 columns for edge bins
         figsize=(15,4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
 
     # Make sure axes is 2D
@@ -441,7 +441,7 @@ def plot_ktgen_by_edges(csv_path, output_path, filter_small=False, plot_node_cov
         ncols=len(cols),  # Fixed 3 columns for edge bins
         figsize=(15, 4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
 
     # Make sure axes is 2D
@@ -617,7 +617,7 @@ def plot_jaccard_by_edges(csv_path, output_path, filter_small=False, plot_node_c
         ncols=len(cols),  # Fixed 3 columns for edge bins
         figsize=(15, 4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
 
     # Make sure axes is 2D
@@ -724,7 +724,7 @@ def plot_delta_qualityRel_by_edges(csv_path, output_path, filter_small=False, pl
     
     # Compute delta_quality_relative
     if 's_qualityGT' in df.columns and 's_qualityRel' in df.columns:
-        df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityRel']
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityRel'])
     else:
         raise ValueError("Missing required columns for delta_quality_relative: s_qualityGT or s_qualityRel")
     
@@ -799,7 +799,7 @@ def plot_delta_qualityRel_by_edges(csv_path, output_path, filter_small=False, pl
         ncols=len(cols),  # Fixed 3 columns for edge bins
         figsize=(15, 4*len(methods)),
         sharex=True,
-        sharey=False,  # Independent y-scales
+        sharey='col',  # Independent y-scales
     )
 
     # Make sure axes is 2D
@@ -911,7 +911,7 @@ def plot_delta_qualityAbs_by_edges(csv_path, output_path, filter_small=False, pl
     
     # Compute delta_quality_relative
     if 's_qualityGT' in df.columns and 's_qualityAbs' in df.columns:
-        df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityAbs']
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])
     else:
         raise ValueError("Missing required columns for delta_quality_relative: s_qualityGT or s_qualityAbs")
     
@@ -986,7 +986,7 @@ def plot_delta_qualityAbs_by_edges(csv_path, output_path, filter_small=False, pl
         ncols=len(cols),  # Fixed 3 columns for edge bins
         figsize=(15, 4*len(methods)),
         sharex=True,
-        sharey=False,  # Independent y-scales
+        sharey='col',  # Independent y-scales
     )
 
     # Make sure axes is 2D
@@ -1081,6 +1081,196 @@ def plot_delta_qualityAbs_by_edges(csv_path, output_path, filter_small=False, pl
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
     print(f"Figure saved to {output_path}")
+    
+def plot_delta_qualityAbsPerc_by_edges(csv_path, output_path, filter_small=False, plot_node_coverage=False):
+    """
+    Create matrix of plots: rows=methods, cols=edges quantiles (low/medium/high)
+    [with optional node_coverage overlay on same charts] and save to file.
+    
+    Args:
+        csv_path: path to input CSV file
+        output_path: path where to save the image (png, pdf, etc)
+        filter_small: if True, skip files where sample at iteration 1 < 7
+        plot_node_coverage: if True, overlay node_coverage line on each edge bin chart
+    """
+    # Load
+    df = pd.read_csv(csv_path)
+    
+    # Compute delta_quality_relative
+    if 's_qualityGT' in df.columns and 's_qualityAbs' in df.columns:
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])/df['s_qualityGT']
+    else:
+        raise ValueError("Missing required columns for delta_quality_relative: s_qualityGT or s_qualityAbs")
+    
+    # Apply filter if requested
+    if filter_small:
+        df_iter1 = df[df['iteration'] == 1]
+        if not df_iter1.empty and 'sample' in df_iter1.columns:
+            small_files = df_iter1[df_iter1['sample'] < 7]['file'].unique()
+            df = df[~df['file'].isin(small_files)]
+            print(f"Filtered out {len(small_files)} small files")
+        else:
+            print("Warning: Could not filter - missing iteration=1 or sample column")
+    
+    if df.empty:
+        print(f"Warning: No data left after filtering. Skipping {output_path}")
+        return
+
+    # Basic checks
+    required = {"file", "iteration", "method", "num_edges"}
+    missing = required - set(df.columns)
+    if missing:
+        raise ValueError(f"Missing required columns: {missing}")
+
+    # Check node_coverage availability if requested
+    has_node_coverage = 'node_coverage' in df.columns and plot_node_coverage
+    if plot_node_coverage and not has_node_coverage:
+        print("WARNING: plot_node_coverage=True but 'node_coverage' column missing. Using delta_quality_relative only.")
+        plot_node_coverage = False
+
+    # Ensure numeric columns
+    df["iteration"] = pd.to_numeric(df["iteration"], errors="coerce")
+    df["num_edges"] = pd.to_numeric(df["num_edges"], errors="coerce")
+    df["delta_quality_relative"] = pd.to_numeric(df["delta_quality_relative"], errors="coerce")
+    if has_node_coverage:
+        df["node_coverage"] = pd.to_numeric(df["node_coverage"], errors="coerce")
+    
+    df = df.dropna(subset=['num_edges', 'delta_quality_relative'])
+    if df.empty:
+        print(f"Warning: No valid data. Skipping {output_path}")
+        return
+
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    
+    # Edge quantiles (always 3 columns)
+    edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
+    if edges_quantiles.isna().any():
+        print(f"Warning: Insufficient data for edge quantiles. Using single column.")
+        cols = ["all_edges"]
+        edge_bins = {"all_edges": pd.Series([True] * len(df), index=df.index)}
+    else:
+        q33, q66 = int(edges_quantiles[0.33]), int(edges_quantiles[0.66])
+        low_edges = df["num_edges"] <= edges_quantiles[0.33]
+        med_edges = (df["num_edges"] > edges_quantiles[0.33]) & (df["num_edges"] <= edges_quantiles[0.66])
+        high_edges = df["num_edges"] > edges_quantiles[0.66]
+        
+        edge_bins = {
+            f"low (≤{q33})": low_edges, 
+            f"medium ({q33}-{q66})": med_edges, 
+            f"high (> {q66})": high_edges
+        }
+        cols = [
+            "low (≤{})".format(q33),
+            "medium ({}-{})".format(q33, q66),
+            "high (> {})".format(q66),
+        ]
+
+    print(f"Plotting {len(cols)} edge bins with node_coverage overlay: {plot_node_coverage}")
+
+    sns.set_style("whitegrid")
+    fig, axes = plt.subplots(
+        nrows=len(methods),
+        ncols=len(cols),  # Fixed 3 columns for edge bins
+        figsize=(15, 4*len(methods)),
+        sharex=True,
+        sharey='col',  # Independent y-scales
+    )
+
+    # Make sure axes is 2D
+    axes = np.atleast_2d(axes)
+
+    # Plot for each method and edge bin
+    for i, method in enumerate(methods):
+        df_m = df[df["method"] == method]
+
+        for j, col_name in enumerate(cols):
+            ax = axes[i, j]
+
+            # Filter for this edge bin (same file/iteration groups)
+            if col_name == "all_edges":
+                df_bin = df_m
+            else:
+                mask = edge_bins[col_name]
+                df_bin = df_m[mask]
+            
+            if df_bin.empty:
+                continue
+
+            # delta_quality_relative line (black) - main metric
+            grouped_delta = df_bin.groupby("iteration")["delta_quality_relative"]
+            med_delta = grouped_delta.median().sort_index()
+            q25_delta = grouped_delta.quantile(0.25).sort_index()
+            q75_delta = grouped_delta.quantile(0.75).sort_index()
+            vmin_delta = grouped_delta.min().sort_index()
+            vmax_delta = grouped_delta.max().sort_index()
+
+            x_delta = med_delta.index.values
+            x_delta, (med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y) = pad_with_zero(
+                x_delta, med_delta.values, q25_delta.values, q75_delta.values, vmin_delta.values, vmax_delta.values
+            )
+            
+            # Remove x=0 and keep x >= 1
+            x_delta, (med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y) = trim_zero_and_ensure_min_x(
+                x_delta, med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y
+            )
+
+            # delta_quality_relative 25–75% band
+            ax.fill_between(x_delta, q25_delta_y, q75_delta_y, alpha=0.2, color="gray")
+            ax.plot(x_delta, med_delta_y, color="black", linewidth=2, label="delta_quality_relative")
+            
+            # delta_quality_relative min/max markers
+            ax.scatter(x_delta, vmin_delta_y, color="gray", marker="v", s=30, alpha=0.7)
+            ax.scatter(x_delta, vmax_delta_y, color="gray", marker="^", s=30, alpha=0.7)
+            
+            # ax.set_ylim(0,1)
+
+            # Node coverage overlay (blue) - same edge bin, same files
+            if plot_node_coverage:
+                grouped_nc = df_bin.groupby("iteration")["node_coverage"]
+                med_nc = grouped_nc.median().sort_index()
+                q25_nc = grouped_nc.quantile(0.25).sort_index()
+                q75_nc = grouped_nc.quantile(0.75).sort_index()
+
+                x_nc = med_nc.index.values
+                x_nc, (med_nc_y, q25_nc_y, q75_nc_y, _, _) = pad_with_zero(
+                    x_nc, med_nc.values, q25_nc.values, q75_nc.values, med_nc.values, med_nc.values
+                )
+
+                # Node coverage band (lighter blue)
+                ax.fill_between(x_nc, q25_nc_y, q75_nc_y, alpha=0.15, color="blue")
+                # Node coverage median line (blue)
+                ax.plot(x_nc, med_nc_y, color="blue", linewidth=2, label="node_coverage")
+                
+
+    # Labels
+    for i, method in enumerate(methods):
+        axes[i, 0].set_ylabel(method, fontsize=12, fontweight="bold")
+        if i == len(methods) - 1:
+            for j in range(len(cols)):
+                axes[i, j].set_xlabel("Iteration", fontsize=12, fontweight="bold")
+    
+    for j, col_name in enumerate(cols):
+        axes[0, j].text(
+            0.5, 1.08, col_name,
+            transform=axes[0, j].transAxes,
+            ha="center", va="bottom", fontsize=11, fontweight="bold"
+        )
+
+    # Legend if node_coverage plotted
+    if plot_node_coverage:
+        axes[-1, -1].legend(loc='upper right', fontsize=10)
+
+    # Clean up
+    for i in range(len(methods)):
+        for j in range(1, len(cols)):
+            axes[i, j].set_ylabel("")
+        for j in range(len(cols)):
+            axes[i, j].set_title("")
+
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+    print(f"Figure saved to {output_path}")
 
 def plot_kt_by_topology(df, output_path, topologies=None, filter_small=False, plot_node_coverage=False):
     """
@@ -1141,7 +1331,7 @@ def plot_kt_by_topology(df, output_path, topologies=None, filter_small=False, pl
         ncols=len(selected_topologies),
         figsize=(4 * len(selected_topologies), 4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
 
     # Make sure axes is 2D
@@ -1288,7 +1478,7 @@ def plot_ktgen_by_topology(df, output_path, topologies=None, filter_small=False,
         ncols=len(selected_topologies),
         figsize=(4 * len(selected_topologies), 4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
     axes = np.atleast_2d(axes)
 
@@ -1432,7 +1622,7 @@ def plot_jaccard_by_topology(df, output_path, topologies=None, filter_small=Fals
         ncols=len(selected_topologies),
         figsize=(4 * len(selected_topologies), 4*len(methods)),
         sharex=True,
-        sharey=True,
+        sharey='col',
     )
 
     # Make sure axes is 2D
@@ -1534,7 +1724,7 @@ def plot_deltaRel_by_topology(df, output_path, topologies=None, filter_small=Fal
     """
     # Compute delta_quality_relative if not present
     if 's_qualityGT' in df.columns and 's_qualityRel' in df.columns:
-        df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityRel']
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityRel'])
     elif 'delta_quality_relative' not in df.columns:
         raise ValueError("Missing columns to compute delta_quality_relative: need s_qualityGT and s_qualityRel")
     
@@ -1587,7 +1777,7 @@ def plot_deltaRel_by_topology(df, output_path, topologies=None, filter_small=Fal
         ncols=len(selected_topologies),
         figsize=(4 * len(selected_topologies), 4*len(methods)),
         sharex=True,
-        sharey=False,  # Independent y-scales
+        sharey='col',  # Independent y-scales
     )
 
     # Make sure axes is 2D
@@ -1694,7 +1884,7 @@ def plot_deltaAbs_by_topology(df, output_path, topologies=None, filter_small=Fal
     """
     # Compute delta_quality_relative if not present
     if 's_qualityGT' in df.columns and 's_qualityAbs' in df.columns:
-        df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityAbs']
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])
     elif 'delta_quality_relative' not in df.columns:
         raise ValueError("Missing columns to compute delta_quality_relative: need s_qualityGT and s_qualityAbs")
     
@@ -1741,13 +1931,18 @@ def plot_deltaAbs_by_topology(df, output_path, topologies=None, filter_small=Fal
     
     methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
 
+    # y_min = df["delta_quality_relative"].min()
+    # y_max = df["delta_quality_relative"].max()
+    # y_pad = 0.05 * (y_max - y_min) if y_max > y_min else 1.0
+    # y_limits = (y_min - y_pad, y_max + y_pad)
+    
     sns.set_style("whitegrid")
     fig, axes = plt.subplots(
         nrows=len(methods),
         ncols=len(selected_topologies),
-        figsize=(4 * len(selected_topologies), 4*len(methods)),
+        figsize=(4 * len(selected_topologies), 4 * len(methods)),
         sharex=True,
-        sharey=False,  # Independent y-scales
+        sharey='col',  # Same y-scale within each column only
     )
 
     # Make sure axes is 2D
@@ -1809,6 +2004,179 @@ def plot_deltaAbs_by_topology(df, output_path, topologies=None, filter_small=Fal
                 ax.fill_between(x_nc, q25_nc_y, q75_nc_y, alpha=0.15, color="blue")
                 # Node coverage median line (blue)
                 ax.plot(x_nc, med_nc_y, color="blue", linewidth=2, label="node_coverage")
+                
+                # ax.set_ylim(y_limits)
+
+    # Labels
+    for i, method in enumerate(methods):
+        axes[i][0].set_ylabel(method, fontsize=12, fontweight="bold")
+        if i == len(methods) - 1:
+            for jj in range(len(selected_topologies)):
+                axes[i][jj].set_xlabel("Iteration", fontsize=12, fontweight="bold")
+    
+    for j, topo in enumerate(selected_topologies):
+        axes[0][j].text(
+            0.5, 1.08, topo,
+            transform=axes[0][j].transAxes,
+            ha="center", va="bottom", fontsize=11, fontweight="bold", wrap=True,
+        )
+
+    # Legend if node_coverage plotted
+    if plot_node_coverage:
+        axes[-1, -1].legend(loc='upper right', fontsize=10)
+
+    # Clean up
+    for j in range(1, len(selected_topologies)):
+        axes[0][j].set_ylabel("")
+
+    for i in range(len(axes)):
+        for j in range(len(axes[0])):
+            axes[i][j].set_title("")
+
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+    print(f"Figure saved to {output_path}")
+    
+def plot_deltaAbsPerc_by_topology(df, output_path, topologies=None, filter_small=False, plot_node_coverage=False):
+    """
+    delta_quality_relative by topology with optional node_coverage overlay on same charts.
+    
+    Args:
+        df: DataFrame (from preprocess_topology)
+        output_path: path where to save the image (png, pdf, etc)
+        topologies: optional list of topology names to plot
+        filter_small: if True, skip files where sample at iteration 1 < 7
+        plot_node_coverage: if True, overlay node_coverage line on each topology chart
+    """
+    # Compute delta_quality_relative if not present
+    if 's_qualityGT' in df.columns and 's_qualityAbs' in df.columns:
+        df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])/df['s_qualityGT']
+    elif 'delta_quality_relative' not in df.columns:
+        raise ValueError("Missing columns to compute delta_quality_relative: need s_qualityGT and s_qualityAbs")
+    
+    print(df[['delta_quality_relative', 's_qualityGT', 's_qualityAbs']])
+    
+    # Apply filter if requested
+    if filter_small:
+        df_filtered = df[(df['iteration'] == 1) & (df['sample'] < 7)].groupby('file').first().reset_index()
+        small_files = df_filtered['file'].unique()
+        df = df[~df['file'].isin(small_files)].copy()
+        print(f"Filtered out {len(small_files)} small files")
+
+    # Basic checks
+    required = {"iteration", "method", "delta_quality_relative", "topology"}
+    missing = required - set(df.columns)
+    if missing:
+        raise ValueError(f"Missing required columns: {missing}")
+
+    # Check node_coverage availability if requested
+    has_node_coverage = 'node_coverage' in df.columns and plot_node_coverage
+    if plot_node_coverage and not has_node_coverage:
+        print("WARNING: plot_node_coverage=True but 'node_coverage' column missing. Using delta_quality_relative only.")
+        plot_node_coverage = False
+
+    # Ensure numeric iteration
+    df["iteration"] = pd.to_numeric(df["iteration"], errors="coerce")
+    df["delta_quality_relative"] = pd.to_numeric(df["delta_quality_relative"], errors="coerce")
+    if has_node_coverage:
+        df["node_coverage"] = pd.to_numeric(df["node_coverage"], errors="coerce")
+
+    all_topologies = sorted(df["topology"].dropna().unique())
+    
+    # Filter topologies if specified
+    if topologies is None:
+        selected_topologies = all_topologies
+    else:
+        selected_topologies = [t for t in topologies if t in all_topologies]
+        if len(selected_topologies) != len(topologies):
+            missing_t = set(topologies) - set(selected_topologies)
+            print(f"WARNING: Topologies not found: {missing_t}")
+    
+    print(f"DEBUG: Plotting topologies: {selected_topologies} with node_coverage overlay: {plot_node_coverage}")
+    
+    if len(selected_topologies) == 0:
+        raise ValueError("No valid topologies to plot")
+    
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+
+    # y_min = df["delta_quality_relative"].min()
+    # y_max = df["delta_quality_relative"].max()
+    # y_pad = 0.05 * (y_max - y_min) if y_max > y_min else 1.0
+    # y_limits = (y_min - y_pad, y_max + y_pad)
+    
+    sns.set_style("whitegrid")
+    fig, axes = plt.subplots(
+        nrows=len(methods),
+        ncols=len(selected_topologies),
+        figsize=(4 * len(selected_topologies), 4 * len(methods)),
+        sharex=True,
+        sharey='col',  # Same y-scale within each column only
+    )
+
+    # Make sure axes is 2D
+    axes = np.atleast_2d(axes)
+
+    # Plot per method and topology
+    for i, method in enumerate(methods):
+        df_m = df[df["method"] == method]
+
+        for j, topo in enumerate(selected_topologies):
+            ax = axes[i][j]
+
+            # Filter for this topology (same files)
+            df_topo = df_m[df_m["topology"] == topo]
+            
+            if df_topo.empty:
+                print(f"WARNING: No data for topology '{topo}' method '{method}'")
+                continue
+
+            # delta_quality_relative line (black) - main metric
+            grouped_delta = df_topo.groupby("iteration")["delta_quality_relative"]
+            med_delta = grouped_delta.median().sort_index()
+            q25_delta = grouped_delta.quantile(0.25).sort_index()
+            q75_delta = grouped_delta.quantile(0.75).sort_index()
+            vmin_delta = grouped_delta.min().sort_index()
+            vmax_delta = grouped_delta.max().sort_index()
+
+            x_delta = med_delta.index.values
+            x_delta, (med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y) = pad_with_zero(
+                x_delta, med_delta.values, q25_delta.values, q75_delta.values, vmin_delta.values, vmax_delta.values
+            )
+            
+            # Remove x=0 and keep x >= 1
+            x_delta, (med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y) = trim_zero_and_ensure_min_x(
+                x_delta, med_delta_y, q25_delta_y, q75_delta_y, vmin_delta_y, vmax_delta_y
+            )
+
+            # delta_quality_relative 25–75% band
+            ax.fill_between(x_delta, q25_delta_y, q75_delta_y, alpha=0.2, color="gray")
+            ax.plot(x_delta, med_delta_y, color="black", linewidth=2, label="delta_quality_relative")
+            
+            # delta_quality_relative min/max markers
+            ax.scatter(x_delta, vmin_delta_y, color="gray", marker="v", s=30, alpha=0.7)
+            ax.scatter(x_delta, vmax_delta_y, color="gray", marker="^", s=30, alpha=0.7)
+            
+            # ax.set_ylim(0,1)
+
+            # Node coverage overlay (blue) - same topology, same files
+            if plot_node_coverage:
+                grouped_nc = df_topo.groupby("iteration")["node_coverage"]
+                med_nc = grouped_nc.median().sort_index()
+                q25_nc = grouped_nc.quantile(0.25).sort_index()
+                q75_nc = grouped_nc.quantile(0.75).sort_index()
+
+                x_nc = med_nc.index.values
+                x_nc, (med_nc_y, q25_nc_y, q75_nc_y, _, _) = pad_with_zero(
+                    x_nc, med_nc.values, q25_nc.values, q75_nc.values, med_nc.values, med_nc.values
+                )
+
+                # Node coverage band (lighter blue)
+                ax.fill_between(x_nc, q25_nc_y, q75_nc_y, alpha=0.15, color="blue")
+                # Node coverage median line (blue)
+                ax.plot(x_nc, med_nc_y, color="blue", linewidth=2, label="node_coverage")
+                
+                # ax.set_ylim(y_limits)
 
     # Labels
     for i, method in enumerate(methods):
@@ -2102,7 +2470,7 @@ def plot_kt_disaggregated(df, output_base_path, topologies=None, filter_small=Fa
             ncols=len(cols),
             figsize=(14, 4*len(methods)),
             sharex=True,
-            sharey=False,
+            sharey='col',
         )
         axes = np.atleast_2d(axes)
 
@@ -2188,8 +2556,8 @@ def plot_kt_disaggregated_quality(df, output_base_path, topologies=None, filter_
     df["iteration"] = pd.to_numeric(df["iteration"], errors="coerce")
     df["num_edges"] = pd.to_numeric(df["num_edges"], errors="coerce")
     # Compute new metrics
-    df['delta_quality_relative'] = df['s_qualityGT'] - df['s_qualityRel']
-    df['delta_quality_absolute'] = df['s_qualityGT'] - df['s_qualityAbs']
+    df['delta_quality_relative'] = abs(df['s_qualityGT'] - df['s_qualityRel'])
+    df['delta_quality_absolute'] = abs(df['s_qualityGT'] - df['s_qualityAbs'])
     
     metrics_to_numeric = ["delta_quality_relative", "delta_quality_absolute"]
     if has_node_coverage:
@@ -2250,7 +2618,7 @@ def plot_kt_disaggregated_quality(df, output_base_path, topologies=None, filter_
             ncols=len(cols),
             figsize=(14, 4*len(methods)),
             sharex=True,
-            sharey=False,
+            sharey='col',
         )
         axes = np.atleast_2d(axes)
 
@@ -2414,23 +2782,26 @@ if __name__ == "__main__":
         plot_size_jac = "progressive/plot/size_jaccard_" + dat + ".png"
         plot_size_qualRel = "progressive/plot/size_qualityRel_" + dat + ".png"
         plot_size_qualAbs = "progressive/plot/size_qualityAbs_" + dat + ".png"
+        plot_size_qualAbsPercentage = "progressive/plot/size_qualityAbsPerc_" + dat + ".png"
         
         plot_topology_std = "progressive/plot/topology_KT_" + dat + ".png"
         plot_topology_gen = "progressive/plot/topology_KTgen_" + dat + ".png"
         plot_topology_jac = "progressive/plot/topology_jaccard_" + dat + ".png"
         plot_topology_qualRel = "progressive/plot/topology_qualityRel_" + dat + ".png"
         plot_topology_qualAbs = "progressive/plot/topology_qualityAbs_" + dat + ".png"
+        plot_topology_qualAbsPercentage = "progressive/plot/topology_qualityAbsPerc_" + dat + ".png"
         
         plot_disagg_gen = "progressive/plot/disaggregated_" + dat + "/"
         Path(plot_aggregate).parent.mkdir(parents=True, exist_ok=True)
         
-        # Example usage with filter_small=True
-        plot_kt_matrix(stats_file, plot_aggregate, filter_small=True, plot_node_coverage=False)
-        plot_kt_by_edges(stats_file, plot_size_std, filter_small=True, plot_node_coverage=False)
-        plot_ktgen_by_edges(stats_file, plot_size_gen, filter_small=True, plot_node_coverage=False)
-        plot_jaccard_by_edges(stats_file, plot_size_jac, filter_small=True, plot_node_coverage=False)
-        plot_delta_qualityRel_by_edges(stats_file, plot_size_qualRel, filter_small=True, plot_node_coverage=False)
+        # # Example usage with filter_small=True
+        # plot_kt_matrix(stats_file, plot_aggregate, filter_small=True, plot_node_coverage=False)
+        # plot_kt_by_edges(stats_file, plot_size_std, filter_small=True, plot_node_coverage=False)
+        # plot_ktgen_by_edges(stats_file, plot_size_gen, filter_small=True, plot_node_coverage=False)
+        # plot_jaccard_by_edges(stats_file, plot_size_jac, filter_small=True, plot_node_coverage=False)
+        # plot_delta_qualityRel_by_edges(stats_file, plot_size_qualRel, filter_small=True, plot_node_coverage=False)
         plot_delta_qualityAbs_by_edges(stats_file, plot_size_qualAbs, filter_small=True, plot_node_coverage=False)
+        plot_delta_qualityAbsPerc_by_edges(stats_file, plot_size_qualAbsPercentage, filter_small=True, plot_node_coverage=False)
         
         topos = []
         for t in ['balanced_tree', 'barabasi_albert', 'complete', 'erdos_renyi', 'geometric', 
@@ -2447,16 +2818,17 @@ if __name__ == "__main__":
             Path(plot_disagg_gen).mkdir(exist_ok=True)
             df_stats = preprocess_topology(stats_file)
             
-            # plot_kt_by_topology(df_stats, plot_topology_std, filter_small=True, plot_node_coverage=False)
-            # plot_ktgen_by_topology(df_stats, plot_topology_gen, filter_small=True, plot_node_coverage=False)
-            # plot_jaccard_by_topology(df_stats, plot_topology_jac, filter_small=True, plot_node_coverage=False)
-            # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, filter_small=True, plot_node_coverage=False)
-            # plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, filter_small=True, plot_node_coverage=False)
-            plot_kt_by_topology(df_stats, plot_topology_std, topologies=topos, filter_small=True, plot_node_coverage=False)
-            plot_ktgen_by_topology(df_stats, plot_topology_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
-            plot_jaccard_by_topology(df_stats, plot_topology_jac, topologies=topos, filter_small=True, plot_node_coverage=False)
-            plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # # plot_kt_by_topology(df_stats, plot_topology_std, filter_small=True, plot_node_coverage=False)
+            # # plot_ktgen_by_topology(df_stats, plot_topology_gen, filter_small=True, plot_node_coverage=False)
+            # # plot_jaccard_by_topology(df_stats, plot_topology_jac, filter_small=True, plot_node_coverage=False)
+            # # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, filter_small=True, plot_node_coverage=False)
+            # # plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, filter_small=True, plot_node_coverage=False)
+            # plot_kt_by_topology(df_stats, plot_topology_std, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_ktgen_by_topology(df_stats, plot_topology_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_jaccard_by_topology(df_stats, plot_topology_jac, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, topologies=topos, filter_small=True, plot_node_coverage=False)
             plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, topologies=topos, filter_small=True, plot_node_coverage=False)
+            plot_deltaAbsPerc_by_topology(df_stats, plot_topology_qualAbsPercentage, topologies=topos, filter_small=True, plot_node_coverage=False)
             
-            plot_kt_disaggregated(df_stats, plot_disagg_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
-            plot_kt_disaggregated_quality(df_stats, plot_disagg_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_kt_disaggregated(df_stats, plot_disagg_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_kt_disaggregated_quality(df_stats, plot_disagg_gen, topologies=topos, filter_small=True, plot_node_coverage=False)

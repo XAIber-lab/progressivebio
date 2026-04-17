@@ -195,8 +195,12 @@ def run_experiment(files, n_iterations, methods, output_csv="progressive/data/re
 if __name__ == "__main__":
     folder_graphs="progressive/synthetic_graphs/"
     folder_benchmark = "progressive/rome_benchmark/"
-    create_syntetic = False
-    if create_syntetic: export_graph_dataset(folder_graphs, seed=42)
+    
+    #TODO: change in prod if necessary more graphs
+    # sizes = (10, 50, 150, 200, 250, 300, 350, 400, 450, 500)
+    sizes = (10, 50, 150)
+    create_syntetic = True 
+    if create_syntetic: export_graph_dataset(folder_graphs, sizes, seed=42)
     
     n_iterations = 10
     methods = ["degree","closeness","betweeness","rmc","random","spectral"]

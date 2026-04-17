@@ -1,23 +1,44 @@
-2026-04-17 15:36:18,703 [INFO] __main__ - Logging configured (fresh run) to file: progressive/data/benchmark.log
-2026-04-17 15:36:23,211 [INFO] __main__ - Starting run_experiment with 81 files, 10 iterations, methods=['degree', 'closeness', 'betweeness', 'rmc', 'random', 'spectral'], output_csv=progressive/data/results_synthetic.csv
-2026-04-17 15:36:23,211 [INFO] __main__ - Processing file 1/81: progressive\synthetic_graphs\balanced_tree_N121_E120.json
-2026-04-17 15:36:23,237 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\balanced_tree_N121_E120.json
-2026-04-17 15:36:23,524 [INFO] numexpr.utils - NumExpr defaulting to 16 threads.
-2026-04-17 15:36:25,204 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N121_E120.json (1/81)
-2026-04-17 15:36:25,205 [INFO] __main__ - Processing file 2/81: progressive\synthetic_graphs\balanced_tree_N40_E39.json
-2026-04-17 15:36:25,228 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\balanced_tree_N40_E39.json
-2026-04-17 15:36:25,457 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N40_E39.json (2/81)
-2026-04-17 15:36:25,458 [INFO] __main__ - Processing file 3/81: progressive\synthetic_graphs\balanced_tree_N5_E4.json
-2026-04-17 15:36:25,479 [INFO] __main__ - Defined 4 samples for file progressive\synthetic_graphs\balanced_tree_N5_E4.json
-2026-04-17 15:36:25,501 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N5_E4.json (3/81)
-2026-04-17 15:36:25,501 [INFO] __main__ - Processing file 4/81: progressive\synthetic_graphs\barabasi_albert_N10_E9.json
-2026-04-17 15:36:25,522 [INFO] __main__ - Defined 9 samples for file progressive\synthetic_graphs\barabasi_albert_N10_E9.json
-2026-04-17 15:36:25,579 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N10_E9.json (4/81)
-2026-04-17 15:36:25,580 [INFO] __main__ - Processing file 5/81: progressive\synthetic_graphs\barabasi_albert_N150_E1001.json
-2026-04-17 15:36:25,696 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\barabasi_albert_N150_E1001.json
-2026-04-17 15:37:47,126 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N150_E1001.json (5/81)
-2026-04-17 15:37:47,126 [INFO] __main__ - Processing file 6/81: progressive\synthetic_graphs\barabasi_albert_N50_E96.json
-2026-04-17 15:37:47,153 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\barabasi_albert_N50_E96.json
-2026-04-17 15:37:47,735 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N50_E96.json (6/81)
-2026-04-17 15:37:47,735 [WARNING] __main__ - Stopping early after processing 5 files (c==5 guard).
-2026-04-17 15:37:47,735 [INFO] __main__ - Completed run_experiment. Results written to progressive/data/results_synthetic.csv
+2026-04-17 15:41:45,353 [INFO] __main__ - Logging configured (fresh run) to file: progressive/data/benchmark.log
+2026-04-17 15:41:50,340 [INFO] __main__ - Starting run_experiment with 81 files, 10 iterations, methods=['degree', 'closeness', 'betweeness', 'rmc', 'random', 'spectral'], output_csv=progressive/data/results_synthetic.csv
+2026-04-17 15:41:50,340 [INFO] __main__ - Processing file 1/81: progressive\synthetic_graphs\balanced_tree_N121_E120.json
+2026-04-17 15:41:50,362 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\balanced_tree_N121_E120.json
+2026-04-17 15:41:50,643 [INFO] numexpr.utils - NumExpr defaulting to 16 threads.
+2026-04-17 15:41:52,081 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N121_E120.json (1/81)
+2026-04-17 15:41:52,081 [INFO] __main__ - Processing file 2/81: progressive\synthetic_graphs\balanced_tree_N40_E39.json
+2026-04-17 15:41:52,088 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\balanced_tree_N40_E39.json
+2026-04-17 15:41:52,254 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N40_E39.json (2/81)
+2026-04-17 15:41:52,254 [INFO] __main__ - Processing file 3/81: progressive\synthetic_graphs\balanced_tree_N5_E4.json
+2026-04-17 15:41:52,254 [INFO] __main__ - Defined 4 samples for file progressive\synthetic_graphs\balanced_tree_N5_E4.json
+2026-04-17 15:41:52,269 [INFO] __main__ - Finished file progressive\synthetic_graphs\balanced_tree_N5_E4.json (3/81)
+2026-04-17 15:41:52,269 [INFO] __main__ - Processing file 4/81: progressive\synthetic_graphs\barabasi_albert_N10_E9.json
+2026-04-17 15:41:52,269 [INFO] __main__ - Defined 9 samples for file progressive\synthetic_graphs\barabasi_albert_N10_E9.json
+2026-04-17 15:41:52,312 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N10_E9.json (4/81)
+2026-04-17 15:41:52,312 [INFO] __main__ - Processing file 5/81: progressive\synthetic_graphs\barabasi_albert_N150_E1001.json
+2026-04-17 15:41:52,421 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\barabasi_albert_N150_E1001.json
+2026-04-17 15:43:46,060 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N150_E1001.json (5/81)
+2026-04-17 15:43:46,061 [INFO] __main__ - Processing file 6/81: progressive\synthetic_graphs\barabasi_albert_N50_E96.json
+2026-04-17 15:43:46,088 [INFO] __main__ - Defined 10 samples for file progressive\synthetic_graphs\barabasi_albert_N50_E96.json
+2026-04-17 15:43:46,846 [INFO] __main__ - Finished file progressive\synthetic_graphs\barabasi_albert_N50_E96.json (6/81)
+2026-04-17 15:43:46,846 [WARNING] __main__ - Stopping early after processing 5 files (c==5 guard).
+2026-04-17 15:43:46,848 [INFO] __main__ - Completed run_experiment. Results written to progressive/data/results_synthetic.csv
+2026-04-17 15:43:47,056 [INFO] __main__ - Starting run_experiment with 11534 files, 10 iterations, methods=['degree', 'closeness', 'betweeness', 'rmc', 'random', 'spectral'], output_csv=progressive/data/results_benchmark.csv
+2026-04-17 15:43:47,072 [INFO] __main__ - Processing file 1/11534: progressive\rome_benchmark\grafo1000.14.json
+2026-04-17 15:43:47,102 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo1000.14.json
+2026-04-17 15:43:47,262 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo1000.14.json (1/11534)
+2026-04-17 15:43:47,263 [INFO] __main__ - Processing file 2/11534: progressive\rome_benchmark\grafo10000.38.json
+2026-04-17 15:43:47,288 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo10000.38.json
+2026-04-17 15:43:47,504 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo10000.38.json (2/11534)
+2026-04-17 15:43:47,504 [INFO] __main__ - Processing file 3/11534: progressive\rome_benchmark\grafo10001.32.json
+2026-04-17 15:43:47,525 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo10001.32.json
+2026-04-17 15:43:47,761 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo10001.32.json (3/11534)
+2026-04-17 15:43:47,762 [INFO] __main__ - Processing file 4/11534: progressive\rome_benchmark\grafo10002.40.json
+2026-04-17 15:43:47,784 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo10002.40.json
+2026-04-17 15:43:47,998 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo10002.40.json (4/11534)
+2026-04-17 15:43:47,999 [INFO] __main__ - Processing file 5/11534: progressive\rome_benchmark\grafo10003.40.json
+2026-04-17 15:43:48,023 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo10003.40.json
+2026-04-17 15:43:48,317 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo10003.40.json (5/11534)
+2026-04-17 15:43:48,318 [INFO] __main__ - Processing file 6/11534: progressive\rome_benchmark\grafo10004.32.json
+2026-04-17 15:43:48,341 [INFO] __main__ - Defined 10 samples for file progressive\rome_benchmark\grafo10004.32.json
+2026-04-17 15:43:48,515 [INFO] __main__ - Finished file progressive\rome_benchmark\grafo10004.32.json (6/11534)
+2026-04-17 15:43:48,516 [WARNING] __main__ - Stopping early after processing 5 files (c==5 guard).
+2026-04-17 15:43:48,517 [INFO] __main__ - Completed run_experiment. Results written to progressive/data/results_benchmark.csv

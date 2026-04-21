@@ -1,4 +1,4 @@
-import json, csv, os.path, sys, math
+import json, csv, os.path, sys, math, re
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -2680,20 +2680,37 @@ def plot_kt_disaggregated_quality(df, output_base_path, topologies=None, filter_
 
 
 # The other functions (extract_topology, add_topology_column, preprocess_topology) remain unchanged
+# def extract_topology(file_path):
+#     """Extract topology from file path - SIMPLIFIED"""
+#     # For your data: extract part between last two '/' characters
+#     # e.g., "progressive/synthetic_graphs/hybrid_complete_noisy_N100_E4950" 
+#     # -> "hybrid_complete_noisy_N100_E4950" -> "hybrid_complete_noisy"
+#     parts = file_path.rsplit('/', 2)  # Split from right, get last 3 parts
+#     if len(parts) >= 2:
+#         filename_part = parts[-1]  # "hybrid_complete_noisy_N100_E4950"
+#         # Take everything before first '_N'
+#         if '_N' in filename_part:
+#             return filename_part.split('_N')[0]
+#         else:
+#             return filename_part.split('_')[0]
+#     return file_path.split('/')[-1].split('_')[0]
 def extract_topology(file_path):
-    """Extract topology from file path - SIMPLIFIED"""
-    # For your data: extract part between last two '/' characters
-    # e.g., "progressive/synthetic_graphs/hybrid_complete_noisy_N100_E4950" 
-    # -> "hybrid_complete_noisy_N100_E4950" -> "hybrid_complete_noisy"
-    parts = file_path.rsplit('/', 2)  # Split from right, get last 3 parts
-    if len(parts) >= 2:
-        filename_part = parts[-1]  # "hybrid_complete_noisy_N100_E4950"
-        # Take everything before first '_N'
-        if '_N' in filename_part:
-            return filename_part.split('_N')[0]
-        else:
-            return filename_part.split('_')[0]
-    return file_path.split('/')[-1].split('_')[0]
+    """Extract topology robustly (supports '-' and multi-underscore names)"""
+
+    # Get last path segment
+    filename = file_path.rsplit('/', 1)[-1]
+
+    # Remove trailing _Nxxx_Exxx (and anything after)
+    # Example:
+    # hybrid_complete_noisy_N100_E4950 -> hybrid_complete_noisy
+    filename = re.sub(r'_N\d+_E\d+.*$', '', filename)
+
+    # Fallback: if only N or only E exists
+    filename = re.sub(r'_N\d+.*$', '', filename)
+    filename = re.sub(r'_E\d+.*$', '', filename)
+
+    return filename
+
 
 def add_topology_column(csv_path, json_dir=None):
     """

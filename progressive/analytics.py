@@ -92,21 +92,20 @@ def plot_matrix_pareto(
     save_path="progressive/plot/pareto_matrix.png",
     use_log=False,
     add_jitter=False
-    ):
+):
     topologies = sorted(topology_summary["topology"].unique())
     n = len(topologies)
 
     ncols = math.ceil(math.sqrt(n))
     nrows = math.ceil(n / ncols)
 
-    fig, axes = plt.subplots(nrows, ncols, figsize=(5*ncols, 5*nrows))
+    fig, axes = plt.subplots(nrows, ncols, figsize=(5 * ncols, 5 * nrows))
     axes = axes.flatten()
 
     # --- Global limits (important for comparability) ---
     x = topology_summary["SpeedAUC"].values
     y = topology_summary["QualityAUC"].values
 
-    # Avoid zeros for log scale
     eps = 1e-8
     x = np.clip(x, eps, None)
     y = np.clip(y, eps, None)
@@ -114,7 +113,6 @@ def plot_matrix_pareto(
     x_min, x_max = x.min(), x.max()
     y_min, y_max = y.min(), y.max()
 
-    # Add padding
     x_pad = (x_max - x_min) * 0.1
     y_pad = (y_max - y_min) * 0.1
 
@@ -125,31 +123,34 @@ def plot_matrix_pareto(
         xs = subset["SpeedAUC"].values
         ys = subset["QualityAUC"].values
 
-        # Avoid zeros
         xs = np.clip(xs, eps, None)
         ys = np.clip(ys, eps, None)
 
-        # --- Optional jitter to separate overlapping points ---
         if add_jitter:
             jitter_scale_x = (x_max - x_min) * 0.01
             jitter_scale_y = (y_max - y_min) * 0.01
             xs = xs + np.random.uniform(-jitter_scale_x, jitter_scale_x, size=len(xs))
             ys = ys + np.random.uniform(-jitter_scale_y, jitter_scale_y, size=len(ys))
 
-        ax.scatter(xs, ys)
+        # Grey points, slightly bigger
+        ax.scatter(xs, ys, s=45, color="gray")
 
-        # Labels
-        for _, row in subset.iterrows():
-            ax.text(
-                max(row["SpeedAUC"], eps),
-                max(row["QualityAUC"], eps),
+        # Offsets to reduce text overlap
+        offsets = [(6, 6), (6, -6), (-6, 6), (-6, -6), (8, 0), (0, 8)]
+
+        for j, (_, row) in enumerate(subset.iterrows()):
+            dx, dy = offsets[j % len(offsets)]
+            ax.annotate(
                 row["method"],
-                fontsize=8
+                xy=(max(row["SpeedAUC"], eps), max(row["QualityAUC"], eps)),
+                xytext=(dx, dy),
+                textcoords="offset points",
+                fontsize=11,
+                color="black"
             )
 
         ax.set_title(topo)
 
-        # --- Axis scaling ---
         if use_log:
             ax.set_xscale("log")
             ax.set_yscale("log")
@@ -160,13 +161,10 @@ def plot_matrix_pareto(
         ax.set_xlabel("SpeedAUC")
         ax.set_ylabel("QualityAUC")
 
-    # Remove empty plots
     for j in range(i + 1, len(axes)):
         fig.delaxes(axes[j])
 
     plt.tight_layout()
-
-    # --- Save to file ---
     plt.savefig(save_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
@@ -176,4 +174,4 @@ if __name__ == "__main__":
     auc_df, topo_summary = compute_rankings_per_topology("progressive/data/results_synthetic.csv")
 
     print(topo_summary)
-    plot_matrix_pareto(topo_summary,"progressive/plot/pareto_matrix.png")
+    plot_matrix_pareto(topo_summary, "progressive/plot/pareto_matrix.png")

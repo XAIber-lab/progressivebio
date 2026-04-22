@@ -167,9 +167,10 @@ def detect_stairs(nodes, edges):
     what_is_a_stair = 3
     delta = 10
 
-    order = {}
-    for i, d in enumerate(nodes):
-        order[d["id"]] = i
+    # order = {}
+    # for i, d in enumerate(nodes):
+    #     order[d["id"]] = i
+    order = {n["id"]: i for i, n in enumerate(nodes) if "id" in n}
 
     fixed = None
     direction = None

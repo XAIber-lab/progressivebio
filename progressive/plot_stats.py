@@ -80,7 +80,7 @@ def plot_kt_matrix(csv_path, output_path, filter_small=False, plot_node_coverage
     # Ensure numeric iteration
     df["iteration"] = pd.to_numeric(df["iteration"], errors="coerce")
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     metrics = ["KT", "KT_gen", "jaccard", "delta_quality_relative", "delta_quality_absolute"]
     if plot_node_coverage:
         metrics.append("node_coverage")
@@ -234,7 +234,7 @@ def plot_kt_by_edges(csv_path, output_path, filter_small=False, plot_node_covera
         print(f"Warning: No valid num_edges data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -408,7 +408,7 @@ def plot_ktgen_by_edges(csv_path, output_path, filter_small=False, plot_node_cov
         print(f"Warning: No valid num_edges data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -584,7 +584,7 @@ def plot_jaccard_by_edges(csv_path, output_path, filter_small=False, plot_node_c
         print(f"Warning: No valid num_edges data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -766,7 +766,7 @@ def plot_delta_qualityRel_by_edges(csv_path, output_path, filter_small=False, pl
         print(f"Warning: No valid data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -953,7 +953,7 @@ def plot_delta_qualityAbs_by_edges(csv_path, output_path, filter_small=False, pl
         print(f"Warning: No valid data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -1140,7 +1140,7 @@ def plot_delta_qualityAbsPerc_by_edges(csv_path, output_path, filter_small=False
         print(f"Warning: No valid data. Skipping {output_path}")
         return
 
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     
     # Edge quantiles (always 3 columns)
     edges_quantiles = df["num_edges"].quantile([0.33, 0.66])
@@ -1323,7 +1323,7 @@ def plot_kt_by_topology(df, output_path, topologies=None, filter_small=False, pl
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     sns.set_style("whitegrid")
     fig, axes = plt.subplots(
@@ -1470,7 +1470,7 @@ def plot_ktgen_by_topology(df, output_path, topologies=None, filter_small=False,
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     sns.set_style("whitegrid")
     fig, axes = plt.subplots(
@@ -1614,7 +1614,7 @@ def plot_jaccard_by_topology(df, output_path, topologies=None, filter_small=Fals
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     sns.set_style("whitegrid")
     fig, axes = plt.subplots(
@@ -1769,7 +1769,7 @@ def plot_deltaRel_by_topology(df, output_path, topologies=None, filter_small=Fal
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     sns.set_style("whitegrid")
     fig, axes = plt.subplots(
@@ -1929,7 +1929,7 @@ def plot_deltaAbs_by_topology(df, output_path, topologies=None, filter_small=Fal
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     # y_min = df["delta_quality_relative"].min()
     # y_max = df["delta_quality_relative"].max()
@@ -2098,7 +2098,7 @@ def plot_deltaAbsPerc_by_topology(df, output_path, topologies=None, filter_small
     if len(selected_topologies) == 0:
         raise ValueError("No valid topologies to plot")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 
     # y_min = df["delta_quality_relative"].min()
     # y_max = df["delta_quality_relative"].max()
@@ -2241,7 +2241,7 @@ def plot_deltaAbsPerc_by_topology(df, output_path, topologies=None, filter_small
 #     topologies = sorted(df["topology"].dropna().unique())
 #     print(f"Detected topologies: {topologies} with node_coverage overlay: {plot_node_coverage}")
     
-#     methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+#     methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
 #     sns.set_style("whitegrid")
     
 #     for topo in topologies:
@@ -2432,7 +2432,7 @@ def plot_kt_disaggregated(df, output_base_path, topologies=None, filter_small=Fa
     
     print(f"Detected topologies: {selected_topologies} with node_coverage overlay: {plot_node_coverage}")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     sns.set_style("whitegrid")
     
     metric_names = ["KT", "KT_gen", "jaccard"]
@@ -2580,7 +2580,7 @@ def plot_kt_disaggregated_quality(df, output_base_path, topologies=None, filter_
     
     print(f"Detected topologies: {selected_topologies} with node_coverage overlay: {plot_node_coverage}")
     
-    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral"]
+    methods = ["degree", "closeness", "betweeness", "rmc", "random", "spectral","pagerank"]
     sns.set_style("whitegrid")
     
     metric_names = ["delta_quality_relative", "delta_quality_absolute"]
@@ -2811,39 +2811,44 @@ if __name__ == "__main__":
         plot_disagg_gen = "progressive/plot/disaggregated_" + dat + "/"
         Path(plot_aggregate).parent.mkdir(parents=True, exist_ok=True)
         
-        # # Example usage with filter_small=True
-        # plot_kt_matrix(stats_file, plot_aggregate, filter_small=True, plot_node_coverage=False)
-        # plot_kt_by_edges(stats_file, plot_size_std, filter_small=True, plot_node_coverage=False)
-        # plot_ktgen_by_edges(stats_file, plot_size_gen, filter_small=True, plot_node_coverage=False)
-        # plot_jaccard_by_edges(stats_file, plot_size_jac, filter_small=True, plot_node_coverage=False)
-        # plot_delta_qualityRel_by_edges(stats_file, plot_size_qualRel, filter_small=True, plot_node_coverage=False)
+        # Example usage with filter_small=True
+        plot_kt_matrix(stats_file, plot_aggregate, filter_small=True, plot_node_coverage=False)
+        plot_kt_by_edges(stats_file, plot_size_std, filter_small=True, plot_node_coverage=False)
+        plot_ktgen_by_edges(stats_file, plot_size_gen, filter_small=True, plot_node_coverage=False)
+        plot_jaccard_by_edges(stats_file, plot_size_jac, filter_small=True, plot_node_coverage=False)
+        plot_delta_qualityRel_by_edges(stats_file, plot_size_qualRel, filter_small=True, plot_node_coverage=False)
         plot_delta_qualityAbs_by_edges(stats_file, plot_size_qualAbs, filter_small=True, plot_node_coverage=False)
         plot_delta_qualityAbsPerc_by_edges(stats_file, plot_size_qualAbsPercentage, filter_small=True, plot_node_coverage=False)
         
-        topos = []
-        for t in ['balanced_tree', 'barabasi_albert', 'complete', 'erdos_renyi', 'geometric', 
-                  'hybrid_BA_ring', 'hybrid_SBM_mesh', 'hybrid_WS_star', 'hybrid_bridge_BA_WS', 
-                  'hybrid_complete_noisy', 'hybrid_path_ER', 'hybrid_ring_mesh', 
-                  'hybrid_spatial_SF', 'hybrid_star_mesh', 'hybrid_star_ring', 
-                  'hybrid_union_ER_BA', 'hybrid_union_WS_SBM', 'mesh', 'path', 'powerlaw_cluster', 
-                  'random_regular', 'ring', 'star', 'stochastic_block', 'watts_strogatz']:
+        allTopos = []
+        topos=[]
+        # for t in ['balanced_tree', 'barabasi_albert', 'complete', 'erdos_renyi', 'geometric', 
+        #           'hybrid_BA_ring', 'hybrid_SBM_mesh', 'hybrid_WS_star', 'hybrid_bridge_BA_WS', 
+        #           'hybrid_complete_noisy', 'hybrid_path_ER', 'hybrid_ring_mesh', 
+        #           'hybrid_spatial_SF', 'hybrid_star_mesh', 'hybrid_star_ring', 
+        #           'hybrid_union_ER_BA', 'hybrid_union_WS_SBM', 'mesh', 'path', 'powerlaw_cluster', 
+        #           'random_regular', 'ring', 'star', 'stochastic_block', 'watts_strogatz',
+        #           'bipartite']:
+        for file_idx, file_path in enumerate([str(p) for p in Path("progressive/synthetic_graphs/").iterdir() if p.is_file()], start=1):
+            topoName = file_path.replace("progressive\\synthetic_graphs\\","").split("_N")[0]
+            if topoName not in allTopos: allTopos.append(topoName)
+        for t in allTopos:
             if "hybrid" not in t: topos.append(t)
-            
         print(topos)
         
         if dat == "synthetic":
             Path(plot_disagg_gen).mkdir(exist_ok=True)
             df_stats = preprocess_topology(stats_file)
             
-            # # plot_kt_by_topology(df_stats, plot_topology_std, filter_small=True, plot_node_coverage=False)
-            # # plot_ktgen_by_topology(df_stats, plot_topology_gen, filter_small=True, plot_node_coverage=False)
-            # # plot_jaccard_by_topology(df_stats, plot_topology_jac, filter_small=True, plot_node_coverage=False)
-            # # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, filter_small=True, plot_node_coverage=False)
-            # # plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, filter_small=True, plot_node_coverage=False)
-            # plot_kt_by_topology(df_stats, plot_topology_std, topologies=topos, filter_small=True, plot_node_coverage=False)
-            # plot_ktgen_by_topology(df_stats, plot_topology_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
-            # plot_jaccard_by_topology(df_stats, plot_topology_jac, topologies=topos, filter_small=True, plot_node_coverage=False)
-            # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, topologies=topos, filter_small=True, plot_node_coverage=False)
+            # plot_kt_by_topology(df_stats, plot_topology_std, filter_small=True, plot_node_coverage=False)
+            # plot_ktgen_by_topology(df_stats, plot_topology_gen, filter_small=True, plot_node_coverage=False)
+            # plot_jaccard_by_topology(df_stats, plot_topology_jac, filter_small=True, plot_node_coverage=False)
+            # plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, filter_small=True, plot_node_coverage=False)
+            # plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, filter_small=True, plot_node_coverage=False)
+            plot_kt_by_topology(df_stats, plot_topology_std, topologies=topos, filter_small=True, plot_node_coverage=False)
+            plot_ktgen_by_topology(df_stats, plot_topology_gen, topologies=topos, filter_small=True, plot_node_coverage=False)
+            plot_jaccard_by_topology(df_stats, plot_topology_jac, topologies=topos, filter_small=True, plot_node_coverage=False)
+            plot_deltaRel_by_topology(df_stats, plot_topology_qualRel, topologies=topos, filter_small=True, plot_node_coverage=False)
             plot_deltaAbs_by_topology(df_stats, plot_topology_qualAbs, topologies=topos, filter_small=True, plot_node_coverage=False)
             plot_deltaAbsPerc_by_topology(df_stats, plot_topology_qualAbsPercentage, topologies=topos, filter_small=True, plot_node_coverage=False)
             

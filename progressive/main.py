@@ -92,6 +92,9 @@ def run_experiment(files, n_iterations, methods, output_csv="progressive/data/re
         for file_idx, file_path in enumerate(files, start=1):
             
             # TODO: REMOVE in prod
+            # if c==0:
+            #     file_idx=0
+            #     file_path = "progressive/synthetic_graphs/bipartite_complete_N500_E62500.json"
             # isOk = False
             # for net in ["hybrid_ring_mesh_N10_E16","mesh_N9_E12","hybrid_path_ER_N10_E16","hybrid_WS_star_N10_E33","hybrid_SBM_mesh_N10_E19"]:
             #     if net in file_path:
@@ -186,7 +189,7 @@ def run_experiment(files, n_iterations, methods, output_csv="progressive/data/re
             logger.info("Finished file %s (%d/%d)", file_path, file_idx, len(files))
             # TODO: REMOVE in prod
             c += 1 
-            if c == 6:
+            if c == 50:
                 logger.warning("Stopping early after processing 5 files (c==5 guard).")
                 break
             
@@ -197,13 +200,13 @@ if __name__ == "__main__":
     folder_benchmark = "progressive/rome_benchmark/"
     
     #TODO: change in prod if necessary more graphs
-    # sizes = (10, 50, 150, 200, 250, 300, 350, 400, 450, 500)
+    # sizes = (10, 50, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 1000)
     sizes = (10, 50, 150)
-    create_syntetic = True 
+    create_syntetic = False 
     if create_syntetic: export_graph_dataset(folder_graphs, sizes, seed=42)
     
     n_iterations = 10
-    methods = ["degree","closeness","betweeness","rmc","random","spectral"]
+    methods = ["degree","closeness","betweeness","rmc","random","spectral","pakerank"]
     
     files_controlled = [str(p) for p in Path(folder_graphs).iterdir() if p.is_file()]
     output_file = "progressive/data/results_synthetic.csv"

@@ -1,69 +1,348 @@
 import math, os, json, random
 import numpy as np
 import networkx as nx
+import networkit as nk
 from scipy.stats import kendalltau
 from collections import Counter, defaultdict
 from biofabric import assessQualityOfStairs
 
-def compute_batch(nodes, edges, sample_n, method="degree"):
-    format_edges=[]
-    for e in edges:
-        format_edges.append([e['source'],e['target']])
-    G=nx.DiGraph(format_edges)
+# def compute_batch(nodes, edges, sample_n, iteration, method="degree"):
+#     format_edges=[]
+#     for e in edges:
+#         format_edges.append([e['source'],e['target']])
+#     G=nx.DiGraph(format_edges)
     
-# Compute a scalar score per node for each method
-    if method == "closeness":
-        meth_cent = nx.closeness_centrality(G)
-    elif method == "betweeness":
-        meth_cent = nx.betweenness_centrality(G)
-    elif method == "degree":
-        meth_cent = nx.degree_centrality(G)
-    elif method == "rmc":
-        # RCM returns an ordering; use the inverse index as a score (later RCM → lower score)
-        ug = G.to_undirected()
-        rcm_order = list(nx.utils.reverse_cuthill_mckee_ordering(ug))  # RCM order [web:1][web:4]
-        # Earlier in RCM list → higher score
-        meth_cent = {n: len(rcm_order) - i for i, n in enumerate(rcm_order)}
-    elif method == "random":
-        # Random permutation as “scores”
-        node_list = list(G.nodes())
-        random.shuffle(node_list)
-        meth_cent = {n: i for i, n in enumerate(node_list)}  # higher index = higher score
-    elif method == "spectral":
-        # Use spectral layout; score by first coordinate (higher x → higher score) [web:6][web:14]
-        pos = nx.spectral_layout(G.to_undirected())
-        meth_cent = {n: pos[n][0] for n in pos}
-    else:
-        # Fallback: degree
-        meth_cent = nx.degree_centrality(G)
+#     # Map nodes to integer IDs
+#     node_list = list(G.nodes())
+#     node_to_id = {n: i for i, n in enumerate(node_list)}
+#     id_to_node = {i: n for n, i in node_to_id.items()}
+#     # Build NetworKit graph once
+#     nk_graph = nk.Graph(len(node_list), directed=G.is_directed())
+#     for u, v in G.edges():
+#         nk_graph.addEdge(node_to_id[u], node_to_id[v])
+    
+#     # # Compute a scalar score per node for each method
+#     # k = min(50 + iteration * 10, len(G))
+#     # # k = 32
+#     # if method == "closeness":
+#     #     # meth_cent = nx.closeness_centrality(G)
+#     #     meth_cent = approx_closeness(G, k=k)
+#     # elif method == "pagerank":
+#     #     meth_cent = nx.pagerank(G, max_iter=50)
+#     # elif method == "betweeness":
+#     #     # meth_cent = nx.betweenness_centrality(G)
+#     #     nx.betweenness_centrality(G, k=k, seed=42)
+#     # elif method == "degree":
+#     #     # meth_cent = nx.degree_centrality(G)
+#     #     meth_cent = dict(G.degree())
+#     # elif method == "rmc":
+#     #     # RCM returns an ordering; use the inverse index as a score (later RCM → lower score)
+#     #     ug = G.to_undirected()
+#     #     rcm_order = list(nx.utils.reverse_cuthill_mckee_ordering(ug))  # RCM order [web:1][web:4]
+#     #     # Earlier in RCM list → higher score
+#     #     meth_cent = {n: len(rcm_order) - i for i, n in enumerate(rcm_order)}
+#     # elif method == "random":
+#     #     # Random permutation as “scores”
+#     #     node_list = list(G.nodes())
+#     #     random.shuffle(node_list)
+#     #     meth_cent = {n: i for i, n in enumerate(node_list)}  # higher index = higher score
+#     # elif method == "spectral":
+#     #     # Use spectral layout; score by first coordinate (higher x → higher score) [web:6][web:14]
+#     #     pos = nx.spectral_layout(G.to_undirected(), dim=1)
+#     #     meth_cent = {n: pos[n][0] for n in pos}
+#     # else:
+#     #     # Fallback: degree
+#     #     print("Error: NO CORREC METHOD")
+#     #     # meth_cent = nx.degree_centrality(G)
+#     #     return [],[]
+#     if method == "closeness":
+#         cc = nk.centrality.ApproxCloseness(nk_graph, nSamples=100)
+#         cc.run()
+#         scores = cc.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
 
-    sorted_n = dict(sorted(meth_cent.items(), key=lambda item: item[1], reverse=True))
-    # sampled_nodes = dict(list(sorted_n.items())[:sample_n])
+#     elif method == "betweeness":
+#         bc = nk.centrality.ApproxBetweenness(nk_graph, epsilon=0.1)
+#         bc.run()
+#         scores = bc.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+#     elif method == "degree":
+#         deg = nk.centrality.DegreeCentrality(nk_graph)
+#         deg.run()
+#         scores = deg.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+#     elif method == "rmc":
+#         # No direct RCM in NetworKit → approximate via degree ordering
+#         deg = nk.centrality.DegreeCentrality(nk_graph)
+#         deg.run()
+#         scores = deg.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+#     elif method == "random":
+#         node_ids = list(range(len(node_list)))
+#         random.shuffle(node_ids)
+#         meth_cent = {id_to_node[i]: node_ids[i] for i in range(len(node_ids))}
+
+#     elif method == "spectral":
+#         # Spectral is expensive → replace with PageRank (fast + stable)
+#         pr = nk.centrality.PageRank(nk_graph, tol=1e-6, maxIter=50)
+#         pr.run()
+#         scores = pr.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+#     else:
+#         deg = nk.centrality.DegreeCentrality(nk_graph)
+#         deg.run()
+#         scores = deg.scores()
+#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+#     sorted_n = dict(sorted(meth_cent.items(), key=lambda item: item[1], reverse=True))
+#     # sampled_nodes = dict(list(sorted_n.items())[:sample_n])
     
-    considered_n=[]
-    considered_e=[]
-    for n in list(sorted_n.keys()):
-        for e in edges:
-            if (e["source"]==n or e["target"]==n) and (n not in considered_n):
-                for b_e in list(nx.bfs_edges(G,n)):
-                    if b_e not in considered_e:
-                        considered_e.append(b_e)
-        considered_n.append(n)
+#     considered_n=[]
+#     considered_e=[]
+#     for n in list(sorted_n.keys()):
+#         for e in edges:
+#             if (e["source"]==n or e["target"]==n) and (n not in considered_n):
+#                 for b_e in list(nx.bfs_edges(G,n)):
+#                     if b_e not in considered_e:
+#                         considered_e.append(b_e)
+#         considered_n.append(n)
         
-    batched_e = []
-    for edge in considered_e:
-        for e in edges:
-            if e["source"]==edge[0] and e["target"]==edge[1]:
-                batched_e.append(e)
+#     batched_e = []
+#     for edge in considered_e:
+#         for e in edges:
+#             if e["source"]==edge[0] and e["target"]==edge[1]:
+#                 batched_e.append(e)
+#     batched_e = batched_e[:sample_n]
+
+#     batched_n=[]
+#     for e2 in batched_e:
+#         for n in nodes:
+#             if (n["id"]==e2["source"] or n["id"]==e2["target"]) and (n not in batched_n):
+#                 batched_n.append(n)
+                
+#     return batched_n,batched_e
+def compute_batch(nodes, edges, sample_n, method="degree"):
+
+    # -----------------------------
+    # FAST ADJACENCY BUILD
+    # -----------------------------
+    adj = defaultdict(list)
+    edge_lookup = {}
+
+    node_ids = set()
+
+    for e in edges:
+        u, v = e["source"], e["target"]
+
+        adj[u].append(v)
+        edge_lookup[(u, v)] = e
+
+        node_ids.add(u)
+        node_ids.add(v)
+
+    node_ids = list(node_ids)
+
+    # -----------------------------
+    # KEEP ORIGINAL NODE IDS ORDERED (STABLE MAPPING)
+    # -----------------------------
+    # deterministic ordering preserves reproducibility
+    node_ids.sort()
+
+    # -----------------------------
+    # NetworKit GRAPH BUILD
+    # -----------------------------
+    node_to_id = {}   # NetworkX ID → NetworKit ID
+    id_to_node = {}   # NetworKit ID → NetworkX ID
+
+    nk_graph = nk.Graph(len(node_ids), directed=True)
+
+    for i, n in enumerate(node_ids):
+        node_to_id[n] = i
+        id_to_node[i] = n
+
+    # add edges using original IDs
+    for u in adj:
+        for v in adj[u]:
+            nk_graph.addEdge(node_to_id[u], node_to_id[v])
+
+    # -----------------------------
+    # CENTRALITY / SCORES
+    # -----------------------------
+    if method == "closeness":
+        algo = nk.centrality.ApproxCloseness(nk_graph, nSamples=100)
+
+    elif method == "betweeness":
+        algo = nk.centrality.ApproxBetweenness(nk_graph, epsilon=0.1)
+
+    elif method == "degree":
+        algo = nk.centrality.DegreeCentrality(nk_graph)
+
+    elif method == "pagerank":
+        algo = nk.centrality.PageRank(nk_graph, damp=0.85, tol=1e-6)
+
+    elif method == "rmc":
+        # RCM approximation: use reverse degree ordering
+        algo = nk.centrality.DegreeCentrality(nk_graph)
+
+    elif method == "random":
+        # handled separately (no computation needed)
+        scores = [0] * len(node_ids)
+        shuffled = list(range(len(node_ids)))
+        random.shuffle(shuffled)
+        meth_cent = {id_to_node[i]: shuffled[i] for i in range(len(shuffled))}
+
+        # skip rest
+        sorted_nodes = sorted(meth_cent, key=meth_cent.get, reverse=True)
+
+        considered_edges = set()
+        visited_nodes = set()
+
+        for n in sorted_nodes:
+            if n in visited_nodes:
+                continue
+
+            queue = [n]
+            visited_nodes.add(n)
+
+            while queue and len(considered_edges) < sample_n:
+                cur = queue.pop(0)
+                for nei in adj.get(cur, []):
+                    edge = (cur, nei)
+                    considered_edges.add(edge)
+
+                    if nei not in visited_nodes:
+                        visited_nodes.add(nei)
+                        queue.append(nei)
+
+            if len(considered_edges) >= sample_n:
+                break
+
+        batched_e = [edge_lookup[e] for e in considered_edges if e in edge_lookup]
+
+        selected_nodes = set()
+        for e in batched_e:
+            selected_nodes.add(e["source"])
+            selected_nodes.add(e["target"])
+
+        node_dict = {n["id"]: n for n in nodes}
+        batched_n = [node_dict[n] for n in selected_nodes if n in node_dict]
+
+        return batched_n, batched_e
+    
+    elif method == "spectral":
+        # Spectral sampling = structural propagation (NOT PageRank)
+        deg = nk.centrality.DegreeCentrality(nk_graph)
+        deg.run()
+        d = deg.scores()
+
+        scores = [0.0] * nk_graph.numberOfNodes()
+
+        for i in range(nk_graph.numberOfNodes()):
+            s = 0.0
+            for j in nk_graph.iterNeighbors(i):
+                s += d[j]
+            scores[i] = s
+
+        meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+        # skip algo.run()
+        sorted_nodes = sorted(meth_cent, key=meth_cent.get, reverse=True)
+
+        considered_edges = set()
+        visited_nodes = set()
+
+        for n in sorted_nodes:
+            if n in visited_nodes:
+                continue
+
+            queue = [n]
+            visited_nodes.add(n)
+
+            while queue and len(considered_edges) < sample_n:
+                cur = queue.pop(0)
+                for nei in adj.get(cur, []):
+                    considered_edges.add((cur, nei))
+
+                    if nei not in visited_nodes:
+                        visited_nodes.add(nei)
+                        queue.append(nei)
+
+            if len(considered_edges) >= sample_n:
+                break
+
+        batched_e = [edge_lookup[e] for e in considered_edges if e in edge_lookup]
+
+        selected_nodes = set()
+        for e in batched_e:
+            selected_nodes.add(e["source"])
+            selected_nodes.add(e["target"])
+
+        node_dict = {n["id"]: n for n in nodes}
+        batched_n = [node_dict[n] for n in selected_nodes if n in node_dict]
+
+        return batched_n, batched_e
+
+    else:
+        algo = nk.centrality.DegreeCentrality(nk_graph)
+
+    # run NetworKit algo
+    algo.run()
+    scores = algo.scores()
+    meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
+
+    # -----------------------------
+    # SORT NODES
+    # -----------------------------
+    sorted_nodes = sorted(meth_cent, key=meth_cent.get, reverse=True)
+
+    # -----------------------------
+    # FAST BFS EDGE COLLECTION
+    # -----------------------------
+    considered_edges = set()
+    visited_nodes = set()
+
+    for n in sorted_nodes:
+        if n in visited_nodes:
+            continue
+
+        queue = [n]
+        visited_nodes.add(n)
+
+        while queue and len(considered_edges) < sample_n:
+            cur = queue.pop(0)
+
+            for nei in adj.get(cur, []):
+                considered_edges.add((cur, nei))
+
+                if nei not in visited_nodes:
+                    visited_nodes.add(nei)
+                    queue.append(nei)
+
+        if len(considered_edges) >= sample_n:
+            break
+
+    # -----------------------------
+    # EDGE RECONSTRUCTION (FAST)
+    # -----------------------------
+    batched_e = [edge_lookup[e] for e in considered_edges if e in edge_lookup]
     batched_e = batched_e[:sample_n]
 
-    batched_n=[]
-    for e2 in batched_e:
-        for n in nodes:
-            if (n["id"]==e2["source"] or n["id"]==e2["target"]) and (n not in batched_n):
-                batched_n.append(n)
-                
-    return batched_n,batched_e
+    # -----------------------------
+    # NODE SELECTION
+    # -----------------------------
+    selected_nodes = set()
+    for e in batched_e:
+        selected_nodes.add(e["source"])
+        selected_nodes.add(e["target"])
+
+    node_dict = {n["id"]: n for n in nodes}
+    batched_n = [node_dict[n] for n in selected_nodes if n in node_dict]
+
+    return batched_n, batched_e[:sample_n]
 
 def kendall_tau_from_dicts(rank_a, rank_b):
     """
@@ -643,12 +922,13 @@ def export_graph_dataset(folder_path, sizes=(10, 100, 200), seed=None):
 
     print(f"Dataset generated in '{folder_path}'")
     
+import time
 if __name__=="__main__":
     folder_graphs = "progressive/synthetic_graphs/"
     # os.makedirs(folder_graphs, exist_ok=True)
     # export_graph_dataset(folder_graphs, seed=42)
 
-    with open(folder_graphs+"complete_N10_E45.json", "r") as f:
+    with open(folder_graphs+"bipartite_complete_N500_E62500.json", "r") as f:
         data = json.load(f)
 
     nodes = data.get("nodes", [])
@@ -656,5 +936,9 @@ if __name__=="__main__":
     
     print(nodes)
     print("-----------")
-    batch_nodes, batch_edges = compute_batch(nodes, edges, 15, "rmc")
-    print(batch_nodes)
+    for m in ["degree","closeness","betweeness","rmc","random","spectral","pagerank"]:
+        start = time.time()
+        batch_nodes, batch_edges = compute_batch(nodes, edges, 62500, m)
+        end = time.time()
+        print(f"Execution time {m}: {end - start:.6f} seconds")
+    # print(batch_nodes)

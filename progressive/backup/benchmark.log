@@ -1,0 +1,94 @@
+2026-04-17 13:47:27,317 [INFO] __main__ - Logging configured (fresh run) to file: progressive/data/benchmark.log
+2026-04-17 13:49:40,118 [INFO] __main__ - Starting run_experiment with 306 files, 10 iterations, methods=['degree', 'closeness', 'betweeness', 'rmc', 'random', 'spectral'], output_csv=progressive/data/results_synthetic.csv
+2026-04-17 13:49:40,119 [INFO] __main__ - Processing file 1/306: progressive/synthetic_graphs/hybrid_union_WS_SBM_N400_E14049.json
+2026-04-17 13:49:48,008 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_union_WS_SBM_N400_E14049.json
+2026-04-17 22:22:45,004 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_union_WS_SBM_N400_E14049.json (1/306)
+2026-04-17 22:22:45,004 [INFO] __main__ - Processing file 2/306: progressive/synthetic_graphs/hybrid_union_ER_BA_N250_E2741.json
+2026-04-17 22:22:45,250 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_union_ER_BA_N250_E2741.json
+2026-04-17 22:32:37,857 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_union_ER_BA_N250_E2741.json (2/306)
+2026-04-17 22:32:37,857 [INFO] __main__ - Processing file 3/306: progressive/synthetic_graphs/hybrid_SBM_mesh_N450_E18442.json
+2026-04-17 22:32:52,172 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_SBM_mesh_N450_E18442.json
+2026-04-18 15:05:18,794 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_SBM_mesh_N450_E18442.json (3/306)
+2026-04-18 15:05:18,794 [INFO] __main__ - Processing file 4/306: progressive/synthetic_graphs/hybrid_complete_noisy_N100_E4950.json
+2026-04-18 15:05:19,693 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_complete_noisy_N100_E4950.json
+2026-04-18 15:25:40,592 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_complete_noisy_N100_E4950.json (4/306)
+2026-04-18 15:25:40,592 [INFO] __main__ - Processing file 5/306: progressive/synthetic_graphs/hybrid_union_WS_SBM_N10_E33.json
+2026-04-18 15:25:40,594 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_union_WS_SBM_N10_E33.json
+2026-04-18 15:25:40,691 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_union_WS_SBM_N10_E33.json (5/306)
+2026-04-18 15:25:40,691 [INFO] __main__ - Processing file 6/306: progressive/synthetic_graphs/hybrid_ring_mesh_N500_E962.json
+2026-04-18 15:25:40,698 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_ring_mesh_N500_E962.json
+2026-04-18 15:28:09,116 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_ring_mesh_N500_E962.json (6/306)
+2026-04-18 15:28:09,116 [INFO] __main__ - Processing file 7/306: progressive/synthetic_graphs/bipartite_random_N350_E6051.json
+2026-04-18 15:28:10,543 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/bipartite_random_N350_E6051.json
+2026-04-18 15:42:17,913 [INFO] __main__ - Finished file progressive/synthetic_graphs/bipartite_random_N350_E6051.json (7/306)
+2026-04-18 15:42:17,913 [INFO] __main__ - Processing file 8/306: progressive/synthetic_graphs/hybrid_BA_ring_N500_E4893.json
+2026-04-18 15:42:18,525 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_BA_ring_N500_E4893.json
+2026-04-18 17:07:08,829 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_BA_ring_N500_E4893.json (8/306)
+2026-04-18 17:07:08,829 [INFO] __main__ - Processing file 9/306: progressive/synthetic_graphs/star_N200_E199.json
+2026-04-18 17:07:08,834 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/star_N200_E199.json
+2026-04-18 17:07:14,357 [INFO] __main__ - Finished file progressive/synthetic_graphs/star_N200_E199.json (9/306)
+2026-04-18 17:07:14,357 [INFO] __main__ - Processing file 10/306: progressive/synthetic_graphs/balanced_tree_N5_E4.json
+2026-04-18 17:07:14,358 [INFO] __main__ - Defined 4 samples for file progressive/synthetic_graphs/balanced_tree_N5_E4.json
+2026-04-18 17:07:14,372 [INFO] __main__ - Finished file progressive/synthetic_graphs/balanced_tree_N5_E4.json (10/306)
+2026-04-18 17:07:14,372 [INFO] __main__ - Processing file 11/306: progressive/synthetic_graphs/hybrid_SBM_mesh_N10_E19.json
+2026-04-18 17:07:14,372 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_SBM_mesh_N10_E19.json
+2026-04-18 17:07:14,436 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_SBM_mesh_N10_E19.json (11/306)
+2026-04-18 17:07:14,436 [INFO] __main__ - Processing file 12/306: progressive/synthetic_graphs/hybrid_star_ring_N500_E997.json
+2026-04-18 17:07:14,469 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_star_ring_N500_E997.json
+2026-04-18 17:11:44,444 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_star_ring_N500_E997.json (12/306)
+2026-04-18 17:11:44,444 [INFO] __main__ - Processing file 13/306: progressive/synthetic_graphs/stochastic_block_N300_E7193.json
+2026-04-18 17:11:46,414 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/stochastic_block_N300_E7193.json
+2026-04-18 18:36:42,232 [INFO] __main__ - Finished file progressive/synthetic_graphs/stochastic_block_N300_E7193.json (13/306)
+2026-04-18 18:36:42,232 [INFO] __main__ - Processing file 14/306: progressive/synthetic_graphs/erdos_renyi_N500_E24041.json
+2026-04-18 18:37:05,652 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/erdos_renyi_N500_E24041.json
+2026-04-20 01:57:31,348 [INFO] __main__ - Finished file progressive/synthetic_graphs/erdos_renyi_N500_E24041.json (14/306)
+2026-04-20 01:57:31,349 [INFO] __main__ - Processing file 15/306: progressive/synthetic_graphs/hybrid_SBM_mesh_N200_E3375.json
+2026-04-20 01:57:31,799 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_SBM_mesh_N200_E3375.json
+2026-04-20 02:11:34,979 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_SBM_mesh_N200_E3375.json (15/306)
+2026-04-20 02:11:34,979 [INFO] __main__ - Processing file 16/306: progressive/synthetic_graphs/complete_N50_E1225.json
+2026-04-20 02:11:35,044 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/complete_N50_E1225.json
+2026-04-20 02:12:21,972 [INFO] __main__ - Finished file progressive/synthetic_graphs/complete_N50_E1225.json (16/306)
+2026-04-20 02:12:21,972 [INFO] __main__ - Processing file 17/306: progressive/synthetic_graphs/hybrid_spatial_SF_N50_E354.json
+2026-04-20 02:12:21,980 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_spatial_SF_N50_E354.json
+2026-04-20 02:12:25,624 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_spatial_SF_N50_E354.json (17/306)
+2026-04-20 02:12:25,624 [INFO] __main__ - Processing file 18/306: progressive/synthetic_graphs/powerlaw_cluster_N200_E590.json
+2026-04-20 02:12:25,638 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/powerlaw_cluster_N200_E590.json
+2026-04-20 02:12:43,541 [INFO] __main__ - Finished file progressive/synthetic_graphs/powerlaw_cluster_N200_E590.json (18/306)
+2026-04-20 02:12:43,541 [INFO] __main__ - Processing file 19/306: progressive/synthetic_graphs/ring_N300_E300.json
+2026-04-20 02:12:43,543 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/ring_N300_E300.json
+2026-04-20 02:12:58,893 [INFO] __main__ - Finished file progressive/synthetic_graphs/ring_N300_E300.json (19/306)
+2026-04-20 02:12:58,893 [INFO] __main__ - Processing file 20/306: progressive/synthetic_graphs/star_N150_E149.json
+2026-04-20 02:12:58,896 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/star_N150_E149.json
+2026-04-20 02:13:01,851 [INFO] __main__ - Finished file progressive/synthetic_graphs/star_N150_E149.json (20/306)
+2026-04-20 02:13:01,851 [INFO] __main__ - Processing file 21/306: progressive/synthetic_graphs/hybrid_spatial_SF_N10_E21.json
+2026-04-20 02:13:01,852 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_spatial_SF_N10_E21.json
+2026-04-20 02:13:01,932 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_spatial_SF_N10_E21.json (21/306)
+2026-04-20 02:13:01,932 [INFO] __main__ - Processing file 22/306: progressive/synthetic_graphs/star_N300_E299.json
+2026-04-20 02:13:01,939 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/star_N300_E299.json
+2026-04-20 02:13:16,825 [INFO] __main__ - Finished file progressive/synthetic_graphs/star_N300_E299.json (22/306)
+2026-04-20 02:13:16,825 [INFO] __main__ - Processing file 23/306: progressive/synthetic_graphs/barabasi_albert_N350_E696.json
+2026-04-20 02:13:16,838 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/barabasi_albert_N350_E696.json
+2026-04-20 02:13:45,446 [INFO] __main__ - Finished file progressive/synthetic_graphs/barabasi_albert_N350_E696.json (23/306)
+2026-04-20 02:13:45,446 [INFO] __main__ - Processing file 24/306: progressive/synthetic_graphs/random_regular_N250_E375.json
+2026-04-20 02:13:45,450 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/random_regular_N250_E375.json
+2026-04-20 02:13:48,235 [INFO] __main__ - Finished file progressive/synthetic_graphs/random_regular_N250_E375.json (24/306)
+2026-04-20 02:13:48,235 [INFO] __main__ - Processing file 25/306: progressive/synthetic_graphs/hybrid_bridge_BA_WS_N100_E201.json
+2026-04-20 02:13:48,239 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_bridge_BA_WS_N100_E201.json
+2026-04-20 02:13:49,711 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_bridge_BA_WS_N100_E201.json (25/306)
+2026-04-20 02:13:49,711 [INFO] __main__ - Processing file 26/306: progressive/synthetic_graphs/geometric_N10_E14.json
+2026-04-20 02:13:49,712 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/geometric_N10_E14.json
+2026-04-20 02:13:49,764 [INFO] __main__ - Finished file progressive/synthetic_graphs/geometric_N10_E14.json (26/306)
+2026-04-20 02:13:49,765 [INFO] __main__ - Processing file 27/306: progressive/synthetic_graphs/watts_strogatz_N10_E30.json
+2026-04-20 02:13:49,765 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/watts_strogatz_N10_E30.json
+2026-04-20 02:13:49,853 [INFO] __main__ - Finished file progressive/synthetic_graphs/watts_strogatz_N10_E30.json (27/306)
+2026-04-20 02:13:49,853 [INFO] __main__ - Processing file 28/306: progressive/synthetic_graphs/erdos_renyi_N450_E11828.json
+2026-04-20 02:13:55,292 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/erdos_renyi_N450_E11828.json
+2026-04-20 08:01:34,583 [INFO] __main__ - Finished file progressive/synthetic_graphs/erdos_renyi_N450_E11828.json (28/306)
+2026-04-20 08:01:34,583 [INFO] __main__ - Processing file 29/306: progressive/synthetic_graphs/erdos_renyi_N100_E300.json
+2026-04-20 08:01:34,590 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/erdos_renyi_N100_E300.json
+2026-04-20 08:01:36,781 [INFO] __main__ - Finished file progressive/synthetic_graphs/erdos_renyi_N100_E300.json (29/306)
+2026-04-20 08:01:36,781 [INFO] __main__ - Processing file 30/306: progressive/synthetic_graphs/hybrid_WS_star_N50_E147.json
+2026-04-20 08:01:36,783 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/hybrid_WS_star_N50_E147.json
+2026-04-20 08:01:37,690 [INFO] __main__ - Finished file progressive/synthetic_graphs/hybrid_WS_star_N50_E147.json (30/306)
+2026-04-20 08:01:37,690 [INFO] __main__ - Processing file 31/306: progressive/synthetic_graphs/bipartite_complete_N450_E50625.json
+2026-04-20 08:02:54,229 [INFO] __main__ - Defined 10 samples for file progressive/synthetic_graphs/bipartite_complete_N450_E50625.json

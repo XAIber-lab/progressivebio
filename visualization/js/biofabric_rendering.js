@@ -1,4 +1,4 @@
-function render_biofabric(graph, ordernodes, orderedges, result, nodetitle, edgetitle, print_title = true, stroke_width = 3, rect_size = 5){
+function render_biofabric(graph, ordernodes, orderedges, result, nodetitle, edgetitle, print_title = true, stroke_width = 3, rect_size = 5, stairColors = null){
   
     let svgwidth = 500;
     let svgheight = 500;
@@ -40,14 +40,38 @@ function render_biofabric(graph, ordernodes, orderedges, result, nodetitle, edge
   
       if (show_node_indices) svg.append("text")
         .attr("x", padding.left - 10)
-        .attr("y", line_h + .2 * (svgheight - padding.top - padding.bottom)/(numnodes))
+        .attr("y", line_h)
         .style("font-size", "small")
         .style("fill", "lightgray")
         .style("font-family", "Arial")
         .style("text-anchor", "end")
+        .style("dominant-baseline", "middle")
         .text(ordernodes[i])
     }
   
+    function getStairPairColors(stairIndices) {
+      let staircase_color_1 = "#F9D466"
+      let staircase_color_2 = "#f7a222"
+
+      if (!stairIndices.length) return ["#ccc", "#ccc"];
+
+      if (!stairColors || !stairColors.length) {
+        let baseIndex = stairIndices[0];
+        if (baseIndex % 2 == 0) return [staircase_color_2, staircase_color_1];
+        return [staircase_color_1, staircase_color_2];
+      }
+
+      const primaryBase = stairColors[stairIndices[0]] || "#8A94A6";
+      const secondaryBase = stairIndices.length > 1 ? (stairColors[stairIndices[1]] || primaryBase) : primaryBase;
+      const primary = d3.color(primaryBase);
+      const secondary = d3.color(secondaryBase);
+
+      return [
+        primary ? primary.darker(0.5).formatHex() : primaryBase,
+        secondary ? secondary.brighter(0.5).formatHex() : secondaryBase
+      ];
+    }
+
     for (let i in orderedges){
       let line_x = padding.left + (svgwidth - padding.left - padding.right)/numedges * i
       
@@ -58,30 +82,17 @@ function render_biofabric(graph, ordernodes, orderedges, result, nodetitle, edge
       let highestnode = Math.max(topnode_h, bottomnode_h)
       let lowestnode = Math.min(topnode_h, bottomnode_h)
 
-      let possible_stair = undefined
-      let index_of_possible_stair = undefined
-
-      let how_many_stairs_share_this_edge = result.stairs.filter(s => s.includes(orderedges[i])).length
-      if (how_many_stairs_share_this_edge != 0) {
-        possible_stair = result.stairs.find(s => s.includes(orderedges[i]))
-        index_of_possible_stair = result.stairs.findIndex(s => s.includes(orderedges[i]))
-      }
-
-      let staircase_color_1 = "#F9D466"
-      let staircase_color_2 = "#f7a222"
-      // let staircase_color_2 = "#3C7BAE"
-      // let staircase_color_2 = "#25BBF7"
+      const stairIndices = result.stairs
+        .map((stair, index) => stair.includes(orderedges[i]) ? index : -1)
+        .filter(index => index !== -1);
+      const how_many_stairs_share_this_edge = stairIndices.length;
+      const [underlayColor, overlayColor] = getStairPairColors(stairIndices);
 
       if (how_many_stairs_share_this_edge){
         svg.append("line")
           .attr("stroke", () => {
             if (!color_by_staircase) return "gray"
-            else {
-              if (possible_stair != undefined) {
-                if (index_of_possible_stair%2 == 0) return staircase_color_2
-                else return staircase_color_1
-              } else return "gray"
-            }
+            return underlayColor;
           })
           .attr("stroke-width", stroke_width)
           .style("stroke-linecap", "round")
@@ -94,12 +105,7 @@ function render_biofabric(graph, ordernodes, orderedges, result, nodetitle, edge
       svg.append("line")
         .attr("stroke", () => {
           if (!color_by_staircase) return "gray"
-          else {
-            if (possible_stair != undefined) {
-              if (index_of_possible_stair%2 == 0) return staircase_color_1
-              else return staircase_color_2
-            } else return "gray"
-          }
+          return overlayColor;
         })
         .attr("stroke-width", stroke_width)
           .style("stroke-linecap", "round")

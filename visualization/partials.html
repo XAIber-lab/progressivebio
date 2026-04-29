@@ -59,6 +59,159 @@
 <script>
 
 let datapath = "../partial/"
+const stairPalette = [
+  "#4E79A7",
+  "#F28E2B",
+  "#E15759",
+  "#76B7B2",
+  "#59A14F",
+  "#EDC948",
+  "#B07AA1",
+  "#FF9DA7",
+  "#9C755F",
+  "#BAB0AC",
+  "#86BCB6",
+  "#D37295"
+];
+
+function addNewEdgeDots(svgNode, edgeordering, newEdgeIds) {
+    if (!svgNode || newEdgeIds.size === 0) return;
+
+    const svg = d3.select(svgNode);
+    const viewBox = svgNode.viewBox.baseVal;
+    const svgwidth = viewBox && viewBox.width ? viewBox.width : 500;
+    const svgheight = viewBox && viewBox.height ? viewBox.height : 500;
+    const padding = {left: 30, right: 20, bottom: 50};
+    const dotY = svgheight - padding.bottom / 2;
+
+    for (let i = 0; i < edgeordering.length; i++) {
+      if (!newEdgeIds.has(edgeordering[i])) continue;
+
+      const lineX = padding.left + (svgwidth - padding.left - padding.right) / edgeordering.length * i;
+      svg.append("circle")
+        .attr("cx", lineX)
+        .attr("cy", dotY)
+        .attr("r", 8)
+        .attr("fill", "steelblue");
+    }
+}
+
+function kendallTauFromOrderings(referenceOrdering, currentOrdering) {
+    const referenceRanks = new Map(referenceOrdering.map((nodeId, index) => [nodeId, index]));
+    const commonNodes = currentOrdering.filter(nodeId => referenceRanks.has(nodeId));
+
+    if (commonNodes.length < 2) return null;
+
+    let concordant = 0;
+    let discordant = 0;
+
+    for (let i = 0; i < commonNodes.length; i++) {
+      for (let j = i + 1; j < commonNodes.length; j++) {
+        const refDiff = referenceRanks.get(commonNodes[i]) - referenceRanks.get(commonNodes[j]);
+        if (refDiff < 0) concordant++;
+        else if (refDiff > 0) discordant++;
+      }
+    }
+
+    const totalPairs = concordant + discordant;
+    if (totalPairs === 0) return null;
+
+    return (concordant - discordant) / totalPairs;
+}
+
+function stairToEdgeSet(stair) {
+    return new Set(stair);
+}
+
+function jaccardSimilarity(setA, setB) {
+    let intersectionSize = 0;
+    for (const value of setA) {
+      if (setB.has(value)) intersectionSize++;
+    }
+
+    const unionSize = setA.size + setB.size - intersectionSize;
+    return unionSize === 0 ? 0 : intersectionSize / unionSize;
+}
+
+function meanPerStairOverlap(referenceStairs, currentStairs) {
+    if (referenceStairs.length === 0) return currentStairs.length === 0 ? 1 : 0;
+    if (currentStairs.length === 0) return 0;
+
+    const currentEdgeSets = currentStairs.map(stairToEdgeSet);
+    let overlapSum = 0;
+
+    for (const referenceStair of referenceStairs) {
+      const referenceEdgeSet = stairToEdgeSet(referenceStair);
+      let bestOverlap = 0;
+
+      for (const currentEdgeSet of currentEdgeSets) {
+        bestOverlap = Math.max(bestOverlap, jaccardSimilarity(referenceEdgeSet, currentEdgeSet));
+      }
+
+      overlapSum += bestOverlap;
+    }
+
+    return overlapSum / referenceStairs.length;
+}
+
+function getReferenceStairColors(referenceStairs) {
+    return referenceStairs.map((_, index) => stairPalette[index % stairPalette.length]);
+}
+
+function getBestReferenceMatchIndex(referenceStairs, currentStair) {
+    const currentEdgeSet = stairToEdgeSet(currentStair);
+    let bestMatchIndex = -1;
+    let bestOverlap = 0;
+
+    for (let i = 0; i < referenceStairs.length; i++) {
+      const overlap = jaccardSimilarity(stairToEdgeSet(referenceStairs[i]), currentEdgeSet);
+      if (overlap > bestOverlap) {
+        bestOverlap = overlap;
+        bestMatchIndex = i;
+      }
+    }
+
+    return {bestMatchIndex, bestOverlap};
+}
+
+function getCurrentStairColors(referenceStairs, currentStairs, referenceColors) {
+    if (currentStairs.length === 0) return [];
+    if (referenceStairs.length === 0) return currentStairs.map(() => "#5C677D");
+
+    const assignments = currentStairs.map((currentStair, currentIndex) => {
+      const match = getBestReferenceMatchIndex(referenceStairs, currentStair);
+      return {
+        currentIndex,
+        referenceIndex: match.bestMatchIndex,
+        overlap: match.bestOverlap
+      };
+    });
+
+    assignments.sort((a, b) => b.overlap - a.overlap);
+
+    const currentColors = new Array(currentStairs.length).fill("#5C677D");
+    const usedCurrent = new Set();
+    const usedReference = new Set();
+
+    for (const assignment of assignments) {
+      if (assignment.referenceIndex === -1 || assignment.overlap === 0) continue;
+      if (usedCurrent.has(assignment.currentIndex) || usedReference.has(assignment.referenceIndex)) continue;
+
+      currentColors[assignment.currentIndex] = referenceColors[assignment.referenceIndex];
+      usedCurrent.add(assignment.currentIndex);
+      usedReference.add(assignment.referenceIndex);
+    }
+
+    for (const assignment of assignments) {
+      if (usedCurrent.has(assignment.currentIndex)) continue;
+      if (assignment.referenceIndex === -1 || assignment.overlap === 0) continue;
+
+      currentColors[assignment.currentIndex] = referenceColors[assignment.referenceIndex];
+      usedCurrent.add(assignment.currentIndex);
+    }
+
+    return currentColors;
+}
 
 async function init(){
 
@@ -102,6 +255,19 @@ async function init(){
       row.appendChild(title)
 
       for (let mode of modes){
+        let previousEdgeIds = new Set();
+        let finalNodeOrdering = null;
+        let finalStairs = [];
+        let finalStairColors = [];
+
+        try {
+          const finalGraph = await d3.json(datapath + filename + "/" + mode + "/iteration10.json");
+          finalNodeOrdering = finalGraph.nodes.map(n => n.id);
+          finalStairs = analyzeGraph(finalGraph.nodes, finalGraph.links).stairs || [];
+          finalStairColors = getReferenceStairColors(finalStairs);
+        } catch (e) {
+          console.log("Could not load final iteration metrics:", filename, mode, e);
+        }
 
         let moderow = document.createElement("div")
         moderow.className = "row align-items-start"
@@ -128,27 +294,37 @@ async function init(){
             original.innerHTML = iteration
             graphdiv.appendChild(original)
 
-            graph.nodes = seededShuffle(graph.nodes, 4)
-            graph.links = seededShuffle(graph.links, 4)
+            // graph.nodes = seededShuffle(graph.nodes, 4)
+            // graph.links = seededShuffle(graph.links, 4)
 
-            sortByDegree(graph.nodes, graph.links)
-            sortForStaircases(graph.nodes, graph.links)
+            // sortByDegree(graph.nodes, graph.links)
+            // sortForStaircases(graph.nodes, graph.links)
 
             // original sorting
             let nodeordering = graph.nodes.map(n => n.id)
             let edgeordering = graph.links.map(e => e.id)
             let result = analyzeGraph(graph.nodes, graph.links)
-            graphdiv.append(render_biofabric(graph, nodeordering, edgeordering, result, "a", "b", false, 8, 8))
+            let currentStairColors = getCurrentStairColors(finalStairs, result.stairs || [], finalStairColors)
+            let newEdgeIds = new Set(edgeordering.filter(edgeId => !previousEdgeIds.has(edgeId)))
+            let biofabric = render_biofabric(graph, nodeordering, edgeordering, result, "a", "b", false, 8, 8, currentStairColors)
+            addNewEdgeDots(biofabric, edgeordering, newEdgeIds)
+            graphdiv.append(biofabric)
+            previousEdgeIds = new Set(edgeordering)
 
             // append result
             let qualitydiv = document.createElement("div")
             qualitydiv.className = "col-lg"
             qualitydiv.style.textAlign = "left"
             qualitydiv.style.fontSize = "11px"
+            const totalStaircaseQuality = analyzeGraph(graph.nodes, graph.links).stairQualities.slice(0, -1).map(s => Math.round(s[0] * 100)/100).reduce((a, b) => a + b, 0);
+            const kendallTau = finalNodeOrdering ? kendallTauFromOrderings(finalNodeOrdering, nodeordering) : null;
+            const stairOverlap = meanPerStairOverlap(finalStairs, result.stairs || []);
             // // qualitydiv.innerHTML = "runway qualities: " + analyzeGraph(graph.nodes, graph.links).runwayQualities.join(", ") + "<br>"
             // // qualitydiv.innerHTML += "total runway quality: " + analyzeGraph(graph.nodes, graph.links).runwayQualities.reduce((a, b) => a + b, 0) + "<br>"
             // qualitydiv.innerHTML += "staircase qualities: " + analyzeGraph(graph.nodes, graph.links).stairQualities.slice(0, -1).map(s => Math.round(s[0] * 100)/100).join(", ") + "<br>"
-            qualitydiv.innerHTML += "total staircase quality: " + analyzeGraph(graph.nodes, graph.links).stairQualities.slice(0, -1).map(s => Math.round(s[0] * 100)/100).reduce((a, b) => a + b, 0) + "<br>"
+            qualitydiv.innerHTML += "total staircase quality: " + totalStaircaseQuality.toFixed(2) + "<br>"
+            qualitydiv.innerHTML += "kendall tau vs. final iteration: " + (kendallTau === null ? "n/a" : kendallTau.toFixed(2)) + "<br>"
+            qualitydiv.innerHTML += "mean stair overlap vs. final iteration: " + stairOverlap.toFixed(2) + "<br>"
             graphdiv.appendChild(qualitydiv)
 
             // for (let i = 1; i < 9999; i++){

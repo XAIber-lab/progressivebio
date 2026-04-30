@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": 5
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 3
+    }
+  ],
+  "links": [
+    {
+      "id": 6,
+      "source": 5,
+      "target": 19
+    },
+    {
+      "id": 51,
+      "source": 19,
+      "target": 5
+    },
+    {
+      "id": 12,
+      "source": 5,
+      "target": 21
+    },
+    {
+      "id": 3,
+      "source": 24,
+      "target": 5
+    },
+    {
+      "id": 10,
+      "source": 5,
+      "target": 24
+    },
+    {
+      "id": 59,
+      "source": 5,
+      "target": 20
+    },
+    {
+      "id": 35,
+      "source": 5,
+      "target": 8
+    },
+    {
+      "id": 42,
+      "source": 5,
+      "target": 17
+    },
+    {
+      "id": 49,
+      "source": 5,
+      "target": 16
+    },
+    {
+      "id": 5,
+      "source": 21,
+      "target": 19
+    },
+    {
+      "id": 52,
+      "source": 19,
+      "target": 21
+    },
+    {
+      "id": 2,
+      "source": 19,
+      "target": 20
+    },
+    {
+      "id": 32,
+      "source": 19,
+      "target": 8
+    },
+    {
+      "id": 13,
+      "source": 19,
+      "target": 6
+    },
+    {
+      "id": 9,
+      "source": 19,
+      "target": 14
+    },
+    {
+      "id": 26,
+      "source": 21,
+      "target": 20
+    },
+    {
+      "id": 46,
+      "source": 21,
+      "target": 8
+    },
+    {
+      "id": 63,
+      "source": 21,
+      "target": 6
+    },
+    {
+      "id": 67,
+      "source": 21,
+      "target": 27
+    },
+    {
+      "id": 44,
+      "source": 24,
+      "target": 20
+    },
+    {
+      "id": 20,
+      "source": 24,
+      "target": 17
+    },
+    {
+      "id": 43,
+      "source": 24,
+      "target": 3
+    }
+  ]
+}

@@ -4,7 +4,7 @@
       "id": 4
     },
     {
-      "id": 7
+      "id": 5
     },
     {
       "id": 8
@@ -13,17 +13,17 @@
       "id": 9
     },
     {
-      "id": 5
+      "id": 6
     },
     {
-      "id": 6
+      "id": 7
     }
   ],
   "links": [
     {
-      "id": 24,
+      "id": 20,
       "source": 4,
-      "target": 7
+      "target": 5
     },
     {
       "id": 22,
@@ -36,24 +36,24 @@
       "target": 9
     },
     {
-      "id": 20,
-      "source": 4,
-      "target": 5
-    },
-    {
       "id": 21,
       "source": 4,
       "target": 6
     },
     {
-      "id": 30,
-      "source": 7,
+      "id": 26,
+      "source": 5,
       "target": 8
     },
     {
-      "id": 31,
-      "source": 7,
+      "id": 27,
+      "source": 5,
       "target": 9
+    },
+    {
+      "id": 25,
+      "source": 5,
+      "target": 7
     }
   ]
 }

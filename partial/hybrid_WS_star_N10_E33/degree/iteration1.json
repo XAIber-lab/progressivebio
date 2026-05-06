@@ -7,13 +7,13 @@
       "id": 1
     },
     {
-      "id": 2
+      "id": 3
     },
     {
-      "id": 8
+      "id": 4
     },
     {
-      "id": 9
+      "id": 7
     }
   ],
   "links": [
@@ -23,19 +23,19 @@
       "target": 1
     },
     {
-      "id": 2,
+      "id": 6,
       "source": 0,
-      "target": 2
+      "target": 3
     },
     {
-      "id": 3,
+      "id": 4,
       "source": 0,
-      "target": 8
+      "target": 4
     },
     {
-      "id": 1,
+      "id": 8,
       "source": 0,
-      "target": 9
+      "target": 7
     }
   ]
 }

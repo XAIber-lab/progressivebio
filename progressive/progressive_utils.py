@@ -6,125 +6,6 @@ from scipy.stats import kendalltau
 from collections import Counter, defaultdict
 from biofabric import assessQualityOfStairs
 
-# def compute_batch(nodes, edges, sample_n, iteration, method="degree"):
-#     format_edges=[]
-#     for e in edges:
-#         format_edges.append([e['source'],e['target']])
-#     G=nx.DiGraph(format_edges)
-    
-#     # Map nodes to integer IDs
-#     node_list = list(G.nodes())
-#     node_to_id = {n: i for i, n in enumerate(node_list)}
-#     id_to_node = {i: n for n, i in node_to_id.items()}
-#     # Build NetworKit graph once
-#     nk_graph = nk.Graph(len(node_list), directed=G.is_directed())
-#     for u, v in G.edges():
-#         nk_graph.addEdge(node_to_id[u], node_to_id[v])
-    
-#     # # Compute a scalar score per node for each method
-#     # k = min(50 + iteration * 10, len(G))
-#     # # k = 32
-#     # if method == "closeness":
-#     #     # meth_cent = nx.closeness_centrality(G)
-#     #     meth_cent = approx_closeness(G, k=k)
-#     # elif method == "pagerank":
-#     #     meth_cent = nx.pagerank(G, max_iter=50)
-#     # elif method == "betweeness":
-#     #     # meth_cent = nx.betweenness_centrality(G)
-#     #     nx.betweenness_centrality(G, k=k, seed=42)
-#     # elif method == "degree":
-#     #     # meth_cent = nx.degree_centrality(G)
-#     #     meth_cent = dict(G.degree())
-#     # elif method == "rmc":
-#     #     # RCM returns an ordering; use the inverse index as a score (later RCM → lower score)
-#     #     ug = G.to_undirected()
-#     #     rcm_order = list(nx.utils.reverse_cuthill_mckee_ordering(ug))  # RCM order [web:1][web:4]
-#     #     # Earlier in RCM list → higher score
-#     #     meth_cent = {n: len(rcm_order) - i for i, n in enumerate(rcm_order)}
-#     # elif method == "random":
-#     #     # Random permutation as “scores”
-#     #     node_list = list(G.nodes())
-#     #     random.shuffle(node_list)
-#     #     meth_cent = {n: i for i, n in enumerate(node_list)}  # higher index = higher score
-#     # elif method == "spectral":
-#     #     # Use spectral layout; score by first coordinate (higher x → higher score) [web:6][web:14]
-#     #     pos = nx.spectral_layout(G.to_undirected(), dim=1)
-#     #     meth_cent = {n: pos[n][0] for n in pos}
-#     # else:
-#     #     # Fallback: degree
-#     #     print("Error: NO CORREC METHOD")
-#     #     # meth_cent = nx.degree_centrality(G)
-#     #     return [],[]
-#     if method == "closeness":
-#         cc = nk.centrality.ApproxCloseness(nk_graph, nSamples=100)
-#         cc.run()
-#         scores = cc.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     elif method == "betweeness":
-#         bc = nk.centrality.ApproxBetweenness(nk_graph, epsilon=0.1)
-#         bc.run()
-#         scores = bc.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     elif method == "degree":
-#         deg = nk.centrality.DegreeCentrality(nk_graph)
-#         deg.run()
-#         scores = deg.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     elif method == "rmc":
-#         # No direct RCM in NetworKit → approximate via degree ordering
-#         deg = nk.centrality.DegreeCentrality(nk_graph)
-#         deg.run()
-#         scores = deg.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     elif method == "random":
-#         node_ids = list(range(len(node_list)))
-#         random.shuffle(node_ids)
-#         meth_cent = {id_to_node[i]: node_ids[i] for i in range(len(node_ids))}
-
-#     elif method == "spectral":
-#         # Spectral is expensive → replace with PageRank (fast + stable)
-#         pr = nk.centrality.PageRank(nk_graph, tol=1e-6, maxIter=50)
-#         pr.run()
-#         scores = pr.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     else:
-#         deg = nk.centrality.DegreeCentrality(nk_graph)
-#         deg.run()
-#         scores = deg.scores()
-#         meth_cent = {id_to_node[i]: scores[i] for i in range(len(scores))}
-
-#     sorted_n = dict(sorted(meth_cent.items(), key=lambda item: item[1], reverse=True))
-#     # sampled_nodes = dict(list(sorted_n.items())[:sample_n])
-    
-#     considered_n=[]
-#     considered_e=[]
-#     for n in list(sorted_n.keys()):
-#         for e in edges:
-#             if (e["source"]==n or e["target"]==n) and (n not in considered_n):
-#                 for b_e in list(nx.bfs_edges(G,n)):
-#                     if b_e not in considered_e:
-#                         considered_e.append(b_e)
-#         considered_n.append(n)
-        
-#     batched_e = []
-#     for edge in considered_e:
-#         for e in edges:
-#             if e["source"]==edge[0] and e["target"]==edge[1]:
-#                 batched_e.append(e)
-#     batched_e = batched_e[:sample_n]
-
-#     batched_n=[]
-#     for e2 in batched_e:
-#         for n in nodes:
-#             if (n["id"]==e2["source"] or n["id"]==e2["target"]) and (n not in batched_n):
-#                 batched_n.append(n)
-                
-#     return batched_n,batched_e
 def compute_batch(nodes, edges, sample_n, method="degree"):
 
     # -----------------------------
@@ -380,130 +261,11 @@ def define_samples(n_edges, n_iterations):
     if samples[len(samples)-1] == n_edges: return samples
     else: return samples+[n_edges]
 
-# def generalized_stair_kendall_tau(rank_gt, stairs_gt, rank_cmp, stairs_cmp=None, min_common_nodes=2):
-#     """
-#     Generalized Kendall tau focusing on GT stairs.
-
-#     Inputs
-#     - rank_gt, rank_cmp: dict {node_id: position} (BioFabric node order)
-#     - stairs_gt: list of stairs; each stair is a list of edges dicts with keys 'source','target'
-#     - stairs_cmp: same format (optional). If provided, each GT stair is matched to the best CMP stair
-#       with the same anchor node; scoring uses only the overlapping neighbor nodes.
-#     - min_common_nodes: need at least 2 nodes to form pairs
-
-#     Returns
-#     - overall_tau: weighted mean across stairs (weights = #pairs in that stair), or None
-#     - details: list of per-stair dicts
-#     """
-
-#     def anchor_and_neighbors(stair_edges):
-#         # Robust anchor: node that appears most often among endpoints in the stair
-#         c = Counter()
-#         for e in stair_edges:
-#             c[e["source"]] += 1
-#             c[e["target"]] += 1
-#         anchor = c.most_common(1)[0][0]
-
-#         # Neighbor list in encounter order (unique, preserve order)
-#         seen = set()
-#         neigh = []
-#         for e in stair_edges:
-#             if e["source"] == anchor:
-#                 other = e["target"]
-#             elif e["target"] == anchor:
-#                 other = e["source"]
-#             else:
-#                 continue
-#             if other not in seen:
-#                 neigh.append(other)
-#                 seen.add(other)
-
-#         return anchor, neigh
-
-#     def tau_from_gt_order(gt_pos, cmp_pos, nodes_in_gt_order):
-#         # keep only nodes that exist in both rankings
-#         nodes = [u for u in nodes_in_gt_order if u in gt_pos and u in cmp_pos]
-#         if len(nodes) < min_common_nodes:
-#             return None, 0, 0
-
-#         # nodes are already in GT stair order; measure inversions in candidate positions
-#         seq = [cmp_pos[u] for u in nodes]
-#         n = len(seq)
-#         total_pairs = n * (n - 1) // 2
-#         if total_pairs == 0:
-#             return None, n, 0
-
-#         inv = 0
-#         for i in range(n):
-#             for j in range(i + 1, n):
-#                 if seq[i] > seq[j]:
-#                     inv += 1
-
-#         # tie-free tau-a: tau = 1 - 2 * (#discordant pairs) / C(n,2) [web:37]
-#         tau = 1.0 - 2.0 * inv / total_pairs
-#         return tau, n, total_pairs
-
-#     # Index candidate stairs by anchor
-#     cmp_index = {}
-#     if stairs_cmp is not None:
-#         for st in stairs_cmp:
-#             a, neigh = anchor_and_neighbors(st)
-#             cmp_index.setdefault(a, []).append(set(neigh))
-
-#     details = []
-#     weighted_sum = 0.0
-#     weight_total = 0
-
-#     for i, st_gt in enumerate(stairs_gt):
-#         anchor, gt_neighbors = anchor_and_neighbors(st_gt)
-#         gt_set = set(gt_neighbors)
-
-#         matched = False
-#         overlap_nodes = gt_neighbors
-
-#         if stairs_cmp is not None:
-#             cands = cmp_index.get(anchor, [])
-#             if cands:
-#                 # pick best by max overlap (tie-break: smaller union)
-#                 best = None
-#                 best_overlap = -1
-#                 best_union = 10**18
-#                 for s in cands:
-#                     ov = len(gt_set & s)
-#                     un = len(gt_set | s)
-#                     if ov > best_overlap or (ov == best_overlap and un < best_union):
-#                         best, best_overlap, best_union = s, ov, un
-
-#                 matched = True
-#                 overlap_set = gt_set & best
-#                 overlap_nodes = [u for u in gt_neighbors if u in overlap_set]  # preserve GT stair order
-
-#         tau, n_nodes, n_pairs = tau_from_gt_order(rank_gt, rank_cmp, overlap_nodes)
-
-#         details.append({
-#             "stair_index": i,
-#             "anchor": anchor,
-#             "gt_size": len(gt_set),
-#             "cmp_matched": matched,
-#             "overlap_size": len(overlap_nodes),
-#             "scored_nodes": n_nodes,
-#             "scored_pairs": n_pairs,
-#             "tau": tau,
-#         })
-
-#         if tau is not None and n_pairs > 0:
-#             weighted_sum += tau * n_pairs
-#             weight_total += n_pairs
-
-#     overall_tau = (weighted_sum / weight_total) if weight_total > 0 else None
-#     return overall_tau, details
-
 def generalized_stair_kendall_tau_clean(
     rank_gt, stairs_gt, rank_cmp, stairs_cmp,
     nodes_gt, edges_gt, nodes_cmp, edges_cmp,
     min_common_nodes=2,
 ):
-    # --- your existing helper functions: anchor_and_neighbors, etc. ---
     def anchor_and_neighbors(stair_edges):
         c = Counter()
         for e in stair_edges:
@@ -536,7 +298,6 @@ def generalized_stair_kendall_tau_clean(
         inv = sum(1 for i in range(n) for j in range(i + 1, n) if seq[i] > seq[j])
         return 1.0 - 2.0 * inv / p, n, p
 
-    # --- your existing quality computation ---
     _, q_gt = assessQualityOfStairs(nodes_gt, edges_gt, stairs_gt)
     _, q_cmp = assessQualityOfStairs(nodes_cmp, edges_cmp, stairs_cmp)
 
@@ -719,9 +480,6 @@ def evaluate_stair_sets(gt_stairs_edges, det_stairs_edges):
         'total_tp_edges': total_tp_edges,
         'status': 'normal'
     }
-
-
-
 
 # -------------------------------------------------
 # Utilities

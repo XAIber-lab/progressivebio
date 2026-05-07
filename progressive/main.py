@@ -133,53 +133,57 @@ def run_experiment(files, n_iterations, methods, output_csv="progressive/data/re
                 for m in methods:
                     logger.debug("Computing method '%s' on sample %s for file %s", m, s, file_path)
                     try:
+                        # if "18681592" not in file_path: continue
+                        if "barabasi_albert_N50_E49" not in file_path: continue
+                        # if "hybrid_WS_star_N10_E33" not in file_path: continue                        
+                        
                         batch_nodes, batch_edges = compute_batch(nodes, edges, s, m)
 
                         prog_node_rows, prog_edge_columns, prog_fabric_edges = generate_biofabric(batch_nodes, batch_edges)
                         prog_node_srt, prog_edges_srt = format_biofabric_for_detect_staircases(prog_node_rows, prog_fabric_edges)
                         prog_stairs = detect_stairs(prog_node_srt, prog_edges_srt)
                         
+                        ### TODO: REMOVE in prod
+                        ### START: STORE PARTIAL RESULTS
+                        netname = file_path.split("\\")[len(file_path.split("\\"))-1].replace(".json","")
+                        partpath = "partial/"+netname+"/"+m
+                        Path(partpath).mkdir(parents=True, exist_ok=True)
+                        write_partial_graph(prog_node_srt,prog_fabric_edges,partpath+"/iteration"+str(s_idx)+".json")
+                        ### END: STORE PARTIAL RESULTS
+                        
                         prog_quality_relative = assessQualityOfStairs(batch_nodes,batch_edges,prog_stairs)
                         prog_quality_absolute = assessQualityOfStairs(nodes,edges,prog_stairs)
                         
-                        # Convert to edge sets
-                        gt_stairs_edges = stairs_to_edge_sets(GT_stairs)
-                        det_stairs_edges = stairs_to_edge_sets(prog_stairs)
-                        metrics = evaluate_stair_sets(gt_stairs_edges, det_stairs_edges)
-                        jaccard = metrics['mean_jaccard']
-                        
-                        # TODO: REMOVE in prod
-                        # ### START: STORE PARTIAL RESULTS 
-                        # netname = file_path.split("\\")[len(file_path.split("\\"))-1].replace(".json","")
-                        # partpath = "partial/"+netname+"/"+m
-                        # Path(partpath).mkdir(parents=True, exist_ok=True)
-                        # write_partial_graph(prog_node_srt,prog_fabric_edges,partpath+"/iteration"+str(s_idx)+".json")
-                        # ### END: STORE PARTIAL RESULTS
+                        # # Convert to edge sets
+                        # gt_stairs_edges = stairs_to_edge_sets(GT_stairs)
+                        # det_stairs_edges = stairs_to_edge_sets(prog_stairs)
+                        # metrics = evaluate_stair_sets(gt_stairs_edges, det_stairs_edges)
+                        # jaccard = metrics['mean_jaccard']
 
-                        result_std = kendall_tau_from_dicts(GT_node_rows, prog_node_rows)
-                        result_gen, per_stair = generalized_stair_kendall_tau_clean(
-                            rank_gt=GT_node_rows,
-                            stairs_gt=GT_stairs,     # ground truth stairs
-                            rank_cmp=prog_node_rows,
-                            stairs_cmp=prog_stairs,   # optional; helps match “corresponding” stairs by anchor
-                            nodes_gt=nodes,
-                            edges_gt=edges,
-                            nodes_cmp=batch_nodes,
-                            edges_cmp=batch_edges
-                        )
+                        # result_std = kendall_tau_from_dicts(GT_node_rows, prog_node_rows)
+                        # result_gen, per_stair = generalized_stair_kendall_tau_clean(
+                        #     rank_gt=GT_node_rows,
+                        #     stairs_gt=GT_stairs,     # ground truth stairs
+                        #     rank_cmp=prog_node_rows,
+                        #     stairs_cmp=prog_stairs,   # optional; helps match “corresponding” stairs by anchor
+                        #     nodes_gt=nodes,
+                        #     edges_gt=edges,
+                        #     nodes_cmp=batch_nodes,
+                        #     edges_cmp=batch_edges
+                        # )
                         
-                        graph_path = file_path.split("\\")
-                        graph_name = graph_path[len(graph_path)-1].replace(".json","")
+                        # graph_path = file_path.split("\\")
+                        # graph_name = graph_path[len(graph_path)-1].replace(".json","")
 
-                        writer.writerow([graph_name, s, s_idx, m, 
-                                         result_std, result_gen, 
-                                         GT_quality[0],prog_quality_relative[0],prog_quality_absolute[0],
-                                         jaccard,
-                                         len(nodes), len(edges), len(batch_nodes)/len(nodes)])
-                        logger.debug(
-                            "Wrote result: graph=%s, sample=%s, method=%s, KT=%.4f, KT_gen=%.4f",
-                            graph_name, s, m, result_std, result_gen
-                        )
+                        # writer.writerow([graph_name, s, s_idx, m, 
+                        #                  result_std, result_gen, 
+                        #                  GT_quality[0],prog_quality_relative[0],prog_quality_absolute[0],
+                        #                  jaccard,
+                        #                  len(nodes), len(edges), len(batch_nodes)/len(nodes)])
+                        # logger.debug(
+                        #     "Wrote result: graph=%s, sample=%s, method=%s, KT=%.4f, KT_gen=%.4f",
+                        #     graph_name, s, m, result_std, result_gen
+                        # )
                     except Exception as e:
                         logger.exception(
                             "Error during computation for file=%s, sample=%s, method=%s: %s",
@@ -189,32 +193,36 @@ def run_experiment(files, n_iterations, methods, output_csv="progressive/data/re
             logger.info("Finished file %s (%d/%d)", file_path, file_idx, len(files))
             # TODO: REMOVE in prod
             c += 1 
-            if c == 50:
-                logger.warning("Stopping early after processing 5 files (c==5 guard).")
-                break
+            # if c == 50:
+            #     logger.warning("Stopping early after processing 5 files (c==5 guard).")
+            #     break
             
     logger.info("Completed run_experiment. Results written to %s", output_csv)
 
 if __name__ == "__main__":
     folder_graphs="progressive/synthetic_graphs/"
     folder_benchmark = "progressive/rome_benchmark/"
-    
-    #TODO: change in prod if necessary more graphs
+    folder_benchmark2 = "progressive/twitter/"
+    #TODO: change in prod if netcessary more graphs
     # sizes = (10, 50, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 1000)
     sizes = (10, 50, 150)
     create_syntetic = False 
     if create_syntetic: export_graph_dataset(folder_graphs, sizes, seed=42)
     
-    n_iterations = 10
-    methods = ["degree","closeness","betweeness","rmc","random","spectral","pakerank"]
+    n_iterations = 35
+    methods = ["degree","closeness","betweeness","rmc","random","spectral","pagerank"]
     
     files_controlled = [str(p) for p in Path(folder_graphs).iterdir() if p.is_file()]
     output_file = "progressive/data/results_synthetic.csv"
-    save_plot="progressive/data/benchplot_synthetic.png"
     run_experiment(files_controlled, n_iterations, methods,output_file)
         
     files_bench = [str(p) for p in Path(folder_benchmark).iterdir() if p.is_file()]
     output_file = "progressive/data/results_benchmark.csv"
-    save_plot="progressive/data/benchplot_benchmark.png"
-    run_experiment(files_bench, n_iterations, methods,output_file)        
+    run_experiment(files_bench, n_iterations, methods, output_file)        
+    
+    files_bench2 = [str(p) for p in Path(folder_benchmark2).iterdir() if p.is_file()]
+    output_file2 = "progressive/data/results_twitter_benchmark.csv"
+    run_experiment(files_bench2, n_iterations, methods, output_file2)    
+    
+    
     

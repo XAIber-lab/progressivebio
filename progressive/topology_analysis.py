@@ -2,8 +2,7 @@ import json
 import networkx as nx
 import numpy as np
 from scipy import stats
-import matplotlib.pyplot as plt
-from collections import Counter
+from pathlib import Path
 
 def load_graph_from_json(json_file):
     """Load undirected simple graph from JSON file."""
@@ -110,5 +109,55 @@ def get_topology(json_file):
     return model, sim
 
 
-if __name__ == "__main__":
-    get_topology("progressive/synthetic_graphs/complete_N50_E1225.json")
+# if __name__ == "__main__":
+#     get_topology("progressive/synthetic_graphs/complete_N50_E1225.json")
+
+def adjustTwitter(originalFolder, formattedFolder):
+    original_path = Path(originalFolder)
+    formatted_path = Path(formattedFolder)
+    formatted_path.mkdir(parents=True, exist_ok=True)
+
+    for edge_file in original_path.glob("*.edges"):
+        edges = []
+        node_ids = set()
+
+        with edge_file.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+
+                parts = line.split()
+                if len(parts) < 2:
+                    continue
+
+                src, dst = parts[0], parts[1]
+                node_ids.add(src)
+                node_ids.add(dst)
+                edges.append((src, dst))
+
+        node_map = {node_id: idx for idx, node_id in enumerate(sorted(node_ids))}
+
+        nodes = [{"id": idx} for idx in range(len(node_map))]
+        links = [
+            {
+                "id": i,
+                "source": node_map[src],
+                "target": node_map[dst]
+            }
+            for i, (src, dst) in enumerate(edges)
+        ]
+
+        graph_json = {
+            "nodes": nodes,
+            "links": links
+        }
+
+        output_file = formatted_path / (edge_file.stem + ".json")
+        with output_file.open("w", encoding="utf-8") as f:
+            json.dump(graph_json, f, indent=2)
+
+if __name__=="__main__":
+    originalFold = "progressive/twitter-origin/"
+    formatFold = "progressive/twitter/"
+    adjustTwitter(originalFold,formatFold)

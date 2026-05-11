@@ -321,12 +321,12 @@ def plot_rank_counts(df, outFile, group_col, method_col="best_method", title=Non
     ax.set_xlabel(xlabel if xlabel else group_col)
     ax.set_ylabel("Count")
     if "size" in group_col: ax.tick_params(axis="x")
-    else: ax.tick_params(axis="x", rotation=90)
+    else: ax.tick_params(axis="x", rotation=45)
     ax.grid(True, axis="y", alpha=0.25)
 
-    leg = ax.legend(title="Method", frameon=False)
-    if leg is not None:
-        leg.set_title("Method", prop={"size": LEGEND_TITLE_SIZE})
+    # leg = ax.legend(title="Method", frameon=False)
+    # if leg is not None:
+    #     leg.set_title("Method", prop={"size": LEGEND_TITLE_SIZE})
 
     fig.tight_layout()
     fig.savefig(outFile, dpi=BAR_DPI, bbox_inches="tight")
@@ -358,19 +358,22 @@ def plot_rank_scores(ranked, outFile, group_col, method_col="method", title=None
     ax.set_xlabel(xlabel if xlabel else group_col)
     ax.set_ylabel("TOPSIS score")
     if "size" in group_col: ax.tick_params(axis="x")
-    else: ax.tick_params(axis="x", rotation=90)
+    else: ax.tick_params(axis="x", rotation=45)
     ax.grid(True, axis="y", alpha=0.25)
 
     # Place legend outside so it never overlaps the chart
-    leg = ax.legend(
-        title="Method",
-        frameon=False,
-        loc="upper left",
-        bbox_to_anchor=(1.02, 1.0),
-        borderaxespad=0.0
-    )
+    # leg = ax.legend(
+    #     title="Method",
+    #     frameon=False,
+    #     loc="upper left",
+    #     bbox_to_anchor=(1.02, 1.0),
+    #     borderaxespad=0.0
+    # )
+    # if leg is not None:
+    #     leg.set_title("Method", prop={"size": LEGEND_TITLE_SIZE})
+    leg = ax.get_legend()
     if leg is not None:
-        leg.set_title("Method", prop={"size": LEGEND_TITLE_SIZE})
+        leg.remove()
 
     fig.savefig(outFile, dpi=BAR_DPI, bbox_inches="tight")
     plt.close(fig)
@@ -500,11 +503,11 @@ def plot_matrix_pareto(df, save_path="progressive/plot/pareto_matrix.png"):
         ax.set_ylim(y_min - y_pad, y_max + y_pad)
         ax.grid(True, alpha=0.25)
 
-        handles, labels = ax.get_legend_handles_labels()
-        uniq = dict(zip(labels, handles))
-        leg = ax.legend(uniq.values(), uniq.keys(), title="Graph size", frameon=False)
-        if leg is not None:
-            leg.set_title("Graph size", prop={"size": LEGEND_TITLE_SIZE})
+        # handles, labels = ax.get_legend_handles_labels()
+        # uniq = dict(zip(labels, handles))
+        # leg = ax.legend(uniq.values(), uniq.keys(), title="Graph size", frameon=False)
+        # if leg is not None:
+        #     leg.set_title("Graph size", prop={"size": LEGEND_TITLE_SIZE})
 
     for j in range(i + 1, len(axes)):
         fig.delaxes(axes[j])
@@ -706,7 +709,7 @@ def plot_thresholds(results, output_path="progressive/plot/threshold.png"):
 # MAIN
 # ============================================================
 if __name__ == "__main__":
-    csv_path = "progressive/data1/results_synthetic.csv"
+    csv_path = "progressive/data/results_synthetic.csv"
 
     df = prepare_data(csv_path)
     ensure_pagerank_present(df)

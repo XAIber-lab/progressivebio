@@ -271,7 +271,7 @@ def plot_kt_matrix_compare(csv_synth, csv_real, output_path, filter_small=False,
     fig, axes = plt.subplots(
         nrows=len(METHODS),
         ncols=len(metrics),
-        figsize=(5.6 * len(metrics), 4.4 * len(METHODS)),
+        figsize=(4.4 * len(metrics), 4.4 * len(METHODS)),
         sharex=True,
         sharey="col",
     )
@@ -330,7 +330,7 @@ def plot_metric_by_edges_compare(csv_synth, csv_real, output_path, metric, filte
     fig, axes = plt.subplots(
         nrows=len(METHODS),
         ncols=len(cols),
-        figsize=(16.5, 4.4 * len(METHODS)),
+        figsize=(13.2, 4.4 * len(METHODS)),
         sharex=True,
         sharey="col",
     )

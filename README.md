@@ -1,5 +1,7 @@
 # Weaving (Bio)fabric: A Benchmark for Scalability through Progressive Sampling Methods
 
+![Demo](closeness.gif)
+
 ## Abstract
 Network data is widely used to represent complex systems across domains, enabling the discovery of structural patterns and relationships. 
 However, as graphs grow in size, visualizing them effectively becomes increasingly challenging. 

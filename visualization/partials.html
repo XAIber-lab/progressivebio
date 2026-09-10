@@ -62,6 +62,23 @@
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .animation-graphdiv {
+      min-width: 340px;
+    }
+    .animation-frame {
+      min-height: 500px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .animation-frame svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
   <script>
     let datapath = "../partial/";
@@ -250,6 +267,318 @@
       return currentColors;
     }
 
+    function formatMetricValue(value) {
+      return value === null ? "n/a" : value.toFixed(2);
+    }
+
+    function getAnimatedStairPairColors(stairIndices, stairColors) {
+      const staircaseColor1 = "#F9D466";
+      const staircaseColor2 = "#f7a222";
+
+      if (!stairIndices.length) return ["#ccc", "#ccc"];
+
+      if (!stairColors || !stairColors.length) {
+        const baseIndex = stairIndices[0];
+        if (baseIndex % 2 === 0) return [staircaseColor2, staircaseColor1];
+        return [staircaseColor1, staircaseColor2];
+      }
+
+      const primaryBase = stairColors[stairIndices[0]] || "#8A94A6";
+      const secondaryBase =
+        stairIndices.length > 1
+          ? (stairColors[stairIndices[1]] || primaryBase)
+          : primaryBase;
+      const primary = d3.color(primaryBase);
+      const secondary = d3.color(secondaryBase);
+
+      return [
+        primary ? primary.darker(0.5).formatHex() : primaryBase,
+        secondary ? secondary.brighter(0.5).formatHex() : secondaryBase,
+      ];
+    }
+
+    function computeAnimationLayout(frame) {
+      const svgwidth = 500;
+      const svgheight = 500;
+      const padding = { left: 30, right: 20, top: 20, bottom: 50 };
+      const numnodes = frame.graph.nodes.length || 1;
+      const numedges = frame.graph.links.length || 1;
+      const nodePositions = new Map();
+
+      const nodes = frame.nodeordering.map((nodeId, index) => {
+        const y =
+          padding.top +
+          ((svgheight - padding.top - padding.bottom) / numnodes) * index;
+        nodePositions.set(nodeId, y);
+        return { id: nodeId, y };
+      });
+
+      const edges = frame.edgeordering.map((edgeId, index) => {
+        const edge = frame.graph.links.find((link) => link.id === edgeId);
+        const x =
+          padding.left +
+          ((svgwidth - padding.left - padding.right) / numedges) * index;
+        const stairIndices = frame.result.stairs
+          .map((stair, stairIndex) => (stair.includes(edgeId) ? stairIndex : -1))
+          .filter((stairIndex) => stairIndex !== -1);
+        const [underlayColor, overlayColor] = getAnimatedStairPairColors(
+          stairIndices,
+          frame.currentStairColors,
+        );
+
+        return {
+          id: edgeId,
+          x,
+          y1: nodePositions.get(edge.source),
+          y2: nodePositions.get(edge.target),
+          hasUnderlay: stairIndices.length > 0,
+          underlayColor,
+          overlayColor,
+          dasharray: stairIndices.length === 2 ? "6,20" : "none",
+          isNew: frame.newEdgeIds.has(edgeId),
+        };
+      });
+
+      return {
+        svgwidth,
+        svgheight,
+        padding,
+        nodes,
+        edges,
+        dots: edges.filter((edge) => edge.isNew),
+      };
+    }
+
+    function renderAnimatedLayout(svg, layout, animate) {
+      const duration = animate ? 850 : 0;
+      const transition = svg.transition().duration(duration).ease(d3.easeCubicInOut);
+
+      const nodeLines = svg
+        .select(".anim-node-lines")
+        .selectAll("line")
+        .data(layout.nodes, (d) => d.id);
+
+      nodeLines
+        .join(
+          (enter) =>
+            enter
+              .append("line")
+              .attr("stroke", "#eee")
+              .attr("stroke-width", 3)
+              .style("stroke-linecap", "round")
+              .attr("x1", layout.padding.left)
+              .attr("x2", layout.svgwidth - layout.padding.left)
+              .attr("y1", (d) => d.y)
+              .attr("y2", (d) => d.y)
+              .style("opacity", 0)
+              .call((enterSelection) =>
+                enterSelection.transition(transition).style("opacity", 1),
+              ),
+          (update) => update,
+          (exit) =>
+            exit.call((exitSelection) =>
+              exitSelection.transition(transition).style("opacity", 0).remove(),
+            ),
+        )
+        .transition(transition)
+        .attr("y1", (d) => d.y)
+        .attr("y2", (d) => d.y);
+
+      const nodeLabels = svg
+        .select(".anim-node-labels")
+        .selectAll("text")
+        .data(layout.nodes, (d) => d.id);
+
+      nodeLabels
+        .join(
+          (enter) =>
+            enter
+              .append("text")
+              .attr("x", layout.padding.left - 10)
+              .attr("y", (d) => d.y)
+              .style("font-size", "small")
+              .style("fill", "lightgray")
+              .style("font-family", "Arial")
+              .style("text-anchor", "end")
+              .style("dominant-baseline", "middle")
+              .style("opacity", 0)
+              .text((d) => d.id)
+              .call((enterSelection) =>
+                enterSelection.transition(transition).style("opacity", 1),
+              ),
+          (update) => update,
+          (exit) =>
+            exit.call((exitSelection) =>
+              exitSelection.transition(transition).style("opacity", 0).remove(),
+            ),
+        )
+        .transition(transition)
+        .attr("y", (d) => d.y);
+
+      const underlayLines = svg
+        .select(".anim-edge-underlay")
+        .selectAll("line")
+        .data(
+          layout.edges.filter((edge) => edge.hasUnderlay),
+          (d) => d.id,
+        );
+
+      underlayLines
+        .join(
+          (enter) =>
+            enter
+              .append("line")
+              .attr("stroke-width", 8)
+              .style("stroke-linecap", "round")
+              .attr("x1", (d) => d.x)
+              .attr("x2", (d) => d.x)
+              .attr("y1", (d) => d.y1)
+              .attr("y2", (d) => d.y2)
+              .attr("stroke", (d) => d.underlayColor)
+              .style("opacity", 0)
+              .call((enterSelection) =>
+                enterSelection.transition(transition).style("opacity", 1),
+              ),
+          (update) => update,
+          (exit) =>
+            exit.call((exitSelection) =>
+              exitSelection.transition(transition).style("opacity", 0).remove(),
+            ),
+        )
+        .transition(transition)
+        .attr("x1", (d) => d.x)
+        .attr("x2", (d) => d.x)
+        .attr("y1", (d) => d.y1)
+        .attr("y2", (d) => d.y2)
+        .attr("stroke", (d) => d.underlayColor);
+
+      const overlayLines = svg
+        .select(".anim-edge-overlay")
+        .selectAll("line")
+        .data(layout.edges, (d) => d.id);
+
+      overlayLines
+        .join(
+          (enter) =>
+            enter
+              .append("line")
+              .attr("stroke-width", 8)
+              .style("stroke-linecap", "round")
+              .attr("x1", (d) => d.x)
+              .attr("x2", (d) => d.x)
+              .attr("y1", (d) => d.y1)
+              .attr("y2", (d) => d.y2)
+              .attr("stroke", (d) => d.overlayColor)
+              .style("stroke-dasharray", (d) => d.dasharray)
+              .style("opacity", 0)
+              .call((enterSelection) =>
+                enterSelection.transition(transition).style("opacity", 1),
+              ),
+          (update) => update,
+          (exit) =>
+            exit.call((exitSelection) =>
+              exitSelection.transition(transition).style("opacity", 0).remove(),
+            ),
+        )
+        .transition(transition)
+        .attr("x1", (d) => d.x)
+        .attr("x2", (d) => d.x)
+        .attr("y1", (d) => d.y1)
+        .attr("y2", (d) => d.y2)
+        .attr("stroke", (d) => d.overlayColor)
+        .style("stroke-dasharray", (d) => d.dasharray);
+
+      const dotSelection = svg
+        .select(".anim-new-edge-dots")
+        .selectAll("circle")
+        .data(layout.dots, (d) => d.id);
+
+      dotSelection
+        .join(
+          (enter) =>
+            enter
+              .append("circle")
+              .attr("r", 8)
+              .attr("fill", "steelblue")
+              .attr("cx", (d) => d.x)
+              .attr("cy", layout.svgheight - layout.padding.bottom / 2)
+              .style("opacity", 0)
+              .call((enterSelection) =>
+                enterSelection.transition(transition).style("opacity", 1),
+              ),
+          (update) => update,
+          (exit) =>
+            exit.call((exitSelection) =>
+              exitSelection.transition(transition).style("opacity", 0).remove(),
+            ),
+        )
+        .transition(transition)
+        .attr("cx", (d) => d.x)
+        .attr("cy", layout.svgheight - layout.padding.bottom / 2);
+    }
+
+    function createAnimationPreview(frames) {
+      if (!frames.length) return null;
+
+      let currentIndex = 0;
+      const animationDiv = document.createElement("div");
+      animationDiv.className = "col-sm graphdiv animation-graphdiv";
+
+      const title = document.createElement("h4");
+      title.textContent = "animated preview";
+      animationDiv.appendChild(title);
+
+      const iterationLabel = document.createElement("div");
+      iterationLabel.style.fontWeight = "bold";
+      iterationLabel.style.marginBottom = "8px";
+      animationDiv.appendChild(iterationLabel);
+
+      const frameContainer = document.createElement("div");
+      frameContainer.className = "animation-frame";
+      animationDiv.appendChild(frameContainer);
+
+      const animationSvg = d3
+        .create("svg")
+        .attr("viewBox", [0, 0, 500, 500]);
+      animationSvg.append("g").attr("class", "anim-node-lines");
+      animationSvg.append("g").attr("class", "anim-edge-underlay");
+      animationSvg.append("g").attr("class", "anim-edge-overlay");
+      animationSvg.append("g").attr("class", "anim-node-labels");
+      animationSvg.append("g").attr("class", "anim-new-edge-dots");
+      frameContainer.appendChild(animationSvg.node());
+
+      const qualityDiv = document.createElement("div");
+      qualityDiv.className = "col-lg";
+      qualityDiv.style.textAlign = "left";
+      qualityDiv.style.fontSize = "11px";
+      animationDiv.appendChild(qualityDiv);
+
+      function renderFrame(index, animate) {
+        const frame = frames[index];
+        iterationLabel.textContent = "iteration " + frame.iteration;
+        qualityDiv.innerHTML =
+          "total staircase quality: " +
+          frame.totalStaircaseQuality.toFixed(2) +
+          "<br>" +
+          "kendall tau vs. final iteration: " +
+          formatMetricValue(frame.kendallTau) +
+          "<br>" +
+          "mean stair overlap vs. final iteration: " +
+          frame.stairOverlap.toFixed(2) +
+          "<br>";
+        renderAnimatedLayout(animationSvg, computeAnimationLayout(frame), animate);
+      }
+
+      renderFrame(currentIndex, false);
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % frames.length;
+        renderFrame(currentIndex, true);
+      }, 1400);
+
+      return animationDiv;
+    }
+
     async function init() {
       let col = document.getElementById("col-main");
 
@@ -325,6 +654,7 @@
           let moderow = document.createElement("div");
           moderow.className = "row align-items-start";
           row.appendChild(moderow);
+          const animationFrames = [];
 
           // append title to row
           let modetitle = document.createElement("h3");
@@ -384,8 +714,6 @@
                 currentStairColors,
               );
               addNewEdgeDots(biofabric, edgeordering, newEdgeIds);
-              graphdiv.append(biofabric);
-              previousEdgeIds = new Set(edgeordering);
 
               // append result
               let qualitydiv = document.createElement("div");
@@ -406,6 +734,20 @@
                 finalStairs,
                 result.stairs || [],
               );
+              animationFrames.push({
+                iteration,
+                graph,
+                nodeordering,
+                edgeordering,
+                result,
+                currentStairColors,
+                newEdgeIds: new Set(newEdgeIds),
+                totalStaircaseQuality,
+                kendallTau,
+                stairOverlap,
+              });
+              graphdiv.append(biofabric);
+              previousEdgeIds = new Set(edgeordering);
               // // qualitydiv.innerHTML = "runway qualities: " + analyzeGraph(graph.nodes, graph.links).runwayQualities.join(", ") + "<br>"
               // // qualitydiv.innerHTML += "total runway quality: " + analyzeGraph(graph.nodes, graph.links).runwayQualities.reduce((a, b) => a + b, 0) + "<br>"
               // qualitydiv.innerHTML += "staircase qualities: " + analyzeGraph(graph.nodes, graph.links).stairQualities.slice(0, -1).map(s => Math.round(s[0] * 100)/100).join(", ") + "<br>"
@@ -415,7 +757,7 @@
                 "<br>";
               qualitydiv.innerHTML +=
                 "kendall tau vs. final iteration: " +
-                (kendallTau === null ? "n/a" : kendallTau.toFixed(2)) +
+                formatMetricValue(kendallTau) +
                 "<br>";
               qualitydiv.innerHTML +=
                 "mean stair overlap vs. final iteration: " +
@@ -488,6 +830,11 @@
             } catch (e) {
               console.log(e);
             }
+          }
+
+          const animationPreview = createAnimationPreview(animationFrames);
+          if (animationPreview) {
+            moderow.insertBefore(animationPreview, moderow.children[1] || null);
           }
 
           // break;

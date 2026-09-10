@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive partial graphs</title>
+    <script src="libs/d3.v7.min.js"></script>
+    <script src="js/helpers/stairsHelper.js"></script>
+    <script src="js/helpers/runwayHelper.js"></script>
+    <script src="js/analyzeGraph.js"></script>
+    <style>
+      :root {
+        color-scheme: light;
+        --background: #f8f9fa;
+        --surface: #ffffff;
+        --border: #dee2e6;
+        --text: #212529;
+        --muted: #6c757d;
+        --accent: #386f9f;
+        --accent-hover: #2c5b84;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family:
+          system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1040px, calc(100% - 32px));
+        margin: 32px auto;
+      }
+
+      h1 {
+        margin: 0 0 24px;
+        font-size: clamp(1.55rem, 4vw, 2rem);
+      }
+
+      .panel {
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      .selectors {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.84rem;
+        font-weight: 650;
+      }
+
+      select,
+      button {
+        min-height: 42px;
+        border: 1px solid #adb5bd;
+        border-radius: 6px;
+        font: inherit;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px 34px 8px 10px;
+        background: white;
+        color: var(--text);
+      }
+
+      select:focus-visible,
+      button:focus-visible {
+        outline: 3px solid rgb(56 111 159 / 25%);
+        outline-offset: 2px;
+      }
+
+      #status {
+        min-height: 24px;
+        margin: 4px 0;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      #status.error {
+        color: #a61e2b;
+      }
+
+      .visualization-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 24px;
+        align-items: start;
+      }
+
+      #graph {
+        display: flex;
+        min-height: 500px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      #graph svg {
+        display: block;
+        width: min(100%, 560px);
+        height: auto;
+      }
+
+      .final-stage {
+        margin-top: 18px;
+        padding-left: 20px;
+        border-left: 1px solid var(--border);
+      }
+
+      .final-stage h2 {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      #final-preview {
+        display: flex;
+        min-height: 220px;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      #final-preview svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      #final-preview .anim-node-labels {
+        display: none;
+      }
+
+      .final-stage-note {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+        line-height: 1.4;
+      }
+
+      .inline-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0 3px 1px 2px;
+        border-radius: 50%;
+        background: steelblue;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        min-height: 60px;
+        margin: 8px 0 18px;
+      }
+
+      .metric {
+        padding: 10px;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        background: #fbfcfd;
+      }
+
+      .metric-name {
+        display: block;
+        color: var(--muted);
+        font-size: 0.72rem;
+        line-height: 1.25;
+      }
+
+      .metric-value {
+        display: block;
+        margin-top: 4px;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .frame-controls {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 12px;
+        align-items: center;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+      }
+
+      button {
+        padding: 8px 16px;
+        border-color: var(--accent);
+        background: var(--accent);
+        color: white;
+        cursor: pointer;
+        font-weight: 650;
+      }
+
+      button:hover:not(:disabled) {
+        border-color: var(--accent-hover);
+        background: var(--accent-hover);
+      }
+
+      button:disabled {
+        border-color: #ced4da;
+        background: #e9ecef;
+        color: #868e96;
+        cursor: not-allowed;
+      }
+
+      #frame-label {
+        min-width: 130px;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+        font-weight: 650;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          width: min(100% - 20px, 1040px);
+          margin: 16px auto;
+        }
+
+        .panel {
+          padding: 14px;
+        }
+
+        .selectors,
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .visualization-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .final-stage {
+          margin-top: 0;
+          padding: 18px 0 0;
+          border-top: 1px solid var(--border);
+          border-left: 0;
+        }
+
+        #final-preview {
+          width: min(230px, 100%);
+          min-height: auto;
+          margin: 0 auto;
+        }
+
+        #graph {
+          min-height: auto;
+        }
+
+        .frame-controls {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        #frame-label {
+          grid-column: 1 / -1;
+          grid-row: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Partial graph explorer</h1>
+
+      <section class="panel" aria-label="Partial graph viewer">
+        <div class="selectors">
+          <div>
+            <label for="dataset-select">Dataset</label>
+            <select id="dataset-select"></select>
+          </div>
+          <div>
+            <label for="sorting-select">Sorting logic</label>
+            <select id="sorting-select"></select>
+          </div>
+        </div>
+
+        <div id="status" role="status" aria-live="polite">Loading frames…</div>
+        <div class="visualization-grid">
+          <div>
+            <div id="graph" aria-live="polite"></div>
+            <div id="metrics" class="metrics"></div>
+          </div>
+          <aside class="final-stage" aria-label="Final graph stage">
+            <h2>Final stage</h2>
+            <div id="final-preview"></div>
+            <p class="final-stage-note">
+              10% of the edges are added at every frame. Edge colors show where
+              they belong in the <em>final</em> stage.
+              <span class="inline-dot" aria-hidden="true"></span> Blue dots mark
+              nodes and edges added in the current frame.
+            </p>
+          </aside>
+        </div>
+
+        <div class="frame-controls">
+          <button id="previous-frame" type="button">← Previous frame</button>
+          <span id="frame-label">Frame – of –</span>
+          <button id="next-frame" type="button">Next frame →</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const dataPath = "../partial/";
+      const datasetModes = {
+        "18470775": [
+          "betweeness",
+          "closeness",
+          "degree",
+          "pagerank",
+          "random",
+          "rmc",
+          "spectral",
+        ],
+        "18681592": [
+          "betweeness",
+          "closeness",
+          "degree",
+          "pagerank",
+          "random",
+          "rmc",
+          "spectral",
+        ],
+        balanced_tree_N21_E20: ["betweeness", "closeness", "degree"],
+        balanced_tree_N5_E4: ["betweeness", "closeness", "degree"],
+        balanced_tree_N85_E84: ["betweeness", "closeness", "degree"],
+        barabasi_albert_N100_E475: ["betweeness", "closeness", "degree"],
+        barabasi_albert_N10_E9: ["betweeness", "closeness", "degree"],
+        barabasi_albert_N50_E49: [
+          "betweeness",
+          "closeness",
+          "degree",
+          "pagerank",
+          "random",
+          "rmc",
+          "spectral",
+        ],
+        barabasi_albert_N50_E96: [
+          "betweeness",
+          "closeness",
+          "degree",
+          "pakerank",
+          "random",
+          "rmc",
+          "spectral",
+        ],
+        hybrid_SBM_mesh_N10_E19: ["betweeness", "closeness", "degree"],
+        hybrid_WS_star_N10_E33: [
+          "betweeness",
+          "closeness",
+          "degree",
+          "pagerank",
+          "random",
+          "rmc",
+          "spectral",
+        ],
+        hybrid_path_ER_N10_E16: ["betweeness", "closeness", "degree"],
+        hybrid_ring_mesh_N10_E16: ["betweeness", "closeness", "degree"],
+        mesh_N9_E12: ["betweeness", "closeness", "degree"],
+      };
+
+      const modeLabels = {
+        betweeness: "Betweenness",
+        closeness: "Closeness",
+        degree: "Degree",
+        pagerank: "PageRank",
+        pakerank: "PageRank",
+        random: "Random",
+        rmc: "RMC",
+        spectral: "Spectral",
+      };
+
+      const stairPalette = [
+        "#4E79A7",
+        "#F28E2B",
+        "#E15759",
+        "#76B7B2",
+        "#59A14F",
+        "#EDC948",
+        "#B07AA1",
+        "#FF9DA7",
+        "#9C755F",
+        "#BAB0AC",
+        "#86BCB6",
+        "#D37295",
+      ];
+
+      const datasetSelect = document.querySelector("#dataset-select");
+      const sortingSelect = document.querySelector("#sorting-select");
+      const graphContainer = document.querySelector("#graph");
+      const finalPreview = document.querySelector("#final-preview");
+      const metricsContainer = document.querySelector("#metrics");
+      const status = document.querySelector("#status");
+      const previousButton = document.querySelector("#previous-frame");
+      const nextButton = document.querySelector("#next-frame");
+      const frameLabel = document.querySelector("#frame-label");
+
+      let frames = [];
+      let currentFrameIndex = 0;
+      let loadSequence = 0;
+      let mainSvg = null;
+      let finalResult = null;
+      let finalOrdering = [];
+      let edgeStrokeWidth = 8;
+
+      function addOption(select, value, label) {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = label;
+        select.appendChild(option);
+      }
+
+      function populateDatasets() {
+        for (const dataset of Object.keys(datasetModes)) {
+          addOption(datasetSelect, dataset, dataset);
+        }
+
+        datasetSelect.value = "18681592";
+        populateSortingModes();
+        sortingSelect.value = "degree";
+      }
+
+      function populateSortingModes() {
+        const previousMode = sortingSelect.value;
+        sortingSelect.replaceChildren();
+
+        for (const mode of datasetModes[datasetSelect.value]) {
+          addOption(sortingSelect, mode, modeLabels[mode] || mode);
+        }
+
+        if (datasetModes[datasetSelect.value].includes(previousMode)) {
+          sortingSelect.value = previousMode;
+        }
+      }
+
+      function jaccardSimilarity(setA, setB) {
+        let intersectionSize = 0;
+        for (const value of setA) {
+          if (setB.has(value)) intersectionSize++;
+        }
+        const unionSize = setA.size + setB.size - intersectionSize;
+        return unionSize === 0 ? 0 : intersectionSize / unionSize;
+      }
+
+      function kendallTau(referenceOrdering, currentOrdering) {
+        const referenceRanks = new Map(
+          referenceOrdering.map((nodeId, index) => [nodeId, index]),
+        );
+        const commonNodes = currentOrdering.filter((nodeId) =>
+          referenceRanks.has(nodeId),
+        );
+        if (commonNodes.length < 2) return null;
+
+        let concordant = 0;
+        let discordant = 0;
+        for (let i = 0; i < commonNodes.length; i++) {
+          for (let j = i + 1; j < commonNodes.length; j++) {
+            const difference =
+              referenceRanks.get(commonNodes[i]) -
+              referenceRanks.get(commonNodes[j]);
+            if (difference < 0) concordant++;
+            if (difference > 0) discordant++;
+          }
+        }
+
+        const pairs = concordant + discordant;
+        return pairs ? (concordant - discordant) / pairs : null;
+      }
+
+      function meanStairOverlap(referenceStairs, currentStairs) {
+        if (!referenceStairs.length) return currentStairs.length ? 0 : 1;
+        if (!currentStairs.length) return 0;
+
+        return (
+          referenceStairs.reduce((sum, referenceStair) => {
+            const referenceEdges = new Set(referenceStair);
+            const bestOverlap = Math.max(
+              ...currentStairs.map((stair) =>
+                jaccardSimilarity(referenceEdges, new Set(stair)),
+              ),
+            );
+            return sum + bestOverlap;
+          }, 0) / referenceStairs.length
+        );
+      }
+
+      function getStairPairColors(stairIndices, stairColors) {
+        if (!stairIndices.length) return ["#ccc", "#ccc"];
+
+        const primaryBase = stairColors[stairIndices[0]] || "#8A94A6";
+        const secondaryBase =
+          stairIndices.length > 1
+            ? stairColors[stairIndices[1]] || primaryBase
+            : primaryBase;
+        const primary = d3.color(primaryBase);
+        const secondary = d3.color(secondaryBase);
+
+        return [
+          primary ? primary.darker(0.5).formatHex() : primaryBase,
+          secondary ? secondary.brighter(0.5).formatHex() : secondaryBase,
+        ];
+      }
+
+      function computeLayout(
+        frame,
+        newEdgeIds = new Set(),
+        newNodeIds = new Set(),
+      ) {
+        const width = 500;
+        const height = 500;
+        const padding = { left: 30, right: 20, top: 20, bottom: 50 };
+        const nodeCount = frame.nodeOrdering.length || 1;
+        const edgeCount = frame.edgeOrdering.length || 1;
+        const nodePositions = new Map();
+        const linksById = new Map(
+          frame.graph.links.map((edge) => [edge.id, edge]),
+        );
+        const finalStairs = finalResult.stairs || [];
+        const stairColors = finalStairs.map(
+          (_, index) => stairPalette[index % stairPalette.length],
+        );
+
+        const nodes = frame.nodeOrdering.map((nodeId, index) => {
+          const y =
+            padding.top +
+            ((height - padding.top - padding.bottom) / nodeCount) * index;
+          nodePositions.set(nodeId, y);
+          return { id: nodeId, y, isNew: newNodeIds.has(nodeId) };
+        });
+
+        const edges = frame.edgeOrdering.map((edgeId, index) => {
+          const edge = linksById.get(edgeId);
+          const x =
+            padding.left +
+            ((width - padding.left - padding.right) / edgeCount) * index;
+          const stairIndices = finalStairs
+            .map((stair, stairIndex) =>
+              stair.includes(edgeId) ? stairIndex : -1,
+            )
+            .filter((stairIndex) => stairIndex !== -1);
+          const [underlayColor, overlayColor] = getStairPairColors(
+            stairIndices,
+            stairColors,
+          );
+
+          return {
+            id: edgeId,
+            x,
+            y1: nodePositions.get(edge.source),
+            y2: nodePositions.get(edge.target),
+            hasUnderlay: stairIndices.length > 0,
+            underlayColor,
+            overlayColor,
+            dasharray:
+              stairIndices.length === 2
+                ? `${edgeStrokeWidth * 1.5},${edgeStrokeWidth * 4}`
+                : "none",
+            isNew: newEdgeIds.has(edgeId),
+          };
+        });
+
+        return {
+          width,
+          height,
+          padding,
+          nodes,
+          edges,
+          nodeDots: nodes.filter((node) => node.isNew),
+          dots: edges.filter((edge) => edge.isNew),
+        };
+      }
+
+      function createLayeredSvg() {
+        const svg = d3.create("svg").attr("viewBox", [0, 0, 500, 500]);
+        svg.append("g").attr("class", "anim-node-lines");
+        svg.append("g").attr("class", "anim-edge-underlay");
+        svg.append("g").attr("class", "anim-edge-overlay");
+        svg.append("g").attr("class", "anim-node-labels");
+        svg.append("g").attr("class", "anim-new-node-dots");
+        svg.append("g").attr("class", "anim-new-edge-dots");
+        return svg;
+      }
+
+      function renderLayout(svg, layout, animate) {
+        svg.selectAll("*").interrupt();
+        const transition = svg
+          .transition()
+          .duration(animate ? 900 : 0)
+          .ease(d3.easeCubicInOut);
+        const initialOpacity = animate ? 0 : 1;
+
+        svg
+          .select(".anim-node-lines")
+          .selectAll("line")
+          .data(layout.nodes, (node) => node.id)
+          .join(
+            (enter) =>
+              enter
+                .append("line")
+                .attr("x1", layout.padding.left)
+                .attr("x2", layout.width - layout.padding.left)
+                .attr("y1", (node) => node.y)
+                .attr("y2", (node) => node.y)
+                .attr("stroke", "#eee")
+                .attr("stroke-width", 3)
+                .style("stroke-linecap", "round")
+                .style("opacity", initialOpacity),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("y1", (node) => node.y)
+          .attr("y2", (node) => node.y)
+          .style("opacity", 1);
+
+        svg
+          .select(".anim-node-labels")
+          .selectAll("text")
+          .data(layout.nodes, (node) => node.id)
+          .join(
+            (enter) =>
+              enter
+                .append("text")
+                .attr("x", layout.padding.left - 10)
+                .attr("y", (node) => node.y)
+                .style("font-size", "small")
+                .style("fill", "lightgray")
+                .style("font-family", "Arial")
+                .style("text-anchor", "end")
+                .style("dominant-baseline", "middle")
+                .style("opacity", initialOpacity)
+                .text((node) => node.id),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("y", (node) => node.y)
+          .style("opacity", 1);
+
+        svg
+          .select(".anim-edge-underlay")
+          .selectAll("line")
+          .data(
+            layout.edges.filter((edge) => edge.hasUnderlay),
+            (edge) => edge.id,
+          )
+          .join(
+            (enter) =>
+              enter
+                .append("line")
+                .attr("x1", (edge) => edge.x)
+                .attr("x2", (edge) => edge.x)
+                .attr("y1", (edge) => edge.y1)
+                .attr("y2", (edge) => edge.y2)
+                .attr("stroke", (edge) => edge.underlayColor)
+                .attr("stroke-width", edgeStrokeWidth)
+                .style("stroke-linecap", "round")
+                .style("opacity", initialOpacity),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("x1", (edge) => edge.x)
+          .attr("x2", (edge) => edge.x)
+          .attr("y1", (edge) => edge.y1)
+          .attr("y2", (edge) => edge.y2)
+          .attr("stroke", (edge) => edge.underlayColor)
+          .attr("stroke-width", edgeStrokeWidth)
+          .style("opacity", 1);
+
+        svg
+          .select(".anim-edge-overlay")
+          .selectAll("line")
+          .data(layout.edges, (edge) => edge.id)
+          .join(
+            (enter) =>
+              enter
+                .append("line")
+                .attr("x1", (edge) => edge.x)
+                .attr("x2", (edge) => edge.x)
+                .attr("y1", (edge) => edge.y1)
+                .attr("y2", (edge) => edge.y2)
+                .attr("stroke", (edge) => edge.overlayColor)
+                .attr("stroke-width", edgeStrokeWidth)
+                .style("stroke-linecap", "round")
+                .style("stroke-dasharray", (edge) => edge.dasharray)
+                .style("opacity", initialOpacity),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("x1", (edge) => edge.x)
+          .attr("x2", (edge) => edge.x)
+          .attr("y1", (edge) => edge.y1)
+          .attr("y2", (edge) => edge.y2)
+          .attr("stroke", (edge) => edge.overlayColor)
+          .attr("stroke-width", edgeStrokeWidth)
+          .style("stroke-dasharray", (edge) => edge.dasharray)
+          .style("opacity", 1);
+
+        svg
+          .select(".anim-new-node-dots")
+          .selectAll("circle")
+          .data(layout.nodeDots, (node) => node.id)
+          .join(
+            (enter) =>
+              enter
+                .append("circle")
+                .attr("cx", layout.width - layout.padding.left)
+                .attr("cy", (node) => node.y)
+                .attr("r", Math.max(2.5, Math.min(6, edgeStrokeWidth)))
+                .attr("fill", "steelblue")
+                .style("opacity", initialOpacity),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("cx", layout.width - layout.padding.left)
+          .attr("cy", (node) => node.y)
+          .style("opacity", 1);
+
+        svg
+          .select(".anim-new-edge-dots")
+          .selectAll("circle")
+          .data(layout.dots, (edge) => edge.id)
+          .join(
+            (enter) =>
+              enter
+                .append("circle")
+                .attr("cx", (edge) => edge.x)
+                .attr("cy", layout.height - layout.padding.bottom / 2)
+                .attr("r", Math.max(2.5, Math.min(6, edgeStrokeWidth)))
+                .attr("fill", "steelblue")
+                .style("opacity", initialOpacity),
+            (update) => update,
+            (exit) =>
+              exit
+                .transition(transition)
+                .style("opacity", 0)
+                .remove(),
+          )
+          .transition(transition)
+          .attr("cx", (edge) => edge.x)
+          .attr("cy", layout.height - layout.padding.bottom / 2)
+          .style("opacity", 1);
+      }
+
+      function addMetric(name, value) {
+        const metric = document.createElement("div");
+        metric.className = "metric";
+        const metricName = document.createElement("span");
+        metricName.className = "metric-name";
+        metricName.textContent = name;
+        const metricValue = document.createElement("span");
+        metricValue.className = "metric-value";
+        metricValue.textContent = value;
+        metric.append(metricName, metricValue);
+        metricsContainer.appendChild(metric);
+      }
+
+      function renderFinalStage() {
+        finalPreview.replaceChildren();
+        if (!frames.length) return;
+
+        const svg = createLayeredSvg();
+        finalPreview.appendChild(svg.node());
+        renderLayout(svg, computeLayout(frames.at(-1)), false);
+      }
+
+      function renderFrame(animate = false) {
+        metricsContainer.replaceChildren();
+
+        if (!frames.length) {
+          graphContainer.replaceChildren();
+          finalPreview.replaceChildren();
+          mainSvg = null;
+          frameLabel.textContent = "Frame – of –";
+          previousButton.disabled = true;
+          nextButton.disabled = true;
+          return;
+        }
+
+        const frame = frames[currentFrameIndex];
+        const previousNodeIds = new Set(
+          currentFrameIndex === 0
+            ? []
+            : frames[currentFrameIndex - 1].graph.nodes.map((node) => node.id),
+        );
+        const previousEdgeIds = new Set(
+          currentFrameIndex === 0
+            ? []
+            : frames[currentFrameIndex - 1].graph.links.map((edge) => edge.id),
+        );
+        const newEdgeIds = new Set(
+          frame.edgeOrdering.filter((edgeId) => !previousEdgeIds.has(edgeId)),
+        );
+        const newNodeIds = new Set(
+          frame.nodeOrdering.filter((nodeId) => !previousNodeIds.has(nodeId)),
+        );
+
+        if (!mainSvg) {
+          graphContainer.replaceChildren();
+          mainSvg = createLayeredSvg();
+          graphContainer.appendChild(mainSvg.node());
+        }
+        renderLayout(
+          mainSvg,
+          computeLayout(frame, newEdgeIds, newNodeIds),
+          animate,
+        );
+
+        const totalStaircaseQuality = frame.result.stairQualities
+          .slice(0, -1)
+          .reduce((total, stair) => total + Number(stair[0]), 0);
+        const tau = kendallTau(finalOrdering, frame.nodeOrdering);
+        const overlap = meanStairOverlap(
+          finalResult.stairs || [],
+          frame.result.stairs || [],
+        );
+        addMetric("Total staircase quality", totalStaircaseQuality.toFixed(2));
+        addMetric(
+          "Kendall tau vs. final frame",
+          tau === null ? "n/a" : tau.toFixed(2),
+        );
+        addMetric("Mean stair overlap vs. final frame", overlap.toFixed(2));
+
+        frameLabel.textContent = `Frame ${frame.iteration} · ${
+          currentFrameIndex + 1
+        } of ${frames.length}`;
+        previousButton.disabled = currentFrameIndex === 0;
+        nextButton.disabled = currentFrameIndex === frames.length - 1;
+        status.textContent = "";
+        status.classList.remove("error");
+      }
+
+      async function loadFrames() {
+        const sequence = ++loadSequence;
+        const dataset = datasetSelect.value;
+        const mode = sortingSelect.value;
+        frames = [];
+        currentFrameIndex = 0;
+        renderFrame();
+        status.textContent = "Loading frames…";
+        status.classList.remove("error");
+        datasetSelect.disabled = true;
+        sortingSelect.disabled = true;
+
+        const requests = Array.from({ length: 10 }, async (_, index) => {
+          const iteration = index + 1;
+          const url = `${dataPath}${dataset}/${mode}/iteration${iteration}.json`;
+          const response = await fetch(url);
+          if (response.status === 404) return null;
+          if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
+          return { iteration, graph: await response.json() };
+        });
+
+        try {
+          const loadedFrames = (await Promise.all(requests)).filter(Boolean);
+          if (sequence !== loadSequence) return;
+          if (!loadedFrames.length) throw new Error("No frames were found.");
+          frames = loadedFrames.map((frame) => ({
+            ...frame,
+            nodeOrdering: frame.graph.nodes.map((node) => node.id),
+            edgeOrdering: frame.graph.links.map((edge) => edge.id),
+            result: analyzeGraph(frame.graph.nodes, frame.graph.links),
+          }));
+          const finalFrame = frames.at(-1);
+          finalResult = finalFrame.result;
+          finalOrdering = finalFrame.nodeOrdering;
+          const finalEdgeCount = finalFrame.edgeOrdering.length || 1;
+          const finalEdgeSpacing = (500 - 30 - 20) / finalEdgeCount;
+          edgeStrokeWidth = Math.min(8, finalEdgeSpacing * 0.72);
+          renderFinalStage();
+          renderFrame(false);
+        } catch (error) {
+          if (sequence !== loadSequence) return;
+          console.error(error);
+          status.textContent =
+            "Could not load these frames: " +
+            (error.message || "unknown error") +
+            ". Open this page through a local web server and check that the selected data exists.";
+          status.classList.add("error");
+        } finally {
+          if (sequence === loadSequence) {
+            datasetSelect.disabled = false;
+            sortingSelect.disabled = false;
+          }
+        }
+      }
+
+      datasetSelect.addEventListener("change", () => {
+        populateSortingModes();
+        loadFrames();
+      });
+      sortingSelect.addEventListener("change", loadFrames);
+      previousButton.addEventListener("click", () => {
+        if (currentFrameIndex === 0) return;
+        currentFrameIndex--;
+        renderFrame(true);
+      });
+      nextButton.addEventListener("click", () => {
+        if (currentFrameIndex >= frames.length - 1) return;
+        currentFrameIndex++;
+        renderFrame(true);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft" && !previousButton.disabled) {
+          previousButton.click();
+        }
+        if (event.key === "ArrowRight" && !nextButton.disabled) {
+          nextButton.click();
+        }
+      });
+
+      populateDatasets();
+      loadFrames();
+    </script>
+  </body>
+</html>

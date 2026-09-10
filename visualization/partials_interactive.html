@@ -38,8 +38,14 @@
       }
 
       h1 {
-        margin: 0 0 24px;
+        margin: 0 0 6px;
         font-size: clamp(1.55rem, 4vw, 2rem);
+      }
+
+      .intro {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 0.9rem;
       }
 
       .panel {
@@ -76,6 +82,14 @@
         padding: 8px 34px 8px 10px;
         background: white;
         color: var(--text);
+      }
+
+      .sorting-recommendation {
+        min-height: 1.15rem;
+        margin: 6px 2px 0;
+        color: var(--muted);
+        font-size: 0.73rem;
+        line-height: 1.35;
       }
 
       select:focus-visible,
@@ -129,6 +143,54 @@
         text-align: center;
       }
 
+      #node-link-preview {
+        display: flex;
+        min-height: 190px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #node-link-preview svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .node-link-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 0 22px;
+        color: var(--muted);
+        font-size: 0.65rem;
+      }
+
+      .network-key {
+        display: inline-flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .network-key-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+
+      .network-key-dot.missing {
+        background: #d5dadd;
+      }
+
+      .network-key-dot.present {
+        background: #4e79a7;
+      }
+
+      .network-key-dot.new {
+        background: #00a6ff;
+      }
+
       #final-preview {
         display: flex;
         min-height: 220px;
@@ -159,7 +221,7 @@
         height: 8px;
         margin: 0 3px 1px 2px;
         border-radius: 50%;
-        background: steelblue;
+        background: #00a6ff;
       }
 
       .metrics {
@@ -191,13 +253,25 @@
         font-weight: 700;
       }
 
+      .metric-chart {
+        display: block;
+        width: 100%;
+        height: 46px;
+        margin-top: 7px;
+        overflow: visible;
+      }
+
+      .metric-chart path,
+      .metric-chart line {
+        vector-effect: non-scaling-stroke;
+      }
+
       .frame-controls {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         gap: 12px;
         align-items: center;
-        padding-top: 18px;
-        border-top: 1px solid var(--border);
+        margin: 10px 0 16px;
       }
 
       button {
@@ -278,6 +352,11 @@
   <body>
     <main>
       <h1>Partial graph explorer</h1>
+      <p class="intro">
+        Please press the &quot;previous frame&quot; and &quot;next frame&quot; buttons to see how
+        the BioFabric visualization progressively evolves as new edges are
+        streamed into it.
+      </p>
 
       <section class="panel" aria-label="Partial graph viewer">
         <div class="selectors">
@@ -288,6 +367,12 @@
           <div>
             <label for="sorting-select">Sorting logic</label>
             <select id="sorting-select"></select>
+            <div
+              id="sorting-recommendation"
+              class="sorting-recommendation"
+              role="status"
+              aria-live="polite"
+            ></div>
           </div>
         </div>
 
@@ -295,24 +380,42 @@
         <div class="visualization-grid">
           <div>
             <div id="graph" aria-live="polite"></div>
+            <div class="frame-controls">
+              <button id="previous-frame" type="button">
+                ← Previous frame
+              </button>
+              <span id="frame-label">Frame – of –</span>
+              <button id="next-frame" type="button">Next frame →</button>
+            </div>
             <div id="metrics" class="metrics"></div>
           </div>
           <aside class="final-stage" aria-label="Final graph stage">
+            <h2>Node-link view</h2>
+            <div id="node-link-preview"></div>
+            <div class="node-link-legend" aria-label="Network color key">
+              <span class="network-key">
+                <span class="network-key-dot missing" aria-hidden="true"></span>
+                Missing
+              </span>
+              <span class="network-key">
+                <span class="network-key-dot present" aria-hidden="true"></span>
+                Present
+              </span>
+              <span class="network-key">
+                <span class="network-key-dot new" aria-hidden="true"></span>
+                Just added
+              </span>
+            </div>
             <h2>Final stage</h2>
             <div id="final-preview"></div>
             <p class="final-stage-note">
               10% of the edges are added at every frame. Edge colors show where
               they belong in the <em>final</em> stage.
               <span class="inline-dot" aria-hidden="true"></span> Blue dots mark
-              nodes and edges added in the current frame.
+              nodes and edges added in the current frame. The nodes added are
+              all endpoints of the edges present in that frame.
             </p>
           </aside>
-        </div>
-
-        <div class="frame-controls">
-          <button id="previous-frame" type="button">← Previous frame</button>
-          <span id="frame-label">Frame – of –</span>
-          <button id="next-frame" type="button">Next frame →</button>
         </div>
       </section>
     </main>
@@ -404,7 +507,11 @@
 
       const datasetSelect = document.querySelector("#dataset-select");
       const sortingSelect = document.querySelector("#sorting-select");
+      const sortingRecommendation = document.querySelector(
+        "#sorting-recommendation",
+      );
       const graphContainer = document.querySelector("#graph");
+      const nodeLinkPreview = document.querySelector("#node-link-preview");
       const finalPreview = document.querySelector("#final-preview");
       const metricsContainer = document.querySelector("#metrics");
       const status = document.querySelector("#status");
@@ -415,10 +522,15 @@
       let frames = [];
       let currentFrameIndex = 0;
       let loadSequence = 0;
+      let recommendationSequence = 0;
       let mainSvg = null;
       let finalResult = null;
       let finalOrdering = [];
       let edgeStrokeWidth = 8;
+      let metricDisplays = [];
+      let nodeLinkSvg = null;
+      let nodeLinkLayout = null;
+      const frameDataCache = new Map();
 
       function addOption(select, value, label) {
         const option = document.createElement("option");
@@ -448,6 +560,31 @@
         if (datasetModes[datasetSelect.value].includes(previousMode)) {
           sortingSelect.value = previousMode;
         }
+      }
+
+      function fetchFramesForMode(dataset, mode) {
+        const cacheKey = `${dataset}/${mode}`;
+        if (frameDataCache.has(cacheKey)) return frameDataCache.get(cacheKey);
+
+        const request = Promise.all(
+          Array.from({ length: 10 }, async (_, index) => {
+            const iteration = index + 1;
+            const url = `${dataPath}${dataset}/${mode}/iteration${iteration}.json`;
+            const response = await fetch(url);
+            if (response.status === 404) return null;
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status} for ${url}`);
+            }
+            return { iteration, graph: await response.json() };
+          }),
+        )
+          .then((loadedFrames) => loadedFrames.filter(Boolean))
+          .catch((error) => {
+            frameDataCache.delete(cacheKey);
+            throw error;
+          });
+        frameDataCache.set(cacheKey, request);
+        return request;
       }
 
       function jaccardSimilarity(setA, setB) {
@@ -482,6 +619,73 @@
 
         const pairs = concordant + discordant;
         return pairs ? (concordant - discordant) / pairs : null;
+      }
+
+      async function updateSortingRecommendation() {
+        const sequence = ++recommendationSequence;
+        const dataset = datasetSelect.value;
+        const highTauThreshold = 0.8;
+        sortingRecommendation.textContent = "Finding the recommended sorting…";
+
+        try {
+          const candidates = await Promise.all(
+            datasetModes[dataset]
+              .filter((mode) => mode !== "random")
+              .map(async (mode) => {
+                const modeFrames = await fetchFramesForMode(dataset, mode);
+                if (!modeFrames.length) return null;
+
+                const referenceOrdering = modeFrames
+                  .at(-1)
+                  .graph.nodes.map((node) => node.id);
+                const tauValues = modeFrames.map((frame) =>
+                  kendallTau(
+                    referenceOrdering,
+                    frame.graph.nodes.map((node) => node.id),
+                  ),
+                );
+                const firstHighIndex = tauValues.findIndex(
+                  (value) => value !== null && value >= highTauThreshold,
+                );
+                if (firstHighIndex === -1) return null;
+
+                const finiteValues = tauValues.filter(
+                  (value) => value !== null,
+                );
+                const meanTau =
+                  finiteValues.reduce((sum, value) => sum + value, 0) /
+                  finiteValues.length;
+                return {
+                  mode,
+                  firstHighFrame: modeFrames[firstHighIndex].iteration,
+                  meanTau,
+                };
+              }),
+          );
+          if (sequence !== recommendationSequence) return;
+
+          const rankedCandidates = candidates
+            .filter(Boolean)
+            .sort(
+              (a, b) =>
+                a.firstHighFrame - b.firstHighFrame || b.meanTau - a.meanTau,
+            );
+          if (!rankedCandidates.length) {
+            sortingRecommendation.textContent =
+              "No sorting reaches Kendall τ ≥ 0.80 before the final frame.";
+            return;
+          }
+
+          const recommended = rankedCandidates[0];
+          sortingRecommendation.textContent = `Recommended: ${
+            modeLabels[recommended.mode] || recommended.mode
+          }.`;
+        } catch (error) {
+          if (sequence !== recommendationSequence) return;
+          console.error(error);
+          sortingRecommendation.textContent =
+            "The sorting recommendation could not be calculated.";
+        }
       }
 
       function meanStairOverlap(referenceStairs, currentStairs) {
@@ -739,10 +943,10 @@
             (enter) =>
               enter
                 .append("circle")
-                .attr("cx", layout.width - layout.padding.left)
+                .attr("cx", layout.width - layout.padding.right / 2)
                 .attr("cy", (node) => node.y)
                 .attr("r", Math.max(2.5, Math.min(6, edgeStrokeWidth)))
-                .attr("fill", "steelblue")
+                .attr("fill", "#00a6ff")
                 .style("opacity", initialOpacity),
             (update) => update,
             (exit) =>
@@ -752,7 +956,7 @@
                 .remove(),
           )
           .transition(transition)
-          .attr("cx", layout.width - layout.padding.left)
+          .attr("cx", layout.width - layout.padding.right / 2)
           .attr("cy", (node) => node.y)
           .style("opacity", 1);
 
@@ -767,7 +971,7 @@
                 .attr("cx", (edge) => edge.x)
                 .attr("cy", layout.height - layout.padding.bottom / 2)
                 .attr("r", Math.max(2.5, Math.min(6, edgeStrokeWidth)))
-                .attr("fill", "steelblue")
+                .attr("fill", "#00a6ff")
                 .style("opacity", initialOpacity),
             (update) => update,
             (exit) =>
@@ -782,7 +986,7 @@
           .style("opacity", 1);
       }
 
-      function addMetric(name, value) {
+      function createMetric(name, key, values) {
         const metric = document.createElement("div");
         metric.className = "metric";
         const metricName = document.createElement("span");
@@ -790,9 +994,249 @@
         metricName.textContent = name;
         const metricValue = document.createElement("span");
         metricValue.className = "metric-value";
-        metricValue.textContent = value;
-        metric.append(metricName, metricValue);
+
+        const width = 200;
+        const height = 46;
+        const padding = 4;
+        const chartData = values.map((point, index) => ({ index, point }));
+        const validValues = values.filter((point) => Number.isFinite(point));
+        const x = d3
+          .scaleLinear()
+          .domain([0, Math.max(values.length - 1, 1)])
+          .range([padding, width - padding]);
+        let [minimum, maximum] = validValues.length
+          ? d3.extent(validValues)
+          : [0, 1];
+        if (minimum === maximum) {
+          const margin = Math.abs(minimum || 0) * 0.05 || 1;
+          minimum -= margin;
+          maximum += margin;
+        } else {
+          const margin = (maximum - minimum) * 0.08;
+          minimum -= margin;
+          maximum += margin;
+        }
+        const y = d3
+          .scaleLinear()
+          .domain([minimum, maximum])
+          .range([height - padding, padding]);
+        const line = d3
+          .line()
+          .defined((point) => Number.isFinite(point.point))
+          .x((point) => x(point.index))
+          .y((point) => y(point.point));
+        const chart = d3
+          .create("svg")
+          .attr("class", "metric-chart")
+          .attr("viewBox", [0, 0, width, height])
+          .attr("role", "img")
+          .attr("aria-label", `${name} across all frames`);
+        chart
+          .append("path")
+          .datum(chartData)
+          .attr("fill", "none")
+          .attr("stroke", "#6c8ba4")
+          .attr("stroke-width", 1.6)
+          .attr("d", line);
+        const marker = chart
+          .append("line")
+          .attr("x1", x(currentFrameIndex))
+          .attr("x2", x(currentFrameIndex))
+          .attr("y1", 0)
+          .attr("y2", height)
+          .attr("stroke", "#d62728")
+          .attr("stroke-width", 1.5);
+
+        metric.append(metricName, metricValue, chart.node());
         metricsContainer.appendChild(metric);
+        return { key, metricValue, marker, x };
+      }
+
+      function formatMetric(key, value) {
+        if (key === "kendallTau" && value === null) return "n/a";
+        return value.toFixed(2);
+      }
+
+      function initializeMetricCharts() {
+        metricsContainer.replaceChildren();
+        const metricDefinitions = [
+          {
+            name: "Total staircase quality",
+            key: "totalStaircaseQuality",
+          },
+          { name: "Kendall tau vs. final frame", key: "kendallTau" },
+          {
+            name: "Mean stair overlap vs. final frame",
+            key: "stairOverlap",
+          },
+        ];
+
+        metricDisplays = metricDefinitions.map(({ name, key }) =>
+          createMetric(
+            name,
+            key,
+            frames.map((frame) => frame.metrics[key]),
+          ),
+        );
+      }
+
+      function updateMetricCharts(animate) {
+        const frame = frames[currentFrameIndex];
+        for (const display of metricDisplays) {
+          display.metricValue.textContent = formatMetric(
+            display.key,
+            frame.metrics[display.key],
+          );
+          display.marker
+            .interrupt()
+            .transition()
+            .duration(animate ? 900 : 0)
+            .ease(d3.easeCubicInOut)
+            .attr("x1", display.x(currentFrameIndex))
+            .attr("x2", display.x(currentFrameIndex));
+        }
+      }
+
+      function calculateFrameMetrics(frame) {
+        const totalStaircaseQuality = frame.result.stairQualities
+          .slice(0, -1)
+          .reduce((total, stair) => total + Number(stair[0]), 0);
+        return {
+          totalStaircaseQuality,
+          kendallTau: kendallTau(finalOrdering, frame.nodeOrdering),
+          stairOverlap: meanStairOverlap(
+            finalResult.stairs || [],
+            frame.result.stairs || [],
+          ),
+        };
+      }
+
+      function initializeNodeLinkPreview() {
+        nodeLinkPreview.replaceChildren();
+        nodeLinkSvg = null;
+        nodeLinkLayout = null;
+        if (!frames.length) return;
+
+        const width = 220;
+        const height = 180;
+        const padding = 10;
+        const finalGraph = frames.at(-1).graph;
+        const nodes = finalGraph.nodes.map((node) => ({ id: node.id }));
+        const links = finalGraph.links.map((edge) => ({
+          id: edge.id,
+          source: edge.source,
+          target: edge.target,
+        }));
+        const nodeCount = nodes.length || 1;
+        const simulation = d3
+          .forceSimulation(nodes)
+          .randomSource(d3.randomLcg(0.42))
+          .force(
+            "link",
+            d3
+              .forceLink(links)
+              .id((node) => node.id)
+              .distance(Math.max(12, 160 / Math.sqrt(nodeCount)))
+              .strength(0.35),
+          )
+          .force("charge", d3.forceManyBody().strength(-35))
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collision", d3.forceCollide(4))
+          .stop();
+
+        for (let tick = 0; tick < 280; tick++) simulation.tick();
+
+        const xExtent = d3.extent(nodes, (node) => node.x);
+        const yExtent = d3.extent(nodes, (node) => node.y);
+        const x = d3
+          .scaleLinear()
+          .domain(xExtent)
+          .range([padding, width - padding]);
+        const y = d3
+          .scaleLinear()
+          .domain(yExtent)
+          .range([padding, height - padding]);
+        nodes.forEach((node) => {
+          node.x = x(node.x);
+          node.y = y(node.y);
+        });
+
+        nodeLinkLayout = {
+          nodes,
+          links,
+          nodeRadius: Math.max(1.7, Math.min(4, 19 / Math.sqrt(nodeCount))),
+          edgeWidth: Math.max(0.45, Math.min(1.3, 8 / Math.sqrt(links.length || 1))),
+        };
+        nodeLinkSvg = d3
+          .create("svg")
+          .attr("viewBox", [0, 0, width, height])
+          .attr("role", "img")
+          .attr("aria-label", "Node-link view of the final graph");
+        nodeLinkSvg
+          .append("g")
+          .attr("class", "network-links")
+          .selectAll("line")
+          .data(links, (edge) => edge.id)
+          .join("line")
+          .attr("x1", (edge) => edge.source.x)
+          .attr("y1", (edge) => edge.source.y)
+          .attr("x2", (edge) => edge.target.x)
+          .attr("y2", (edge) => edge.target.y)
+          .attr("stroke-width", nodeLinkLayout.edgeWidth)
+          .style("stroke-linecap", "round");
+        nodeLinkSvg
+          .append("g")
+          .attr("class", "network-nodes")
+          .selectAll("circle")
+          .data(nodes, (node) => node.id)
+          .join("circle")
+          .attr("cx", (node) => node.x)
+          .attr("cy", (node) => node.y)
+          .attr("r", nodeLinkLayout.nodeRadius)
+          .attr("stroke", "white")
+          .attr("stroke-width", 0.6);
+        nodeLinkPreview.appendChild(nodeLinkSvg.node());
+      }
+
+      function renderNodeLinkState(frame, newNodeIds, newEdgeIds, animate) {
+        if (!nodeLinkSvg || !nodeLinkLayout) return;
+
+        const presentNodeIds = new Set(frame.nodeOrdering);
+        const presentEdgeIds = new Set(frame.edgeOrdering);
+        const missingColor = "#d5dadd";
+        const presentColor = "#4e79a7";
+        const newColor = "#00a6ff";
+        const transition = nodeLinkSvg
+          .transition()
+          .duration(animate ? 900 : 0)
+          .ease(d3.easeCubicInOut);
+
+        nodeLinkSvg
+          .select(".network-links")
+          .selectAll("line")
+          .interrupt()
+          .transition(transition)
+          .attr("stroke", (edge) => {
+            if (newEdgeIds.has(edge.id)) return newColor;
+            if (presentEdgeIds.has(edge.id)) return presentColor;
+            return missingColor;
+          })
+          .attr("stroke-opacity", (edge) =>
+            presentEdgeIds.has(edge.id) ? 0.9 : 0.55,
+          );
+        nodeLinkSvg
+          .select(".network-nodes")
+          .selectAll("circle")
+          .interrupt()
+          .transition(transition)
+          .attr("fill", (node) => {
+            if (newNodeIds.has(node.id)) return newColor;
+            if (presentNodeIds.has(node.id)) return presentColor;
+            return missingColor;
+          })
+          .attr("fill-opacity", (node) =>
+            presentNodeIds.has(node.id) ? 1 : 0.7,
+          );
       }
 
       function renderFinalStage() {
@@ -805,12 +1249,15 @@
       }
 
       function renderFrame(animate = false) {
-        metricsContainer.replaceChildren();
-
         if (!frames.length) {
           graphContainer.replaceChildren();
+          nodeLinkPreview.replaceChildren();
           finalPreview.replaceChildren();
+          metricsContainer.replaceChildren();
           mainSvg = null;
+          nodeLinkSvg = null;
+          nodeLinkLayout = null;
+          metricDisplays = [];
           frameLabel.textContent = "Frame – of –";
           previousButton.disabled = true;
           nextButton.disabled = true;
@@ -845,21 +1292,8 @@
           computeLayout(frame, newEdgeIds, newNodeIds),
           animate,
         );
-
-        const totalStaircaseQuality = frame.result.stairQualities
-          .slice(0, -1)
-          .reduce((total, stair) => total + Number(stair[0]), 0);
-        const tau = kendallTau(finalOrdering, frame.nodeOrdering);
-        const overlap = meanStairOverlap(
-          finalResult.stairs || [],
-          frame.result.stairs || [],
-        );
-        addMetric("Total staircase quality", totalStaircaseQuality.toFixed(2));
-        addMetric(
-          "Kendall tau vs. final frame",
-          tau === null ? "n/a" : tau.toFixed(2),
-        );
-        addMetric("Mean stair overlap vs. final frame", overlap.toFixed(2));
+        renderNodeLinkState(frame, newNodeIds, newEdgeIds, animate);
+        updateMetricCharts(animate);
 
         frameLabel.textContent = `Frame ${frame.iteration} · ${
           currentFrameIndex + 1
@@ -882,17 +1316,8 @@
         datasetSelect.disabled = true;
         sortingSelect.disabled = true;
 
-        const requests = Array.from({ length: 10 }, async (_, index) => {
-          const iteration = index + 1;
-          const url = `${dataPath}${dataset}/${mode}/iteration${iteration}.json`;
-          const response = await fetch(url);
-          if (response.status === 404) return null;
-          if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
-          return { iteration, graph: await response.json() };
-        });
-
         try {
-          const loadedFrames = (await Promise.all(requests)).filter(Boolean);
+          const loadedFrames = await fetchFramesForMode(dataset, mode);
           if (sequence !== loadSequence) return;
           if (!loadedFrames.length) throw new Error("No frames were found.");
           frames = loadedFrames.map((frame) => ({
@@ -904,9 +1329,14 @@
           const finalFrame = frames.at(-1);
           finalResult = finalFrame.result;
           finalOrdering = finalFrame.nodeOrdering;
+          frames.forEach((frame) => {
+            frame.metrics = calculateFrameMetrics(frame);
+          });
           const finalEdgeCount = finalFrame.edgeOrdering.length || 1;
           const finalEdgeSpacing = (500 - 30 - 20) / finalEdgeCount;
           edgeStrokeWidth = Math.min(8, finalEdgeSpacing * 0.72);
+          initializeNodeLinkPreview();
+          initializeMetricCharts();
           renderFinalStage();
           renderFrame(false);
         } catch (error) {
@@ -927,6 +1357,7 @@
 
       datasetSelect.addEventListener("change", () => {
         populateSortingModes();
+        updateSortingRecommendation();
         loadFrames();
       });
       sortingSelect.addEventListener("change", loadFrames);
@@ -950,6 +1381,7 @@
       });
 
       populateDatasets();
+      updateSortingRecommendation();
       loadFrames();
     </script>
   </body>

@@ -361,19 +361,76 @@ def plot_rank_scores(ranked, outFile, group_col, method_col="method", title=None
     else: ax.tick_params(axis="x", rotation=45)
     ax.grid(True, axis="y", alpha=0.25)
 
-    # Place legend outside so it never overlaps the chart
-    # leg = ax.legend(
-    #     title="Method",
-    #     frameon=False,
-    #     loc="upper left",
-    #     bbox_to_anchor=(1.02, 1.0),
-    #     borderaxespad=0.0
-    # )
-    # if leg is not None:
-    #     leg.set_title("Method", prop={"size": LEGEND_TITLE_SIZE})
     leg = ax.get_legend()
     if leg is not None:
         leg.remove()
+
+    fig.savefig(outFile, dpi=BAR_DPI, bbox_inches="tight")
+    plt.close(fig)
+    return fig, ax
+
+def plot_rank_scores_heatmap(
+    ranked,
+    outFile,
+    group_col,
+    method_col="method",
+    title=None,
+    xlabel=None,
+    ylabel=None,
+    annot=True,
+    fmt=".3f",
+    cmap="YlGnBu"
+):
+    ranked = ranked.copy()
+    ranked[group_col] = ranked[group_col].astype(str)
+    ranked[method_col] = ranked[method_col].astype(str)
+
+    method_order = get_method_order(ranked, method_col=method_col)
+
+    heatmap_df = ranked.pivot_table(
+        index=group_col,
+        columns=method_col,
+        values="topsis_score",
+        aggfunc="mean"
+    )
+
+    heatmap_df = heatmap_df.reindex(columns=method_order)
+
+    method_label_colors = {
+        "Random": "#4C78A8",
+        "Degree": "#F58518",
+        "Betweenness": "#54A24B",
+        "Closeness": "#E45756",
+        "RCM": "#B279A2",
+        "Spectral": "#361E45",
+        "PageRank": "#72B7B2",
+    }
+
+    fig, ax = plt.subplots(figsize=(13, 6), constrained_layout=True)
+
+    sns.heatmap(
+        heatmap_df,
+        ax=ax,
+        cmap=cmap,
+        annot=annot,
+        fmt=fmt,
+        linewidths=0.5,
+        linecolor="white",
+        cbar_kws={"label": "TOPSIS score"}
+    )
+
+    ax.set_title(title if title else f"TOPSIS score heatmap by {group_col}")
+    ax.set_xlabel(xlabel if xlabel else method_col)
+    ax.set_ylabel(ylabel if ylabel else group_col)
+
+    ax.set_xticks(np.arange(len(heatmap_df.columns)) + 0.5)
+    ax.set_xticklabels(list(heatmap_df.columns), rotation=45, ha="right")
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
+
+    fig.canvas.draw()
+
+    for tick, method in zip(ax.get_xticklabels(), heatmap_df.columns):
+        tick.set_color(method_label_colors.get(method, "black"))
 
     fig.savefig(outFile, dpi=BAR_DPI, bbox_inches="tight")
     plt.close(fig)
@@ -719,8 +776,8 @@ if __name__ == "__main__":
 
     # Ranking by size
     ranked_size, best_size = rank_by_size(df)
-    ranked_size.to_csv("method_ranking_by_size.csv", index=False)
-    best_size.to_csv("best_method_by_size.csv", index=False)
+    ranked_size.to_csv("progressive/data/method_ranking_by_size.csv", index=False)
+    best_size.to_csv("progressive/data/best_method_by_size.csv", index=False)
 
     plot_rank_counts(
         best_size,
@@ -742,8 +799,8 @@ if __name__ == "__main__":
 
     # Ranking by topology
     ranked_topo, best_topo = rank_by_topology(df)
-    ranked_topo.to_csv("method_ranking_by_topology.csv", index=False)
-    best_topo.to_csv("best_method_by_topology.csv", index=False)
+    ranked_topo.to_csv("progressive/data/method_ranking_by_topology.csv", index=False)
+    best_topo.to_csv("progressive/data/best_method_by_topology.csv", index=False)
 
     plot_rank_counts(
         best_topo,
@@ -761,6 +818,16 @@ if __name__ == "__main__":
         method_col="method",
         title="TOPSIS score by topology",
         xlabel="Topology"
+    )
+    
+    plot_rank_scores_heatmap(
+        ranked_topo,
+        "progressive/plot/ranking_by_topology_scores_heatmap.png",
+        group_col="topology",
+        method_col="method",
+        title="TOPSIS score by topology and method",
+        xlabel="Method",
+        ylabel="Topology"
     )
 
     # Thresholds

@@ -1,0 +1,4 @@
+graph_size,best_method,topsis_score,topsis_rank
+small,spectral,0.9999999999945518,1
+medium,spectral,0.9682584893931252,1
+large,spectral,0.9999999999954712,1

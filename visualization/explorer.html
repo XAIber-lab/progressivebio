@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Progressive BioFabric Benchmark Explorer</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+      :root {
+        --bg: #f5f2eb;
+        --surface: #fffdf9;
+        --surface2: #eeeae1;
+        --border: #d6d0c5;
+        --text: #25231f;
+        --muted: #716d65;
+        --primary: #075e66;
+        --secondary: #660740;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          12px/1.25 system-ui,
+          sans-serif;
+      }
+      .app {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 255px minmax(0, 1fr) 255px;
+        grid-template-rows: 58px minmax(0, 1fr);
+        overflow: hidden;
+      }
+      header {
+        grid-column: 1/-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 14px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .brand {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      }
+      .mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: var(--primary);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+        font-weight: bold;
+      }
+      .title h1 {
+        font:
+          700 1.35rem Georgia,
+          serif;
+        margin: 0;
+      }
+      .title p {
+        margin: 1px 0;
+        color: var(--muted);
+      }
+      .actions {
+        display: flex;
+        gap: 6px;
+      }
+      .btn {
+        border: 1px solid var(--border);
+        background: var(--surface);
+        border-radius: 999px;
+        padding: 7px 10px;
+        color: var(--text);
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .primary {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+      }
+      .secondary {
+        background: var(--secondary);
+        border-color: var(--secondary);
+        color: #fff;
+      }
+      .side {
+        background: var(--surface);
+        padding: 10px;
+        overflow: hidden;
+        min-height: 0;
+      }
+      .left {
+        border-right: 1px solid var(--border);
+      }
+      .right {
+        border-left: 1px solid var(--border);
+      }
+      main {
+        padding: 9px;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .panel-title {
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      .section,
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 8px;
+        margin-bottom: 7px;
+      }
+      .section {
+        background: var(--surface2);
+      }
+      .section h3 {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 0 0 6px;
+      }
+      .field {
+        display: grid;
+        gap: 2px;
+        margin-bottom: 5px;
+      }
+      .field label {
+        font-weight: 600;
+        font-size: 11px;
+      }
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        min-height: 27px;
+        padding: 4px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        background: var(--surface);
+        color: var(--text);
+      }
+      .field textarea {
+        resize: none;
+      }
+      .field small,
+      .tiny {
+        font-size: 10px;
+        color: var(--muted);
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+      }
+      .workspace-container {
+        flex: 1;
+        overflow-y: auto;
+        min-height: 0;
+      }
+      .workspace {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: 285px 285px auto;
+        gap: 7px;
+      }
+      .chart-card {
+        min-width: 0;
+        margin: 0;
+      }
+      .wide {
+        grid-column: 1/-1;
+      }
+      .convergence {
+        grid-column: 1/4;
+      }
+      .chart-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+      }
+      .chart-heading h2 {
+        font-size: 12px;
+        margin: 0;
+      }
+      .chart {
+        height: 260px;
+      }
+      .convergence .chart {
+        height: 270px;
+      }
+      .table {
+        grid-column: 1/-1;
+        min-height: 0;
+      }
+      .table-wrap {
+        height: calc(100% - 20px);
+        overflow: auto;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 10px;
+      }
+      th,
+      td {
+        padding: 4px;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+        text-align: left;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background: var(--surface2);
+      }
+      .chip {
+        display: inline-block;
+        padding: 3px 6px;
+        border-radius: 99px;
+        background: #d9e6e4;
+        margin-right: 4px;
+        font-size: 10px;
+      }
+      .insight {
+        padding: 7px;
+        margin-bottom: 6px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface2);
+      }
+      .status {
+        color: var(--primary);
+        font-weight: bold;
+      }
+      @media (max-width: 1250px) {
+        .app {
+          grid-template-columns: 225px minmax(0, 1fr) 225px;
+        }
+        .workspace-container {
+          overflow-y: auto;
+        }
+        .workspace {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .convergence,
+        .wide {
+          grid-column: 1/-1;
+        }
+      }
+      @media (max-width: 850px) {
+        body {
+          overflow: auto;
+          height: auto;
+        }
+        .app {
+          height: auto;
+          display: block;
+        }
+        .side,
+        main {
+          border: 0;
+        }
+        .workspace-container {
+          overflow: visible;
+        }
+        .workspace {
+          grid-template-columns: 1fr;
+        }
+        .convergence,
+        .wide {
+          grid-column: auto;
+        }
+        .chart,
+        .convergence .chart {
+          height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="brand">
+          <div class="mark">∿</div>
+          <div class="title">
+            <h1>Progressive BioFabric Benchmark Explorer</h1>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" id="theme">Dark mode</button>
+          <a
+            class="btn secondary"
+            href="partials_interactive.html"
+            target="_blank"
+            >Local Analysis</a
+          ><button class="btn primary" id="export">Export CSV</button>
+        </div>
+      </header>
+      <aside class="side left">
+        <h2 class="panel-title">Data &amp; filters</h2>
+        <div class="section">
+          <h3>External CSV</h3>
+          <div class="field">
+            <label for="files">Local files</label
+            ><input id="files" type="file" accept=".csv,text/csv" multiple />
+          </div>
+          <button class="btn primary" id="load">Load CSV</button>
+          <div class="field">
+            <label for="urls">Remote URLs</label
+            ><textarea
+              id="urls"
+              rows="2"
+              placeholder="https://example.org/data.csv"
+            ></textarea>
+          </div>
+          <button class="btn" id="remote">Load URLs</button>
+          <p id="status" class="tiny">No data loaded.</p>
+        </div>
+        <div class="section">
+          <h3>Scope</h3>
+          <div class="field">
+            <label for="family">Family</label
+            ><select id="family">
+              <option value="All">All</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="file">File</label
+            ><select id="file">
+              <option value="All">All</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="method">Method</label
+            ><select id="method">
+              <option value="All">All</option>
+            </select>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="imin">Iteration min</label
+              ><input id="imin" type="number" />
+            </div>
+            <div class="field">
+              <label for="imax">Iteration max</label
+              ><input id="imax" type="number" />
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Metrics</h3>
+          <div class="field">
+            <label for="metric">Primary metric</label
+            ><select id="metric"></select>
+          </div>
+          <div class="field">
+            <label for="agg">Aggregation</label
+            ><select id="agg">
+              <option value="mean">Mean</option>
+              <option value="median">Median</option>
+              <option value="min">Minimum</option>
+              <option value="max">Maximum</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="threshold">KT_gen threshold</label
+            ><input id="threshold" type="number" value="0.9" step="0.05" />
+          </div>
+          <button class="btn" id="reset">Reset</button>
+        </div>
+      </aside>
+      <main>
+        <div class="workspace-container">
+          <div class="workspace">
+            <section class="card chart-card convergence">
+              <div class="chart-heading">
+                <h2>Progressive convergence</h2>
+                <span class="tiny">metric × iteration × method</span>
+              </div>
+              <div id="conv" class="chart"></div>
+            </section>
+            <section class="card chart-card">
+              <div class="chart-heading"><h2>Method ranking</h2></div>
+              <div id="rank" class="chart"></div>
+            </section>
+            <section class="card chart-card">
+              <div class="chart-heading"><h2>Metric profile</h2></div>
+              <div id="heat" class="chart"></div>
+            </section>
+            <section class="card chart-card">
+              <div class="chart-heading"><h2>Distributions</h2></div>
+              <div id="dist" class="chart"></div>
+            </section>
+            <section class="card chart-card">
+              <div class="chart-heading"><h2>Structural effects</h2></div>
+              <div id="struct" class="chart"></div>
+            </section>
+            <section class="card chart-card">
+              <div class="chart-heading">
+                <h2>Fidelity–quality trade-off</h2>
+              </div>
+              <div id="pareto" class="chart"></div>
+            </section>
+            <section class="card chart-card wide">
+              <div class="chart-heading"><h2>Threshold analysis</h2></div>
+              <div id="thresh" class="chart"></div>
+            </section>
+            <section class="card table wide">
+              <div class="chart-heading"><h2>Filtered records</h2></div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr id="head"></tr>
+                  </thead>
+                  <tbody id="body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <aside class="side right">
+        <h2 class="panel-title">Interpretation</h2>
+        <div class="section">
+          <h3>Current reading</h3>
+          <div id="insight">
+            <div class="insight">Load an external CSV to begin.</div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Metrics</h3>
+          <p class="tiny">
+            <b>KT / KT_gen:</b> ordering convergence. <b>Jaccard:</b> pattern
+            overlap. <b>s_qualityAbs:</b> layout error.
+            <b>node_coverage:</b> structural coverage.
+          </p>
+        </div>
+        <div class="section">
+          <h3>Workflow</h3>
+          <p class="tiny">
+            Read convergence first, compare rankings and distributions, inspect
+            graph-size effects, then evaluate fidelity–quality trade-offs.
+          </p>
+        </div>
+      </aside>
+    </div>
+    <script>
+      "use strict";
+
+      let D = [];
+      let F = [];
+      let S = [];
+
+      const M = [
+        "KT",
+        "KT_gen",
+        "s_qualityGT",
+        "s_qualityRel",
+        "s_qualityAbs",
+        "jaccard",
+        "node_coverage",
+      ];
+
+      const N = ["sample", "iteration", ...M, "num_node", "num_edges"];
+
+      const q = (id) => document.getElementById(id);
+
+      function uniqueValues(values) {
+        return [...new Set(values)].sort((a, b) =>
+          String(a).localeCompare(String(b), undefined, {
+            numeric: true,
+          }),
+        );
+      }
+
+      function aggregate(values) {
+        const numbers = values.filter(Number.isFinite).sort((a, b) => a - b);
+
+        if (!numbers.length) {
+          return NaN;
+        }
+
+        const mode = q("agg").value;
+
+        if (mode === "min") {
+          return numbers[0];
+        }
+
+        if (mode === "max") {
+          return numbers[numbers.length - 1];
+        }
+
+        if (mode === "median") {
+          const middle = Math.floor(numbers.length / 2);
+
+          return numbers.length % 2 === 1
+            ? numbers[middle]
+            : (numbers[middle - 1] + numbers[middle]) / 2;
+        }
+
+        return numbers.reduce((sum, value) => sum + value, 0) / numbers.length;
+      }
+
+      function formatValue(value) {
+        return Number.isFinite(value) ? value.toFixed(3) : "—";
+      }
+
+      function getFamily(file) {
+        return String(file || "")
+          .split("/")
+          .slice(0, 2)
+          .join("/");
+      }
+
+      function setOptions(element, values) {
+        element.innerHTML =
+          '<option value="All">All</option>' +
+          uniqueValues(values)
+            .map(
+              (value) =>
+                `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`,
+            )
+            .join("");
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function initializeControls() {
+        setOptions(
+          q("family"),
+          D.map((row) => row.family),
+        );
+        setOptions(
+          q("file"),
+          D.map((row) => row.file),
+        );
+        setOptions(
+          q("method"),
+          D.map((row) => row.method),
+        );
+
+        q("metric").innerHTML = M.map(
+          (metric) => `<option value="${metric}">${metric}</option>`,
+        ).join("");
+
+        const iterations = D.map((row) => row.iteration).filter(
+          Number.isFinite,
+        );
+
+        if (iterations.length) {
+          q("imin").value = Math.min(...iterations);
+          q("imax").value = Math.max(...iterations);
+        }
+
+        q("status").textContent = `${S.length} source(s): ${S.join(", ")}`;
+      }
+
+      function parseCsv(text, sourceName) {
+        const result = Papa.parse(text.trim(), {
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true,
+        });
+
+        const rows = result.data
+          .filter((row) => row.file && row.method)
+          .map((row) => {
+            N.forEach((column) => {
+              row[column] = Number(row[column]);
+            });
+
+            row.family = getFamily(row.file);
+            return row;
+          });
+
+        D.push(...rows);
+        S.push(sourceName);
+        initializeControls();
+        applyFilters();
+      }
+
+      function applyFilters() {
+        if (!D.length) {
+          return;
+        }
+
+        const selectedFamily = q("family").value;
+        const selectedFile = q("file").value;
+        const selectedMethod = q("method").value;
+        const iterationMin = Number(q("imin").value);
+        const iterationMax = Number(q("imax").value);
+
+        F = D.filter((row) => {
+          return (
+            (selectedFamily === "All" || row.family === selectedFamily) &&
+            (selectedFile === "All" || row.file === selectedFile) &&
+            (selectedMethod === "All" || row.method === selectedMethod) &&
+            row.iteration >= iterationMin &&
+            row.iteration <= iterationMax
+          );
+        });
+
+        render();
+      }
+
+      function chartLayout() {
+        const dark = document.body.classList.contains("dark");
+
+        return {
+          paper_bgcolor: dark ? "#1d1b18" : "#fffdf9",
+          plot_bgcolor: dark ? "#1d1b18" : "#fffdf9",
+          font: {
+            color: dark ? "#eeeeee" : "#25231f",
+          },
+          margin: {
+            left: 55,
+            right: 20,
+            top: 58,
+            bottom: 52,
+          },
+          legend: {
+            orientation: "h",
+            x: 0,
+            y: 1.18,
+            xanchor: "left",
+            yanchor: "bottom",
+          },
+          colorway: ["#075e66", "#9a531b", "#437a22", "#a34063", "#7450b6"],
+          xaxis: {
+            gridcolor: "#dddddd",
+          },
+          yaxis: {
+            gridcolor: "#dddddd",
+          },
+        };
+      }
+
+      function drawChart(id, traces, options) {
+        Plotly.newPlot(
+          id,
+          traces,
+          {
+            ...chartLayout(),
+            ...options,
+          },
+          {
+            responsive: true,
+            displaylogo: false,
+          },
+        );
+      }
+
+      function render() {
+        if (!F.length) {
+          return;
+        }
+
+        const metric = q("metric").value;
+        const methods = uniqueValues(F.map((row) => row.method));
+        const grouped = {};
+
+        F.forEach((row) => {
+          if (!grouped[row.method]) {
+            grouped[row.method] = [];
+          }
+
+          grouped[row.method].push(row[metric]);
+        });
+
+        const rankings = Object.entries(grouped).map(([method, values]) => ({
+          method,
+          value: aggregate(values),
+        }));
+
+        drawChart(
+          "rank",
+          [
+            {
+              type: "bar",
+              orientation: "h",
+              y: rankings.map((row) => row.method),
+              x: rankings.map((row) => row.value),
+              text: rankings.map((row) => formatValue(row.value)),
+              textposition: "auto",
+            },
+          ],
+          {
+            showlegend: false,
+          },
+        );
+
+        drawChart(
+          "conv",
+          methods.map((method) => {
+            const byIteration = {};
+
+            F.filter((row) => row.method === method).forEach((row) => {
+              if (!byIteration[row.iteration]) {
+                byIteration[row.iteration] = [];
+              }
+
+              byIteration[row.iteration].push(row[metric]);
+            });
+
+            const values = Object.entries(byIteration)
+              .map(([iteration, numbers]) => ({
+                iteration: Number(iteration),
+                value: aggregate(numbers),
+              }))
+              .sort((a, b) => a.iteration - b.iteration);
+
+            return {
+              type: "scatter",
+              mode: "lines+markers",
+              name: method,
+              x: values.map((row) => row.iteration),
+              y: values.map((row) => row.value),
+              marker: {
+                size: 8,
+              },
+            };
+          }),
+          {
+            xaxis: { title: "Iteration" },
+            yaxis: { title: metric },
+          },
+        );
+
+        drawChart(
+          "heat",
+          [
+            {
+              type: "heatmap",
+              x: M,
+              y: methods,
+              z: methods.map((method) =>
+                M.map((metricName) => {
+                  return aggregate(
+                    F.filter((row) => row.method === method).map(
+                      (row) => row[metricName],
+                    ),
+                  );
+                }),
+              ),
+              colorscale: "Viridis",
+            },
+          ],
+          {
+            showlegend: false,
+          },
+        );
+
+        drawChart(
+          "dist",
+          methods.map((method) => ({
+            type: "box",
+            name: method,
+            y: F.filter((row) => row.method === method).map(
+              (row) => row[metric],
+            ),
+            boxpoints: "outliers",
+          })),
+          {
+            yaxis: { title: metric },
+            showlegend: false,
+          },
+        );
+
+        drawChart(
+          "struct",
+          methods.map((method) => {
+            const rows = F.filter((row) => row.method === method);
+
+            return {
+              type: "scatter",
+              mode: "markers",
+              name: method,
+              x: rows.map((row) => row.num_edges),
+              y: rows.map((row) => row[metric]),
+              marker: {
+                size: 9,
+                opacity: 0.8,
+              },
+            };
+          }),
+          {
+            xaxis: { title: "Edges" },
+            yaxis: { title: metric },
+            showlegend: false,
+          },
+        );
+
+        const pareto = methods.map((method) => {
+          const rows = F.filter((row) => row.method === method);
+
+          return {
+            method,
+            qualityError: aggregate(rows.map((row) => row.s_qualityAbs)),
+            fidelity: aggregate(rows.map((row) => row.KT_gen)),
+            coverage: aggregate(rows.map((row) => row.node_coverage)),
+          };
+        });
+
+        drawChart(
+          "pareto",
+          [
+            {
+              type: "scatter",
+              mode: "markers+text",
+              x: pareto.map((row) => row.qualityError),
+              y: pareto.map((row) => row.fidelity),
+              text: pareto.map((row) => row.method),
+              textposition: "top center",
+              marker: {
+                size: 10,
+                opacity: 0.9,
+              },
+            },
+          ],
+          {
+            xaxis: { title: "Quality error" },
+            yaxis: { title: "KT_gen" },
+            showlegend: false,
+          },
+        );
+
+        const threshold = Number(q("threshold").value);
+
+        const thresholdRows = methods.map((method) => {
+          const match = F.filter((row) => row.method === method)
+            .sort((a, b) => a.iteration - b.iteration)
+            .find((row) => row.KT_gen >= threshold);
+
+          return {
+            method,
+            iteration: match ? match.iteration : 0,
+          };
+        });
+
+        drawChart(
+          "thresh",
+          [
+            {
+              type: "bar",
+              x: thresholdRows.map((row) => row.method),
+              y: thresholdRows.map((row) => row.iteration),
+              text: thresholdRows.map((row) => row.iteration || "not reached"),
+              textposition: "outside",
+            },
+          ],
+          {
+            yaxis: { title: "Iteration" },
+            showlegend: false,
+          },
+        );
+
+        const columns = [
+          "file",
+          "family",
+          "sample",
+          "iteration",
+          "method",
+          ...M,
+          "num_node",
+          "num_edges",
+        ];
+
+        q("head").innerHTML = columns
+          .map((column) => `<th>${column}</th>`)
+          .join("");
+
+        q("body").innerHTML = F.slice(0, 500)
+          .map(
+            (row) =>
+              `<tr>${columns
+                .map((column) => {
+                  const value = row[column];
+                  return `<td>${
+                    typeof value === "number"
+                      ? formatValue(value)
+                      : escapeHtml(value ?? "")
+                  }</td>`;
+                })
+                .join("")}</tr>`,
+          )
+          .join("");
+
+        rankings.sort((a, b) => b.value - a.value);
+        const best = rankings[0];
+
+        q("insight").innerHTML = `
+    <div class="insight">
+      <b>${F.length}</b> records across
+      <b>${uniqueValues(F.map((row) => row.file)).length}</b> graphs.
+    </div>
+    <div class="insight">
+      Leader for ${metric}:
+      <span class="status">${best ? best.method : "—"}</span>
+      (${best ? formatValue(best.value) : "—"}).
+    </div>
+  `;
+      }
+
+      q("load").onclick = async () => {
+        D = [];
+        F = [];
+        S = [];
+
+        for (const file of q("files").files) {
+          parseCsv(await file.text(), file.name);
+        }
+      };
+
+      q("remote").onclick = async () => {
+        D = [];
+        F = [];
+        S = [];
+
+        const urls = q("urls")
+          .value.split(/[,\r\n]+/)
+          .map((url) => url.trim())
+          .filter(Boolean);
+
+        try {
+          for (const url of urls) {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}`);
+            }
+
+            parseCsv(await response.text(), url);
+          }
+        } catch (error) {
+          q("status").textContent = `Error: ${error.message}`;
+        }
+      };
+
+      [
+        "family",
+        "file",
+        "method",
+        "metric",
+        "agg",
+        "imin",
+        "imax",
+        "threshold",
+      ].forEach((id) => {
+        q(id).addEventListener("change", applyFilters);
+      });
+
+      q("reset").onclick = () => {
+        if (D.length) {
+          initializeControls();
+          applyFilters();
+        }
+      };
+
+      q("export").onclick = () => {
+        const link = document.createElement("a");
+        const blob = new Blob([Papa.unparse(F)], { type: "text/csv" });
+
+        link.href = URL.createObjectURL(blob);
+        link.download = "filtered.csv";
+        link.click();
+      };
+
+      q("theme").onclick = () => {
+        document.body.classList.toggle("dark");
+
+        if (F.length) {
+          render();
+        }
+      };
+    </script>
+  </body>
+</html>

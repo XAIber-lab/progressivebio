@@ -1,0 +1,16 @@
+topology,best_method,topsis_score,topsis_rank
+balanced_tree,random,0.9215827505799379,1
+barabasi_albert,betweeness,0.7961473106514344,1
+bipartite_complete,spectral,0.999999999988206,1
+bipartite_random,spectral,0.9905763083324189,1
+complete,spectral,0.9999999999882151,1
+erdos_renyi,spectral,0.7830377356655517,1
+geometric,random,0.9603015134146132,1
+mesh,degree,0.9919686056707095,1
+path,random,0.9999999919751222,1
+powerlaw_cluster,betweeness,0.9793259133796344,1
+random_regular,degree,0.9968882750009945,1
+ring,random,0.999999992781051,1
+star,random,0.9999999999950729,1
+stochastic_block,random,0.9273090092305817,1
+watts_strogatz,closeness,0.9808549229800315,1

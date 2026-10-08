@@ -38,18 +38,34 @@ git clone https://github.com/XAIber-lab/progressivebio.git
 cd progressivebio
 ```
 
-Adjust the graph dataset you want to benchmark in the ```data``` folder
+Adjust the graph dataset you want to benchmark in the ```data``` folder.
 
-Run the benchmark:
+### 1) Run the benchmark
 
 ```bash
 python main.py
 ```
 
-Plot results and analytics:
+This executes the benchmark pipeline and generates the results used for analysis.
+
+### 2) Explore the benchmark results
+
+Launch the visualization web app from the repository root:
+
+```bash
+python -m http.server 8000
+```
+
+Then open one of these pages in your browser:
+
+- `http://localhost:8000/visualization/explorer.html`
+- `http://localhost:8000/visualization/partial_interactive.html`
+
+These pages let you explore the benchmark outputs interactively and inspect progressive partial results.
+
+### Optional analysis plots
+
 ```bash
 python plot_stats_cmp.py
 python analytics.py
 ```
-
-View progressive partial results of selected graphs in the ```visualization``` frontend.

@@ -445,7 +445,7 @@
         <div class="section">
           <h3>Current reading</h3>
           <div id="insight">
-            <div class="insight">Load an external CSV to begin.</div>
+            <div class="insight">Loading default dataset…</div>
           </div>
         </div>
         <div class="section">
@@ -992,6 +992,27 @@
         link.download = "filtered.csv";
         link.click();
       };
+
+      const DEFAULT_DATASET = "../progressive/data/dataset_small.csv";
+
+      async function loadDefaultDataset() {
+        q("status").textContent = "Loading default dataset…";
+        try {
+          const response = await fetch(DEFAULT_DATASET);
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          D = [];
+          F = [];
+          S = [];
+          parseCsv(await response.text(), "dataset_small.csv");
+        } catch (error) {
+          q("status").textContent =
+            `Default dataset not loaded (${error.message}). Use the loaders above.`;
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", loadDefaultDataset);
 
       q("theme").onclick = () => {
         document.body.classList.toggle("dark");
